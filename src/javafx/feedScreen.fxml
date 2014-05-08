@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FeedScreenController">
+  <center>
+    <Accordion>
+      <expandedPane>
+        <TitledPane fx:id="x1" animated="false" text="untitled">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </TitledPane>
+      </expandedPane>
+      <panes>
+        <TitledPane animated="false" text="untitled">
+          <content>
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          </content>
+        </TitledPane>
+        <fx:reference source="x1" />
+      </panes>
+    </Accordion>
+  </center>
+  <top>
+    <HBox minHeight="36.0" prefHeight="36.0" prefWidth="600.0">
+      <children>
+        <Button fx:id="addFeed" onAction="#addNewFeed" text="">
+          <graphic>
+            <ImageView>
+              <Image url="@icons/addFeed.png" />
+            </ImageView>
+          </graphic>
+          <tooltip>
+            <Tooltip text="Add a new Feed" />
+          </tooltip>
+        </Button>
+        <Button fx:id="editProfil" onAction="#showProfil" text="">
+          <graphic>
+            <ImageView>
+              <Image url="@icons/profil.png" />
+            </ImageView>
+          </graphic>
+          <tooltip>
+            <Tooltip text="Edit Profil" />
+          </tooltip>
+        </Button>
+        <Button fx:id="addFriend" onAction="#addFriend" text="">
+          <graphic>
+            <ImageView>
+              <Image url="@icons/addFriend.png" />
+            </ImageView>
+          </graphic>
+          <tooltip>
+            <Tooltip text="Add Friend" />
+          </tooltip>
+        </Button>
+        <Pane maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="391.0" />
+        <Button fx:id="logout" onAction="#logout" text="">
+          <graphic>
+            <ImageView>
+              <Image url="@icons/logout.png" />
+            </ImageView>
+          </graphic>
+          <tooltip>
+            <Tooltip text="Log Out" />
+          </tooltip>
+        </Button>
+      </children>
+    </HBox>
+  </top>
+</BorderPane>
