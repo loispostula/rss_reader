@@ -14,4 +14,36 @@ public class Friendship {
 
     public Friendship() {
     }
+
+    public User getUserA() {
+        return userA;
+    }
+
+    public void setUserA(User userA) {
+        this.userA = userA;
+    }
+
+    public User getUserB() {
+        return userB;
+    }
+
+    public void setUserB(User userB) {
+        this.userB = userB;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    public Boolean getAccepted() {
+        return accepted;
+    }
+
+    public void setAccepted(Boolean accepted) {
+        this.accepted = accepted;
+    }
 }

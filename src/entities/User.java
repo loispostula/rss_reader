@@ -16,7 +16,6 @@ public class User {
     private String avatar; //todo check if this can't be a image
     private String biography;
     private Date joinedDate;
-    private Feed shared;
 
 
     public User() {
@@ -70,11 +69,11 @@ public class User {
         this.biography = biography;
     }
 
-    public Date getSubscribeDate() {
+    public Date getJoinedDate() {
         return joinedDate;
     }
 
-    public void setSubscribeDate(Date joinedDate) {
+    public void setJoinedDate(Date joinedDate) {
         this.joinedDate = joinedDate;
     }
 }
