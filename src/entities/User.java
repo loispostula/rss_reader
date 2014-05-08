@@ -12,7 +12,7 @@ public class User {
     private String email;
     private String password;
     private String nickname;
-    private String city;
+	private String city;
     private String avatar; //todo check if this can't be a image
     private String biography;
     private Date joinedDate;
@@ -20,6 +20,19 @@ public class User {
 
     public User() {
     }
+    
+
+    public User(String email, String password, String nickname, String city,
+			String avatar, String biography, Date joinedDate) {
+		super();
+		this.email = email;
+		this.password = password;
+		this.nickname = nickname;
+		this.city = city;
+		this.avatar = avatar;
+		this.biography = biography;
+		this.joinedDate = joinedDate;
+	}
 
     public String getEmail() {
         return email;

@@ -16,7 +16,8 @@ public class SharedPublication {
     public SharedPublication() {
     }
 
-    public SharedPublication(User user, Publication publication, Feed feed, Date sharedDate, String text) {
+    public SharedPublication(Feed feed, Publication publication, User user, Date sharedDate,
+			String text) {
         this.user = user;
         this.publication = publication;
         this.feed = feed;

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+<users>
+	<user>
+		<email>paul@eustache.fr</email>
+		<password>azerty</password>
+		<nickname>peustache953</nickname>
+		<city>Bruxelles</city>
+		<country>Belgique</country>
+		<avatar>avatar.jpg</avatar>
+		<biography>je m'appel paul eustache</biography>
+		<subscribeDate>21/06/2010</subscribeDate>
+	</user>
+	<user>
+		<email>jean@marsouin.be</email>
+		<password>azerty</password>
+		<nickname>jmarsouin114</nickname>
+		<city>Paris</city>
+		<country>France</country>
+		<avatar>avatar1.jpg</avatar>
+		<biography>slt cv</biography>
+		<subscribeDate>30/01/2011</subscribeDate>
+	</user>
+	<user>
+		<email>arnaud@rosette.be</email>
+		<password>azerty</password>
+		<nickname>rkinkindu91</nickname>
+		<city>Theux</city>
+		<country>Belgique</country>
+		<avatar>avatar2.jpg</avatar>
+		<biography>fat rotier</biography>
+		<subscribeDate>30/01/2013</subscribeDate>
+	</user>
+</users>
+<friends>
+	<friend>
+		<email>paul@eustache.fr</email>
+		<email>jean@marsouin.be</email>
+		<date>01/05/2012</date>
+		<accepted>True</accepted>
+	</friend>
+	<friend>
+		<email>arnaud@rosette.be</email>
+		<email>jean@marsouin.be</email>
+		<date>01/02/2014</date>
+		<accepted>True</accepted>
+	</friend>
+	<friend>
+		<email>arnaud@rosette.be</email>
+		<email>paul@eustache.fr</email>
+		<date>04/03/2014</date>
+		<accepted>False</accepted>
+	</friend>
+</friends>
+
+<feeds>
+	<feed>
+		<URL>http://lolilol.com</URL>
+		<title>le fux du rire</title>
+		<description>ici on s'amuse bien</description>
+		<link>http://lolilol.com/home</link>
+	</feed>
+</feeds>
+
+<items>
+	<item>
+		<URL>http://lolilol.com/item1</URL>
+		<title>Bonne blague</title>
+	</item>
+</items>
+
+<reads>
+	<read>
+		<email>paul@eustache.fr</email>
+		<date>01/05/2012</date>
+		<feed>http://lolilol.com</feed>
+		<item>http://lolilol.com/item1</item>
+	</read>
+</reads>
+
+<comments>
+	<comment>
+		<email>arnaud@rosette.be</email>
+		<text>ptdr mdr</text>
+		<feed>http://lolilol.com</feed>
+		<item>http://lolilol.com/item1</item>
+		<date>08/05/2014</date>
+	</comment>
+</comments>
+
+<shares>
+	<share>
+		<feed>http://lolilol.com</feed>
+		<item>http://lolilol.com/item1</item>
+		<date>06/05/2014</date>
+		<email>paul@eustache.be</email>
+		<text></text>
+	</share>
+</shares>
+
+<subscriptions>
+	<subscription>
+		<email>arnaud@rosette.be</email>
+		<feed>http://lolilol.com</feed>
+		<date>05/05/2014</date>
+	</subscription>
+</subscriptions>
+</root>

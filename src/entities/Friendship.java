@@ -14,8 +14,20 @@ public class Friendship {
 
     public Friendship() {
     }
+    
+    
 
-    public User getUserA() {
+    public Friendship(User userA, User userB, Date date, Boolean accepted) {
+		super();
+		this.userA = userA;
+		this.userB = userB;
+		this.date = date;
+		this.accepted = accepted;
+	}
+
+
+
+	public User getUserA() {
         return userA;
     }
 

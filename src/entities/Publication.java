@@ -14,8 +14,21 @@ public class Publication {
 
     public Publication() {
     }
+    
+    
 
-    public String getUrl() {
+    public Publication(String url, String title, Date releaseDate,
+			String description) {
+		super();
+		this.url = url;
+		this.title = title;
+		this.releaseDate = releaseDate;
+		this.description = description;
+	}
+
+
+
+	public String getUrl() {
         return url;
     }
 

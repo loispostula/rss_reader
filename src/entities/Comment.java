@@ -16,8 +16,22 @@ public class Comment {
 
     public Comment() {
     }
+    
+    
 
-    public Feed getFeed() {
+    public Comment(Feed feed, Publication publication, User user, Date date,
+			String text) {
+		super();
+		this.feed = feed;
+		this.publication = publication;
+		this.user = user;
+		this.date = date;
+		this.text = text;
+	}
+
+
+
+	public Feed getFeed() {
         return feed;
     }
 

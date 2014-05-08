@@ -15,8 +15,20 @@ public class Feed {
 
     public Feed() {
     }
+    
+    
 
-    public String getUrl() {
+    public Feed(String url, String title, String description, String link) {
+		super();
+		this.url = url;
+		this.title = title;
+		this.description = description;
+		this.link = link;
+	}
+
+
+
+	public String getUrl() {
         return url;
     }
 
