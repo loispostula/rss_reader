@@ -29,7 +29,7 @@ public class LoginController implements DialogController{
     public void login(){
         try{
             //test if the user can be logged
-            if(!true){
+            if(true){
 
             }
             else throw new BadLoginException();
@@ -40,7 +40,7 @@ public class LoginController implements DialogController{
             return;
         }
         dialog.close();
-        screens.showScreen(screens.feedScreen());
+        screens.feedScreen().show();
 
     }
 

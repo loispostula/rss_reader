@@ -29,11 +29,19 @@ public class ScreensConfiguration {
         return new LoginController(this);
     }
 
-    FeedScreen feedScreen() {
-        return new FeedScreen(feedScreenController());
+    FXMLDialog feedScreen() {
+        return new FXMLDialog(feedScreenController(), getClass().getResource("feedScreen.fxml"), primaryStage, StageStyle.DECORATED);
     }
 
     FeedScreenController feedScreenController(){
         return new FeedScreenController(this);
+    }
+
+    FXMLDialog profileDialog() {
+        return new FXMLDialog(profileController(), getClass().getResource("profileForm.fxml"), primaryStage, StageStyle.UNDECORATED);
+    }
+
+    ProfileController profileController(){
+        return new ProfileController(this);
     }
 }
