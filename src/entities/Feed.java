@@ -12,7 +12,6 @@ public class Feed {
     private String title;
     private String description;
     private String link;
-    private List<Publication> publicationsList;
     public Feed() {
     }
 }

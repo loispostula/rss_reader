@@ -7,7 +7,7 @@ import java.util.Date;
  * Documentation de la classe Comments
  */
 public class Comment {
-    
+
     private Feed feed;
     private Publication publication;
     private User user;

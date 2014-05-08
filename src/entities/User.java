@@ -16,8 +16,6 @@ public class User {
     private String avatar; //todo check if this can't be a image
     private String biography;
     private Date joinedDate;
-    private List<Feed> subscribedFeeds;
-    private List<User> friends;
     private Feed shared;
 
 
