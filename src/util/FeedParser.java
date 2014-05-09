@@ -44,6 +44,7 @@ public class FeedParser {
 	{
 		Element info = root.getChild("channel");
 		List<Element> items = info.getChildren("item");
+		
 		String title = escapeXml(info.getChild("title").getText());
 		String description = escapeXml(info.getChild("description").getText());
 		String link = escapeXml(info.getChild("link").getText());
@@ -61,7 +62,12 @@ public class FeedParser {
 			String titlePub = escapeXml(current.getChild("title").getText());
 			Date datePub = new Date(current.getChild("pubDate").getText());
 			String descriptionPub = escapeXml(current.getChild("description").getText());
-            String imagePub = "";
+			String imagePub;
+			try{
+				imagePub = escapeXml(current.getChild("enclosure").getAttribute("url").getValue());
+			}catch (Exception e){
+				imagePub = null;
+			}
 
 			Publication publication = new Publication(linkPub, titlePub, datePub, descriptionPub, imagePub);
 	        
