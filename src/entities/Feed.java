@@ -72,7 +72,6 @@ public class Feed {
                 "INNER JOIN feed f " +
                 "ON f.url = cnt.feed_url " +
                 "WHERE f.url = \""+ escapeXml(this.getUrl()) + "\"";
-        System.out.println(query);
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
@@ -96,7 +95,6 @@ public class Feed {
                 "ON f.url = cnt.feed_url " +
                 "WHERE f.url = \""+ escapeXml(this.getUrl()) + "\" " +
                 "AND NOT EXISTS (SELECT * FROM readstatus r WHERE r.publication_url = p.url AND r.feed_url = f.url AND r.user_email = \""+ user.getEmail() +"\")";
-        System.out.println(query);
         ResultSet res = db.querry(query);
         try {
             while(res.next()){

@@ -187,7 +187,6 @@ public class FeedScreenController implements DialogController {
         //TODO refactorer ceci
         feeds = screens.getConnectedUser().getAllFriendsSubscription();
         for (Feed feed : feeds) {
-        	System.out.println(feed.getTitle());
             TitledPane pane = new TitledPane();
             pane.setText(feed.getTitle());
             pane.setTooltip(new Tooltip(feed.getDescription()));
