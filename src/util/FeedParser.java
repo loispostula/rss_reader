@@ -38,9 +38,13 @@ public class FeedParser {
 	{
 		Element info = root.getChild("channel");
 		List<Element> items = info.getChildren("item");
+		String title = info.getChild("title").getText();
+		String description = info.getChild("description").getText();
+		String link = info.getChild("link").getText();
+		String image = info.getChild("image").getChild("url").getText();
 		
-		Feed feed = new Feed(path, info.getChild("title").getText(), info.getChild("desciption").getText(),
-				info.getChild("link").getText(), info.getChild("image").getChild("url").getText());
+		Feed feed = new Feed(path, title, description, link, image);
+		feed.save();
 
 
 		Iterator i = items.iterator();
@@ -50,8 +54,10 @@ public class FeedParser {
 
 			Publication publication = new Publication(current.getChild("link").getText(), current.getChild("title").getText(), new Date(current.getChild("pubDate").getText()), current.getChild("description").getText());
 	        
+			publication.save();
+			
 			Database db = new Database();
-	        db.update("INSERT INTO `contain` (`feed_url`, `publication_url`"
+	        db.update("INSERT INTO `contain` (`feed_url`, `publication_url`) VALUES"
 	        	+ "('"+ feed.getUrl() +"', '"+publication.getUrl() +"')");
 	        db.close();
 		}

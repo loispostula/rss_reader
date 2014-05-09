@@ -85,7 +85,7 @@ public class XMLParser {
 		{	
 			Element current = (Element)i.next();
 
-			Feed feed = new Feed(current.getChild("URL").getText(), current.getChild("title").getText(), current.getChild("description").getText(), current.getChild("link").getText());
+			//Feed feed = new Feed(current.getChild("URL").getText(), current.getChild("title").getText(), current.getChild("description").getText(), current.getChild("link").getText());
 		}
 		
 		items = racine.getChild("items").getChildren("item");

@@ -8,8 +8,8 @@ import java.sql.Statement;
 
 public class Database {
 	String url = "jdbc:mysql://localhost:3306/rssreader";
-	String utilisateur = "rssreader";
-	String motDePasse = "rssreader";
+	String utilisateur = "root";
+	String motDePasse = "";
 	Connection connexion = null;
 	ResultSet res = null;
 	Statement statement = null;
