@@ -1,6 +1,10 @@
 package entities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
+
+import util.Database;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -27,6 +31,25 @@ public class Comment {
 		this.date = date;
 		this.text = text;
 	}
+
+    public static Comment getCommentFromDb(String feed_url, String user_email, String publication_url){
+    	Database db = new Database();
+    	Comment comment = null;
+    	ResultSet res = db.querry("SELECT * FROM `comment` WHERE `feed_url` LIKE \"" + feed_url +"\" "
+    			+ "AND publication_url LIKE\""+ publication_url +"\" AND user_email LIKE \"" + user_email +"\"" );
+    	try {
+			if (res.next()){
+				comment = new Comment(getFeedFromDb(feed_url))
+				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
+						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	db.close();
+    	return comment;
+    }
 
 
 

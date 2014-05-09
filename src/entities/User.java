@@ -1,5 +1,8 @@
 package entities;
 
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
@@ -26,10 +29,32 @@ public class User {
     public User() {
     }
 
+
+
     public static User getUserFromDb(String email){
+        Database db = new Database();
+        User user = null;
+        ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` == \"" + email +"\"");
+        try {
+            if (res.next()){
+                user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
+                        , res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        db.close();
+        return user;
+    }
+
+    public static User getUserFromDb(String email, String password){
+
     	Database db = new Database();
     	User user = null;
-    	ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` LIKE \"" + email +"\"");
+        String query = "SELECT * FROM `user` WHERE `email` = \"" + email +"\" AND `password` = PASSWORD(\"" + password + "\")";
+        System.out.println(query);
+    	ResultSet res = db.querry(query);
     	try {
 			if (res.next()){
 				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
@@ -39,7 +64,7 @@ public class User {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-    	db.close();
+        db.close();
     	return user;
     }
 

@@ -36,7 +36,7 @@ public class LoginController implements DialogController{
             labelHeader.setTextFill(Color.DARKRED);
             return;
         }
-        User usr = User.getUserFromDb(textEmail.getText(), textPassword.getText());
+        User usr = User.getUserFromDb(textEmail.getText());
         if(usr == null){
             labelHeader.setText("Login failure, please try again: ");
             labelHeader.setTextFill(Color.DARKRED);
