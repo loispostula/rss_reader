@@ -64,7 +64,7 @@ public class FeedScreenController implements DialogController{
             pane.setText(feed.getTitle());
             pane.setTooltip(new Tooltip(feed.getDescription()));
             pane.setGraphic(new ImageView(new Image(feed.getImage())));
-            TableView<Publication> table = new TableView<>();
+            TableView<Publication> table = new TableView<Publication>();
 
             TableColumn pubEnclosure = new TableColumn();
             pubEnclosure.setCellValueFactory(new PropertyValueFactory("enclosureP"));
