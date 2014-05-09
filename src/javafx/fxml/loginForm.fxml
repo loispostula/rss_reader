@@ -11,6 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.text.*?>
 
+<?import com.sun.javafx.scene.control.skin.PasswordFieldSkin?>
 <GridPane alignment="CENTER" gridLinesVisible="false" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.LoginController">
   <children>
     <Label fx:id="labelTitle" prefWidth="547.0" text="Welcome to RSS Reader" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0">
@@ -25,7 +26,7 @@
     </Label>
     <Label fx:id="labelPassword" text="Password" GridPane.columnIndex="0" GridPane.rowIndex="3">
       <labelFor>
-        <TextField fx:id="textPassword" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <PasswordField fx:id="textPassword" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       </labelFor>
     </Label>
     <Label fx:id="labelHeader" prefWidth="318.0" text="Please enter with your credentials:" textFill="GREY" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
