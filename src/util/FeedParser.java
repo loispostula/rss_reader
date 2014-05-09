@@ -52,13 +52,13 @@ public class FeedParser {
 		{	
 			Element current = (Element)i.next();
 
-			Publication publication = new Publication(current.getChild("link").getText(), current.getChild("title").getText(), new Date(current.getChild("pubDate").getText()), current.getChild("description").getText());
+			//Publication publication = new Publication(current.getChild("link").getText(), current.getChild("title").getText(), new Date(current.getChild("pubDate").getText()), current.getChild("description").getText());
 	        
-			publication.save();
+			//publication.save();
 			
 			Database db = new Database();
-	        db.update("INSERT INTO `contain` (`feed_url`, `publication_url`) VALUES"
-	        	+ "('"+ feed.getUrl() +"', '"+publication.getUrl() +"')");
+	        //db.update("INSERT INTO `contain` (`feed_url`, `publication_url`) VALUES"
+	       // 	+ "('"+ feed.getUrl() +"', '"+publication.getUrl() +"')");
 	        db.close();
 		}
 		

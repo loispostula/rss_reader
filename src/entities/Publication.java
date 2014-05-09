@@ -13,24 +13,24 @@ import java.util.Date;
  * Documentation de la classe Publications
  */
 public class Publication {
-    private String url;
-    private String title;
-    private Date releaseDate;
-    private String description;
-
-    private String image;
+    private SimpleStringProperty url;
+    private SimpleStringProperty title;
+    private SimpleStringProperty releaseDate;
+    private SimpleStringProperty description;
+    private SimpleStringProperty image;
     public Publication() {
     }
     
     
 
     public Publication(String url, String title, Date releaseDate,
-			String description) {
+			String description, String image) {
 		super();
-		this.url = url;
-		this.title = title;
-		this.releaseDate = releaseDate;
-		this.description = description;
+		this.url = new SimpleStringProperty(url);
+		this.title = new SimpleStringProperty(title);
+		this.releaseDate = new SimpleStringProperty(releaseDate.toString());
+		this.description = new SimpleStringProperty(description);
+        this.image = new SimpleStringProperty(image);
 	}
 
 
@@ -41,7 +41,7 @@ public class Publication {
         ResultSet res = db.querry("SELECT * FROM `publication` WHERE `url` == \"" + url +"\"");
         try {
             if (res.next()){
-                publication = new Publication(url, res.getString("title"), res.getDate("releaseDate"), res.getString("description"));
+                publication = new Publication(url, res.getString("title"), res.getDate("releaseDate"), res.getString("description"), res.getString("image"));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -53,7 +53,7 @@ public class Publication {
 
     public void save(){
         Database db = new Database();
-        if (getPublicationFromDb(url) == null){
+        if (getPublicationFromDb(url.get()) == null){
         	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`"
         		+ "('"+ url +"', '"+title +"', '"+ releaseDate +"', '"+ description +"')");
         	db.close();
@@ -63,43 +63,43 @@ public class Publication {
 
 
 	public String getUrl() {
-        return url;
+        return url.get();
     }
 
     public void setUrl(String url) {
-        this.url = url;
+        this.url.set( url);
     }
 
     public String getTitle() {
-        return title;
+        return title.get();
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title.set(title);
     }
 
-    public Date getReleaseDate() {
-        return releaseDate;
+    public String getReleaseDate() {
+        return releaseDate.get();
     }
 
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setReleaseDate(String releaseDate) {
+        this.releaseDate.set(releaseDate);
     }
 
     public String getDescription() {
-        return description;
+        return description.get();
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.description.set(description);
     }
 
 
     public String getImage() {
-        return image;
+        return image.get();
     }
 
     public void setImage(String image) {
-        this.image = image;
+        this.image.set(image);
     }
 }

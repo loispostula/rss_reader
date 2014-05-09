@@ -3,6 +3,7 @@ package entities;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import util.Database;
@@ -65,6 +66,20 @@ public class Feed {
         }
         db.close();
         return feeds;
+    }
+
+    public List<Publication> getAllPublications(){
+        ArrayList<Publication> publications = new ArrayList<Publication>();
+        Publication pub = new Publication(
+                "http://www.lalibre.be/culture/cinema/dix-raisons-de-se-souvenir-de-mickey-rooney-534280003570aae038afda0a",
+                "Dix raisons de se souvenir de Mickey Rooney",
+                new Date("Mon, 07 Apr 2014 10:47:07 +0100"),
+                "&lt;img src=&quot;http://r.llb.be/image/62/53427fb23570d35ee3e8e862.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Quelque deux mois après Shirley Temple, Hollywood dit adieu à l'autre enfant-star de son âge d'or. \n" +
+                        "Retour en dix points sur une carrière exceptionnelle avec Alain Lorfèvre.",
+                "http://r.llb.be/image/62/53427fb23570d35ee3e8e862.jpg"
+        );
+        publications.add(pub);
+        return publications;
     }
 
     public void save(){

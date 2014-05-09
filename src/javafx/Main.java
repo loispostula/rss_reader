@@ -18,7 +18,7 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        //launch(args);
-    	FeedParser t = new FeedParser("rss/rss_lesoirmonde.xml");
+        launch(args);
+    	//FeedParser t = new FeedParser("rss/rss_lesoirmonde.xml");
     }
 }
