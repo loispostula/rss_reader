@@ -2,6 +2,7 @@ package entities;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import util.Database;
@@ -16,6 +17,7 @@ public class Feed {
     private String title;
     private String description;
     private String link;
+
     private String image;
 
     public Feed() {
@@ -50,12 +52,28 @@ public class Feed {
         return feed;
     }
 
+    public static List<Feed> getAllFeeds(){
+        ArrayList<Feed> feeds = new ArrayList<>();
+        Database db = new Database();
+        ResultSet res = db.querry("Select * FROM `feed`");
+        try {
+            while (res.next()){
+                feeds.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        db.close();
+        return feeds;
+    }
+
     public void save(){
         Database db = new Database();
         if (getFeedFromDb(url) == null){
         	db.update("INSERT INTO `feed` (`url`, `title`, `link`, `description`"
         		+ "('"+ url +"', '"+title +"', '"+ link +"', '"+ description +"')");
         }
+        db.close();
     }
 
 
@@ -90,5 +108,15 @@ public class Feed {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
