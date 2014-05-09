@@ -34,7 +34,7 @@ public class XMLParser {
 		//On initialise un nouvel ï¿½lï¿½ment racine avec l'ï¿½lï¿½ment racine du document.
 		racine = document.getRootElement();
 
-		//Méthode définie dans la partie 3.2. de cet article
+		//Mï¿½thode dï¿½finie dans la partie 3.2. de cet article
 		parseAll();
 
 	   }
@@ -85,7 +85,7 @@ public class XMLParser {
 		{	
 			Element current = (Element)i.next();
 
-			Feed feed = new Feed(current.getChild("URL").getText(), current.getChild("title").getText(), current.getChild("description").getText(), current.getChild("link").getText());
+            //Feed feed = new Feed(current.getChild("url").getText(), current.getChild("title").getText(), current.getChild("description").getText(), current.getChild("link").getText());
 		}
 		
 		items = racine.getChild("items").getChildren("item");

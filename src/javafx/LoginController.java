@@ -44,7 +44,9 @@ public class LoginController implements DialogController{
         }
         screens.connectUser(usr);
         dialog.close();
-        screens.feedScreen().show();
+        FXMLDialog feedScreen = screens.feedScreen();
+        feedScreen.show();
+        ((FeedScreenController)feedScreen.getController()).loadFeeds();
 
     }
 

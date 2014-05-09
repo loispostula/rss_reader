@@ -1,10 +1,12 @@
 package entities;
 
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import util.Database;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
-
-import util.Database;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -16,6 +18,7 @@ public class Publication {
     private Date releaseDate;
     private String description;
 
+    private String image;
     public Publication() {
     }
     
@@ -88,5 +91,14 @@ public class Publication {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
