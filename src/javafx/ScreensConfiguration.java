@@ -24,7 +24,7 @@ public class ScreensConfiguration {
     }
 
     FXMLDialog loginDialog() {
-        return new FXMLDialog(loginController(), getClass().getResource("fxml/loginForm.fxml"), primaryStage, StageStyle.UNDECORATED);
+        return new FXMLDialog(loginController(), getClass().getResource("fxml/loginForm.fxml"), primaryStage, StageStyle.DECORATED);
     }
 
     LoginController loginController() {

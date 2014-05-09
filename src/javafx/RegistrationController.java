@@ -91,9 +91,9 @@ public class RegistrationController implements DialogController {
     }
 
     public void registerUser() {
-        if(emailField.getText().isEmpty() &&
-                cityField.getText().isEmpty() &&
-                nicknameField.getText().isEmpty() &&
+        if(emailField.getText().isEmpty() ||
+                cityField.getText().isEmpty() ||
+                nicknameField.getText().isEmpty() ||
                 countryField.getText().isEmpty()){
             mainError.setText("All field with a (*) must be filled");
             mainError.setTextFill(Color.DARKRED);
