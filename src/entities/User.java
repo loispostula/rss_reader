@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -167,5 +168,27 @@ public class User {
                 "VALUES (\""+this.email+"\", \""+feed.getUrl()+"\" , NOW())";
         db.update(query);
         db.close();
+    }
+
+    public List<Feed> getAllSubscription(){
+        ArrayList<Feed> feeds = new ArrayList<Feed>();
+        Database db = new Database();
+        //todo jointur subscribe
+        String query = "SELECT * FROM `feed` f " +
+                "INNER JOIN feedsubscription fs " +
+                "ON fs.feed_url = f.url " +
+                "INNER JOIN user u " +
+                "ON u.email = fs.user_email " +
+                "WHERE u.email = \""+this.email+"\"";
+        ResultSet res = db.querry(query);
+        try {
+            while (res.next()){
+                feeds.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        db.close();
+        return feeds;
     }
 }

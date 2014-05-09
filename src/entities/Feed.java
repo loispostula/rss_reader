@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 import util.Database;
+import util.FeedParser;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -35,6 +36,14 @@ public class Feed {
 		this.image = image;
 	}
 
+    public static Feed getFeedFromFile(String url){
+        Feed feed = getFeedFromDb(url);
+        if(feed == null){
+            FeedParser pars = new FeedParser(url);
+            feed = pars.getFeed();
+        }
+        return feed;
+    }
 
 
     public static Feed getFeedFromDb(String url){
@@ -53,33 +62,23 @@ public class Feed {
         return feed;
     }
 
-    public static List<Feed> getAllFeeds(){
-        ArrayList<Feed> feeds = new ArrayList<Feed>();
+    public List<Publication> getAllPublications(){
         Database db = new Database();
-        //todo jointur subscribe
-        ResultSet res = db.querry("Select * FROM `feed`");
+        ArrayList<Publication> publications = new ArrayList<Publication>();
+        String query ="SELECT * FROM publication p " +
+                "INNER JOIN contain cnt " +
+                "ON cnt.publication_url = p.url " +
+                "INNER JOIN feed f " +
+                "ON f.url = cnt.feed_url " +
+                "WHERE f.url = \""+ this.getUrl() + "\"";
+        ResultSet res = db.querry(query);
         try {
-            while (res.next()){
-                feeds.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
+            while(res.next()){
+                publications.add(new Publication(res.getString("url"), res.getString("title"), res.getDate("releaseDate"), res.getString("description"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        db.close();
-        return feeds;
-    }
-
-    public List<Publication> getAllPublications(){
-        ArrayList<Publication> publications = new ArrayList<Publication>();
-        Publication pub = new Publication(
-                "http://www.lalibre.be/culture/cinema/dix-raisons-de-se-souvenir-de-mickey-rooney-534280003570aae038afda0a",
-                "Dix raisons de se souvenir de Mickey Rooney",
-                new Date("Mon, 07 Apr 2014 10:47:07 +0100"),
-                "&lt;img src=&quot;http://r.llb.be/image/62/53427fb23570d35ee3e8e862.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Quelque deux mois après Shirley Temple, Hollywood dit adieu à l'autre enfant-star de son âge d'or. \n" +
-                        "Retour en dix points sur une carrière exceptionnelle avec Alain Lorfèvre.",
-                "http://r.llb.be/image/62/53427fb23570d35ee3e8e862.jpg"
-        );
-        publications.add(pub);
         return publications;
     }
 

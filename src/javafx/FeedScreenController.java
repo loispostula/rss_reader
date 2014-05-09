@@ -3,17 +3,13 @@ package javafx;
 import entities.Feed;
 import entities.Publication;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseButton;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.util.Callback;
 import util.FeedParser;
@@ -65,8 +61,8 @@ public class FeedScreenController implements DialogController {
         configureFileChooser(fileChooser);
         File file = fileChooser.showOpenDialog(this.dialog);
         if (file != null) {
-            FeedParser pars = new FeedParser(file.getAbsolutePath());
-            screens.getConnectedUser().subscribe(pars.getFeed());
+            Feed feed = Feed.getFeedFromFile(file.getAbsolutePath());
+            screens.getConnectedUser().subscribe(feed);
         }
     }
 
@@ -79,7 +75,7 @@ public class FeedScreenController implements DialogController {
     }
 
     public void loadFeeds() {
-        List<Feed> feeds = Feed.getAllFeeds();
+        List<Feed> feeds = screens.getConnectedUser().getAllSubscription();
         for (Feed feed : feeds) {
             TitledPane pane = new TitledPane();
             pane.setText(feed.getTitle());
