@@ -10,7 +10,6 @@ import org.jdom2.input.SAXBuilder;
 
 import entities.Feed;
 import entities.Publication;
-
 import static org.apache.commons.lang3.StringEscapeUtils.*;
 
 public class FeedParser {
@@ -70,7 +69,6 @@ public class FeedParser {
 			}
 
 			Publication publication = new Publication(linkPub, titlePub, datePub, descriptionPub, imagePub);
-	        
 			publication.save();
 			
 			Database db = new Database();

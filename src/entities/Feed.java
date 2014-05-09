@@ -8,6 +8,7 @@ import java.util.List;
 
 import util.Database;
 import util.FeedParser;
+import static org.apache.commons.lang3.StringEscapeUtils.*;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -74,7 +75,23 @@ public class Feed {
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
-                publications.add(new Publication(res.getString("url"), res.getString("title"), res.getDate("releaseDate"), res.getString("description"), res.getString("image")));
+                publications.add(new Publication(unescapeXml(res.getString("url")), unescapeXml(res.getString("title")), res.getDate("releaseDate"), unescapeXml(res.getString("description")), unescapeXml(res.getString("image"))));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return publications;
+    }
+
+    public List<Publication> getAllShares(){
+        Database db = new Database();
+        ArrayList<Publication> publications = new ArrayList<Publication>();
+        String query ="SELECT * FROM sharedpublication s " +
+                "WHERE s.user_email = \""+ this.getUrl() + "\"";
+        ResultSet res = db.querry(query);
+        try {
+            while(res.next()){
+                publications.add(Publication.getPublicationFromDb(res.getString("publication_url")));
             }
         } catch (SQLException e) {
             e.printStackTrace();

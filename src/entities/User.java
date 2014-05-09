@@ -191,4 +191,30 @@ public class User {
         db.close();
         return feeds;
     }
+
+    public List<Feed> getAllFriendsSubscription(){
+        ArrayList<Feed> feeds = new ArrayList<Feed>();
+        Database db = new Database();
+        //todo jointur subscribe
+        String query = "SELECT * FROM `friendship` WHERE `user1_email` = \"" + this.email +"\" AND accepted = 1";
+        ResultSet res = db.querry(query);
+        try {
+            while (res.next()){
+                feeds.add(Feed.getFeedFromDb(res.getString("user2_email")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        query = "SELECT * FROM `friendship` WHERE `user2_email` = \"" + this.email +"\" AND accepted = 1";
+        res = db.querry(query);
+        try {
+            while (res.next()){
+                feeds.add(Feed.getFeedFromDb(res.getString("user1_email")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        db.close();
+        return feeds;
+    }
 }

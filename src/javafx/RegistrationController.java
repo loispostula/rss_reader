@@ -1,5 +1,6 @@
 package javafx;
 
+import entities.Feed;
 import entities.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -12,7 +13,9 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
+
 import org.apache.commons.validator.EmailValidator;
+
 import java.io.File;
 import java.util.Date;
 
@@ -125,6 +128,9 @@ public class RegistrationController implements DialogController {
                 biographyArea.getText(),
                 new Date());
         usr.save();
+        
+        Feed usrFeed = new Feed(emailField.getText(), nicknameField.getText()+" personnal feed", "", "", img_path);
+        usrFeed.save();
         this.dialog.close();
 
     }

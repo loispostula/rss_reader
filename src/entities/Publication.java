@@ -59,8 +59,8 @@ public class Publication {
 		java.text.SimpleDateFormat sdf = 
 			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (getPublicationFromDb(url.get()) == null){
-        	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`) VALUES "
-        		+ "('"+ url.get() +"', '"+title.get() +"', '"+ sdf.format(releaseDateF) +"', '"+ description.get() +"')");
+        	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`, `image`) VALUES "
+        		+ "('"+ url.get() +"', '"+title.get() +"', '"+ sdf.format(releaseDateF) +"', '"+ description.get() +"', '"+ image.get() +"')");
         	db.close();
         }
     }

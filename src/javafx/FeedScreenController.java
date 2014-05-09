@@ -2,6 +2,7 @@ package javafx;
 
 import entities.Feed;
 import entities.Publication;
+import entities.User;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +13,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.util.Callback;
+import util.Database;
 import util.FeedParser;
+
+import static org.apache.commons.lang3.StringEscapeUtils.*;
 
 import java.io.File;
 import java.util.List;
@@ -46,6 +50,23 @@ public class FeedScreenController implements DialogController {
     }
 
     public void addFriend() {
+    	String email;
+    	//TODO get email via inputbox
+    	email = "lois@postula.be";
+    	if (User.getUserFromDb(email) != null)
+    	{
+			Database db = new Database();
+	        db.update("INSERT INTO `friendship` (`user1_email`, `user2_email`, `requestDate`, `accepted`) VALUES"
+	        	+ "('"+ screens.getConnectedUser().getEmail() +"', '"+email +"', NOW(), 0)");
+	        db.close();
+    	}
+    }
+
+    public void share(Publication publication, String text) {
+    	Database db = new Database();
+    	db.update("INSERT INTO `rssreader`.`sharedpublication` (`user_email`, `publication_url`, `sharedDate`, `text`) VALUES"
+    			+ "('"+ screens.getConnectedUser().getEmail() +"', '"+publication.getUrl() +"', NOW(), '"+ escapeXml(text) +"')");
+    	db.close();
     }
 
     public void showProfil() {
@@ -125,6 +146,62 @@ public class FeedScreenController implements DialogController {
 //            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
 
             table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
+            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle);
+            pane.setContent(table);
+            accordion.getPanes().add(pane);
+        }
+        //TODO refactorer ceci
+        feeds = screens.getConnectedUser().getAllFriendsSubscription();
+        for (Feed feed : feeds) {
+        	System.out.println(feed.getTitle());
+            TitledPane pane = new TitledPane();
+            pane.setText(feed.getTitle());
+            pane.setTooltip(new Tooltip(feed.getDescription()));
+            if(!feed.getImage().isEmpty()){
+                pane.setGraphic(new ImageView(new Image(feed.getImage())));
+
+            }
+            TableView<Publication> table = new TableView<Publication>();
+            table.setTableMenuButtonVisible(true);
+
+            TableColumn pubEnclosure = new TableColumn("Image");
+            pubEnclosure.setCellValueFactory(new PropertyValueFactory("image"));
+
+            pubEnclosure.setCellFactory(new Callback<TableColumn, TableCell>() {
+                @Override
+                public TableCell call(TableColumn tableColumn) {
+                    TableCell cell = new TableCell() {
+                        ImageView imageView = new ImageView();
+
+                        @Override
+                        protected void updateItem(Object o, boolean b) {
+                            if (o != null) {
+                                HBox box = new HBox();
+                                box.setSpacing(10);
+                                imageView.setFitHeight(60);
+                                imageView.setFitWidth(80);
+                                imageView.setImage(new Image((String) o));
+                                box.getChildren().addAll(imageView);
+                                setGraphic(box);
+                            }
+                        }
+                    };
+                    return cell;
+                }
+            });
+
+            TableColumn pubDate = new TableColumn("Date");
+            pubDate.setMinWidth(50);
+            pubDate.setCellValueFactory(new PropertyValueFactory<Publication, String>("releaseDate"));
+
+            TableColumn pubTitle = new TableColumn("title");
+            pubTitle.setMinWidth(200);
+            pubTitle.setCellValueFactory(new PropertyValueFactory<Publication, String>("title"));
+
+//            TableColumn pubOpen = new TableColumn();
+//            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
+
+            table.setItems(FXCollections.observableArrayList(feed.getAllShares()));
             table.getColumns().addAll(pubEnclosure, pubDate, pubTitle);
             pane.setContent(table);
             accordion.getPanes().add(pane);
