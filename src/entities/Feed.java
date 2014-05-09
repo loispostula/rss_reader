@@ -56,6 +56,7 @@ public class Feed {
     public static List<Feed> getAllFeeds(){
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
+        //todo jointur subscribe
         ResultSet res = db.querry("Select * FROM `feed`");
         try {
             while (res.next()){
@@ -85,8 +86,8 @@ public class Feed {
     public void save(){
         Database db = new Database();
         if (getFeedFromDb(url) == null){
-        	db.update("INSERT INTO `feed` (`url`, `title`, `link`, `description`) VALUES "
-        		+ "('"+ url +"', '"+title +"', '"+ link +"', '"+ description +"')");
+        	db.update("INSERT INTO `feed` (`url`, `title`, `link`, `description`, `image`) VALUES "
+        		+ "('"+ url +"', '"+title +"', '"+ link +"', '"+ description +"', '"+image+"')");
         }
         db.close();
     }

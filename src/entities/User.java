@@ -160,4 +160,12 @@ public class User {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    public void subscribe(Feed feed){
+        Database db = new Database();
+        String query = "INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate)" +
+                "VALUES (\""+this.email+"\", \""+feed.getUrl()+"\" , NOW())";
+        db.update(query);
+        db.close();
+    }
 }

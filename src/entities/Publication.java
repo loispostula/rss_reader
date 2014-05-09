@@ -16,6 +16,7 @@ public class Publication {
     private SimpleStringProperty url;
     private SimpleStringProperty title;
     private SimpleStringProperty releaseDate;
+    private Date releaseDateF;
     private SimpleStringProperty description;
     private SimpleStringProperty image;
     public Publication() {
@@ -29,6 +30,7 @@ public class Publication {
 		this.url = new SimpleStringProperty(url);
 		this.title = new SimpleStringProperty(title);
 		this.releaseDate = new SimpleStringProperty(releaseDate.toString());
+        this.releaseDateF = releaseDate;
 		this.description = new SimpleStringProperty(description);
         this.image = new SimpleStringProperty(image);
 	}
@@ -58,7 +60,7 @@ public class Publication {
 			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (getPublicationFromDb(url.get()) == null){
         	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`) VALUES "
-        		+ "('"+ url +"', '"+title +"', '"+ sdf.format(releaseDate) +"', '"+ description +"')");
+        		+ "('"+ url.get() +"', '"+title.get() +"', '"+ sdf.format(releaseDateF) +"', '"+ description.get() +"')");
         	db.close();
         }
     }

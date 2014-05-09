@@ -18,6 +18,7 @@ public class FeedParser {
 	static org.jdom2.Document document;
 	static Element root;
 	static String path;
+    Feed feed;
 
 	public FeedParser(String path) {
 		this.path = path;
@@ -35,8 +36,11 @@ public class FeedParser {
 
 	   }
 
-	   
-	static void parseAll()
+    public Feed getFeed(){
+        return feed;
+    }
+
+    void parseAll()
 	{
 		Element info = root.getChild("channel");
 		List<Element> items = info.getChildren("item");
@@ -45,8 +49,8 @@ public class FeedParser {
 		String link = escapeXml(info.getChild("link").getText());
 		String image = escapeXml(info.getChild("image").getChild("url").getText());
 		
-		Feed feed = new Feed(path, title, description, link, image);
-		feed.save();
+		this.feed = new Feed(path, title, description, link, image);
+		this.feed.save();
 		
 		Iterator i = items.iterator();
 		while(i.hasNext())
