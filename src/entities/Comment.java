@@ -19,8 +19,7 @@ public class Comment {
     
     
 
-    public Comment(Feed feed, Publication publication, User user, Date date,
-			String text) {
+    public Comment(Feed feed, Publication publication, User user, Date date, String text) {
 		super();
 		this.feed = feed;
 		this.publication = publication;
