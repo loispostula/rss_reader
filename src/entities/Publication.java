@@ -56,7 +56,7 @@ public class Publication {
 
 		java.text.SimpleDateFormat sdf = 
 			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        if (getPublicationFromDb(url) == null){
+        if (getPublicationFromDb(url.get()) == null){
         	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`) VALUES "
         		+ "('"+ url +"', '"+title +"', '"+ sdf.format(releaseDate) +"', '"+ description +"')");
         	db.close();

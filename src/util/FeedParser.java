@@ -57,8 +57,9 @@ public class FeedParser {
 			String titlePub = escapeXml(current.getChild("title").getText());
 			Date datePub = new Date(current.getChild("pubDate").getText());
 			String descriptionPub = escapeXml(current.getChild("description").getText());
+            String imagePub = "";
 
-			Publication publication = new Publication(linkPub, titlePub, datePub, descriptionPub);
+			Publication publication = new Publication(linkPub, titlePub, datePub, descriptionPub, imagePub);
 	        
 			publication.save();
 			
