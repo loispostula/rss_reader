@@ -18,7 +18,7 @@
     </Label>
     <Label prefWidth="100.0" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3">
       <labelFor>
-        <TextField fx:id="emailField" prefWidth="219.00009999999747" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+        <TextField fx:id="emailField" prefWidth="219.00009999999747" disable="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
       </labelFor>
     </Label>
     <Label prefWidth="100.0" text="Nickname:" GridPane.columnIndex="0" GridPane.rowIndex="4">

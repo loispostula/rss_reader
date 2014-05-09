@@ -55,8 +55,7 @@ public class RegistrationController implements DialogController {
     Image avatar_img;
     @FXML
     ImageView avatar;
-
-    private String img_path;
+    private String img_path = getClass().getResource("icons/default.png").getPath();
 
 
 

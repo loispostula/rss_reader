@@ -87,9 +87,6 @@ public class ProfileController implements DialogController {
     }
 
     public void saveProfil() {
-        if (!emailField.getText().isEmpty()){
-            user.setEmail(emailField.getText());
-        }
         if (!nicknameField.getText().isEmpty()){
             user.setNickname(nicknameField.getText());
         }
