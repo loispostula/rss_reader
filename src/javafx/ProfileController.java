@@ -7,6 +7,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -43,6 +44,8 @@ public class ProfileController implements DialogController {
     @FXML
     Image avatar_img;
     @FXML
+    ImageView avatar;
+    @FXML
     Label joinDate;
     @FXML
     Label passwordInfo;
@@ -61,7 +64,9 @@ public class ProfileController implements DialogController {
                 configureFileChooser(fileChooser);
                 File file = fileChooser.showOpenDialog(this.dialog);
                 if(file != null){
-                    System.out.println(file.getAbsolutePath());
+                    avatar_img = new Image("file://" + file.getAbsoluteFile());
+                    avatar.setImage(avatar_img);
+                    user.setAvatar(file.getAbsolutePath());
                 }
             }
         }
@@ -82,6 +87,22 @@ public class ProfileController implements DialogController {
     }
 
     public void saveProfil() {
+        if (!emailField.getText().isEmpty()){
+            user.setEmail(emailField.getText());
+        }
+        if (!nicknameField.getText().isEmpty()){
+            user.setNickname(nicknameField.getText());
+        }
+        if (!cityField.getText().isEmpty()){
+            user.setCity(cityField.getText());
+        }
+        if (!countryField.getText().isEmpty()){
+            user.setCountry(countryField.getText());
+        }
+        if (!biographyArea.getText().isEmpty()){
+            user.setBiography(biographyArea.getText());
+        }
+        user.save();
         //todo save the profil
         this.dialog.close();
     }
@@ -100,7 +121,6 @@ public class ProfileController implements DialogController {
         }
         user.setPassword(passwordField.getText());
         user.save();
-        this.dialog.close();
     }
 
     public void loadUser(User user){
@@ -111,5 +131,7 @@ public class ProfileController implements DialogController {
         this.countryField.setText(user.getCountry());
         this.biographyArea.setText(user.getBiography());
         this.joinDate.setText(user.getJoinedDate().toString());
+        avatar_img = new Image("file://" + user.getAvatar());
+        avatar.setImage(avatar_img);
     }
 }

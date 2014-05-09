@@ -31,20 +31,18 @@ public class LoginController implements DialogController{
 
     @FXML
     public void login(){
-        try{
-            //test if the user can be logged
-            if(true){
-                //test for the moment
-                User usr = new User("lois.postula@gmail.com", "test", "lpostula", "bxl", "belgique", "", "short bio", new Date());
-                screens.connectUser(usr);
-            }
-            else throw new BadLoginException();
+        if(textEmail.getText().isEmpty() && textPassword.getText().isEmpty()){
+            labelHeader.setText("Please enter the email and the password: ");
+            labelHeader.setTextFill(Color.DARKRED);
+            return;
         }
-        catch (BadLoginException e) {
+        User usr = User.getUserFromDb(textEmail.getText(), textPassword.getText());
+        if(usr == null){
             labelHeader.setText("Login failure, please try again: ");
             labelHeader.setTextFill(Color.DARKRED);
             return;
         }
+        screens.connectUser(usr);
         dialog.close();
         screens.feedScreen().show();
 
