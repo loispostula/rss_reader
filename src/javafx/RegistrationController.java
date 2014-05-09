@@ -129,7 +129,7 @@ public class RegistrationController implements DialogController {
                 new Date());
         usr.save();
         
-        Feed usrFeed = new Feed(emailField.getText(), nicknameField.getText()+" personnal feed", "", "", img_path);
+        Feed usrFeed = new Feed(emailField.getText(), nicknameField.getText()+" personnal feed", "Feed with all the publication which "+ nicknameField.getText()+" shares.", "None", img_path);
         usrFeed.save();
         this.dialog.close();
 

@@ -15,10 +15,12 @@ import javafx.stage.FileChooser;
 import javafx.util.Callback;
 import util.Database;
 import util.FeedParser;
-
 import static org.apache.commons.lang3.StringEscapeUtils.*;
 
 import java.io.File;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -62,10 +64,42 @@ public class FeedScreenController implements DialogController {
     	}
     }
 
+    public ArrayList<User> getFirendRequest() {
+        Database db = new Database();
+        String query = "SELECT * FROM `friendship` WHERE `user2_email` = \"" + screens.getConnectedUser().getEmail() +"\" AND accepted = 0";
+        ResultSet res = db.querry(query);
+        ArrayList<User> requests = new ArrayList<User>();
+        try {
+            while (res.next()){
+            	requests.add(User.getUserFromDb(res.getString("user1_email")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return requests;
+    }
+
+    public void acceptFriend(String email) {
+    	if (User.getUserFromDb(email) != null)
+    	{
+			Database db = new Database();
+	        db.update("UPDATE `rssreader`.`friendship` SET `accepted` = '0' "
+	        		+ "WHERE `friendship`.`user1_email` = '"+email +"' AND `friendship`.`user2_email` = '"+ screens.getConnectedUser().getEmail() +"'");
+	        db.close();
+    	}
+    }
+
     public void share(Publication publication, String text) {
     	Database db = new Database();
     	db.update("INSERT INTO `rssreader`.`sharedpublication` (`user_email`, `publication_url`, `sharedDate`, `text`) VALUES"
     			+ "('"+ screens.getConnectedUser().getEmail() +"', '"+publication.getUrl() +"', NOW(), '"+ escapeXml(text) +"')");
+    	db.close();
+    }
+
+    public void addComment(Publication publication, String text, Feed feed) {
+    	Database db = new Database();
+    	db.update("INSERT INTO `rssreader`.`comment` (`feed_url`, `publication_url`, `user_email`, `date`, `text`) VALUES"
+    			+ "('"+ feed.getUrl() +"', '"+publication.getUrl() +"', '"+screens.getConnectedUser().getEmail()+"', NOW(), '"+ escapeXml(text) +"')");
     	db.close();
     }
 

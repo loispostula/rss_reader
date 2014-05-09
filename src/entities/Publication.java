@@ -1,12 +1,15 @@
 package entities;
 
+import static org.apache.commons.lang3.StringEscapeUtils.unescapeXml;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import util.Database;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -61,6 +64,32 @@ public class Publication {
         if (getPublicationFromDb(url.get()) == null){
         	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`, `image`) VALUES "
         		+ "('"+ url.get() +"', '"+title.get() +"', '"+ sdf.format(releaseDateF) +"', '"+ description.get() +"', '"+ image.get() +"')");
+        	db.close();
+        }
+    }
+
+    public List<Comment> getComments(Feed feed){
+        Database db = new Database();
+        ArrayList<Comment> comments = new ArrayList<Comment>();
+        String query ="SELECT * FROM comment c " +
+                "WHERE c.publication_url = \""+ this.getUrl() + "\" AND c.feed_url = \""+ feed.getUrl() +"\"";
+        ResultSet res = db.querry(query);
+        try {
+            while(res.next()){
+                comments.add(Comment.getCommentFromDb(res.getString("feed_url"), res.getString("user_email"), res.getString("publication_url")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return comments;
+    }
+
+    public void markAsRead(User user, Feed feed){
+        Database db = new Database();
+        
+        if (getPublicationFromDb(url.get()) == null){
+        	db.update("INSERT INTO `rssreader`.`readstatus` (`user_email`, `publication_url`, `feed_url`, `date`) VALUES "
+        		+ "('"+ user.getEmail() +"', '"+this.getUrl() +"', '"+ feed.getUrl() +"', NOW() )");
         	db.close();
         }
     }
