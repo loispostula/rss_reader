@@ -179,7 +179,7 @@ public class FeedScreenController implements DialogController {
 //            TableColumn pubOpen = new TableColumn();
 //            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
 
-            table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
+            table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
             table.getColumns().addAll(pubEnclosure, pubDate, pubTitle);
             pane.setContent(table);
             accordion.getPanes().add(pane);

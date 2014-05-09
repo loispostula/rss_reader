@@ -66,16 +66,41 @@ public class Feed {
     public List<Publication> getAllPublications(){
         Database db = new Database();
         ArrayList<Publication> publications = new ArrayList<Publication>();
-        String query ="SELECT * FROM publication p " +
+        String query ="SELECT p.url FROM publication p " +
                 "INNER JOIN contain cnt " +
                 "ON cnt.publication_url = p.url " +
                 "INNER JOIN feed f " +
                 "ON f.url = cnt.feed_url " +
-                "WHERE f.url = \""+ this.getUrl() + "\"";
+                "WHERE f.url = \""+ escapeXml(this.getUrl()) + "\"";
+        System.out.println(query);
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
-                publications.add(new Publication(unescapeXml(res.getString("url")), unescapeXml(res.getString("title")), res.getDate("releaseDate"), unescapeXml(res.getString("description")), unescapeXml(res.getString("image"))));
+                publications.add(Publication.getPublicationFromDb(res.getString("url")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return publications;
+    }
+    
+
+
+    public List<Publication> getUnreadPublications(User user){
+        Database db = new Database();
+        ArrayList<Publication> publications = new ArrayList<Publication>();
+        String query ="SELECT p.url FROM publication p " +
+                "INNER JOIN contain cnt " +
+                "ON cnt.publication_url = p.url " +
+                "INNER JOIN feed f " +
+                "ON f.url = cnt.feed_url " +
+                "WHERE f.url = \""+ escapeXml(this.getUrl()) + "\" " +
+                "AND NOT EXISTS (SELECT * FROM readstatus r WHERE r.publication_url = p.url AND r.feed_url = f.url AND r.user_email = \""+ user.getEmail() +"\")";
+        System.out.println(query);
+        ResultSet res = db.querry(query);
+        try {
+            while(res.next()){
+            	publications.add(Publication.getPublicationFromDb(res.getString("url")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
