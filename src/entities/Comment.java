@@ -39,9 +39,8 @@ public class Comment {
     			+ "AND publication_url LIKE\""+ publication_url +"\" AND user_email LIKE \"" + user_email +"\"" );
     	try {
 			if (res.next()){
-				comment = new Comment(getFeedFromDb(feed_url))
-				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
-						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
+				comment = new Comment(Feed.getFeedFromDb(feed_url), Publication.getPublicationFromDb(publication_url), User.getUserFromDb(user_email), res.getDate("date")
+						, res.getString("test"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -49,6 +48,14 @@ public class Comment {
 		}
     	db.close();
     	return comment;
+    }
+
+    public void save(){
+        Database db = new Database();
+        if (getCommentFromDb(feed.getUrl(), user.getEmail(), publication.getUrl()) == null){
+        	db.update("INSERT INTO `comment` (`feed_url`, `publication_url`, `user_email`, `text`, `date`"
+        		+ "('"+ feed.getUrl() +"', '"+ publication.getUrl() +"', '"+ user.getEmail() +"', '"+ text +"', '"+ date +"')");
+        }
     }
 
 

@@ -1,6 +1,10 @@
 package entities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
+
+import util.Database;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -25,6 +29,32 @@ public class Publication {
 		this.releaseDate = releaseDate;
 		this.description = description;
 	}
+
+
+
+    public static Publication getPublicationFromDb(String url){
+        Database db = new Database();
+        Publication publication = null;
+        ResultSet res = db.querry("SELECT * FROM `publication` WHERE `url` == \"" + url +"\"");
+        try {
+            if (res.next()){
+                publication = new Publication(url, res.getString("title"), res.getDate("releaseDate"), res.getString("description"));
+            }
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        db.close();
+        return publication;
+    }
+
+    public void save(){
+        Database db = new Database();
+        if (getPublicationFromDb(url) == null){
+        	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`"
+        		+ "('"+ url +"', '"+title +"', '"+ releaseDate +"', '"+ description +"')");
+        }
+    }
 
 
 
