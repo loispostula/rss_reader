@@ -53,7 +53,7 @@ public class Feed {
     }
 
     public static List<Feed> getAllFeeds(){
-        ArrayList<Feed> feeds = new ArrayList<>();
+        ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
         ResultSet res = db.querry("Select * FROM `feed`");
         try {
