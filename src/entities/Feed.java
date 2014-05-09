@@ -16,18 +16,20 @@ public class Feed {
     private String title;
     private String description;
     private String link;
+    private String image;
 
     public Feed() {
     }
     
     
 
-    public Feed(String url, String title, String description, String link) {
+    public Feed(String url, String title, String description, String link, String image) {
 		super();
 		this.url = url;
 		this.title = title;
 		this.description = description;
 		this.link = link;
+		this.image = image;
 	}
 
 
@@ -38,7 +40,7 @@ public class Feed {
         ResultSet res = db.querry("SELECT * FROM `feed` WHERE `url` == \"" + url +"\"");
         try {
             if (res.next()){
-                feed = new Feed(url, res.getString("title"), res.getString("description"), res.getString("link"));
+                feed = new Feed(url, res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image"));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
