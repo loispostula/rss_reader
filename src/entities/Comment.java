@@ -55,6 +55,7 @@ public class Comment {
         if (getCommentFromDb(feed.getUrl(), user.getEmail(), publication.getUrl()) == null){
         	db.update("INSERT INTO `comment` (`feed_url`, `publication_url`, `user_email`, `text`, `date`"
         		+ "('"+ feed.getUrl() +"', '"+ publication.getUrl() +"', '"+ user.getEmail() +"', '"+ text +"', '"+ date +"')");
+        	db.close();
         }
     }
 
