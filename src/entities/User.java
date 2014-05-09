@@ -1,7 +1,11 @@
 package entities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
+
+import util.Database;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -23,8 +27,25 @@ public class User {
     }
 
     public static User getUserFromDb(String email, String password){
-
-        return null;
+    	Database db = new Database();
+    	User user = null;
+    	ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` LIKE \"" + email +"\"");
+    	try {
+			if (res.next() && res.getString( "password" ).equals(password)){
+				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
+						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
+			}
+			else{
+				System.out.println(res.getString( "password" ));
+				System.out.println(password);
+				System.out.println(res.getString( "nickname" ));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	db.close();
+    	return user;
     }
 
     public User(String email, String password, String nickname, String city,
@@ -41,7 +62,7 @@ public class User {
 	}
 
     public void save(){
-        //todo db access to save
+        Database db = new Database();
     }
 
     public String getEmail() {
