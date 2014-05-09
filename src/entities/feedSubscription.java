@@ -13,8 +13,19 @@ public class feedSubscription {
 
     public feedSubscription() {
     }
+    
+    
 
-    public User getUser() {
+    public feedSubscription(User user, Feed feed, Date subscribedDate) {
+		super();
+		this.user = user;
+		this.feed = feed;
+		this.subscribedDate = subscribedDate;
+	}
+
+
+
+	public User getUser() {
         return user;
     }
 

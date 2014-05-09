@@ -1,4 +1,4 @@
-package sample;
+package util;
 
 import java.io.*;
 
@@ -35,7 +35,7 @@ public class XMLParser {
 		racine = document.getRootElement();
 
 		//Méthode définie dans la partie 3.2. de cet article
-		afficheALL();
+		parseAll();
 	   }
 	
 	public static org.jdom2.Document getDocument() {
@@ -47,7 +47,7 @@ public class XMLParser {
 	}
 
 	   
-	static void afficheALL()
+	static void parseAll()
 	{
 		List items = racine.getChild("users").getChildren("user");
 
