@@ -37,7 +37,7 @@
     <fx:reference source="textPassword" />
     <Button fx:id="buttonLogin" contentDisplay="LEFT" mnemonicParsing="false" onAction="#login" prefWidth="246.0" text="Login" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
     <ImageView fitHeight="149.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.rowSpan="4">
-      <Image url="@../rss_icon.png" />
+      <Image url="@../icons/rss_icon.png" />
       <GridPane.margin>
         <Insets />
       </GridPane.margin>
