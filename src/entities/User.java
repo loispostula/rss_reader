@@ -34,9 +34,9 @@ public class User {
     public static User getUserFromDb(String email){
         Database db = new Database();
         User user = null;
-        ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` == \"" + email +"\"");
+        ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` = \"" + email +"\"");
         try {
-            if (res.next()){
+            if (res != null && res.next()){
                 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
                         , res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
             }
@@ -56,7 +56,7 @@ public class User {
         System.out.println(query);
     	ResultSet res = db.querry(query);
     	try {
-			if (res.next()){
+			if (res != null && res.next()){
 				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
 						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
 			}
@@ -85,13 +85,13 @@ public class User {
         Database db = new Database();
         if (getUserFromDb(email) == null){
         	db.update("INSERT INTO `user` (`email`, `nickname`, `password`, `country`, `city`, `avatar`, `biography`, `joinedDate`) VALUES "
-        		+ "('"+ email +"', '"+ nickname +"', '"+ password +"', '"+ country +"', '"+ city +"', '"+ avatar +"', '"+ biography +"', '"+ joinedDate +"')");
+        		+ "('"+ email +"', '"+ nickname +"', PASSWORD(\""+ password +"\"), '"+ country +"', '"+ city +"', '"+ avatar +"', '"+ biography +"', '"+ new java.sql.Date(joinedDate.getTime()) +"')");
         }
         else{
-        	db.update("UPDATE `rssreader`.`user` SET"
-        			+ " `nickname` = '"+ nickname +"', `password` = '"+ password +"', `country` = '"+ country +"', `city` = '"+ city +"', "
-        			+ "`avatar` = '"+ avatar +"', `biography` = '"+ biography +"', `joinedDate` = '"+ joinedDate +"' "
-        			+ "WHERE `user`.`email` = '"+ email +"'");
+            String query = "UPDATE `user` SET"
+                    + " `nickname` = '"+ nickname +"', `password` =PASSWORD(\""+ password +"\"), `country` = '"+ country +"', `city` = '"+ city +"', "
+                    + "`avatar` = '"+ avatar +"', `biography` = '"+ biography + "' WHERE `email` = \"" + email + "\"";
+            db.update(query);
         }
     }
         

@@ -39,9 +39,7 @@ public class Comment {
     			+ "AND publication_url LIKE\""+ publication_url +"\" AND user_email LIKE \"" + user_email +"\"" );
     	try {
 			if (res.next()){
-				comment = new Comment(getFeedFromDb(feed_url))
-				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
-						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
+				//	, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
