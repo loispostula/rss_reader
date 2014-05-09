@@ -124,6 +124,23 @@ public class Feed {
         return publications;
     }
 
+    public List<Publication> getUnreadShares(User user){
+        Database db = new Database();
+        ArrayList<Publication> publications = new ArrayList<Publication>();
+        String query ="SELECT s.publication_url FROM sharedpublication s " +
+                "WHERE s.user_email = \""+ this.getUrl() + "\" "+
+                "AND NOT EXISTS (SELECT * FROM readstatus r WHERE r.publication_url = s.publication_url AND r.feed_url = s.user_email AND r.user_email = \""+ user.getEmail() +"\")";
+        ResultSet res = db.querry(query);
+        try {
+            while(res.next()){
+                publications.add(Publication.getPublicationFromDb(res.getString("publication_url")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return publications;
+    }
+
     public void save(){
         Database db = new Database();
         if (getFeedFromDb(url) == null){
