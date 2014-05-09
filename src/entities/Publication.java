@@ -56,6 +56,7 @@ public class Publication {
         if (getPublicationFromDb(url) == null){
         	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`"
         		+ "('"+ url +"', '"+title +"', '"+ releaseDate +"', '"+ description +"')");
+        	db.close();
         }
     }
 
