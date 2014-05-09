@@ -31,10 +31,10 @@ public class XMLParser {
 	    }
 	    catch(Exception e){ System.out.println( e ); }
 
-		//On initialise un nouvel élément racine avec l'élément racine du document.
+		//On initialise un nouvel ï¿½lï¿½ment racine avec l'ï¿½lï¿½ment racine du document.
 		racine = document.getRootElement();
 
-		//Méthode définie dans la partie 3.2. de cet article
+		//Mï¿½thode dï¿½finie dans la partie 3.2. de cet article
 		afficheALL();
 	   }
 	
@@ -69,10 +69,10 @@ public class XMLParser {
 			
 			List<Element> emails = current.getChildren("email");
 			
-			User userA = new User(emails.get(0).getText());
-			User userB = new User(emails.get(0).getText());
+			//User userA = new User(emails.get(0).getText());
+			//User userB = new User(emails.get(0).getText());
 			//TODO user from email
-			Friendship user = new Friendship(userA, userB, current.getChild("date").getText(), current.getChild("accepted").getText());
+			//Friendship user = new Friendship(userA, userB, current.getChild("date").getText(), current.getChild("accepted").getText());
 			//TODO date string to date
 			//TODO accepted string to boolean
 		}
@@ -94,8 +94,8 @@ public class XMLParser {
 		{	
 			Element current = (Element)i.next();
 
-			Publication publication = new Publication(current.getChild("URL").getText(), current.getChild("title").getText(), current.getChild("date").getText(),
-					current.getChild("description").getText());
+			//Publication publication = new Publication(current.getChild("URL").getText(), current.getChild("title").getText(), current.getChild("date").getText(),
+			//		current.getChild("description").getText());
 			//TODO date string to date
 		}
 		
@@ -106,8 +106,8 @@ public class XMLParser {
 		{	
 			Element current = (Element)i.next();
 
-			Comment comment = new Comment(new Feed(current.getChild("feed").getText()), new Publication(current.getChild("item").getText()), new User(current.getChild("email").getText()), new Date(current.getChild("date").getText()),
-					current.getChild("text").getText());
+			//Comment comment = new Comment(new Feed(current.getChild("feed").getText()), new Publication(current.getChild("item").getText()), new User(current.getChild("email").getText()), new Date(current.getChild("date").getText()),
+			//		current.getChild("text").getText());
 			//TODO date string to date
 			//TODO user from email
 			//TODO feed from url
@@ -122,8 +122,8 @@ public class XMLParser {
 		{	
 			Element current = (Element)i.next();
 
-			SharedPublication comment = new SharedPublication(new Feed(current.getChild("feed").getText()), new Publication(current.getChild("item").getText()), new User(current.getChild("email").getText()), new Date(current.getChild("date").getText()),
-					current.getChild("text").getText());
+			//SharedPublication comment = new SharedPublication(new Feed(current.getChild("feed").getText()), new Publication(current.getChild("item").getText()), new User(current.getChild("email").getText()), new Date(current.getChild("date").getText()),
+			//		current.getChild("text").getText());
 			//TODO date string to date
 			//TODO user from email
 			//TODO feed from url
@@ -138,7 +138,7 @@ public class XMLParser {
 		{	
 			Element current = (Element)i.next();
 
-			feedSubscription subscription = new feedSubscription(new User(current.getChild("email").getText()), new Feed(current.getChild("feed").getText()), new Date(current.getChild("date").getText()));
+			//feedSubscription subscription = new feedSubscription(new User(current.getChild("email").getText()), new Feed(current.getChild("feed").getText()), new Date(current.getChild("date").getText()));
 			//TODO date string to date
 			//TODO user from email
 			//TODO feed from url

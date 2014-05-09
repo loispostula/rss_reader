@@ -1,8 +1,13 @@
 package javafx;
 
+import entities.User;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
@@ -25,6 +30,16 @@ public class ProfileController implements DialogController {
         this.screens = screens;
     }
 
+    @FXML
+    TextField emailField;
+    @FXML
+    TextField nicknameField;
+    @FXML
+    TextField cityField;
+    @FXML
+    TextField countryField;
+    @FXML
+    TextArea biographyArea;
     @FXML
     Image avatar_img;
 
@@ -70,5 +85,12 @@ public class ProfileController implements DialogController {
     public void savePassword(){
         //todo save the password
         this.dialog.close();
+    }
+
+    public void loadUser(User user){
+        this.emailField.setText(user.getEmail());
+        this.nicknameField.setText(user.getNickname());
+        this.cityField.setText(user.getCity());
+        this.countryField.setText(user.getCountry());
     }
 }

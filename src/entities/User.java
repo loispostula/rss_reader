@@ -12,7 +12,8 @@ public class User {
     private String email;
     private String password;
     private String nickname;
-	private String city;
+    private String city;
+    private String country;
     private String avatar; //todo check if this can't be a image
     private String biography;
     private Date joinedDate;
@@ -88,5 +89,14 @@ public class User {
 
     public void setJoinedDate(Date joinedDate) {
         this.joinedDate = joinedDate;
+    }
+
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 }
