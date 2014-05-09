@@ -1,22 +1,18 @@
 package javafx;
 
 import entities.User;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 
 import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -29,7 +25,7 @@ public class ProfileController implements DialogController {
     public ProfileController(ScreensConfiguration screens) {
         this.screens = screens;
     }
-
+    private User user;
     @FXML
     TextField emailField;
     @FXML
@@ -41,7 +37,15 @@ public class ProfileController implements DialogController {
     @FXML
     TextArea biographyArea;
     @FXML
+    PasswordField passwordField;
+    @FXML
+    PasswordField passwordConf;
+    @FXML
     Image avatar_img;
+    @FXML
+    Label joinDate;
+    @FXML
+    Label passwordInfo;
 
     @Override
     public void setDialog(FXMLDialog dialog) {
@@ -84,13 +88,28 @@ public class ProfileController implements DialogController {
 
     public void savePassword(){
         //todo save the password
+        if(!passwordField.getText().equals(passwordConf.getText())){
+            passwordInfo.setText("The password did not match: ");
+            passwordInfo.setTextFill(Color.DARKRED);
+            return;
+        }
+        if(passwordField.getText().length() < 6){
+            passwordInfo.setText("The password must be at least 6 characters;");
+            passwordInfo.setTextFill(Color.DARKRED);
+            return;
+        }
+        user.setPassword(passwordField.getText());
+        user.save();
         this.dialog.close();
     }
 
     public void loadUser(User user){
+        this.user = user;
         this.emailField.setText(user.getEmail());
         this.nicknameField.setText(user.getNickname());
         this.cityField.setText(user.getCity());
         this.countryField.setText(user.getCountry());
+        this.biographyArea.setText(user.getBiography());
+        this.joinDate.setText(user.getJoinedDate().toString());
     }
 }

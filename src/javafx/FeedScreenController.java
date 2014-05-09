@@ -21,6 +21,7 @@ public class FeedScreenController implements DialogController{
 
     public void logout() {
         dialog.close();
+        screens.disconnectUser();
         screens.loginDialog().show();
     }
 

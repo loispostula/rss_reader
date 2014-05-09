@@ -1,10 +1,13 @@
 package javafx;
 
+import entities.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
+
+import java.util.Date;
 
 public class LoginController implements DialogController{
     private FXMLDialog dialog;
@@ -31,7 +34,9 @@ public class LoginController implements DialogController{
         try{
             //test if the user can be logged
             if(true){
-
+                //test for the moment
+                User usr = new User("lois.postula@gmail.com", "test", "lpostula", "bxl", "belgique", "", "short bio", new Date());
+                screens.connectUser(usr);
             }
             else throw new BadLoginException();
         }

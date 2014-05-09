@@ -24,16 +24,21 @@ public class User {
     
 
     public User(String email, String password, String nickname, String city,
-			String avatar, String biography, Date joinedDate) {
+			String country, String avatar, String biography, Date joinedDate) {
 		super();
 		this.email = email;
 		this.password = password;
 		this.nickname = nickname;
 		this.city = city;
+        this.country = country;
 		this.avatar = avatar;
 		this.biography = biography;
 		this.joinedDate = joinedDate;
 	}
+
+    public void save(){
+        //todo db access to save
+    }
 
     public String getEmail() {
         return email;

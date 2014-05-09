@@ -55,8 +55,8 @@ public class XMLParser {
 		while(i.hasNext())
 		{
 			Element current = (Element)i.next();
-			User user = new User(current.getChild("email").getText(), current.getChild("password").getText(), current.getChild("nickname").getText(), current.getChild("city").getText(),
-					current.getChild("avatar").getText(), current.getChild("biography").getText(), new Date(current.getChild("subscribeDate").getText()));
+			//User user = new User(current.getChild("email").getText(), current.getChild("password").getText(), current.getChild("nickname").getText(), current.getChild("city").getText(),
+			//		current.getChild("avatar").getText(), current.getChild("biography").getText(), new Date(current.getChild("subscribeDate").getText()));
 			//TODO subscribedate string to date
 		}
 		
