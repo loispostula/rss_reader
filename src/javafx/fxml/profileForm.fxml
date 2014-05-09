@@ -30,7 +30,7 @@
     <Label text="New Password:" GridPane.columnIndex="0" GridPane.rowIndex="12" />
     <Label text="Confirmation:" GridPane.columnIndex="0" GridPane.rowIndex="13" />
     <ImageView fx:id="avatar" fitHeight="106.12501525878906" fitWidth="147.00001525878906" onMouseClicked="#changeAvatar" pickOnBounds="true" preserveRatio="true" style="" GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.rowSpan="3">
-      <Image url="@icons/default.png" fx:id="avatar_img"/>
+      <Image url="@../icons/default.png" fx:id="avatar_img"/>
     </ImageView>
     <Button mnemonicParsing="false" onAction="#saveProfil" text="Save" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
     <Button mnemonicParsing="false" onAction="#cancel" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" />

@@ -44,4 +44,12 @@ public class ScreensConfiguration {
     ProfileController profileController(){
         return new ProfileController(this);
     }
+
+    FXMLDialog registrationDialog() {
+        return new FXMLDialog(registrationController(), getClass().getResource("registrationForm.fxml"), primaryStage, StageStyle.UNDECORATED);
+    }
+
+    ProfileController registrationController(){
+        return new registrationController(this);
+    }
 }
