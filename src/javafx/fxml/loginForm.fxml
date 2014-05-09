@@ -28,7 +28,7 @@
         <TextField fx:id="textPassword" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
       </labelFor>
     </Label>
-    <Label fx:id="labelHeader" prefWidth="318.0" text="Please javafx with your credentials:" textFill="GREY" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+    <Label fx:id="labelHeader" prefWidth="318.0" text="Please enter with your credentials:" textFill="GREY" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
       <font>
         <Font size="15.0" />
       </font>
@@ -37,11 +37,12 @@
     <fx:reference source="textPassword" />
     <Button fx:id="buttonLogin" contentDisplay="LEFT" mnemonicParsing="false" onAction="#login" prefWidth="246.0" text="Login" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
     <ImageView fitHeight="149.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.rowSpan="4">
-      <Image url="@rss_icon.png" />
+      <Image url="@../rss_icon.png" />
       <GridPane.margin>
         <Insets />
       </GridPane.margin>
     </ImageView>
+    <Button fx:id="newUser" mnemonicParsing="false" onAction="#newUser" prefWidth="115.0" text="New User" GridPane.columnIndex="0" GridPane.rowIndex="4" />
   </children>
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="105.0" />

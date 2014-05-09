@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="10.0" prefWidth="493.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.ProfileController">
+  <children>
+    <Label prefWidth="167.0" text="User Profil" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+      <font>
+        <Font name="System Bold" size="25.0" />
+      </font>
+    </Label>
+    <Label prefWidth="100.0" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3">
+      <labelFor>
+        <TextField fx:id="emailField" prefWidth="219.00009999999747" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+      </labelFor>
+    </Label>
+    <Label prefWidth="100.0" text="Nickname:" GridPane.columnIndex="0" GridPane.rowIndex="4">
+      <labelFor>
+        <TextField fx:id="nicknameField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+      </labelFor>
+    </Label>
+    <Label prefWidth="100.0" text="City:" GridPane.columnIndex="0" GridPane.rowIndex="5">
+      <labelFor>
+        <TextField fx:id="cityField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      </labelFor>
+    </Label>
+    <Label text="Biography:" GridPane.columnIndex="0" GridPane.rowIndex="7">
+      <labelFor>
+        <TextArea fx:id="biographyArea" prefHeight="65.0" prefWidth="360.0" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="7" GridPane.rowSpan="3" />
+      </labelFor>
+    </Label>
+    <Label text="Joined Date:" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+    <fx:reference source="emailField" />
+    <fx:reference source="nicknameField" />
+    <fx:reference source="cityField" />
+    <TextField fx:id="countryField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+    <PasswordField fx:id="passwordField" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="14" />
+    <PasswordField id="passwordCon" fx:id="passwordConf" prefWidth="200.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="15" />
+    <fx:reference source="biographyArea" />
+    <Label fx:id="joinDate" text="16/11/1992" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+    <Separator prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="12" />
+    <Label labelFor="$passwordField" text="New Password:" GridPane.columnIndex="0" GridPane.rowIndex="14" />
+    <Label labelFor="$passwordConf" text="Confirmation:" GridPane.columnIndex="0" GridPane.rowIndex="15" />
+    <ImageView fx:id="avatar" fitHeight="106.12501525878906" fitWidth="147.00001525878906" onMouseClicked="#changeAvatar" pickOnBounds="true" preserveRatio="true" style="" GridPane.columnIndex="2" GridPane.rowIndex="0" GridPane.rowSpan="3">
+      <Image url="@../icons/default.png" fx:id="avatar_img" />
+    </ImageView>
+    <Button mnemonicParsing="false" onAction="#saveProfil" text="Save" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="11" GridPane.valignment="CENTER" />
+    <Button mnemonicParsing="false" onAction="#cancel" text="Cancel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+    <Button mnemonicParsing="false" onAction="#savePassword" text="Save" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="16" />
+    <Label labelFor="$countryField" prefWidth="122.0" text="Country:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+    <Label fx:id="passwordInfo" prefWidth="453.0" text="" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="13" />
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="10.0" prefWidth="112.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="186.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="135.0" />
+  </columnConstraints>
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+  <rowConstraints>
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

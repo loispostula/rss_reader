@@ -21,6 +21,7 @@ public class FeedScreenController implements DialogController{
 
     public void logout() {
         dialog.close();
+        screens.disconnectUser();
         screens.loginDialog().show();
     }
 
@@ -28,7 +29,11 @@ public class FeedScreenController implements DialogController{
     }
 
     public void showProfil() {
-        screens.profileDialog().show();
+        FXMLDialog dial = screens.profileDialog();
+        ProfileController controller = (ProfileController) dial.getController();
+        dial.show();
+        controller.loadUser(screens.getConnectedUser());
+
     }
 
     public void addNewFeed(ActionEvent actionEvent) {
