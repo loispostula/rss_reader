@@ -40,7 +40,7 @@ public class Feed {
     public static Feed getFeedFromDb(String url){
         Database db = new Database();
         Feed feed = null;
-        ResultSet res = db.querry("SELECT * FROM `feed` WHERE `url` == \"" + url +"\"");
+        ResultSet res = db.querry("SELECT * FROM `feed` WHERE `url` LIKE \"" + url +"\"");
         try {
             if (res.next()){
                 feed = new Feed(url, res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image"));
@@ -85,7 +85,7 @@ public class Feed {
     public void save(){
         Database db = new Database();
         if (getFeedFromDb(url) == null){
-        	db.update("INSERT INTO `feed` (`url`, `title`, `link`, `description`"
+        	db.update("INSERT INTO `feed` (`url`, `title`, `link`, `description`) VALUES "
         		+ "('"+ url +"', '"+title +"', '"+ link +"', '"+ description +"')");
         }
         db.close();

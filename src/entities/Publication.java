@@ -38,7 +38,7 @@ public class Publication {
     public static Publication getPublicationFromDb(String url){
         Database db = new Database();
         Publication publication = null;
-        ResultSet res = db.querry("SELECT * FROM `publication` WHERE `url` == \"" + url +"\"");
+        ResultSet res = db.querry("SELECT * FROM `publication` WHERE `url` LIKE \"" + url +"\"");
         try {
             if (res.next()){
                 publication = new Publication(url, res.getString("title"), res.getDate("releaseDate"), res.getString("description"), res.getString("image"));
@@ -53,9 +53,12 @@ public class Publication {
 
     public void save(){
         Database db = new Database();
-        if (getPublicationFromDb(url.get()) == null){
-        	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`"
-        		+ "('"+ url +"', '"+title +"', '"+ releaseDate +"', '"+ description +"')");
+
+		java.text.SimpleDateFormat sdf = 
+			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        if (getPublicationFromDb(url) == null){
+        	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`) VALUES "
+        		+ "('"+ url +"', '"+title +"', '"+ sdf.format(releaseDate) +"', '"+ description +"')");
         	db.close();
         }
     }
