@@ -2,8 +2,11 @@ package javafx;
 
 import entities.Feed;
 import entities.Publication;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -65,9 +68,10 @@ public class FeedScreenController implements DialogController{
             pane.setTooltip(new Tooltip(feed.getDescription()));
             pane.setGraphic(new ImageView(new Image(feed.getImage())));
             TableView<Publication> table = new TableView<Publication>();
+            table.setTableMenuButtonVisible(true);
 
-            TableColumn pubEnclosure = new TableColumn();
-            pubEnclosure.setCellValueFactory(new PropertyValueFactory("enclosureP"));
+            TableColumn pubEnclosure = new TableColumn("Image");
+            pubEnclosure.setCellValueFactory(new PropertyValueFactory("image"));
 
             pubEnclosure.setCellFactory(new Callback<TableColumn, TableCell>() {
                 @Override
@@ -76,12 +80,12 @@ public class FeedScreenController implements DialogController{
                         ImageView imageView = new ImageView();
                         @Override
                         protected void updateItem(Object o, boolean b) {
-                            if (o != null && o instanceof Publication){
+                            if (o != null){
                                 HBox box= new HBox();
                                 box.setSpacing(10) ;
-                                imageView.setFitHeight(50);
-                                imageView.setFitWidth(50);
-                                imageView.setImage(new Image(((Publication)o).getImage()));
+                                imageView.setFitHeight(60);
+                                imageView.setFitWidth(80);
+                                imageView.setImage(new Image((String)o));
                                 box.getChildren().addAll(imageView);
                                 setGraphic(box);
                             }
@@ -91,20 +95,20 @@ public class FeedScreenController implements DialogController{
                 }
             });
 
-            TableColumn pubDate = new TableColumn();
-            pubDate.setCellValueFactory(new PropertyValueFactory("dateP"));
+            TableColumn pubDate = new TableColumn("Date");
+            pubDate.setMinWidth(50);
+            pubDate.setCellValueFactory(new PropertyValueFactory<Publication, String>("releaseDate"));
 
-            TableColumn pubTitle = new TableColumn();
-            pubTitle.setCellValueFactory(new PropertyValueFactory("titleP"));
+            TableColumn pubTitle = new TableColumn("title");
+            pubTitle.setMinWidth(200);
+            pubTitle.setCellValueFactory(new PropertyValueFactory<Publication, String>("title"));
 
-            TableColumn pubOpen = new TableColumn();
-            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
+//            TableColumn pubOpen = new TableColumn();
+//            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
 
-
-
-
-
-
+            table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
+            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle);
+            pane.setContent(table);
             accordion.getPanes().add(pane);
         }
     }
