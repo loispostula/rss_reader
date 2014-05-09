@@ -26,19 +26,14 @@ public class User {
     public User() {
     }
 
-    public static User getUserFromDb(String email, String password){
+    public static User getUserFromDb(String email){
     	Database db = new Database();
     	User user = null;
     	ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` LIKE \"" + email +"\"");
     	try {
-			if (res.next() && res.getString( "password" ).equals(password)){
+			if (res.next()){
 				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
 						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
-			}
-			else{
-				System.out.println(res.getString( "password" ));
-				System.out.println(password);
-				System.out.println(res.getString( "nickname" ));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -63,7 +58,18 @@ public class User {
 
     public void save(){
         Database db = new Database();
+        if (getUserFromDb(email) == null){
+        	db.update("INSERT INTO `user` (`email`, `nickname`, `password`, `country`, `city`, `avatar`, `biography`, `joinedDate`) VALUES "
+        		+ "('"+ email +"', '"+ nickname +"', '"+ password +"', '"+ country +"', '"+ city +"', '"+ avatar +"', '"+ biography +"', '"+ joinedDate +"')");
+        }
+        else{
+        	db.update("UPDATE `rssreader`.`user` SET"
+        			+ " `nickname` = '"+ nickname +"', `password` = '"+ password +"', `country` = '"+ country +"', `city` = '"+ city +"', "
+        			+ "`avatar` = '"+ avatar +"', `biography` = '"+ biography +"', `joinedDate` = '"+ joinedDate +"' "
+        			+ "WHERE `user`.`email` = '"+ email +"'");
+        }
     }
+        
 
     public String getEmail() {
         return email;
