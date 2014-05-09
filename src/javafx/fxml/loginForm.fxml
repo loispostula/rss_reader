@@ -30,7 +30,7 @@
     </Label>
     <Label fx:id="labelHeader" prefWidth="318.0" text="Please enter with your credentials:" textFill="GREY" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
       <font>
-        <Font size="15.0" />
+        <Font size="14.0" />
       </font>
     </Label>
     <fx:reference source="textEmail" />

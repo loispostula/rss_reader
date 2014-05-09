@@ -21,7 +21,11 @@ public class User {
 
     public User() {
     }
-    
+
+    public static User getUserFromDb(String email, String password){
+
+        return null;
+    }
 
     public User(String email, String password, String nickname, String city,
 			String country, String avatar, String biography, Date joinedDate) {

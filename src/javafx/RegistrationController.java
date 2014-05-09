@@ -1,17 +1,20 @@
 package javafx;
 
+import entities.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import org.apache.commons.validator.EmailValidator;
 import java.io.File;
+import java.util.Date;
 
 /**
  * Created by lpostula on 09/05/14.
@@ -50,6 +53,10 @@ public class RegistrationController implements DialogController {
     TextArea biographyArea;
     @FXML
     Image avatar_img;
+    @FXML
+    ImageView avatar;
+
+    private String img_path;
 
 
 
@@ -61,7 +68,9 @@ public class RegistrationController implements DialogController {
                 configureFileChooser(fileChooser);
                 File file = fileChooser.showOpenDialog(this.dialog);
                 if(file != null){
-                    System.out.println(file.getAbsolutePath());
+                    img_path = file.getAbsolutePath();
+                    avatar_img = new Image("file://" + file.getAbsoluteFile());
+                    avatar.setImage(avatar_img);
                 }
             }
         }
@@ -108,6 +117,15 @@ public class RegistrationController implements DialogController {
             return;
         }
         //todo save the new user
+        User usr = new User(emailField.getText(),
+                passwordField.getText(),
+                nicknameField.getText(),
+                cityField.getText(),
+                countryField.getText(),
+                img_path,
+                biographyArea.getText(),
+                new Date());
+        usr.save();
         this.dialog.close();
 
     }
