@@ -121,23 +121,18 @@ ORDER BY nshared
 
 R6
 
-SELECT f.user1_email, f.user2_email, 
-(SELECT COUNT(*) FROM readstatus rs WHERE (rs.user_email = fs.user1_email OR rs.user_email = fs.user2_email)) AS nread, 
-(SELECT COUNT(*) FROM sharedpublication sp WHERE sp.publication_url = c.publication_url AND sp.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30) AS nshared ,
-(SELECT nshared/nread) AS ratio
-FROM friendship f
-INNER JOIN feedsubscription fs
-ON fs.user_email = f.user1_email OR fs.user_email = f.user2_email
-INNER JOIN contain c
-ON c.feed_url = fs.feed_url
-WHERE fs.user_email = "a@a.be" 
-GROUP BY fs.feed_url
-ORDER BY nshared
-
-
-
-
-
+SELECT u.email,
+(SELECT COUNT(*) FROM readstatus rs WHERE rs.user_email = u.email)/(TO_DAYS(NOW())-TO_DAYS(u.joinedDate)) AS mread, 
+(SELECT COUNT(u2.email) FROM user u2 
+INNER JOIN friendship f2 
+ON f2.user1_email = u2.email OR f2.user2_email = u2.email
+WHERE u2.email = u.email 
+GROUP  BY u2.email) AS nfriend
+FROM user u 
+INNER JOIN friendship f 
+ON f.user1_email = u.email OR f.user2_email = u.email
+WHERE (f.user1_email = "a@a.be" AND u.email <> f.user1_email) OR (f.user2_email = "a@a.be" AND u.email <> f.user2_email)
+ORDER BY mread
 
 
 

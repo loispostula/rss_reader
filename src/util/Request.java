@@ -120,4 +120,25 @@ public class Request {
         return requests;
 	}
 
+	public ArrayList<Feed> friendReadFriendInfo(User user){
+		Database db = new Database();
+		ResultSet res = db.querry(
+				"SELECT u.email, "
+				+ "(SELECT COUNT(*) FROM readstatus rs WHERE rs.user_email = u.email)/(TO_DAYS(NOW())-TO_DAYS(u.joinedDate)) AS mread, "
+				+ "(SELECT COUNT(u2.email) FROM user u2 INNER JOIN friendship f2 ON f2.user1_email = u2.email OR f2.user2_email = u2.email WHERE u2.email = u.email GROUP BY u2.email) AS nfriend "
+				+ "FROM user u "
+				+ "INNER JOIN friendship f ON f.user1_email = u.email OR f.user2_email = u.email "
+				+ "WHERE (f.user1_email = \""+ user.getEmail() +"\" AND u.email <> f.user1_email) OR (f.user2_email = \""+ user.getEmail() +"\" AND u.email <> f.user2_email) "
+				+ "ORDER BY mread");
+        ArrayList<Feed> requests = new ArrayList<Feed>();
+        try {
+            while (res.next()) {
+                requests.add(Feed.getFeedFromDb(res.getString("feed_url")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return requests;
+	}
+
 }
