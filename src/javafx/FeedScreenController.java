@@ -96,12 +96,6 @@ public class FeedScreenController implements DialogController {
         dial.show();
         ((FriendRequestController)dial.getController()).showRequest();
         this.setFriendRequestCount();
-//        if (User.getUserFromDb(email) != null) {
-//            Database db = new Database();
-//            db.update("UPDATE `rssreader`.`friendship` SET `accepted` = '0' "
-//                    + "WHERE `friendship`.`user1_email` = '" + email + "' AND `friendship`.`user2_email` = '" + screens.getConnectedUser().getEmail() + "'");
-//            db.close();
-//        }
     }
 
     public void share(Publication publication, String text) {
