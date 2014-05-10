@@ -55,6 +55,14 @@ public class ScreensConfiguration {
         return new RegistrationController(this);
     }
 
+    public FXMLDialog friendRequestDialog() {
+        return new FXMLDialog(acceptFriendController(), getClass().getResource("fxml/acceptFriend.fxml"), primaryStage, StageStyle.DECORATED);
+    }
+
+    public FriendRequestController acceptFriendController() {
+        return new FriendRequestController(this);
+    }
+
     public void connectUser(User user){
         this.connectedUser = user;
     }

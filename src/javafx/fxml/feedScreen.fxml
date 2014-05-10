@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import java.util.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FeedScreenController">
   <center>
-    <Accordion fx:id="accordion">
-    </Accordion>
+    <Accordion fx:id="accordion" />
   </center>
   <top>
     <HBox minHeight="36.0" prefHeight="36.0" prefWidth="600.0">
@@ -47,6 +45,20 @@
             <Tooltip text="Add Friend" />
           </tooltip>
         </Button>
+        <StackPane fx:id="stackPane" prefHeight="37.0" prefWidth="54.0">
+          <children>
+            <Button id="friendRequest" onAction="#acceptFriend" text="">
+              <graphic>
+                <ImageView fx:id="friendRequest">
+                  <Image url="@../icons/friendRequest.png" />
+                </ImageView>
+              </graphic>
+              <tooltip>
+                <Tooltip text="Check Friend Request" />
+              </tooltip>
+            </Button>
+          </children>
+        </StackPane>
         <Pane maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="391.0" />
         <Button fx:id="logout" onAction="#logout" text="">
           <graphic>

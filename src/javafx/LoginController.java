@@ -46,7 +46,7 @@ public class LoginController implements DialogController{
         dialog.close();
         FXMLDialog feedScreen = screens.feedScreen();
         feedScreen.show();
-        ((FeedScreenController)feedScreen.getController()).loadFeeds();
+        ((FeedScreenController)feedScreen.getController()).refresh();
 
     }
 
