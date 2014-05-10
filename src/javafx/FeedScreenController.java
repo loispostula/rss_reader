@@ -18,6 +18,7 @@ import util.FeedParser;
 import static org.apache.commons.lang3.StringEscapeUtils.*;
 
 import java.io.File;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -92,7 +93,7 @@ public class FeedScreenController implements DialogController {
     public void share(Publication publication, String text) {
     	Database db = new Database();
     	db.update("INSERT INTO `rssreader`.`sharedpublication` (`user_email`, `publication_url`, `sharedDate`, `text`) VALUES"
-    			+ "('"+ screens.getConnectedUser().getEmail() +"', '"+publication.getUrl() +"', NOW(), '"+ escapeXml(text) +"')");
+                + "('" + screens.getConnectedUser().getEmail() + "', '" + publication.getUrl() + "', NOW(), '" + escapeXml(text) + "')");
     	db.close();
     }
 
@@ -156,9 +157,7 @@ public class FeedScreenController implements DialogController {
                             if (o != null) {
                                 HBox box = new HBox();
                                 box.setSpacing(10);
-                                imageView.setFitHeight(60);
-                                imageView.setFitWidth(80);
-                                imageView.setImage(new Image((String) o));
+                                imageView.setImage((Image) o);
                                 box.getChildren().addAll(imageView);
                                 setGraphic(box);
                             }

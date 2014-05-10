@@ -3,6 +3,7 @@ package entities;
 import static org.apache.commons.lang3.StringEscapeUtils.unescapeXml;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
 import util.Database;
 
 import java.sql.ResultSet;
@@ -21,7 +22,8 @@ public class Publication {
     private SimpleStringProperty releaseDate;
     private Date releaseDateF;
     private SimpleStringProperty description;
-    private SimpleStringProperty image;
+    private SimpleObjectProperty image;
+    private String imageUrl;
     public Publication() {
     }
     
@@ -35,7 +37,8 @@ public class Publication {
 		this.releaseDate = new SimpleStringProperty(releaseDate.toString());
         this.releaseDateF = releaseDate;
 		this.description = new SimpleStringProperty(description);
-        this.image = new SimpleStringProperty(image);
+        this.image = new SimpleObjectProperty(new Image(image));
+        this.imageUrl = image;
 	}
 
 
@@ -63,7 +66,7 @@ public class Publication {
 			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (getPublicationFromDb(url.get()) == null){
         	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`, `image`) VALUES "
-        		+ "('"+ url.get() +"', '"+title.get() +"', '"+ sdf.format(releaseDateF) +"', '"+ description.get() +"', '"+ image.get() +"')");
+        		+ "('"+ url.get() +"', '"+title.get() +"', '"+ sdf.format(releaseDateF) +"', '"+ description.get() +"', '"+ imageUrl +"')");
         	db.close();
         }
     }
@@ -129,11 +132,11 @@ public class Publication {
     }
 
 
-    public String getImage() {
+    public Object getImage() {
         return image.get();
     }
 
-    public void setImage(String image) {
+    public void setImage(Object image) {
         this.image.set(image);
     }
 }
