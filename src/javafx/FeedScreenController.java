@@ -63,6 +63,23 @@ public class FeedScreenController implements DialogController {
         screens.disconnectUser();
         screens.loginDialog().show();
     }
+    
+    public ArrayList<User> searchFirend(String search){
+    	search = escapeXml(search);
+        Database db = new Database();
+        String query = "SELECT `email` FROM `user` WHERE `email` = \"" + search + "\" OR `nickname` = \""+ search +"\"";
+        ResultSet res = db.querry(query);
+        ArrayList<User> requests = new ArrayList<User>();
+        try {
+            while (res.next()) {
+                requests.add(User.getUserFromDb(res.getString("email")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return requests;
+    	
+    }
 
     public void addFriend() {
         String email;
@@ -76,7 +93,7 @@ public class FeedScreenController implements DialogController {
         }
     }
 
-    public ArrayList<User> getFirendRequest() {
+    public ArrayList<User> getFriendRequest() {
         Database db = new Database();
         String query = "SELECT * FROM `friendship` WHERE `user2_email` = \"" + screens.getConnectedUser().getEmail() + "\" AND accepted = 0";
         ResultSet res = db.querry(query);
@@ -98,9 +115,11 @@ public class FeedScreenController implements DialogController {
         this.setFriendRequestCount();
 //        if (User.getUserFromDb(email) != null) {
 //            Database db = new Database();
-//            db.update("UPDATE `rssreader`.`friendship` SET `accepted` = '0' "
+//            db.update("UPDATE `rssreader`.`friendship` SET `accepted` = '1' "
 //                    + "WHERE `friendship`.`user1_email` = '" + email + "' AND `friendship`.`user2_email` = '" + screens.getConnectedUser().getEmail() + "'");
 //            db.close();
+//      	  Feed feed = Feed.getFeedFromFile(file.getAbsolutePath(email));
+//			  screens.getConnectedUser().subscribe(feed);
 //        }
     }
 
@@ -108,6 +127,8 @@ public class FeedScreenController implements DialogController {
         Database db = new Database();
         db.update("INSERT INTO `rssreader`.`sharedpublication` (`user_email`, `publication_url`, `sharedDate`, `text`) VALUES"
                 + "('" + screens.getConnectedUser().getEmail() + "', '" + publication.getUrl() + "', NOW(), '" + escapeXml(text) + "')");
+	    db.update("INSERT INTO `contain` (`feed_url`, `publication_url`) VALUES"
+	        	+ "('"+ screens.getConnectedUser().getEmail() +"', '"+publication.getUrl() +"')");
         db.close();
     }
 

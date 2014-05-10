@@ -1,0 +1,200 @@
+R1
+
+SELECT u.email, COUNT(u.email) FROM user u 
+INNER JOIN friendship f 
+ON f.user1_email = u.email OR f.user2_email = u.email 
+GROUP  BY u.email 
+HAVING COUNT(u.email) < 3
+
+
+
+R2
+
+SELECT c.feed_url FROM feedsubscription c
+INNER JOIN (
+SELECT b.user_email FROM `feedsubscription` b
+INNER JOIN (SELECT feed_url FROM feedsubscription WHERE user_email = "a@a.be") a
+ON a.feed_url = b.feed_url
+GROUP BY b.user_email
+HAVING COUNT(b.user_email) > 1) d
+ON d.user_email = c.user_email
+GROUP BY c.feed_url
+
+
+
+
+
+
+
+
+
+R3
+
+
+toute les publication des flux de a@a.be
+
+SELECT p.url FROM publication p
+INNER JOIN contain c
+ON c.publication_url = p.url
+INNER JOIN feedsubscription s
+ON c.feed_url = s.feed_url
+WHERE s.user_email = "a@a.be"
+
+Les flux dont il n' partager aucune publication
+
+SELECT c.feed_url FROM contain c 
+INNER JOIN feedsubscription s 
+ON c.feed_url = s.feed_url 
+WHERE s.user_email = "a@a.be" 
+AND NOT EXISTS(SELECT * FROM sharedpublication WHERE user_email = s.user_email AND publication_url = c.publication_url)
+GROUP BY c.feed_url
+HAVING COUNT(c.feed_url) = (SELECT COUNT(c2.feed_url) FROM contain c2 WHERE c2.feed_url = c.feed_url GROUP BY c2.feed_url)
+
+//si une publication apparait dans plusieurs flux, tout les flux seront considéré comme "deja partagé une fois ou plus)
+
+
+La liste des flux de ses amis et les siens
+
+SELECT s.feed_url FROM feedsubsription s
+INNER JOIN friendship f
+ON s.user_email = f.user1_email OR s.user_email = f.user2_email
+WHERE f.user1_email = "a@a.be" OR f.user2_email = "a@a.be"
+GROUP BY s.feed_url
+
+Uniquement ses amis
+
+SELECT s.feed_url FROM feedsubscription s
+INNER JOIN friendship f
+ON s.user_email = f.user1_email OR s.user_email = f.user2_email
+WHERE (f.user1_email = "a@a.be" OR f.user2_email = "a@a.be") AND s.user_email <> "a@a.be"
+GROUP BY s.feed_url
+
+ses flux dont ses amis ne sont pas abonné
+
+SELECT s.feed_url FROM feedsubscription s
+INNER JOIN friendship f
+ON (s.user_email = f.user1_email OR s.user_email = f.user2_email) AND f.accepted = 1
+WHERE (f.user1_email = "b@b.be" OR f.user2_email = "b@b.be")
+GROUP BY s.feed_url
+HAVING COUNT(s.feed_url) = (SELECT COUNT(*) FROM friendship WHERE user1_email = "b@b.be" OR user2_email = "b@b.be")
+
+
+Fusion des deux
+
+SELECT c.feed_url FROM contain c 
+INNER JOIN feedsubscription s 
+ON c.feed_url = s.feed_url 
+INNER JOIN friendship f
+ON (s.user_email = f.user1_email OR s.user_email = f.user2_email) AND f.accepted = 1
+WHERE (f.user1_email = "b@b.be" OR f.user2_email = "b@b.be") 
+AND NOT EXISTS(SELECT * FROM sharedpublication WHERE user_email = s.user_email AND publication_url = c.publication_url)
+GROUP BY c.feed_url
+HAVING COUNT(c.feed_url) = (SELECT(SELECT COUNT(c2.feed_url) FROM contain c2 WHERE c2.feed_url = c.feed_url GROUP BY c2.feed_url)*(SELECT COUNT(*) FROM friendship WHERE user1_email = "b@b.be" OR user2_email = "b@b.be"))
+
+
+
+R4
+
+
+SELECT s.user_email FROM  sharedpublication s
+INNER JOIN (SELECT publication_url FROM shared publication WHERE user_email = "b@b.be") a
+ON s.publication_url = a.publication_url
+GROUP BY s.user_email
+HAVING COUNT(s.user_email) > 2
+
+
+
+R5
+
+SELECT fs.feed_url, 
+(SELECT COUNT(*) FROM readstatus rs WHERE rs.publication_url = c.publication_url AND rs.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30) AS nread, 
+(SELECT COUNT(*) FROM sharedpublication sp WHERE sp.publication_url = c.publication_url AND sp.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30) AS nshared ,
+(SELECT nshared/nread) AS ratio
+FROM feedsubscription fs
+INNER JOIN contain c
+ON c.feed_url = fs.feed_url
+WHERE fs.user_email = "a@a.be" 
+GROUP BY fs.feed_url
+ORDER BY nshared
+
+
+
+R6
+
+SELECT f.user1_email, f.user2_email, 
+(SELECT COUNT(*) FROM readstatus rs WHERE (rs.user_email = fs.user1_email OR rs.user_email = fs.user2_email)) AS nread, 
+(SELECT COUNT(*) FROM sharedpublication sp WHERE sp.publication_url = c.publication_url AND sp.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30) AS nshared ,
+(SELECT nshared/nread) AS ratio
+FROM friendship f
+INNER JOIN feedsubscription fs
+ON fs.user_email = f.user1_email OR fs.user_email = f.user2_email
+INNER JOIN contain c
+ON c.feed_url = fs.feed_url
+WHERE fs.user_email = "a@a.be" 
+GROUP BY fs.feed_url
+ORDER BY nshared
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

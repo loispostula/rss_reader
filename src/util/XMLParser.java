@@ -31,10 +31,7 @@ public class XMLParser {
 	    }
 	    catch(Exception e){ System.out.println( e ); }
 
-		//On initialise un nouvel �l�ment racine avec l'�l�ment racine du document.
 		racine = document.getRootElement();
-
-		//M�thode d�finie dans la partie 3.2. de cet article
 		parseAll();
 
 	   }

@@ -174,7 +174,7 @@ public class User {
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
         //todo jointur subscribe
-        String query = "SELECT * FROM `feed` f " +
+        String query = "SELECT `url` FROM `feed` f " +
                 "INNER JOIN feedsubscription fs " +
                 "ON fs.feed_url = f.url " +
                 "INNER JOIN user u " +
@@ -183,7 +183,7 @@ public class User {
         ResultSet res = db.querry(query);
         try {
             while (res.next()){
-                feeds.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
+                feeds.add(Feed.getFeedFromDb(res.getString("url")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -196,7 +196,7 @@ public class User {
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
         //todo jointur subscribe
-        String query = "SELECT * FROM `friendship` WHERE `user1_email` = \"" + this.email +"\" AND accepted = 1";
+        String query = "SELECT `user2_email` FROM `friendship` WHERE `user1_email` = \"" + this.email +"\" AND accepted = 1";
         ResultSet res = db.querry(query);
         try {
             while (res.next()){
@@ -205,7 +205,7 @@ public class User {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        query = "SELECT * FROM `friendship` WHERE `user2_email` = \"" + this.email +"\" AND accepted = 1";
+        query = "SELECT `user1_email` FROM `friendship` WHERE `user2_email` = \"" + this.email +"\" AND accepted = 1";
         res = db.querry(query);
         try {
             while (res.next()){
