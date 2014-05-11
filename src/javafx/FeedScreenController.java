@@ -169,7 +169,12 @@ public class FeedScreenController implements DialogController {
             pane.setText(feed.getTitle());
             pane.setTooltip(new Tooltip(feed.getDescription()));
             if (!feed.getImage().isEmpty()) {
-                pane.setGraphic(new ImageView(new Image(feed.getImage())));
+            	System.out.println(feed.getImage());
+            	ImageView temp = new ImageView(new Image(feed.getImage()));
+            	temp.setPreserveRatio(true);
+            	temp.setFitHeight(40);
+            	temp.setFitWidth(120);
+                pane.setGraphic(temp);
 
             }
             TableView<Publication> table = new TableView<Publication>();

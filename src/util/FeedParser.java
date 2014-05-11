@@ -63,7 +63,7 @@ public class FeedParser {
 		try{
 			image = escapeXml(info.getChild("image").getChild("url").getText());
 		}catch (Exception e){
-			image = "icons/rss_icon.png";
+			image = ("file:////"+System.getProperty("user.dir").replace("\\","//")+"//src//javafx//icons//rss_icon.png");
 		}
 		
 		this.feed = new Feed(path, title, description, link, image);

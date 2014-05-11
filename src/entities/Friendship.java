@@ -37,9 +37,9 @@ public class Friendship {
                 + "('"+ userA.getEmail() +"', '"+userB.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"', '"+accept +"')");
         if (accepted){
 	        db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
-	                + "('"+ userA.getEmail() +"', '"+userB.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"')");
-	        //db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
-	        //        + "('"+ userB.getEmail() +"', '"+userA.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"')");
+	                + "('"+ userA.getEmail() +"', '"+"feed://"+userB.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"')");
+	        db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
+	                + "('"+ userB.getEmail() +"', '"+"feed://"+userA.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"')");
         }
         db.close();
     }

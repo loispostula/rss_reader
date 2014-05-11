@@ -20,6 +20,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Iterator;
 import java.util.Locale;
+
+import javafx.scene.image.Image;
 import static org.apache.commons.lang3.StringEscapeUtils.escapeXml;
 
 public class XMLParser {
@@ -56,6 +58,7 @@ public class XMLParser {
 		Date d = new Date();
 
 		Iterator i = items.iterator();
+		String avatarPath = "", imgPath = "";
 		while(i.hasNext())
 		{
 			Element current = (Element)i.next();
@@ -65,11 +68,16 @@ public class XMLParser {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			avatarPath = "file:////"+current.getChild("avatar").getText();
+			Image temp = new Image(avatarPath);
+			if (temp.getHeight() == 0){
+				avatarPath = ("file:////"+System.getProperty("user.dir").replace("\\","//")+"//src//javafx//icons//rss_icon.png");
+			}
 			User user = new User(current.getChild("email").getText(), current.getChild("password").getText(), current.getChild("nickname").getText(), current.getChild("city").getText(), current.getChild("country").getText(),
-					current.getChild("avatar").getText(), current.getChild("biography").getText(), d);
+					avatarPath, current.getChild("biography").getText(), d);
 			user.save();
 
-			Feed feed = new Feed(current.getChild("email").getText(), current.getChild("nickname").getText()+" personnal feed","Feed with all the publication which "+ current.getChild("nickname").getText()+" shares.", "None", current.getChild("avatar").getText());
+			Feed feed = new Feed("feed://"+current.getChild("email").getText(), current.getChild("nickname").getText()+" personnal feed","Feed with all the publication which "+ current.getChild("nickname").getText()+" shares.", "None", avatarPath);
 			feed.save();
 		}
     	System.out.println("\nDone adding user\n");
@@ -109,9 +117,18 @@ public class XMLParser {
 		while(i.hasNext())
 		{	
 			Element current = (Element)i.next();
+			imgPath = current.getChild("image").getText();
+			try{
+			Image temp = new Image(imgPath);
+			if (temp.getHeight() == 0){
+				imgPath = ("file:////"+System.getProperty("user.dir").replace("\\","//")+"//src//javafx//icons//rss_icon.png");
+			}
+			}catch(Exception e){
+				imgPath = ("file:////"+System.getProperty("user.dir").replace("\\","//")+"//src//javafx//icons//rss_icon.png");
+			}
 
 
-			Feed feed = new Feed(current.getChild("url").getText(), escapeXml(current.getChild("title").getText()), escapeXml(current.getChild("description").getText()), current.getChild("link").getText(), current.getChild("image").getText());
+			Feed feed = new Feed(current.getChild("url").getText(), escapeXml(current.getChild("title").getText()), escapeXml(current.getChild("description").getText()), current.getChild("link").getText(), imgPath);
 			feed.save();
 		}
     	System.out.println("\nDone adding feeds\n");

@@ -221,16 +221,12 @@ public class User {
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
         //todo jointur subscribe
-        String query = "SELECT `url` FROM `feed` f " +
-                "INNER JOIN feedsubscription fs " +
-                "ON fs.feed_url = f.url " +
-                "INNER JOIN user u " +
-                "ON u.email = fs.user_email " +
-                "WHERE u.email = \"" + this.getEmail() + "\"";
+        String query = "SELECT fs.feed_url FROM feedsubscription fs " +
+                "WHERE fs.user_email = \"" + this.getEmail() + "\"";
         ResultSet res = db.querry(query);
         try {
             while (res.next()) {
-                feeds.add(Feed.getFeedFromDb(res.getString("url")));
+                feeds.add(Feed.getFeedFromDb(res.getString("feed_url")));
             }
         } catch (SQLException e) {
             e.printStackTrace();

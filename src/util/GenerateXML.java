@@ -56,9 +56,9 @@ public class GenerateXML {
     }
 	
 	public static void run(){
-		int readPercent = 100-25;
+		int readPercent = 25;
 		int friendPercent = 75;
-		int sharePercent = 100-10;
+		int sharePercent = 10;
 		int CommentPercent = 75;
 		String adressedufichier = System.getProperty("user.dir") + "/"+ "xmltest.xml";
         Database db = new Database();
@@ -169,9 +169,9 @@ public class GenerateXML {
 
         	        res = db.querry("SELECT publication_url, p.releaseDate FROM `contain` INNER JOIN publication p ON p.url = publication_url WHERE feed_url = \""+feeds.get(j)+"\"");
         	        while (res.next()){
-        	        	if ((Math.random()*100)>readPercent){
+        	        	if ((Math.random()*100)<readPercent){
 	            	        output.write("\t<read>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<date>"+getMinDate(currentDate, res.getString("releaseDate"))+"</date>\n\t\t<feed>"+feeds.get(j)+"</feed>\n\t\t<item>"+res.getString("publication_url")+"</item>\n\t</read>\n\n");
-	        	        	if ((Math.random()*100)>sharePercent){
+	        	        	if ((Math.random()*100)<sharePercent){
 	        	        		share +="\t<share>\n\t\t<feed>"+feeds.get(j)+"</feed>\n\t\t<item>"+res.getString("publication_url")+"</item>\n\t\t<date>"+getMinDate(currentDate, res.getString("releaseDate"))+"</date>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<text>"+text.get((int)(Math.random()*text.size()))+"</text>\n\t</share>\n\n";
 	        	        	}
         	        	}
