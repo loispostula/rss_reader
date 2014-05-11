@@ -1,15 +1,16 @@
 package entities;
 
-import java.io.UnsupportedEncodingException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
+import util.Database;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
-import util.Database;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -17,14 +18,20 @@ import util.Database;
  */
 public class User {
 
-    private String email;
-    private String password;
-    private String nickname;
-    private String city;
-    private String country;
-    private String avatar; //todo check if this can't be a image
-    private String biography;
-    private Date joinedDate;
+    private SimpleStringProperty email;
+    private SimpleStringProperty password;
+    private SimpleStringProperty nickname;
+    private SimpleStringProperty city;
+    private SimpleStringProperty country;
+    private SimpleObjectProperty avatar;
+
+    private String avatarS;
+    private SimpleStringProperty biography;
+    private SimpleStringProperty joinedDate;
+    private Date joinedDateS;
+
+    private SimpleIntegerProperty pubByDay;
+    private SimpleIntegerProperty numOfFriend;
 
 
     public User() {
@@ -54,7 +61,6 @@ public class User {
     	Database db = new Database();
     	User user = null;
         String query = "SELECT * FROM `user` WHERE `email` = \"" + email +"\" AND `password` = PASSWORD(\"" + password + "\")";
-        System.out.println(query);
     	ResultSet res = db.querry(query);
     	try {
 			if (res != null && res.next()){
@@ -62,7 +68,6 @@ public class User {
 						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         db.close();
@@ -72,94 +77,138 @@ public class User {
     public User(String email, String password, String nickname, String city,
 			String country, String avatar, String biography, Date joinedDate) {
 		super();
-		this.email = email;
-		this.password = password;
-		this.nickname = nickname;
-		this.city = city;
-        this.country = country;
-		this.avatar = avatar;
-		this.biography = biography;
-		this.joinedDate = joinedDate;
+		this.email = new SimpleStringProperty(email);
+		this.password = new SimpleStringProperty(password);
+		this.nickname = new SimpleStringProperty(nickname);
+		this.city = new SimpleStringProperty(city);
+        this.country = new SimpleStringProperty(country);
+		this.avatar = new SimpleObjectProperty(new Image(avatar));
+        this.avatarS = avatar;
+		this.biography = new SimpleStringProperty(biography);
+		this.joinedDate = new SimpleStringProperty(joinedDate.toString());
+        this.joinedDateS = joinedDate;
 	}
 
     public void save(){
         Database db = new Database();
-        if (getUserFromDb(email) == null){
+        if (getUserFromDb(this.getEmail()) == null){
         	db.update("INSERT INTO `user` (`email`, `nickname`, `password`, `country`, `city`, `avatar`, `biography`, `joinedDate`) VALUES "
-        		+ "('"+ email +"', '"+ nickname +"', PASSWORD(\""+ password +"\"), '"+ country +"', '"+ city +"', '"+ avatar +"', '"+ biography +"', '"+ new java.sql.Date(joinedDate.getTime()) +"')");
+        		+ "('"+
+                    this.getEmail() +"', '"+
+                    this.getNickname() +"', PASSWORD(\""+
+                    this.getPassword() +"\"), '"+
+                    this.getCountry() +"', '"+
+                    this.getCity() +"', '"+
+                    this.getAvatarS() +"', '"+
+                    this.getBiography() +"', '"+
+                    new java.sql.Date(this.getJoinedDateS().getTime()) +"')");
         }
         else{
             String query = "UPDATE `user` SET"
-                    + " `nickname` = '"+ nickname +"', `password` =PASSWORD(\""+ password +"\"), `country` = '"+ country +"', `city` = '"+ city +"', "
-                    + "`avatar` = '"+ avatar +"', `biography` = '"+ biography + "' WHERE `email` = \"" + email + "\"";
+                    + " `nickname` = '"+ this.getNickname() +"', `password` =PASSWORD(\""+ this.getPassword() +"\"), `country` = '"+ country +"', `city` = '"+ city +"', "
+                    + "`avatar` = '"+ this.getAvatarS() +"', `biography` = '"+ this.getBiography() + "' WHERE `email` = \"" + this.getEmail() + "\"";
             db.update(query);
         }
     }
         
 
     public String getEmail() {
-        return email;
+        return email.get();
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email.set(email);
     }
 
     public String getPassword() {
-        return password;
+        return password.get();
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password.set(password);
     }
 
     public String getNickname() {
-        return nickname;
+        return nickname.get();
     }
 
     public void setNickname(String nickname) {
-        this.nickname = nickname;
+        this.nickname.set(nickname);
     }
 
     public String getCity() {
-        return city;
+        return city.get();
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.city.set(city);
     }
 
-    public String getAvatar() {
-        return avatar;
+    public Object getAvatar() {
+        return avatar.get();
+    }
+
+    public void setAvatar(Object avatar) {
+        this.avatar.set(avatar);
     }
 
     public void setAvatar(String avatar) {
-        this.avatar = avatar;
+        this.avatarS = avatar;
+        this.avatar = new SimpleObjectProperty(new Image(avatar));
     }
 
     public String getBiography() {
-        return biography;
+        return biography.get();
     }
 
     public void setBiography(String biography) {
-        this.biography = biography;
+        this.biography.set(biography);
     }
 
-    public Date getJoinedDate() {
-        return joinedDate;
+    public String getJoinedDate() {
+        return joinedDate.get();
     }
 
-    public void setJoinedDate(Date joinedDate) {
-        this.joinedDate = joinedDate;
+    public void setJoinedDate(String joinedDate) {
+        this.joinedDate.set(joinedDate);
+    }
+
+    public void setJoinedDate(Date date){
+        this.joinedDateS = date;
+        this.joinedDate = new SimpleStringProperty(date.toString());
     }
 
 
     public String getCountry() {
-        return country;
+        return country.get();
     }
 
     public void setCountry(String country) {
-        this.country = country;
+        this.country.set(country);
+    }
+
+    public String getAvatarS() {
+        return avatarS;
+    }
+
+    public Date getJoinedDateS() {
+        return joinedDateS;
+    }
+
+    public int getPubByDay() {
+        return pubByDay.get();
+    }
+
+    public int getNumOfFriend() {
+        return numOfFriend.get();
+    }
+
+    public void setPubByDay(int pubByDay) {
+        this.pubByDay.set(pubByDay);
+    }
+
+    public void setNumOfFriend(int numOfFriend) {
+        this.numOfFriend.set(numOfFriend);
     }
 
     public void subscribe(Feed feed){
@@ -216,5 +265,15 @@ public class User {
         }
         db.close();
         return feeds;
+    }
+
+    public void receiveRequest(User sender) {
+        String email = sender.getEmail();
+        if (User.getUserFromDb(email) != null) {
+            Database db = new Database();
+            db.update("INSERT INTO `friendship` (`user1_email`, `user2_email`, `requestDate`, `accepted`) VALUES"
+                    + "('" + email + "', '" + this.email + "', NOW(), 0)");
+            db.close();
+        }
     }
 }

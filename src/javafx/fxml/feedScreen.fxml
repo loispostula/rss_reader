@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FeedScreenController">
+<BorderPane prefHeight="400.0" prefWidth="735.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FeedScreenController">
   <center>
     <Accordion fx:id="accordion" />
   </center>
@@ -59,8 +59,18 @@
             </Button>
           </children>
         </StackPane>
-        <Pane maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="391.0" />
-        <Button fx:id="logout" onAction="#logout" text="">
+        <Pane maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="492.0" />
+        <Button fx:id="logout" onAction="#refresh" text="">
+          <graphic>
+            <ImageView>
+              <Image url="@../icons/refresh.png" />
+            </ImageView>
+          </graphic>
+            <tooltip>
+                <Tooltip text="Refresh feed and notifications" />
+            </tooltip>
+        </Button>
+        <Button id="logout" onAction="#logout" text="">
           <graphic>
             <ImageView>
               <Image url="@../icons/logout.png" />

@@ -40,7 +40,7 @@ public class ScreensConfiguration {
     }
 
     FXMLDialog profileDialog() {
-        return new FXMLDialog(profileController(), getClass().getResource("fxml/profileForm.fxml"), primaryStage, StageStyle.UNDECORATED);
+        return new FXMLDialog(profileController(), getClass().getResource("fxml/profileForm.fxml"), primaryStage, StageStyle.DECORATED);
     }
 
     ProfileController profileController(){
@@ -61,6 +61,13 @@ public class ScreensConfiguration {
 
     public FriendRequestController acceptFriendController() {
         return new FriendRequestController(this);
+    }
+
+    public FXMLDialog findFriendDialog(){
+        return new FXMLDialog(findFriendController(), getClass().getResource("fxml/addFriend.fxml"), primaryStage, StageStyle.UNDECORATED);
+    }
+    public FindFriendController findFriendController(){
+        return new FindFriendController(this);
     }
 
     public void connectUser(User user){
