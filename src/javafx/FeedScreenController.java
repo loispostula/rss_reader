@@ -158,7 +158,7 @@ public class FeedScreenController implements DialogController {
 
     public void refresh(){
         setFriendRequestCount();
-        //loadFeeds();
+        loadFeeds();
     }
 
     private void loadFeeds() {

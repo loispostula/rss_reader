@@ -88,13 +88,16 @@ public class Feed {
     public List<Publication> getUnreadPublications(User user){
         Database db = new Database();
         ArrayList<Publication> publications = new ArrayList<Publication>();
-        String query ="SELECT p.url FROM publication p " +
-                "INNER JOIN contain cnt " +
-                "ON cnt.publication_url = p.url " +
-                "INNER JOIN feed f " +
-                "ON f.url = cnt.feed_url " +
-                "WHERE f.url = \""+ escapeXml(this.getUrl()) + "\" " +
-                "AND NOT EXISTS (SELECT * FROM readstatus r WHERE r.publication_url = p.url AND r.feed_url = f.url AND r.user_email = \""+ user.getEmail() +"\")";
+        String query ="SELECT cnt.publication_url FROM contain cnt\n" +
+                "WHERE cnt.feed_url = \"test\"\n" +
+                "AND NOT EXISTS " +
+                "(" +
+                "SELECT * FROM readstatus r " +
+                "WHERE r.publication_url = cnt.publication_url " +
+                "AND " +
+                "r.feed_url = cnt.feed_url " +
+                "AND " +
+                "r.user_email = \""+user.getEmail()+"\")";
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
