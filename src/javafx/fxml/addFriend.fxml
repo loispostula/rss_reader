@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane prefHeight="366.0" prefWidth="516.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FindFriendController">
+<GridPane prefHeight="366.0" prefWidth="744.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FindFriendController">
   <children>
     <Label text="Find Friends:" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="0">
       <font>
@@ -21,17 +21,16 @@
     </Label>
     <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
     <Label prefWidth="148.0" text="Criteria:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-    <ChoiceBox id="criteriaComb" fx:id="criteriaBox" prefWidth="234.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
-    </ChoiceBox>
+    <ChoiceBox id="criteriaComb" fx:id="criteriaBox" prefWidth="234.0" GridPane.columnIndex="0" GridPane.rowIndex="2" />
     <TextField fx:id="querryVal" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
     <Label text="Value:" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-    <Button fx:id="searchButton" mnemonicParsing="false" prefWidth="110.0" text="Search!" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-    <Button fx:id="doneButton" mnemonicParsing="false" onAction="#close" prefWidth="77.0" text="Done" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    <Button fx:id="searchButton" mnemonicParsing="false" onAction="#search" prefWidth="110.0" text="Search!" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+    <Button fx:id="doneButton" mnemonicParsing="false" onAction="#close" prefWidth="82.0" text="Done" GridPane.columnIndex="2" GridPane.rowIndex="4" />
   </children>
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="234.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="275.0" minWidth="10.0" prefWidth="205.0" />
-    <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="77.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="435.0" minWidth="10.0" prefWidth="428.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="171.0" minWidth="10.0" prefWidth="82.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="74.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />

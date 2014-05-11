@@ -82,15 +82,9 @@ public class FeedScreenController implements DialogController {
     }
 
     public void addFriend() {
-        String email;
-        //TODO get email via inputbox
-        email = "lois@postula.be";
-        if (User.getUserFromDb(email) != null) {
-            Database db = new Database();
-            db.update("INSERT INTO `friendship` (`user1_email`, `user2_email`, `requestDate`, `accepted`) VALUES"
-                    + "('" + screens.getConnectedUser().getEmail() + "', '" + email + "', NOW(), 0)");
-            db.close();
-        }
+        FXMLDialog dial = this.screens.findFriendDialog();
+        dial.show();
+        ((FindFriendController)dial.getController()).populateCriteria();
     }
 
     public void acceptFriend() {

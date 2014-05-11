@@ -128,7 +128,7 @@ public class ProfileController implements DialogController {
         this.countryField.setText(user.getCountry());
         this.biographyArea.setText(user.getBiography());
         this.joinDate.setText(user.getJoinedDate().toString());
-        avatar_img = new Image("file://" + user.getAvatar());
+        avatar_img = (Image) user.getAvatar();
         avatar.setImage(avatar_img);
     }
 }

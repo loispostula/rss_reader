@@ -64,7 +64,7 @@ public class ScreensConfiguration {
     }
 
     public FXMLDialog findFriendDialog(){
-        return new FXMLDialog(findFriendController(), getClass().getResource("fxml/addFriend.fxml"), primaryStage, StageStyle.UNDECORATED);
+        return new FXMLDialog(findFriendController(), getClass().getResource("fxml/addFriend.fxml"), primaryStage, StageStyle.DECORATED);
     }
     public FindFriendController findFriendController(){
         return new FindFriendController(this);

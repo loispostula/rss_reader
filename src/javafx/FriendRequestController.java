@@ -175,8 +175,6 @@ public class FriendRequestController implements DialogController {
             db.update("UPDATE friendship SET accepted = 1 "
                     + "WHERE user1_email = \"" + friendEmail.get() + "\" AND user2_email = \"" + screens.getConnectedUser().getEmail() + "\"");
             db.close();
-            Feed feed = Feed.getFeedFromFile(friendEmail.get());
-			screens.getConnectedUser().subscribe(feed);
         }
 
         public void refuse() {

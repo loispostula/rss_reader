@@ -38,13 +38,12 @@ public class User {
     }
 
 
-
-    public static User getUserFromDb(String email){
+    public static User getUserFromDb(String email) {
         Database db = new Database();
         User user = null;
-        ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` = \"" + email +"\"");
+        ResultSet res = db.querry("SELECT * FROM `user` WHERE `email` = \"" + email + "\"");
         try {
-            if (res != null && res.next()){
+            if (res != null && res.next()) {
                 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
                         , res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
             }
@@ -56,61 +55,60 @@ public class User {
         return user;
     }
 
-    public static User getUserFromDb(String email, String password){
+    public static User getUserFromDb(String email, String password) {
 
-    	Database db = new Database();
-    	User user = null;
-        String query = "SELECT * FROM `user` WHERE `email` = \"" + email +"\" AND `password` = PASSWORD(\"" + password + "\")";
-    	ResultSet res = db.querry(query);
-    	try {
-			if (res != null && res.next()){
-				 user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
-						, res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
+        Database db = new Database();
+        User user = null;
+        String query = "SELECT * FROM `user` WHERE `email` = \"" + email + "\" AND `password` = PASSWORD(\"" + password + "\")";
+        ResultSet res = db.querry(query);
+        try {
+            if (res != null && res.next()) {
+                user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"), res.getString("country")
+                        , res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         db.close();
-    	return user;
+        return user;
     }
 
     public User(String email, String password, String nickname, String city,
-			String country, String avatar, String biography, Date joinedDate) {
-		super();
-		this.email = new SimpleStringProperty(email);
-		this.password = new SimpleStringProperty(password);
-		this.nickname = new SimpleStringProperty(nickname);
-		this.city = new SimpleStringProperty(city);
+                String country, String avatar, String biography, Date joinedDate) {
+        super();
+        this.email = new SimpleStringProperty(email);
+        this.password = new SimpleStringProperty(password);
+        this.nickname = new SimpleStringProperty(nickname);
+        this.city = new SimpleStringProperty(city);
         this.country = new SimpleStringProperty(country);
-		this.avatar = new SimpleObjectProperty(new Image(avatar));
+        this.avatar = new SimpleObjectProperty(new Image("file:///" + avatar));
         this.avatarS = avatar;
-		this.biography = new SimpleStringProperty(biography);
-		this.joinedDate = new SimpleStringProperty(joinedDate.toString());
+        this.biography = new SimpleStringProperty(biography);
+        this.joinedDate = new SimpleStringProperty(joinedDate.toString());
         this.joinedDateS = joinedDate;
-	}
+    }
 
-    public void save(){
+    public void save() {
         Database db = new Database();
-        if (getUserFromDb(this.getEmail()) == null){
-        	db.update("INSERT INTO `user` (`email`, `nickname`, `password`, `country`, `city`, `avatar`, `biography`, `joinedDate`) VALUES "
-        		+ "('"+
-                    this.getEmail() +"', '"+
-                    this.getNickname() +"', PASSWORD(\""+
-                    this.getPassword() +"\"), '"+
-                    this.getCountry() +"', '"+
-                    this.getCity() +"', '"+
-                    this.getAvatarS() +"', '"+
-                    this.getBiography() +"', '"+
-                    new java.sql.Date(this.getJoinedDateS().getTime()) +"')");
-        }
-        else{
+        if (getUserFromDb(this.getEmail()) == null) {
+            db.update("INSERT INTO `user` (`email`, `nickname`, `password`, `country`, `city`, `avatar`, `biography`, `joinedDate`) VALUES "
+                    + "('" +
+                    this.getEmail() + "', '" +
+                    this.getNickname() + "', PASSWORD(\"" +
+                    this.getPassword() + "\"), '" +
+                    this.getCountry() + "', '" +
+                    this.getCity() + "', '" +
+                    this.getAvatarS() + "', '" +
+                    this.getBiography() + "', '" +
+                    new java.sql.Date(this.getJoinedDateS().getTime()) + "')");
+        } else {
             String query = "UPDATE `user` SET"
-                    + " `nickname` = '"+ this.getNickname() +"', `password` =PASSWORD(\""+ this.getPassword() +"\"), `country` = '"+ country +"', `city` = '"+ city +"', "
-                    + "`avatar` = '"+ this.getAvatarS() +"', `biography` = '"+ this.getBiography() + "' WHERE `email` = \"" + this.getEmail() + "\"";
+                    + " `nickname` = '" + this.getNickname() + "', `password` =PASSWORD(\"" + this.getPassword() + "\"), `country` = '" + country + "', `city` = '" + city + "', "
+                    + "`avatar` = '" + this.getAvatarS() + "', `biography` = '" + this.getBiography() + "' WHERE `email` = \"" + this.getEmail() + "\"";
             db.update(query);
         }
     }
-        
+
 
     public String getEmail() {
         return email.get();
@@ -154,7 +152,7 @@ public class User {
 
     public void setAvatar(String avatar) {
         this.avatarS = avatar;
-        this.avatar = new SimpleObjectProperty(new Image(avatar));
+        this.avatar = new SimpleObjectProperty(new Image("file:///" + avatar));
     }
 
     public String getBiography() {
@@ -173,7 +171,7 @@ public class User {
         this.joinedDate.set(joinedDate);
     }
 
-    public void setJoinedDate(Date date){
+    public void setJoinedDate(Date date) {
         this.joinedDateS = date;
         this.joinedDate = new SimpleStringProperty(date.toString());
     }
@@ -211,15 +209,15 @@ public class User {
         this.numOfFriend.set(numOfFriend);
     }
 
-    public void subscribe(Feed feed){
+    public void subscribe(Feed feed) {
         Database db = new Database();
         String query = "INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate)" +
-                "VALUES (\""+this.email+"\", \""+feed.getUrl()+"\" , NOW())";
+                "VALUES (\"" + this.email + "\", \"" + feed.getUrl() + "\" , NOW())";
         db.update(query);
         db.close();
     }
 
-    public List<Feed> getAllSubscription(){
+    public List<Feed> getAllSubscription() {
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
         //todo jointur subscribe
@@ -228,10 +226,10 @@ public class User {
                 "ON fs.feed_url = f.url " +
                 "INNER JOIN user u " +
                 "ON u.email = fs.user_email " +
-                "WHERE u.email = \""+this.email+"\"";
+                "WHERE u.email = \"" + this.email + "\"";
         ResultSet res = db.querry(query);
         try {
-            while (res.next()){
+            while (res.next()) {
                 feeds.add(Feed.getFeedFromDb(res.getString("url")));
             }
         } catch (SQLException e) {
@@ -241,23 +239,23 @@ public class User {
         return feeds;
     }
 
-    public List<Feed> getAllFriendsSubscription(){
+    public List<Feed> getAllFriendsSubscription() {
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
         //todo jointur subscribe
-        String query = "SELECT `user2_email` FROM `friendship` WHERE `user1_email` = \"" + this.email +"\" AND accepted = 1";
+        String query = "SELECT `user2_email` FROM `friendship` WHERE `user1_email` = \"" + this.email + "\" AND accepted = 1";
         ResultSet res = db.querry(query);
         try {
-            while (res.next()){
+            while (res.next()) {
                 feeds.add(Feed.getFeedFromDb(res.getString("user2_email")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        query = "SELECT `user1_email` FROM `friendship` WHERE `user2_email` = \"" + this.email +"\" AND accepted = 1";
+        query = "SELECT `user1_email` FROM `friendship` WHERE `user2_email` = \"" + this.email + "\" AND accepted = 1";
         res = db.querry(query);
         try {
-            while (res.next()){
+            while (res.next()) {
                 feeds.add(Feed.getFeedFromDb(res.getString("user1_email")));
             }
         } catch (SQLException e) {
@@ -272,8 +270,21 @@ public class User {
         if (User.getUserFromDb(email) != null) {
             Database db = new Database();
             db.update("INSERT INTO `friendship` (`user1_email`, `user2_email`, `requestDate`, `accepted`) VALUES"
-                    + "('" + email + "', '" + this.email + "', NOW(), 0)");
+                    + "('" + email + "', '" + this.getEmail() + "', NOW(), 0)");
             db.close();
         }
+    }
+
+    public void computeStat() {
+        pubByDay = new SimpleIntegerProperty(0);
+        numOfFriend = new SimpleIntegerProperty(0);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof User) {
+            return ((User) obj).getEmail() == this.getEmail();
+        }
+        return false;
     }
 }
