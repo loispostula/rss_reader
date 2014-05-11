@@ -37,11 +37,11 @@ public class Publication {
 		this.releaseDate = new SimpleStringProperty(releaseDate.toString());
         this.releaseDateF = releaseDate;
 		this.description = new SimpleStringProperty(description);
-        this.image = new SimpleObjectProperty(new Image(image));
         this.imageUrl = image;
         if (imageUrl == ""){
-        	imageUrl = getClass().getResource("icons/rss_icon.png").getPath();
+        	imageUrl = "file://"+System.getProperty("user.dir").replace("\\", "/")+"/icons/rss_icon.png";
         }
+        this.image = new SimpleObjectProperty(new Image(imageUrl));
 	}
 
 

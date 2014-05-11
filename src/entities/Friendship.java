@@ -2,6 +2,8 @@ package entities;
 
 import java.util.Date;
 
+import util.Database;
+
 /**
  * Created by lpostula on 08/05/14.
  * Documentation de la classe Friendship
@@ -24,7 +26,23 @@ public class Friendship {
 		this.date = date;
 		this.accepted = accepted;
 	}
-
+    
+    public void save(){
+    	Database db = new Database();
+    	String accept = "0";
+    	if (accepted){
+    		accept = "1";
+    	}
+        db.update("INSERT INTO `friendship` (user1_email, user2_email, requestDate, accepted) VALUES"
+                + "('"+ userA.getEmail() +"', '"+userB.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"', '"+accept +"')");
+        if (accepted){
+	        db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
+	                + "('"+ userA.getEmail() +"', '"+userB.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"')");
+	        //db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
+	        //        + "('"+ userB.getEmail() +"', '"+userA.getEmail() +"', '"+new java.sql.Date(date.getTime()) +"')");
+        }
+        db.close();
+    }
 
 
 	public User getUserA() {
