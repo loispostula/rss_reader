@@ -212,7 +212,7 @@ public class User {
     public void subscribe(Feed feed) {
         Database db = new Database();
         String query = "INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate)" +
-                "VALUES (\"" + this.email + "\", \"" + feed.getUrl() + "\" , NOW())";
+                "VALUES (\"" + this.getEmail() + "\", \"" + feed.getUrl() + "\" , NOW())";
         db.update(query);
         db.close();
     }
@@ -226,7 +226,7 @@ public class User {
                 "ON fs.feed_url = f.url " +
                 "INNER JOIN user u " +
                 "ON u.email = fs.user_email " +
-                "WHERE u.email = \"" + this.email + "\"";
+                "WHERE u.email = \"" + this.getEmail() + "\"";
         ResultSet res = db.querry(query);
         try {
             while (res.next()) {
