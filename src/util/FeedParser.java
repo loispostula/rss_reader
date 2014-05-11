@@ -45,9 +45,26 @@ public class FeedParser {
 		List<Element> items = info.getChildren("item");
 		
 		String title = escapeXml(info.getChild("title").getText());
-		String description = escapeXml(info.getChild("description").getText());
-		String link = escapeXml(info.getChild("link").getText());
-		String image = escapeXml(info.getChild("image").getChild("url").getText());
+		String description;
+		try{
+			description = escapeXml(info.getChild("description").getText());
+		}catch (Exception e){
+			description = title+" feed";
+		}
+		
+		String link;
+		try{
+			link = escapeXml(info.getChild("link").getText());
+		}
+		catch(Exception e){
+			link = "NaN";
+		}
+		String image;
+		try{
+			image = escapeXml(info.getChild("image").getChild("url").getText());
+		}catch (Exception e){
+			image = "icons/rss_icon.png";
+		}
 		
 		this.feed = new Feed(path, title, description, link, image);
 		this.feed.save();
@@ -65,7 +82,7 @@ public class FeedParser {
 			try{
 				imagePub = escapeXml(current.getChild("enclosure").getAttribute("url").getValue());
 			}catch (Exception e){
-				imagePub = null;
+				imagePub = "icons/rss_icon.png";
 			}
 
 			Publication publication = new Publication(linkPub, titlePub, datePub, descriptionPub, imagePub);

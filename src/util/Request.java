@@ -133,7 +133,7 @@ public class Request {
         ArrayList<Feed> requests = new ArrayList<Feed>();
         try {
             while (res.next()) {
-                requests.add(Feed.getFeedFromDb(res.getString("feed_url")));
+                requests.add(Feed.getFeedFromDb(res.getString("email")));
             }
         } catch (SQLException e) {
             e.printStackTrace();

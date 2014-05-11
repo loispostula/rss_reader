@@ -151,7 +151,7 @@ public class FeedScreenController implements DialogController {
 
     private void configureFileChooser(final FileChooser fileChooser) {
         fileChooser.setTitle("Choose Feed");
-        fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
+        fileChooser.setInitialDirectory(new File(System.getProperty("user.dir")));
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Feed XML", "*.xml")
         );

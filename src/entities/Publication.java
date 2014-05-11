@@ -39,6 +39,9 @@ public class Publication {
 		this.description = new SimpleStringProperty(description);
         this.image = new SimpleObjectProperty(new Image(image));
         this.imageUrl = image;
+        if (imageUrl == ""){
+        	imageUrl = getClass().getResource("icons/rss_icon.png").getPath();
+        }
 	}
 
 
