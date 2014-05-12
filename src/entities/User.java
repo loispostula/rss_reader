@@ -235,6 +235,25 @@ public class User {
         return feeds;
     }
 
+    public List<Publication> getAllpublication() {
+        ArrayList<Publication> publications = new ArrayList<Publication>();
+        Database db = new Database();
+        //todo jointur subscribe
+        String query = "SELECT c.publication_url FROM feedsubscription fs "
+        		+ "INNER JOIN contain c ON c.feed_url = fs.feed_url" +
+                "WHERE fs.user_email = \"" + this.getEmail() + "\"";
+        ResultSet res = db.querry(query);
+        try {
+            while (res.next()) {
+                publications.add(Publication.getPublicationFromDb(res.getString("publication_url")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        db.close();
+        return publications;
+    }
+
     public List<Feed> getAllFriendsSubscription() {
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();

@@ -50,8 +50,12 @@ public class FeedScreenController implements DialogController {
     ImageView friendRequest;
     @FXML
     StackPane stackPane;
+    @FXML
+    ScrollPane scrollPane;
 
     List<TitledPane> feedPane;
+    
+
 
     @Override
     public void setDialog(FXMLDialog dialog) {
@@ -164,12 +168,12 @@ public class FeedScreenController implements DialogController {
     private void loadFeeds() {
         List<Feed> feeds = screens.getConnectedUser().getAllSubscription();
         for (int i = 0; i < feeds.size(); ++i) {
+        	System.out.println(feeds.get(i).getUrl());
             Feed feed = feeds.get(i);
             TitledPane pane = new TitledPane();
             pane.setText(feed.getTitle());
             pane.setTooltip(new Tooltip(feed.getDescription()));
             if (!feed.getImage().isEmpty()) {
-            	System.out.println(feed.getImage());
             	ImageView temp = new ImageView(new Image(feed.getImage()));
             	temp.setPreserveRatio(true);
             	temp.setFitHeight(40);
@@ -216,10 +220,13 @@ public class FeedScreenController implements DialogController {
 //            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
 
             table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
+            //table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
             table.getColumns().addAll(pubEnclosure, pubDate, pubTitle);
             pane.setContent(table);
             accordion.getPanes().add(pane);
         }
+        scrollPane.setPrefHeight(accordion.getHeight());
+        scrollPane.setFitToWidth(true);
         //TODO refactorer ceci
 //        feeds = screens.getConnectedUser().getAllFriendsSubscription();
 //        for (Feed feed : feeds) {

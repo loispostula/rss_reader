@@ -32,7 +32,7 @@ public class SharedPublication {
         db.update("INSERT INTO `sharedPublication` (`publication_url`, `user_email`, `text`, `sharedDate`) VALUES "
             	+ "('"+ publication.getUrl() +"', '"+ user.getEmail() +"', '"+ text +"', '"+ new java.sql.Date(sharedDate.getTime()) +"')");
         db.update("INSERT INTO contain (`publication_url`, `feed_url`) VALUES "
-            	+ "('"+ publication.getUrl() +"', '"+ user.getEmail() +"')");
+            	+ "('"+ publication.getUrl() +"', 'feed://"+ user.getEmail() +"')");
         db.close();
     }
 
