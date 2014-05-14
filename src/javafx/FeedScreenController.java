@@ -6,6 +6,7 @@ import entities.User;
 import javafx.collections.FXCollections;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.control.*;
@@ -15,8 +16,12 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.util.Callback;
 import util.Database;
@@ -50,12 +55,8 @@ public class FeedScreenController implements DialogController {
     ImageView friendRequest;
     @FXML
     StackPane stackPane;
-    @FXML
-    ScrollPane scrollPane;
 
     List<TitledPane> feedPane;
-    
-
 
     @Override
     public void setDialog(FXMLDialog dialog) {
@@ -166,10 +167,10 @@ public class FeedScreenController implements DialogController {
     }
 
     private void loadFeeds() {
+        accordion.getPanes().removeAll(accordion.getPanes());
         List<Feed> feeds = screens.getConnectedUser().getAllSubscription();
         for (int i = 0; i < feeds.size(); ++i) {
-        	System.out.println(feeds.get(i).getUrl());
-            Feed feed = feeds.get(i);
+            final Feed feed = feeds.get(i);
             TitledPane pane = new TitledPane();
             pane.setText(feed.getTitle());
             pane.setTooltip(new Tooltip(feed.getDescription()));
@@ -213,74 +214,98 @@ public class FeedScreenController implements DialogController {
             pubDate.setCellValueFactory(new PropertyValueFactory<Publication, String>("releaseDate"));
 
             TableColumn pubTitle = new TableColumn("title");
-            pubTitle.setMinWidth(200);
+            pubTitle.setPrefWidth(300);
             pubTitle.setCellValueFactory(new PropertyValueFactory<Publication, String>("title"));
+            Callback<TableColumn, TableCell> cellFactory = new Callback<TableColumn, TableCell>() {
+                @Override
+                public TableCell call(TableColumn tableColumn) {
+                    final TableCell cell = new TableCell(){
+                        private Text text;
+                        @Override
+                        protected void updateItem(Object o, boolean b) {
+                            super.updateItem(o, b);
+                            if(!isEmpty()){
+                                text = new Text(o.toString());
+                                text.setWrappingWidth(290);
+                                setGraphic(text);
+                            }
+                        }
+                    };
+                            return cell;
+                }
+            };
+            pubTitle.setCellFactory(cellFactory);
+            TableColumn openPub = new TableColumn("Open");
+            openPub.setCellFactory(new Callback<TableColumn, TableCell>() {
+                @Override
+                public TableCell call(TableColumn tableColumn) {
+                    TableCell cell = new TableCell() {
+                        @Override
+                        protected void updateItem(Object o, boolean b) {
+                            super.updateItem(o, b);
 
-//            TableColumn pubOpen = new TableColumn();
-//            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
+                            final VBox vbox = new VBox(5);
+                            Image image = new Image("file:///" + getClass().getResource("icons/openPub.png").getPath());
+                            Button button = new Button("", new ImageView(image));
+                            final TableCell c = this;
+                            button.setOnAction(new EventHandler<ActionEvent>() {
+                                @Override
+                                public void handle(ActionEvent actionEvent) {
+                                    TableRow row = c.getTableRow();
+                                    Publication pub = (Publication) row.getTableView().getItems().get(row.getIndex());
+                                    openBrowser(pub.getUrl());
+                                    pub.markAsRead(screens.getConnectedUser(), feed);
+                                }
+                            });
+                            vbox.getChildren().add(button);
+                            setGraphic(vbox);
+                        }
+                    };
+                    return cell;
+                }
+            });
 
             table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
-            //table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
-            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle);
+            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub);
             pane.setContent(table);
             accordion.getPanes().add(pane);
         }
-        scrollPane.setPrefHeight(accordion.getHeight());
-        scrollPane.setFitToWidth(true);
-        //TODO refactorer ceci
-//        feeds = screens.getConnectedUser().getAllFriendsSubscription();
-//        for (Feed feed : feeds) {
-//            TitledPane pane = new TitledPane();
-//            pane.setText(feed.getTitle());
-//            pane.setTooltip(new Tooltip(feed.getDescription()));
-//            if(!feed.getImage().isEmpty()){
-//                pane.setGraphic(new ImageView(new Image(feed.getImage())));
-//
-//            }
-//            TableView<Publication> table = new TableView<Publication>();
-//            table.setTableMenuButtonVisible(true);
-//
-//            TableColumn pubEnclosure = new TableColumn("Image");
-//            pubEnclosure.setCellValueFactory(new PropertyValueFactory("image"));
-//
-//            pubEnclosure.setCellFactory(new Callback<TableColumn, TableCell>() {
-//                @Override
-//                public TableCell call(TableColumn tableColumn) {
-//                    TableCell cell = new TableCell() {
-//                        ImageView imageView = new ImageView();
-//
-//                        @Override
-//                        protected void updateItem(Object o, boolean b) {
-//                            if (o != null) {
-//                                HBox box = new HBox();
-//                                box.setSpacing(10);
-//                                imageView.setFitHeight(60);
-//                                imageView.setFitWidth(80);
-//                                imageView.setImage(new Image((String) o));
-//                                box.getChildren().addAll(imageView);
-//                                setGraphic(box);
-//                            }
-//                        }
-//                    };
-//                    return cell;
-//                }
-//            });
-//
-//            TableColumn pubDate = new TableColumn("Date");
-//            pubDate.setMinWidth(50);
-//            pubDate.setCellValueFactory(new PropertyValueFactory<Publication, String>("releaseDate"));
-//
-//            TableColumn pubTitle = new TableColumn("title");
-//            pubTitle.setMinWidth(200);
-//            pubTitle.setCellValueFactory(new PropertyValueFactory<Publication, String>("title"));
-//
-////            TableColumn pubOpen = new TableColumn();
-////            pubOpen.setCellValueFactory(new PropertyValueFactory("openP"));
-//
-//            table.setItems(FXCollections.observableArrayList(feed.getUnreadShares(screens.getConnectedUser())));
-//            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle);
-//            pane.setContent(table);
-//            accordion.getPanes().add(pane);
-//        }
+    }
+
+    private void openBrowser(String url){
+        String os = System.getProperty("os.name").toLowerCase();
+        Runtime rt = Runtime.getRuntime();
+
+        try{
+
+            if (os.indexOf( "win" ) >= 0) {
+
+                // this doesn't support showing urls in the form of "page.html#nameLink"
+                rt.exec( "rundll32 url.dll,FileProtocolHandler " + url);
+
+            } else if (os.indexOf( "mac" ) >= 0) {
+
+                rt.exec( "open " + url);
+
+            } else if (os.indexOf( "nix") >=0 || os.indexOf( "nux") >=0) {
+
+                // Do a best guess on unix until we get a platform independent way
+                // Build a list of browsers to try, in this order.
+                String[] browsers = {"epiphany", "firefox", "mozilla", "konqueror",
+                        "netscape","opera","links","lynx"};
+
+                // Build a command string which looks like "browser1 "url" || browser2 "url" ||..."
+                StringBuffer cmd = new StringBuffer();
+                for (int i=0; i<browsers.length; i++)
+                    cmd.append( (i==0  ? "" : " || " ) + browsers[i] +" \"" + url + "\" ");
+
+                rt.exec(new String[] { "sh", "-c", cmd.toString() });
+
+            } else {
+                return;
+            }
+        }catch (Exception e){
+            return;
+        }
     }
 }

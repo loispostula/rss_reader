@@ -6,20 +6,6 @@ ON f.user1_email = u.email OR f.user2_email = u.email
 GROUP  BY u.email 
 HAVING COUNT(u.email) < 3
 
-SELECT u.email, COUNT(u.email)  FROM user u
-INNER JOIN friendship f
-ON f.user1_email = u.email OR
-f.user2_email = u.email
-GROUP BY u.email
-HAVING COUNT(u.email) < 3
-AND
-COUNT(u.email) >= 1
-//if 0 included
-UNION
-SELECT u.email, 0 FROM user u
-WHERE u.email not in (SELECT user1_email from friendship)
-AND u.email not in (SELECT user2_email from friendship);
-
 R2
 
 SELECT c.feed_url FROM feedsubscription c
@@ -31,13 +17,6 @@ GROUP BY b.user_email
 HAVING COUNT(b.user_email) > 1) d
 ON d.user_email = c.user_email
 GROUP BY c.feed_url
-
-
-
-
-
-
-
 
 
 R3

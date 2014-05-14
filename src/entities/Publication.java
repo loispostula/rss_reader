@@ -27,8 +27,8 @@ public class Publication {
     private String imageUrl;
     public Publication() {
     }
-    
-    
+
+
 
     public Publication(String url, String title, Date releaseDate,
 			String description, String image) {
@@ -66,7 +66,7 @@ public class Publication {
     public void save(){
         Database db = new Database();
 
-		java.text.SimpleDateFormat sdf = 
+		java.text.SimpleDateFormat sdf =
 			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (getPublicationFromDb(url.get()) == null){
         	db.update("INSERT INTO `publication` (`url`, `title`, `releaseDate`, `description`, `image`) VALUES "
@@ -93,12 +93,9 @@ public class Publication {
 
     public void markAsRead(User user, Feed feed){
         Database db = new Database();
-        
-        if (getPublicationFromDb(url.get()) == null){
-        	db.update("INSERT INTO `rssreader`.`readstatus` (`user_email`, `publication_url`, `feed_url`, `date`) VALUES "
-        		+ "('"+ user.getEmail() +"', '"+this.getUrl() +"', '"+ feed.getUrl() +"', NOW() )");
-        	db.close();
-        }
+        db.update("INSERT INTO readstatus (user_email, publication_url, feed_url, date) VALUES "
+            + "('"+ user.getEmail() +"', '"+this.getUrl() +"', '"+ feed.getUrl() +"', NOW() )");
+        db.close();
     }
 
 

@@ -4,6 +4,7 @@ package javafx;
  * Created by lpostula on 08/05/14.
  * Documentation de la classe ScreensConfiguration
  */
+import entities.Publication;
 import entities.User;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -68,6 +69,14 @@ public class ScreensConfiguration {
     }
     public FindFriendController findFriendController(){
         return new FindFriendController(this);
+    }
+
+    public FXMLDialog publicationView(){
+        return new FXMLDialog(publicationViewController(), getClass().getResource("fxml/openPub.fxml"), primaryStage, StageStyle.DECORATED);
+    }
+
+    public PublicationViewController publicationViewController(){
+        return new PublicationViewController(this);
     }
 
     public void connectUser(User user){

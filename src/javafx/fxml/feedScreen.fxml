@@ -10,9 +10,7 @@
 
 <BorderPane prefHeight="400.0" prefWidth="735.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FeedScreenController">
   <center>
-    <ScrollPane fx:id="scrollPane">
-      <Accordion fx:id="accordion" />
-    </ScrollPane>
+    <Accordion fx:id="accordion" />
   </center>
   <top>
     <HBox minHeight="36.0" prefHeight="36.0" prefWidth="600.0">
