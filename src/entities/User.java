@@ -232,6 +232,7 @@ public class User {
             e.printStackTrace();
         }
         db.close();
+        feeds.addAll(getAllFriendsSubscription());
         return feeds;
     }
 
@@ -254,30 +255,56 @@ public class User {
         return publications;
     }
 
-    public List<Feed> getAllFriendsSubscription() {
-        ArrayList<Feed> feeds = new ArrayList<Feed>();
+    public ArrayList<User> getFriend(){
+        ArrayList<User> friends = new ArrayList<User>();
+        String query = "SELECT u.email FROM user u " +
+                "INNER JOIN friendship fs ON fs.user1_email = u.email OR fs.user2_email = u.email " +
+                "WHERE " +
+                "(fs.user1_email = \""+this.getEmail()+"\" OR fs.user2_email = \""+this.getEmail()+"\") " +
+                "AND " +
+                "( fs.accepted = 1) " +
+                "AND " +
+                "(u.email != \""+this.getEmail()+"\");";
         Database db = new Database();
-        //todo jointur subscribe
-        String query = "SELECT `user2_email` FROM `friendship` WHERE `user1_email` = \"" + this.email + "\" AND accepted = 1";
         ResultSet res = db.querry(query);
         try {
-            while (res.next()) {
-                feeds.add(Feed.getFeedFromDb(res.getString("user2_email")));
+            while(res.next()){
+                friends.add(User.getUserFromDb(res.getString("email")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        query = "SELECT `user1_email` FROM `friendship` WHERE `user2_email` = \"" + this.email + "\" AND accepted = 1";
-        res = db.querry(query);
-        try {
-            while (res.next()) {
-                feeds.add(Feed.getFeedFromDb(res.getString("user1_email")));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        return friends;
+    }
+
+    public ArrayList<Feed> getAllFriendsSubscription() {
+        ArrayList<User> friends = getFriend();
+        ArrayList<Feed> feeds = new ArrayList<Feed>();
+        for(User friend : friends){
+            feeds.add(friend.createSharedFeed());
         }
-        db.close();
         return feeds;
+    }
+
+    public Feed createSharedFeed(){
+        Feed feed = new Feed(getEmail(), getNickname(), "Shared Feed of " + getNickname(), getEmail(), "file:///" + getAvatarS());
+        ArrayList<Publication> pubs = new ArrayList<Publication>();
+        String querry = "SELECT * FROM sharedpublication WHERE user_email = \""+getEmail()+"\"";
+        Database db =  new Database();
+        ResultSet res = db.querry(querry);
+        try {
+            while(res.next()){
+                Publication pub = Publication.getPublicationFromDb(res.getString("publication_url"));
+                if(pub != null){
+                    pub.setReleaseDate(res.getString("sharedDate"));
+                    pub.setDescription(res.getString("text"));
+                    feed.addPublication(pub);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return feed;
     }
 
     public void receiveRequest(User sender) {

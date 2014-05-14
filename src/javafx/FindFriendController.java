@@ -188,7 +188,7 @@ public class FindFriendController implements DialogController {
                         "ON f.user1_email = u.email OR " +
                         "f.user2_email = u.email " +
                         "WHERE (f.user1_email = \"" + querryVal.getText() + "\" OR " +
-                        "f.user2_email = \"" + querryVal.getText() + "\") AND (u.email != \""+querryVal.getText()+"\")";
+                        "f.user2_email = \"" + querryVal.getText() + "\") AND (u.email != \""+querryVal.getText()+"\") AND (f.accepted = 1)";
                 break;
         }
         Database db = new Database();

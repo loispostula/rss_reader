@@ -4,37 +4,32 @@ import entities.Feed;
 import entities.Publication;
 import entities.User;
 import javafx.collections.FXCollections;
-import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.Group;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.util.Callback;
+import org.controlsfx.control.action.Action;
+import org.controlsfx.dialog.Dialogs;
 import util.Database;
-import util.FeedParser;
-
-import static org.apache.commons.lang3.StringEscapeUtils.*;
 
 import java.io.File;
-import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
+
+import static org.apache.commons.lang3.StringEscapeUtils.escapeXml;
 
 /**
  * Created by lpostula on 08/05/14.
@@ -69,10 +64,10 @@ public class FeedScreenController implements DialogController {
         screens.loginDialog().show();
     }
 
-    public ArrayList<User> searchFirend(String search){
+    public ArrayList<User> searchFirend(String search) {
         search = escapeXml(search);
         Database db = new Database();
-        String query = "SELECT `email` FROM `user` WHERE `email` = \"" + search + "\" OR `nickname` = \""+ search +"\"";
+        String query = "SELECT `email` FROM `user` WHERE `email` = \"" + search + "\" OR `nickname` = \"" + search + "\"";
         ResultSet res = db.querry(query);
         ArrayList<User> requests = new ArrayList<User>();
         try {
@@ -89,13 +84,13 @@ public class FeedScreenController implements DialogController {
     public void addFriend() {
         FXMLDialog dial = this.screens.findFriendDialog();
         dial.show();
-        ((FindFriendController)dial.getController()).populateCriteria();
+        ((FindFriendController) dial.getController()).populateCriteria();
     }
 
     public void acceptFriend() {
-        FXMLDialog dial= this.screens.friendRequestDialog();
+        FXMLDialog dial = this.screens.friendRequestDialog();
         dial.show();
-        ((FriendRequestController)dial.getController()).showRequest();
+        ((FriendRequestController) dial.getController()).showRequest();
         this.setFriendRequestCount();
     }
 
@@ -103,8 +98,6 @@ public class FeedScreenController implements DialogController {
         Database db = new Database();
         db.update("INSERT INTO `rssreader`.`sharedpublication` (`user_email`, `publication_url`, `sharedDate`, `text`) VALUES"
                 + "('" + screens.getConnectedUser().getEmail() + "', '" + publication.getUrl() + "', NOW(), '" + escapeXml(text) + "')");
-        db.update("INSERT INTO `contain` (`feed_url`, `publication_url`) VALUES"
-                + "('"+ screens.getConnectedUser().getEmail() +"', '"+publication.getUrl() +"')");
         db.close();
     }
 
@@ -141,13 +134,13 @@ public class FeedScreenController implements DialogController {
         );
     }
 
-    private void setFriendRequestCount(){
+    private void setFriendRequestCount() {
         Database db = new Database();
         int nmb = 0;
         String query = "SELECT COUNT(*) FROM `friendship` WHERE `user2_email` = \"" + screens.getConnectedUser().getEmail() + "\" AND accepted = 0";
         ResultSet res = db.querry(query);
         try {
-            if(res.next()){
+            if (res.next()) {
                 nmb = res.getInt("COUNT(*)");
             }
         } catch (SQLException e) {
@@ -161,7 +154,7 @@ public class FeedScreenController implements DialogController {
         stackPane.getChildren().add(friendReq);
     }
 
-    public void refresh(){
+    public void refresh() {
         setFriendRequestCount();
         loadFeeds();
     }
@@ -175,10 +168,10 @@ public class FeedScreenController implements DialogController {
             pane.setText(feed.getTitle());
             pane.setTooltip(new Tooltip(feed.getDescription()));
             if (!feed.getImage().isEmpty()) {
-            	ImageView temp = new ImageView(new Image(feed.getImage()));
-            	temp.setPreserveRatio(true);
-            	temp.setFitHeight(40);
-            	temp.setFitWidth(120);
+                ImageView temp = new ImageView(new Image(feed.getImage()));
+                temp.setPreserveRatio(true);
+                temp.setFitHeight(40);
+                temp.setFitWidth(120);
                 pane.setGraphic(temp);
 
             }
@@ -219,22 +212,24 @@ public class FeedScreenController implements DialogController {
             Callback<TableColumn, TableCell> cellFactory = new Callback<TableColumn, TableCell>() {
                 @Override
                 public TableCell call(TableColumn tableColumn) {
-                    final TableCell cell = new TableCell(){
+                    final TableCell cell = new TableCell() {
                         private Text text;
+
                         @Override
                         protected void updateItem(Object o, boolean b) {
                             super.updateItem(o, b);
-                            if(!isEmpty()){
+                            if (!isEmpty()) {
                                 text = new Text(o.toString());
                                 text.setWrappingWidth(290);
                                 setGraphic(text);
                             }
                         }
                     };
-                            return cell;
+                    return cell;
                 }
             };
             pubTitle.setCellFactory(cellFactory);
+
             TableColumn openPub = new TableColumn("Open");
             openPub.setCellFactory(new Callback<TableColumn, TableCell>() {
                 @Override
@@ -265,47 +260,100 @@ public class FeedScreenController implements DialogController {
                 }
             });
 
+            TableColumn sharePub = new TableColumn("Share");
+            sharePub.setCellFactory(new Callback<TableColumn, TableCell>() {
+                @Override
+                public TableCell call(TableColumn tableColumn) {
+                    TableCell cell = new TableCell() {
+                        @Override
+                        protected void updateItem(Object o, boolean b) {
+                            super.updateItem(o, b);
+
+                            final VBox vbox = new VBox(5);
+                            Image image = new Image("file:///" + getClass().getResource("icons/sharePub.png").getPath());
+                            Button button = new Button("", new ImageView(image));
+                            final TableCell c = this;
+                            button.setOnAction(new EventHandler<ActionEvent>() {
+                                @Override
+                                public void handle(ActionEvent actionEvent) {
+                                    TableRow row = c.getTableRow();
+                                    Publication pub = (Publication) row.getTableView().getItems().get(row.getIndex());
+                                    String sharedComment = getComment();
+                                    share(pub, sharedComment);//todo get the text
+                                }
+                            });
+                            vbox.getChildren().add(button);
+                            setGraphic(vbox);
+                        }
+                    };
+                    return cell;
+                }
+            });
+            table.setRowFactory(new Callback<TableView<Publication>, TableRow<Publication>>() {
+                @Override
+                public TableRow<Publication> call(TableView<Publication> publicationTableView) {
+                    TableRow<Publication> row = new TableRow<Publication>() {
+                        @Override
+                        protected void updateItem(Publication publication, boolean b) {
+                            if (publication != null) {
+                                super.updateItem(publication, b);
+                                this.setTooltip(new Tooltip(publication.getDescription()));
+                            }
+                        }
+                    };
+                    return row;
+                }
+            });
             table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
-            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub);
+            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub, sharePub);
             pane.setContent(table);
             accordion.getPanes().add(pane);
         }
     }
 
-    private void openBrowser(String url){
+    private void openBrowser(String url) {
         String os = System.getProperty("os.name").toLowerCase();
         Runtime rt = Runtime.getRuntime();
 
-        try{
+        try {
 
-            if (os.indexOf( "win" ) >= 0) {
+            if (os.indexOf("win") >= 0) {
 
                 // this doesn't support showing urls in the form of "page.html#nameLink"
-                rt.exec( "rundll32 url.dll,FileProtocolHandler " + url);
+                rt.exec("rundll32 url.dll,FileProtocolHandler " + url);
 
-            } else if (os.indexOf( "mac" ) >= 0) {
+            } else if (os.indexOf("mac") >= 0) {
 
-                rt.exec( "open " + url);
+                rt.exec("open " + url);
 
-            } else if (os.indexOf( "nix") >=0 || os.indexOf( "nux") >=0) {
+            } else if (os.indexOf("nix") >= 0 || os.indexOf("nux") >= 0) {
 
                 // Do a best guess on unix until we get a platform independent way
                 // Build a list of browsers to try, in this order.
                 String[] browsers = {"epiphany", "firefox", "mozilla", "konqueror",
-                        "netscape","opera","links","lynx"};
+                        "netscape", "opera", "links", "lynx"};
 
                 // Build a command string which looks like "browser1 "url" || browser2 "url" ||..."
                 StringBuffer cmd = new StringBuffer();
-                for (int i=0; i<browsers.length; i++)
-                    cmd.append( (i==0  ? "" : " || " ) + browsers[i] +" \"" + url + "\" ");
+                for (int i = 0; i < browsers.length; i++)
+                    cmd.append((i == 0 ? "" : " || ") + browsers[i] + " \"" + url + "\" ");
 
-                rt.exec(new String[] { "sh", "-c", cmd.toString() });
+                rt.exec(new String[]{"sh", "-c", cmd.toString()});
 
             } else {
                 return;
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             return;
         }
+    }
+
+    public String getComment(){
+        String comment = Dialogs.create()
+                .title("Comment")
+                .masthead("Comment")
+                .message("Please insert your comment")
+                .showTextInput();
+        return comment;
     }
 }

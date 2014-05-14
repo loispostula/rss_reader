@@ -20,7 +20,7 @@ public class Feed {
     private String title;
     private String description;
     private String link;
-
+    private ArrayList<Publication> pubs = null;
     private String image;
 
     public Feed() {
@@ -64,6 +64,7 @@ public class Feed {
     }
 
     public List<Publication> getAllPublications(){
+        if (pubs == null){
         Database db = new Database();
         ArrayList<Publication> publications = new ArrayList<Publication>();
         String query ="SELECT c.publication_url FROM contain c " +
@@ -77,12 +78,15 @@ public class Feed {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return publications;
+        return publications;}
+        else return pubs;
     }
     
 
 
     public List<Publication> getUnreadPublications(User user){
+
+        if (pubs == null){
         Database db = new Database();
         ArrayList<Publication> publications = new ArrayList<Publication>();
         String query ="SELECT cnt.publication_url FROM contain cnt "
@@ -96,7 +100,8 @@ public class Feed {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return publications;
+        return publications;}
+    else return pubs;
     }
 
     public List<Publication> getAllShares(){
@@ -183,5 +188,12 @@ public class Feed {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public void addPublication(Publication pub) {
+        if ( pubs == null){
+            pubs = new ArrayList<Publication>();
+        }
+        pubs.add(pub);
     }
 }

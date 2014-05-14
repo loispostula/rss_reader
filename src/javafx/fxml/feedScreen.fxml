@@ -8,17 +8,19 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane prefHeight="400.0" prefWidth="735.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FeedScreenController">
+<BorderPane prefHeight="400.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.FeedScreenController">
   <center>
-    <Accordion fx:id="accordion" />
+    <Accordion fx:id="accordion" prefHeight="347.0" prefWidth="735.0" />
   </center>
   <top>
-    <HBox minHeight="36.0" prefHeight="36.0" prefWidth="600.0">
+    <HBox minHeight="36.0" prefHeight="48.0" prefWidth="735.0">
       <children>
         <Button fx:id="addFeed" onAction="#addNewFeed" text="">
           <graphic>
             <ImageView>
-              <Image url="@../icons/addFeed.png" />
+               <image>
+                 <Image url="@../icons/addFeed.png" />
+               </image>
             </ImageView>
           </graphic>
           <tooltip>
@@ -28,7 +30,9 @@
         <Button fx:id="editProfil" onAction="#showProfil" text="">
           <graphic>
             <ImageView>
-              <Image url="@../icons/profil.png" />
+               <image>
+                 <Image url="@../icons/profil.png" />
+               </image>
             </ImageView>
           </graphic>
           <tooltip>
@@ -38,19 +42,23 @@
         <Button fx:id="addFriend" onAction="#addFriend" text="">
           <graphic>
             <ImageView>
-              <Image url="@../icons/addFriend.png" />
+               <image>
+                 <Image url="@../icons/addFriend.png" />
+               </image>
             </ImageView>
           </graphic>
           <tooltip>
             <Tooltip text="Add Friend" />
           </tooltip>
         </Button>
-        <StackPane fx:id="stackPane" prefHeight="37.0" prefWidth="54.0">
+        <StackPane fx:id="stackPane" alignment="TOP_LEFT">
           <children>
             <Button id="friendRequest" onAction="#acceptFriend" text="">
               <graphic>
                 <ImageView fx:id="friendRequest">
-                  <Image url="@../icons/friendRequest.png" />
+                   <image>
+                     <Image url="@../icons/friendRequest.png" />
+                   </image>
                 </ImageView>
               </graphic>
               <tooltip>
@@ -59,11 +67,13 @@
             </Button>
           </children>
         </StackPane>
-        <Pane maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="492.0" />
+        <Pane maxWidth="1.7976931348623157E308" prefHeight="62.0" prefWidth="435.0" />
         <Button fx:id="logout" onAction="#refresh" text="">
           <graphic>
             <ImageView>
-              <Image url="@../icons/refresh.png" />
+               <image>
+                 <Image url="@../icons/refresh.png" />
+               </image>
             </ImageView>
           </graphic>
             <tooltip>
@@ -73,7 +83,9 @@
         <Button id="logout" onAction="#logout" text="">
           <graphic>
             <ImageView>
-              <Image url="@../icons/logout.png" />
+               <image>
+                 <Image url="@../icons/logout.png" />
+               </image>
             </ImageView>
           </graphic>
           <tooltip>

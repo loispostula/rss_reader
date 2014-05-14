@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.text.*?>
-
-<?import com.sun.javafx.scene.control.skin.PasswordFieldSkin?>
+<?import javafx.scene.text.Font?>
 <GridPane alignment="CENTER" gridLinesVisible="false" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.LoginController">
   <children>
     <Label fx:id="labelTitle" prefWidth="547.0" text="Welcome to RSS Reader" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0">
