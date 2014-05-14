@@ -174,6 +174,10 @@ public class FriendRequestController implements DialogController {
             Database db = new Database();
             db.update("UPDATE friendship SET accepted = 1 "
                     + "WHERE user1_email = \"" + friendEmail.get() + "\" AND user2_email = \"" + screens.getConnectedUser().getEmail() + "\"");
+	        db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
+	                + "('"+ friendEmail.get() +"', '"+"feed://"+screens.getConnectedUser().getEmail() +"', NOW())");
+	        db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
+	                + "('"+ screens.getConnectedUser().getEmail() +"', '"+"feed://"+friendEmail.get() +"', NOW())");
             db.close();
         }
 

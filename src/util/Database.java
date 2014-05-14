@@ -37,10 +37,16 @@ public class Database {
             url = prop.getProperty("database");
             utilisateur = prop.getProperty("dbuser");
             motDePasse = prop.getProperty("dbpassword");
+            
+            connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
+            statement = connexion.createStatement();
 
         } catch (IOException ex) {
             ex.printStackTrace();
-        } finally {
+        } catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
             if (input != null) {
                 try {
                     input.close();
@@ -55,8 +61,6 @@ public class Database {
 
     public ResultSet querry(String req) {
         try {
-            connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
-            statement = connexion.createStatement();
 
             res = statement.executeQuery(req);
 
@@ -69,8 +73,6 @@ public class Database {
     public int update(String req) {
         int status = -1;
         try {
-            connexion = DriverManager.getConnection(url, utilisateur, motDePasse);
-            statement = connexion.createStatement();
 
             status = statement.executeUpdate(req);
 

@@ -2,6 +2,8 @@ package entities;
 
 import java.util.Date;
 
+import util.Database;
+
 /**
  * Created by lpostula on 08/05/14.
  * Documentation de la classe feedSubscription
@@ -22,6 +24,13 @@ public class feedSubscription {
 		this.feed = feed;
 		this.subscribedDate = subscribedDate;
 	}
+
+    public void save(){
+        Database db = new Database();
+        db.update("INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) VALUES"
+                + "('"+ user.getEmail() +"', '"+feed.getUrl() +"', '"+new java.sql.Date(subscribedDate.getTime()) +"')");
+        db.close();
+    }
 
 
 

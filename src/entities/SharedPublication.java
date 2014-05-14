@@ -2,6 +2,8 @@ package entities;
 
 import java.util.Date;
 
+import util.Database;
+
 /**
  * Created by lpostula on 08/05/14.
  * Documentation de la classe SharedPublication
@@ -23,6 +25,15 @@ public class SharedPublication {
         this.feed = feed;
         this.sharedDate = sharedDate;
         this.text = text;
+    }
+
+    public void save(){
+        Database db = new Database();
+        db.update("INSERT INTO `sharedPublication` (`publication_url`, `user_email`, `text`, `sharedDate`) VALUES "
+            	+ "('"+ publication.getUrl() +"', '"+ user.getEmail() +"', '"+ text +"', '"+ new java.sql.Date(sharedDate.getTime()) +"')");
+        db.update("INSERT INTO contain (`publication_url`, `feed_url`) VALUES "
+            	+ "('"+ publication.getUrl() +"', 'feed://"+ user.getEmail() +"')");
+        db.close();
     }
 
 
