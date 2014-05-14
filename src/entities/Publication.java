@@ -4,6 +4,7 @@ import static org.apache.commons.lang3.StringEscapeUtils.unescapeXml;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.image.Image;
+import org.apache.commons.lang3.StringEscapeUtils;
 import util.Database;
 
 import java.sql.ResultSet;
@@ -52,7 +53,7 @@ public class Publication {
         ResultSet res = db.querry("SELECT * FROM `publication` WHERE `url` LIKE \"" + url +"\"");
         try {
             if (res.next()){
-                publication = new Publication(url, res.getString("title"), res.getDate("releaseDate"), res.getString("description"), res.getString("image"));
+                publication = new Publication(url, StringEscapeUtils.unescapeHtml4(res.getString("title")).replace("&apos;", "'"), res.getDate("releaseDate"), res.getString("description"), res.getString("image"));
             }
         } catch (SQLException e) {
             // TODO Auto-generated catch block
