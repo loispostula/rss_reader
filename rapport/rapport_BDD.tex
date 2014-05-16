@@ -1,87 +1,121 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
  \usepackage{latexsym}
+\usepackage{listings}
+\usepackage[usenames,dvipsnames]{color}
+
+\usepackage{tikz}
+
+
+\lstset{
+  breaklines=true,                                     % line wrapping on
+  language=SQL,
+  frame=ltrb,
+  framesep=5pt,
+  basicstyle=\normalsize,
+  keywordstyle=\ttfamily\color{ForestGreen},
+  identifierstyle=\ttfamily\color{Cerulean}\bfseries,
+  identifierstyle=\ttfamily\color{Cerulean}\bfseries,
+  commentstyle=\color{Brown},
+  stringstyle=\ttfamily,
+  showstringspaces=true,
+  numbers=left
+}
+
 
 \begin{document}
-
+\section{Requêtes}
 \subsection{Requête 1}
+Tous les utilisateurs qui ont au plus 2 amis.
 \subsubsection{SQL}
-\begin{verbatim}
-SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate 
-FROM user u
+\begin{lstlisting}
+SELECT * FROM user u
 LEFT OUTER JOIN friendship f
 ON
 (
-f.user1_email = u.email 
-OR 
+f.user1_email = u.email
+OR
 f.user2_email = u.email
 )
 GROUP BY u.email
 HAVING COUNT(u.email) < 3
-\end{verbatim}
-\subsection{Algèbre relationnel}
+\end{lstlisting}
+\subsubsection{Algèbre relationnel tuple}
 $$Request \leftarrow user\sqsupset\Join_{email=user1\_email \vee email=user2\_email}( friendship)$$
 $$Request\_Accepted \leftarrow\ \sigma_{accepted=TRUE}\ (Request)$$
-$$Result \leftarrow \pi_* (mail\ \sigma_{COUNT(email)\ <\ 3}\ (Request_Accepted) )$$
+$$Result \leftarrow \pi_* (email\ \sigma_{COUNT(email)\ <\ 3}\ (Request_Accepted) )$$
 \subsubsection{Calcul relationnel tuple}
-
-
+\clearpage
 \subsection{Requête 2}
+La liste des flux auxquels a souscrit au moins un utilisateur qui a souscrit à au moins deux flux auxquel X
+a souscrit.
 \subsubsection{SQL}
-\begin{verbatim}
+\begin{lstlisting}
+SELECT * FROM feed f
+INNER JOIN feedsubscription c ON c.feed_url = f.url
+INNER JOIN 
+  (
+  SELECT b.user_email FROM feedsubscription b 
+  INNER JOIN 
+    (SELECT feed_url FROM feedsubscription WHERE user_email = "X.email") a
+  ON a.feed_url = b.feed_url 
+  GROUP BY b.user_email
+  HAVING COUNT(b.user_email) > 1
+  ) d
+ON d.user_email = c.user_email
+GROUP BY c.feed_url
+\end{lstlisting}
+\subsubsection{Algèbre relationnel}
 
-
-\end{verbatim}
-\subsection{Algèbre relationnel}
+$$a\ \leftarrow\ \pi_{feed\_url}\ (\sigma_{user\_email=<user>.email}\ (feedsubscription)$$
+$$b\ \leftarrow\ \pi_{user\_email, feed\_url}\ (feedsubscription)$$
+$$b\_a\_join\ \leftarrow\ b \Join_{a.feed\_url=b.feed\_url}\ (a)$$
+$$d\ \leftarrow\ \pi_{b.user\_email}\ (b.user\_email\ \sigma_{COUNT(b.user\_email)\ >\ 1} (b\_a\_join))$$
+$$c\ \leftarrow\ feedsubscription \Join_{feed\_url=url}\ (f)$$
+$$c\_d\_join\ \leftarrow\ c \Join_{c.user\_email=d.user\_email} (d)$$
+$$Result\ \leftarrow\ \pi_*\ (c.feed\_url\ c\_d\_join)$$
 
 \subsubsection{Calcul relationnel tuple}
-
+\clearpage
 \subsection{Requête 3}
+La liste des flux auxquels X a souscrit, auxquels aucun de ses amis n’a souscrit et duquel il n’a partagé
+aucune publication.
 \subsubsection{SQL}
-\begin{verbatim}
+\begin{lstlisting}
 
 
-\end{verbatim}
-\subsection{Algèbre relationnel}
+\end{lstlisting}
+\subsubsection{Algèbre relationnel}
 
 \subsubsection{Calcul relationnel tuple}
-
+\clearpage
 \subsection{Requête 4}
+La liste des utilisateurs qui ont partagé au moins 3 publications que X a partagé.
 \subsubsection{SQL}
-\begin{verbatim}
+\begin{lstlisting}
 
 
-\end{verbatim}
-\subsection{Algèbre relationnel}
+\end{lstlisting}
+\subsubsection{Algèbre relationnel tuple}
 
 \subsubsection{Calcul relationnel tuple}
-
+\clearpage
 \subsection{Requête 5}
+La liste des flux auquel un utilisateur est inscrit avec le nombre de publications lues, le nombre de publications
+partagées, le pourcentage de ces dernières par rapport aux premières, cela pour les 30 derniers jours et ordonnée
+par le nombre de publications partagées.
 \subsubsection{SQL}
-\begin{verbatim}
+\begin{lstlisting}
 
 
-\end{verbatim}
-\subsection{Algèbre relationnel}
-
-\subsubsection{Calcul relationnel tuple}
-
+\end{lstlisting}
 \subsection{Requête 6}
+La liste des amis d’un utilisateur avec pour chacun le nombre de publications lues par jour et le nombre
+d’amis, ordonnée par la moyenne des lectures par jour depuis la date d’inscription de cet ami
+
 \subsubsection{SQL}
-\begin{verbatim}
+\begin{lstlisting}
 
 
-\end{verbatim}
-\subsection{Algèbre relationnel}
-
-\subsubsection{Calcul relationnel tuple}
-
-\subsection{Requête 2}
-\subsubsection{SQL}
-\begin{verbatim}
-
-
-
-
-      
+\end{lstlisting}
 \end{document}
