@@ -8,12 +8,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 
-<BorderPane prefHeight="400.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.FeedScreenController">
-  <center>
-    <Accordion fx:id="accordion" prefHeight="347.0" prefWidth="735.0" />
-  </center>
+<BorderPane prefHeight="400.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.FeedScreenController">
   <top>
-    <HBox minHeight="36.0" prefHeight="48.0" prefWidth="735.0">
+    <HBox minHeight="36.0" prefHeight="45.0" prefWidth="850.0">
       <children>
         <Button fx:id="addFeed" onAction="#addNewFeed" text="">
           <graphic>
@@ -67,7 +64,7 @@
             </Button>
           </children>
         </StackPane>
-        <Pane maxWidth="1.7976931348623157E308" prefHeight="62.0" prefWidth="435.0" />
+        <Pane maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="568.0" />
         <Button fx:id="logout" onAction="#refresh" text="">
           <graphic>
             <ImageView>
@@ -95,4 +92,11 @@
       </children>
     </HBox>
   </top>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="556.0" prefWidth="850.0" vbarPolicy="ALWAYS" BorderPane.alignment="CENTER">
+        <content>
+            <Accordion fx:id="accordion" />
+        </content>
+      </ScrollPane>
+   </center>
 </BorderPane>

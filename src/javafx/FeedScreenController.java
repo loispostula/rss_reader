@@ -1,8 +1,10 @@
 package javafx;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import entities.Feed;
 import entities.Publication;
 import entities.User;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -18,16 +20,15 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.util.Callback;
-import org.controlsfx.control.action.Action;
 import org.controlsfx.dialog.Dialogs;
 import util.Database;
 
 import java.io.File;
+import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 
 import static org.apache.commons.lang3.StringEscapeUtils.escapeXml;
 
@@ -175,25 +176,34 @@ public class FeedScreenController implements DialogController {
                 pane.setGraphic(temp);
 
             }
-            TableView<Publication> table = new TableView<Publication>();
+            final TableView<Publication> table = new TableView<Publication>();
             table.setTableMenuButtonVisible(true);
 
-            TableColumn pubEnclosure = new TableColumn("Image");
-            pubEnclosure.setCellValueFactory(new PropertyValueFactory("image"));
+            final TableColumn pubEnclosure = new TableColumn("Image");
+            pubEnclosure.setCellValueFactory(new PropertyValueFactory("imageLoad"));
 
             pubEnclosure.setCellFactory(new Callback<TableColumn, TableCell>() {
                 @Override
                 public TableCell call(TableColumn tableColumn) {
-                    TableCell cell = new TableCell() {
+                    final TableCell cell = new TableCell() {
                         ImageView imageView = new ImageView();
-
+                        Button btn = new Button("", imageView);
                         @Override
                         protected void updateItem(Object o, boolean b) {
                             if (o != null) {
                                 HBox box = new HBox();
                                 box.setSpacing(10);
                                 imageView.setImage((Image) o);
-                                box.getChildren().add(imageView);
+                                btn.setOnAction(new EventHandler<ActionEvent>() {
+                                    @Override
+                                    public void handle(ActionEvent actionEvent) {
+                                        int index = getTableRow().getIndex();
+                                        Publication curr = table.getItems().get(index);
+                                        Image newI = new Image(curr.getImageUrl());
+                                        imageView.setImage(newI);
+                                    }
+                                });
+                                box.getChildren().add(btn);
                                 setGraphic(box);
                             }
                         }
@@ -307,6 +317,7 @@ public class FeedScreenController implements DialogController {
             table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
             table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub, sharePub);
             pane.setContent(table);
+            pane.setMinWidth(800);
             accordion.getPanes().add(pane);
         }
     }

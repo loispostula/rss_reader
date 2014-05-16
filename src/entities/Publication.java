@@ -1,6 +1,5 @@
 package entities;
 
-import static org.apache.commons.lang3.StringEscapeUtils.unescapeXml;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.image.Image;
@@ -23,7 +22,13 @@ public class Publication {
     private SimpleStringProperty releaseDate;
     private Date releaseDateF;
     private SimpleStringProperty description;
-    private SimpleObjectProperty image;
+    private static SimpleObjectProperty<Image> imageLoad = new SimpleObjectProperty<Image>(
+            new Image(
+    "file://" + Publication.class.getResource("/javafx/icons/clickToLoad.png").getPath()
+            )
+
+    );
+
     private String imageUrl;
     public Publication() {
     }
@@ -42,7 +47,6 @@ public class Publication {
         if (imageUrl == ""){
         	imageUrl = "file://"+System.getProperty("user.dir").replace("\\", "/")+"/icons/rss_icon.png";
         }
-        this.image = new SimpleObjectProperty(new Image(imageUrl));
 	}
 
 
@@ -132,12 +136,11 @@ public class Publication {
         this.description.set(description);
     }
 
-
-    public Object getImage() {
-        return image.get();
+    public Object getImageLoad(){
+        return imageLoad.get();
     }
 
-    public void setImage(Object image) {
-        this.image.set(image);
+    public String getImageUrl(){
+        return imageUrl;
     }
 }

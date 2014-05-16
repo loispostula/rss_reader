@@ -81,7 +81,8 @@ public class User {
         this.nickname = new SimpleStringProperty(nickname);
         this.city = new SimpleStringProperty(city);
         this.country = new SimpleStringProperty(country);
-        this.avatar = new SimpleObjectProperty(new Image("file:///" + avatar));
+        //this.avatar = new SimpleObjectProperty(new Image("file:///" + avatar));
+        this.avatar = new SimpleObjectProperty();
         this.avatarS = avatar;
         this.biography = new SimpleStringProperty(biography);
         this.joinedDate = new SimpleStringProperty(joinedDate.toString());
@@ -232,7 +233,7 @@ public class User {
             e.printStackTrace();
         }
         db.close();
-        feeds.addAll(getAllFriendsSubscription());
+        //feeds.addAll(getAllFriendsSubscription());
         return feeds;
     }
 
