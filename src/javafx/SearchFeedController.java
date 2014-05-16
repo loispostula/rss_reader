@@ -49,9 +49,9 @@ public class SearchFeedController implements DialogController {
 
     public void populateCriteria() {
         criteriaBox.getItems().addAll(
-                "Feed Followed By User Who Follow Two Or More Feed Of X' subscription",
-                "Feed From X, with no shared Publication and no Friend Following",
-                "Feed of X with detail"
+                "R2 : Feed Followed By User Who Follow Two Or More Feed Of X' subscription",
+                "R3 : Feed From X, with no shared Publication and no Friend Following",
+                "R5 : Feed of X with detail"
         );
         criteriaBox.getSelectionModel().selectFirst();
         this.constructTableForResult();

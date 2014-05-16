@@ -108,32 +108,23 @@ public class Request {
 	public static ArrayList<Feed> feedReadShareInfo(String email){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT f.url, f.title, f.description, f.link, f.image, "
-				+ "(" +
-                        "SELECT COUNT(*) FROM readstatus rs " +
-                        "WHERE rs.publication_url = f.publication_url " +
-                        "AND " +
-                        "rs.user_email = fs.user_email " +
-                        "AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30" +
-                ") " +
-                "AS nread, "
-				+ "(" +
-                        "SELECT COUNT(*) FROM sharedpublication sp " +
-                        "WHERE sp.publication_url = c.publication_url " +
-                        "AND " +
-                        "sp.user_email = fs.user_email " +
-                        "AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30" +
-                ") " +
-                "AS nshared, "
-				+ "(" +
-                        "SELECT nshared/nread" +
-                ") " +
-                "AS ratio FROM feed f "
-				+ "INNER JOIN feedsubscription fs ON fs.feed_url = f.url "
-				+ "INNER JOIN contain c ON c.feed_url = fs.feed_url "
-				+ "WHERE fs.user_email = \""+ email +"\" "
-				+ "GROUP BY fs.feed_url "
-				+ "ORDER BY nshared");
+				"SELECT f.url, f.title, f.description, f.link, f.image, ("
+					+ "SELECT COUNT(*) FROM readstatus rs "
+					+ "WHERE rs.feed_url = f.url AND rs.user_email = fs2.user_email "
+						+ "AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30 "
+				+ ") AS nread, ("
+					+ "SELECT COUNT(*) FROM sharedpublication sp "
+					+ "INNER JOIN feedsubscription fs ON sp.user_email = fs.user_email "
+					+ "INNER JOIN contain c ON fs.feed_url = c.feed_url "
+						+ "AND sp.publication_url = c.publication_url "
+					+ "WHERE c.feed_url = f.url "
+						+ "AND sp.user_email = fs2.user_email "
+						+ "AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30 "
+				+ ") AS nshared, "
+				+ "( SELECT nshared/nread ) AS ratio FROM feed f "
+				+ "INNER JOIN feedsubscription fs2 ON fs2.feed_url = f.url "
+				+ "WHERE fs2.user_email = \""+email+"\" GROUP BY f.url ORDER BY nshared");
+
         ArrayList<Feed> requests = new ArrayList<Feed>();
         try {
             while (res.next()) {
@@ -141,8 +132,6 @@ public class Request {
                 cand.setPubView(res.getInt("nread"));
                 cand.setPubShared(res.getInt("nshared"));
                 cand.setRatio(res.getDouble("ratio"));
-                System.out.println(res.getInt("nread"));
-                System.out.println(res.getInt("nshared"));
                 requests.add(cand);
             }
         } catch (SQLException e) {
@@ -162,21 +151,11 @@ public class Request {
 				+ "WHERE (f.user1_email = \""+ email +"\" AND u.email <> f.user1_email) OR (f.user2_email = \""+ email +"\" AND u.email <> f.user2_email) "
 				+ "ORDER BY mread");
         ArrayList<User> requests = new ArrayList<User>();
-        System.out.println(
-				"SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate, "
-				+ "(SELECT COUNT(*) FROM readstatus rs WHERE rs.user_email = u.email)/(TO_DAYS(NOW())-TO_DAYS(u.joinedDate)) AS mread, "
-				+ "(SELECT COUNT(u2.email) FROM user u2 INNER JOIN friendship f2 ON f2.user1_email = u2.email OR f2.user2_email = u2.email WHERE u2.email = u.email GROUP BY u2.email) AS nfriend "
-				+ "FROM user u "
-				+ "INNER JOIN friendship f ON f.user1_email = u.email OR f.user2_email = u.email "
-				+ "WHERE (f.user1_email = \""+ email +"\" AND u.email <> f.user1_email) OR (f.user2_email = \""+ email +"\" AND u.email <> f.user2_email) "
-				+ "ORDER BY mread");
         int i = 0;
         try {
             while (res.next()) {
                 requests.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
                 		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
-                System.out.println(res.getDouble("mread"));
-                System.out.println(requests.get(i).getEmail());
                 requests.get(i).setPubByDay(res.getDouble("mread"));
                 requests.get(i).setNumOfFriend(res.getInt("nfriend"));
                 i++;

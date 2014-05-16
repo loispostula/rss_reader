@@ -83,6 +83,26 @@ AND NOT EXISTS(SELECT * FROM sharedpublication WHERE user_email = s.user_email A
 GROUP BY c.feed_url
 HAVING COUNT(c.feed_url) = (SELECT(SELECT COUNT(c2.feed_url) FROM contain c2 WHERE c2.feed_url = c.feed_url GROUP BY c2.feed_url)*(SELECT COUNT(*) FROM friendship WHERE user1_email = "b@b.be" OR user2_email = "b@b.be"))
 
+========
+
+SELECT f.url, f.title, f.description, f.link, f.image FROM feed f
+INNER JOIN feedsubscription fs1 ON fs1.feed_url=f.url AND fs1.user_email="Aneth@gmail.com"
+WHERE
+    NOT EXISTS (
+        SELECT c1.feed_url FROM contain c1
+        INNER JOIN contain c2 ON
+            c2.publication_url = c1.publication_url AND
+            c2.feed_url = "feed://Aneth@gmail.com"
+        WHERE c1.feed_url=f.url
+    ) 
+	AND NOT EXISTS (
+        SELECT fs2.feed_url FROM feedsubscription fs2
+        INNER JOIN friendship fr ON
+            ((fr.user1_email=fs2.user_email AND fr.user2_email="Aneth@gmail.com") OR
+            (fr.user2_email=fs2.user_email AND fr.user1_email="Aneth@gmail.com")) AND accepted = TRUE
+		WHERE fs2.feed_url = f.url
+    )
+
 
 
 R4
@@ -98,16 +118,17 @@ HAVING COUNT(s.user_email) > 2
 
 R5
 
-SELECT fs.feed_url, 
-(SELECT COUNT(*) FROM readstatus rs WHERE rs.publication_url = c.publication_url AND rs.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30) AS nread, 
-(SELECT COUNT(*) FROM sharedpublication sp WHERE sp.publication_url = c.publication_url AND sp.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30) AS nshared ,
-(SELECT nshared/nread) AS ratio
-FROM feedsubscription fs
-INNER JOIN contain c
-ON c.feed_url = fs.feed_url
-WHERE fs.user_email = "a@a.be" 
-GROUP BY fs.feed_url
-ORDER BY nshared
+SELECT f.url, f.title, f.description, f.link, f.image, 
+(
+	SELECT COUNT(*) FROM readstatus rs WHERE rs.feed_url = f.url AND rs.user_email = fs2.user_email AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30
+) AS nread, 
+(
+    SELECT COUNT(*) FROM sharedpublication sp INNER JOIN feedsubscription fs ON sp.user_email = fs.user_email INNER JOIN contain c ON fs.feed_url = c.feed_url AND sp.publication_url = c.publication_url WHERE c.feed_url = f.url AND sp.user_email = fs2.user_email AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30
+) AS nshared, 
+(
+    SELECT nshared/nread
+) AS ratio 
+FROM feed f INNER JOIN feedsubscription fs2 ON fs2.feed_url = f.url WHERE fs2.user_email = "Aneth@gmail.com" GROUP BY f.url ORDER BY nshared
 
 
 
