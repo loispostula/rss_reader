@@ -12,15 +12,16 @@ public class Request {
 	public ArrayList<User> noMoreThanTwoFriend(){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT u.email, COUNT(u.email) FROM user u "+
-				"INNER JOIN friendship f "+
-				"ON f.user1_email = u.email OR f.user2_email = u.email "+
-				"GROUP  BY u.email "+
+				"SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u "+
+				"LEFT OUTER JOIN friendship f "+
+				"ON (f.user1_email = u.email OR f.user2_email = u.email) AND accepted = TRUE "+
+				"GROUP BY u.email "+
 				"HAVING COUNT(u.email) < 3");
         ArrayList<User> requests = new ArrayList<User>();
         try {
             while (res.next()) {
-                requests.add(User.getUserFromDb(res.getString("email")));
+                requests.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
+                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -31,7 +32,8 @@ public class Request {
 	public ArrayList<Feed> feedFollowedByUserWhoFollowTwoOrMoreFeedOfX(User user){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT c.feed_url FROM feedsubscription c "
+				"SELECT f.url, f.title, f.description, f.link, f.image FROM feed f FROM publication f "
+				+ "INNER JOIN feedsubscription c ON c.feed_url = f.url "
 				+ "INNER JOIN ("
 					+ "SELECT b.user_email FROM `feedsubscription` b "
 					+ "INNER JOIN ("
@@ -47,7 +49,7 @@ public class Request {
         ArrayList<Feed> requests = new ArrayList<Feed>();
         try {
             while (res.next()) {
-                requests.add(Feed.getFeedFromDb(res.getString("feed_url")));
+            	requests.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -58,7 +60,8 @@ public class Request {
 	public ArrayList<Feed> notFollowedByFriendAndNotShared(User user){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT c.feed_url FROM contain c "
+				"SELECT f.url, f.title, f.description, f.link, f.image FROM feed f FROM publication f "
+				+ "INNER JOIN contain c ON f.url = c.feed_url "
 				+ "INNER JOIN feedsubscription s "
 				+ "ON c.feed_url = s.feed_url "
 				+ "INNER JOIN friendship f "
@@ -70,7 +73,7 @@ public class Request {
         ArrayList<Feed> requests = new ArrayList<Feed>();
         try {
             while (res.next()) {
-                requests.add(Feed.getFeedFromDb(res.getString("feed_url")));
+            	requests.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -81,7 +84,8 @@ public class Request {
 	public ArrayList<User> resharedMoreThanThreeTime(User user){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT s.user_email FROM sharedpublication s "
+				"SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u "
+				+ "INNER JOIN shared publication s ON s.user_email = u.email "
 				+ "INNER JOIN (SELECT publication_url FROM sharedpublication WHERE user_email = \""+ user.getEmail() +"\") a "
 				+ "ON s.publication_url = a.publication_url "
 				+ "GROUP BY s.user_email "
@@ -89,7 +93,8 @@ public class Request {
         ArrayList<User> requests = new ArrayList<User>();
         try {
             while (res.next()) {
-                requests.add(User.getUserFromDb(res.getString("user_email")));
+                requests.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
+                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -100,11 +105,13 @@ public class Request {
 	public ArrayList<Feed> feedReadShareInfo(User user){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT fs.feed_url, "
+				"SELECT f.url, f.title, f.description, f.link, f.image FROM feed f "
+				+ "SELECT fs.feed_url, "
 				+ "(SELECT COUNT(*) FROM readstatus rs WHERE rs.publication_url = c.publication_url AND rs.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30) AS nread, "
 				+ "(SELECT COUNT(*) FROM sharedpublication sp WHERE sp.publication_url = c.publication_url AND sp.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30) AS nshared "
 				+ ", (SELECT nshared/nread) AS ratio "
-				+ "FROM feedsubscription fs "
+				+ "FROM publication f "
+				+ "INNER JOIN feedsubscription fs ON fs.feed_url = f.url"
 				+ "INNER JOIN contain c ON c.feed_url = fs.feed_url "
 				+ "WHERE fs.user_email = \""+ user.getEmail() +"\" "
 				+ "GROUP BY fs.feed_url "
@@ -112,7 +119,7 @@ public class Request {
         ArrayList<Feed> requests = new ArrayList<Feed>();
         try {
             while (res.next()) {
-                requests.add(Feed.getFeedFromDb(res.getString("feed_url")));
+            	requests.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -120,20 +127,21 @@ public class Request {
         return requests;
 	}
 
-	public ArrayList<Feed> friendReadFriendInfo(User user){
+	public ArrayList<User> friendReadFriendInfo(User user){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT u.email, "
+				"SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate, "
 				+ "(SELECT COUNT(*) FROM readstatus rs WHERE rs.user_email = u.email)/(TO_DAYS(NOW())-TO_DAYS(u.joinedDate)) AS mread, "
 				+ "(SELECT COUNT(u2.email) FROM user u2 INNER JOIN friendship f2 ON f2.user1_email = u2.email OR f2.user2_email = u2.email WHERE u2.email = u.email GROUP BY u2.email) AS nfriend "
 				+ "FROM user u "
 				+ "INNER JOIN friendship f ON f.user1_email = u.email OR f.user2_email = u.email "
 				+ "WHERE (f.user1_email = \""+ user.getEmail() +"\" AND u.email <> f.user1_email) OR (f.user2_email = \""+ user.getEmail() +"\" AND u.email <> f.user2_email) "
 				+ "ORDER BY mread");
-        ArrayList<Feed> requests = new ArrayList<Feed>();
+        ArrayList<User> requests = new ArrayList<User>();
         try {
             while (res.next()) {
-                requests.add(Feed.getFeedFromDb(res.getString("email")));
+                requests.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
+                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
             }
         } catch (SQLException e) {
             e.printStackTrace();

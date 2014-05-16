@@ -148,7 +148,7 @@ public class FindFriendController implements DialogController {
                 //numberOfFriend
                 String[] born = querryVal.getText().split(",");
                 if (born.length == 2) {
-                    querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate, COUNT(u.email)  FROM user u " +
+                    querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate, COUNT(u.email) FROM user u " +
                             "INNER JOIN friendship f " +
                             "ON f.user1_email = u.email OR " +
                             "f.user2_email = u.email " +
