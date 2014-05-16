@@ -149,7 +149,6 @@ public class FeedScreenController implements DialogController {
     private void loadFeeds() {
         accordion.getPanes().removeAll(accordion.getPanes());
         List<Feed> feeds = screens.getConnectedUser().getAllSubscription();
-    	System.out.println("hello");
         for (int i = 0; i < feeds.size(); ++i) {
             final Feed feed = feeds.get(i);
             TitledPane pane = new TitledPane();
@@ -181,13 +180,20 @@ public class FeedScreenController implements DialogController {
                                 HBox box = new HBox();
                                 box.setSpacing(10);
                                 imageView.setImage((Image) o);
+                                imageView.setPreserveRatio(true);
+                                imageView.setFitHeight(70);
+                                imageView.setFitWidth(140);
                                 btn.setOnAction(new EventHandler<ActionEvent>() {
                                     @Override
                                     public void handle(ActionEvent actionEvent) {
                                         int index = getTableRow().getIndex();
                                         Publication curr = table.getItems().get(index);
                                         Image newI = new Image(curr.getImageUrl());
+                                        //System.out.println(curr.getImageUrl());
                                         imageView.setImage(newI);
+                                        imageView.setPreserveRatio(true);
+                                        imageView.setFitHeight(70);
+                                        imageView.setFitWidth(140);
                                     }
                                 });
                                 box.getChildren().add(btn);
@@ -346,6 +352,8 @@ public class FeedScreenController implements DialogController {
         } catch (Exception e) {
             return;
         }
+        
+        
     }
 
     public String getComment(){

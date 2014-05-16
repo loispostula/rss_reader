@@ -1,14 +1,15 @@
 R1
 
-SELECT u.email, COUNT(u.email) FROM user u 
-INNER JOIN friendship f 
-ON f.user1_email = u.email OR f.user2_email = u.email 
-GROUP  BY u.email 
+SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u 
+LEFT OUTER JOIN friendship f 
+ON (f.user1_email = u.email OR f.user2_email = u.email) AND accepted = TRUE 
+GROUP BY u.email
 HAVING COUNT(u.email) < 3
 
 R2
 
-SELECT c.feed_url FROM feedsubscription c
+SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p 
+INNER JOIN feedsubscription c ON c.feed_url = p.url
 INNER JOIN (
 SELECT b.user_email FROM `feedsubscription` b
 INNER JOIN (SELECT feed_url FROM feedsubscription WHERE user_email = "a@a.be") a

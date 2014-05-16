@@ -56,9 +56,9 @@ public class GenerateXML {
     }
 	
 	public static void run(){
-		int readPercent = 25;
+		int readPercent = 5;
 		int friendPercent = 75;
-		int sharePercent = 10;
+		int sharePercent = 35;
 		int CommentPercent = 75;
 		String adressedufichier = System.getProperty("user.dir") + "/"+ "xmltest.xml";
         Database db = new Database();
@@ -116,13 +116,13 @@ public class GenerateXML {
         	for (int i = 0; i < 50; ++i) {
         		nickname.set(i, nickname.get(i)+Integer.toString((int) (Math.random()*100)));
         		email.set(i, email.get(i).replace('é', 'e').replace('è', 'e').replace('ë', 'e').replace('ê', 'e').replace('ü', 'u').replace('ä', 'a')+"@gmail.com");
-        		date.add(generate_random_date_java("2012-01-01","2013-12-28"));
+        		date.add(generate_random_date_java("2011-01-01","2013-12-28"));
         	}
         	
         	output.write("<users>\n");
         	
         	for (int i = 0; i < 50; ++i) {
-            	output.write("\t<user>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<password>azerty</password>\n\t\t<nickname>"+nickname.get(i)+"</nickname>\n\t\t<country>"+country.get((int) (Math.random()*country.size()))+"</country>\n\t\t<city>"+city.get(i)+"</city>\n\t\t<biography></biography>\n\t\t<avatar>avatar.jpg</avatar>\n\t\t<date>"+date.get(i)+"</date>\n\t</user>\n\n");
+            	output.write("\t<user>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<password>azerty</password>\n\t\t<nickname>"+email.get(i)+Integer.toString((int) (Math.random()*100))+"</nickname>\n\t\t<country>"+country.get((int) (Math.random()*country.size()))+"</country>\n\t\t<city>"+city.get(i)+"</city>\n\t\t<biography></biography>\n\t\t<avatar>avatar.jpg</avatar>\n\t\t<date>"+date.get(i)+"</date>\n\t</user>\n\n");
         	}
         	output.write("</users>\n\n");
         	
@@ -133,8 +133,7 @@ public class GenerateXML {
         	String sd = "", accepted;
         	ArrayList<Integer> friendships = new ArrayList<Integer>();
         	
-        	for (int i = 0; i < 750; ++i) {
-        		System.out.println(i);
+        	for (int i = 0; i < 100; ++i) {
         		a = (int) (Math.random()*50);
         		b = (int) (Math.random()*50);
         		while(a == b || friendships.contains(a*100+ b) || friendships.contains(b*100+ a) ){

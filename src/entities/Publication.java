@@ -98,7 +98,8 @@ public class Publication {
     public void markAsRead(User user, Feed feed){
         Database db = new Database();
         db.update("INSERT INTO readstatus (user_email, publication_url, feed_url, date) VALUES "
-            + "('"+ user.getEmail() +"', '"+this.getUrl() +"', '"+ feed.getUrl() +"', NOW() )");
+            + "('"+ user.getEmail() +"', '"+this.getUrl() +"', '"+ feed.getUrl() +"', NOW() ) "
+            		+ "ON DUPLICATE KEY UPDATE date = NOW()");
         db.close();
     }
 
