@@ -25,6 +25,18 @@
             <Tooltip text="Add a new Feed" />
           </tooltip>
         </Button>
+            <Button fx:id="searchFeed" onAction="#searchFeed" text="">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/searchFeed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Add Friend" />
+               </tooltip>
+            </Button>
         <Button fx:id="editProfil" onAction="#showProfil" text="">
           <graphic>
             <ImageView>
@@ -89,18 +101,6 @@
                   <Tooltip text="Show All Publication" />
                </tooltip>
             </ToggleButton>
-            <Button fx:id="searchFeed" onAction="#searchFeed" text="">
-               <graphic>
-                  <ImageView>
-                     <image>
-                        <Image url="@../icons/searchFeed.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <tooltip>
-                  <Tooltip text="Add Friend" />
-               </tooltip>
-            </Button>
         <Pane maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="568.0" />
         <Button id="logout" onAction="#logout" text="">
           <graphic>

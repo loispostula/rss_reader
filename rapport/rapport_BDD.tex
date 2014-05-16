@@ -1,0 +1,87 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+ \usepackage{latexsym}
+
+\begin{document}
+
+\subsection{Requête 1}
+\subsubsection{SQL}
+\begin{verbatim}
+SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate 
+FROM user u
+LEFT OUTER JOIN friendship f
+ON
+(
+f.user1_email = u.email 
+OR 
+f.user2_email = u.email
+)
+GROUP BY u.email
+HAVING COUNT(u.email) < 3
+\end{verbatim}
+\subsection{Algèbre relationnel}
+$$Request \leftarrow user\sqsupset\Join_{email=user1\_email \vee email=user2\_email}( friendship)$$
+$$Request\_Accepted \leftarrow\ \sigma_{accepted=TRUE}\ (Request)$$
+$$Result \leftarrow \pi_* (mail\ \sigma_{COUNT(email)\ <\ 3}\ (Request_Accepted) )$$
+\subsubsection{Calcul relationnel tuple}
+
+
+\subsection{Requête 2}
+\subsubsection{SQL}
+\begin{verbatim}
+
+
+\end{verbatim}
+\subsection{Algèbre relationnel}
+
+\subsubsection{Calcul relationnel tuple}
+
+\subsection{Requête 3}
+\subsubsection{SQL}
+\begin{verbatim}
+
+
+\end{verbatim}
+\subsection{Algèbre relationnel}
+
+\subsubsection{Calcul relationnel tuple}
+
+\subsection{Requête 4}
+\subsubsection{SQL}
+\begin{verbatim}
+
+
+\end{verbatim}
+\subsection{Algèbre relationnel}
+
+\subsubsection{Calcul relationnel tuple}
+
+\subsection{Requête 5}
+\subsubsection{SQL}
+\begin{verbatim}
+
+
+\end{verbatim}
+\subsection{Algèbre relationnel}
+
+\subsubsection{Calcul relationnel tuple}
+
+\subsection{Requête 6}
+\subsubsection{SQL}
+\begin{verbatim}
+
+
+\end{verbatim}
+\subsection{Algèbre relationnel}
+
+\subsubsection{Calcul relationnel tuple}
+
+\subsection{Requête 2}
+\subsubsection{SQL}
+\begin{verbatim}
+
+
+
+
+      
+\end{document}
