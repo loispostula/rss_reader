@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 /**
  * Created by lpostula on 08/05/14.
  * Documentation de la classe User
@@ -211,7 +213,7 @@ public class User {
 
     public void subscribe(Feed feed) {
         Database db = new Database();
-        String query = "INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate)" +
+        String query = "INSERT INTO `feedsubscription` (user_email, feed_url, subscribedDate) " +
                 "VALUES (\"" + this.getEmail() + "\", \"" + feed.getUrl() + "\" , NOW())";
         db.update(query);
         db.close();
@@ -221,18 +223,18 @@ public class User {
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         Database db = new Database();
         //todo jointur subscribe
-        String query = "SELECT fs.feed_url FROM feedsubscription fs " +
+        String query = "SELECT f.url, f.title, f.description, f.link, f.image FROM feed f "
+        		+ "INNER JOIN feedsubscription fs ON fs.feed_url = f.url " +
                 "WHERE fs.user_email = \"" + this.getEmail() + "\"";
         ResultSet res = db.querry(query);
         try {
             while (res.next()) {
-                feeds.add(Feed.getFeedFromDb(res.getString("feed_url")));
+                feeds.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         db.close();
-        feeds.addAll(getAllFriendsSubscription());
         return feeds;
     }
 
@@ -240,13 +242,14 @@ public class User {
         ArrayList<Publication> publications = new ArrayList<Publication>();
         Database db = new Database();
         //todo jointur subscribe
-        String query = "SELECT c.publication_url FROM feedsubscription fs "
-        		+ "INNER JOIN contain c ON c.feed_url = fs.feed_url" +
+        String query = "SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
+        		+ "INNER JOIN feedsubscription fs ON fs.publication_url = p.url "
+        		+ "INNER JOIN contain c ON c.feed_url = fs.feed_url " +
                 "WHERE fs.user_email = \"" + this.getEmail() + "\"";
         ResultSet res = db.querry(query);
         try {
             while (res.next()) {
-                publications.add(Publication.getPublicationFromDb(res.getString("publication_url")));
+                publications.add(new Publication(res.getString("url"), StringEscapeUtils.unescapeHtml4(res.getString("title")).replace("&apos;", "'"), res.getDate("releaseDate"), res.getString("description"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -257,7 +260,7 @@ public class User {
 
     public ArrayList<User> getFriend(){
         ArrayList<User> friends = new ArrayList<User>();
-        String query = "SELECT u.email FROM user u " +
+        String query = "SELECT u.email, u.password, u.nickname, u.city, u.cournty, u.avatar, u.biography, u.joinedDate FROM user u " +
                 "INNER JOIN friendship fs ON fs.user1_email = u.email OR fs.user2_email = u.email " +
                 "WHERE " +
                 "(fs.user1_email = \""+this.getEmail()+"\" OR fs.user2_email = \""+this.getEmail()+"\") " +
@@ -269,7 +272,8 @@ public class User {
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
-                friends.add(User.getUserFromDb(res.getString("email")));
+                friends.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
+                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -277,7 +281,7 @@ public class User {
         return friends;
     }
 
-    public ArrayList<Feed> getAllFriendsSubscription() {
+    /*public ArrayList<Feed> getAllFriendsSubscription() {
         ArrayList<User> friends = getFriend();
         ArrayList<Feed> feeds = new ArrayList<Feed>();
         for(User friend : friends){
@@ -305,7 +309,7 @@ public class User {
             e.printStackTrace();
         }
         return feed;
-    }
+    }*/
 
     public void receiveRequest(User sender) {
         String email = sender.getEmail();
