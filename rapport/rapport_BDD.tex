@@ -41,9 +41,14 @@ GROUP BY u.email
 HAVING COUNT(u.email) < 3
 \end{lstlisting}
 \subsubsection{Algèbre relationnel tuple}
-$$Request \leftarrow user\sqsupset\Join_{email=user1\_email \vee email=user2\_email}( friendship)$$
-$$Request\_Accepted \leftarrow\ \sigma_{accepted=TRUE}\ (Request)$$
-$$Result \leftarrow \pi_* (email\ \sigma_{COUNT(email)\ <\ 3}\ (Request_Accepted) )$$
+\begin{center}
+\begin{tabular}{lll}
+$Request$		& $\leftarrow$ & $ user\sqsupset\Join_{email=user1\_email \vee email=user2\_email}( friendship)$\\
+$Request\_Accepted$	& $\leftarrow$ & $ \sigma_{accepted=TRUE}\ (Request)$\\
+$Result$		& $\leftarrow$ & $ \pi_* (email\ \sigma_{COUNT(email)\ <\ 3}\ (Request_Accepted) )$ 
+\end{tabular}
+\end{center}
+
 \subsubsection{Calcul relationnel tuple}
 \clearpage
 \subsection{Requête 2}
@@ -57,7 +62,7 @@ INNER JOIN
   (
   SELECT b.user_email FROM feedsubscription b 
   INNER JOIN 
-    (SELECT feed_url FROM feedsubscription WHERE user_email = "X.email") a
+    (SELECT feed_url FROM feedsubscription WHERE user_email = <user>.email) a
   ON a.feed_url = b.feed_url 
   GROUP BY b.user_email
   HAVING COUNT(b.user_email) > 1
@@ -66,14 +71,17 @@ ON d.user_email = c.user_email
 GROUP BY c.feed_url
 \end{lstlisting}
 \subsubsection{Algèbre relationnel}
-
-$$a\ \leftarrow\ \pi_{feed\_url}\ (\sigma_{user\_email=<user>.email}\ (feedsubscription)$$
-$$b\ \leftarrow\ \pi_{user\_email, feed\_url}\ (feedsubscription)$$
-$$b\_a\_join\ \leftarrow\ b \Join_{a.feed\_url=b.feed\_url}\ (a)$$
-$$d\ \leftarrow\ \pi_{b.user\_email}\ (b.user\_email\ \sigma_{COUNT(b.user\_email)\ >\ 1} (b\_a\_join))$$
-$$c\ \leftarrow\ feedsubscription \Join_{feed\_url=url}\ (f)$$
-$$c\_d\_join\ \leftarrow\ c \Join_{c.user\_email=d.user\_email} (d)$$
-$$Result\ \leftarrow\ \pi_*\ (c.feed\_url\ c\_d\_join)$$
+\begin{center}
+\begin{tabular}{lll}
+$a$		& $\leftarrow$ & $ \pi_{feed\_url}\ (\sigma_{user\_email=<user>.email}\ (feedsubscription)$\\
+$b$		& $\leftarrow$ & $ \pi_{user\_email, feed\_url}\ (feedsubscription)$\\
+$b\_a\_join$	& $\leftarrow$ & $ b \Join_{a.feed\_url=b.feed\_url}\ (a)$\\
+$d$		& $\leftarrow$ & $ \pi_{b.user\_email}\ (b.user\_email\ \sigma_{COUNT(b.user\_email)\ >\ 1} (b\_a\_join))$\\
+$c$		& $\leftarrow$ & $ feedsubscription \Join_{feed\_url=url}\ (f)$\\
+$c\_d\_join$	& $\leftarrow$ & $ c \Join_{c.user\_email=d.user\_email} (d)$\\
+$Result$	& $\leftarrow$ & $ \pi_*\ (c.feed\_url\ c\_d\_join)$
+\end{tabular}
+\end{center}
 
 \subsubsection{Calcul relationnel tuple}
 \clearpage
@@ -82,7 +90,21 @@ La liste des flux auxquels X a souscrit, auxquels aucun de ses amis n’a souscr
 aucune publication.
 \subsubsection{SQL}
 \begin{lstlisting}
-
+SELECT * FROM feed f
+INNER JOIN feedsubscription fs1 
+ON 
+fs1.feed_url=f.url AND fs1.user_email=<user>.email
+WHERE NOT EXISTS ( "
+	SELECT c1.feed_url FROM contain c1 "
+	INNER JOIN contain c2 ON c2.publication_url = c1.publication_url AND c2.feed_url = \"feed://"+ email +"\" "
+	WHERE c1.feed_url=f.url ) "
+AND NOT EXISTS ( "
+	SELECT fs2.feed_url FROM feedsubscription fs2 "
+	INNER JOIN friendship fr ON ("
+		(fr.user1_email=fs2.user_email AND fr.user2_email=\""+ email +"\") "
+		OR (fr.user2_email=fs2.user_email AND fr.user1_email=\""+ email +"\") "
+		AND accepted = TRUE) "
+	WHERE fs2.feed_url = f.url )"
 
 \end{lstlisting}
 \subsubsection{Algèbre relationnel}
@@ -93,10 +115,26 @@ aucune publication.
 La liste des utilisateurs qui ont partagé au moins 3 publications que X a partagé.
 \subsubsection{SQL}
 \begin{lstlisting}
-
-
+SELECT * FROM user u
+INNER JOIN sharedpublication s ON s.user_email = u.email
+INNER JOIN 
+  (
+  SELECT publication_url FROM sharedpublication 
+  WHERE user_email = <user>.email
+  ) a
+ON s.publication_url = a.publication_url
+GROUP BY s.user_email
+HAVING COUNT(s.user_email) > 2
 \end{lstlisting}
 \subsubsection{Algèbre relationnel tuple}
+\begin{center}
+\begin{tabular}{lll}
+$a$		& $\leftarrow$ & $\pi_{publication\_url}\ (\ \sigma_{user\_email=<user>.email}\ (sharedpublication))$\\
+$s$		& $\leftarrow$ & $user \Join_{email = user\_email} (sharedpublication)$\\
+$a\_s\_join$	& $\leftarrow$ & $a \Join_{a.publication\_url=s.publication_url} (s)$\\
+$Result$	& $\leftarrow$ & $\pi_*\ (s.user\_email\ \sigma_{COUNT(s.user_email) > 2} (a\_s\_join))$
+\end{tabular}
+\end{center}
 
 \subsubsection{Calcul relationnel tuple}
 \clearpage
