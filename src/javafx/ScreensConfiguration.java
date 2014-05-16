@@ -71,6 +71,13 @@ public class ScreensConfiguration {
         return new FindFriendController(this);
     }
 
+    public FXMLDialog commentDialog(){
+        return new FXMLDialog(commentDialogController(), getClass().getResource("fxml/commentForm.fxml"), primaryStage, StageStyle.DECORATED);
+    }
+    public CommentDialogController commentDialogController(){
+        return new CommentDialogController(this);
+    }
+
     public FXMLDialog publicationView(){
         return new FXMLDialog(publicationViewController(), getClass().getResource("fxml/openPub.fxml"), primaryStage, StageStyle.DECORATED);
     }

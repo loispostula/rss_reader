@@ -18,6 +18,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.FileChooser;
 import javafx.util.Callback;
 import org.controlsfx.dialog.Dialogs;
@@ -210,14 +211,20 @@ public class FeedScreenController implements DialogController {
                 @Override
                 public TableCell call(TableColumn tableColumn) {
                     final TableCell cell = new TableCell() {
-                        private Text text;
-
+                        private TextFlow text;
                         @Override
                         protected void updateItem(Object o, boolean b) {
                             super.updateItem(o, b);
                             if (!isEmpty()) {
-                                text = new Text(o.toString());
-                                text.setWrappingWidth(290);
+                                TableRow row = getTableRow();
+                                Publication pub = (Publication) row.getTableView().getItems().get(row.getIndex());
+                                Text text1 = new Text(o.toString());
+                                text1.setWrappingWidth(290);
+                                text1.setStyle("-fx-font-weight: bold");
+                                Text skip = new Text("\n");
+                                Text text2 = new Text(pub.getDescription().substring(0, pub.getDescription().length() < 100? pub.getDescription().length() : 100).replace("&apos;", "'") + " ...");
+                                text2.setWrappingWidth(290);
+                                text = new TextFlow(text1, skip, text2);
                                 setGraphic(text);
                             }
                         }
@@ -227,7 +234,7 @@ public class FeedScreenController implements DialogController {
             };
             pubTitle.setCellFactory(cellFactory);
 
-            TableColumn openPub = new TableColumn("Open");
+            TableColumn openPub = new TableColumn();
             openPub.setCellFactory(new Callback<TableColumn, TableCell>() {
                 @Override
                 public TableCell call(TableColumn tableColumn) {
@@ -257,7 +264,7 @@ public class FeedScreenController implements DialogController {
                 }
             });
 
-            TableColumn sharePub = new TableColumn("Share");
+            TableColumn sharePub = new TableColumn();
             sharePub.setCellFactory(new Callback<TableColumn, TableCell>() {
                 @Override
                 public TableCell call(TableColumn tableColumn) {
@@ -286,25 +293,40 @@ public class FeedScreenController implements DialogController {
                     return cell;
                 }
             });
-            table.setRowFactory(new Callback<TableView<Publication>, TableRow<Publication>>() {
+
+            TableColumn commentPub = new TableColumn();
+            commentPub.setCellFactory(new Callback<TableColumn, TableCell>() {
                 @Override
-                public TableRow<Publication> call(TableView<Publication> publicationTableView) {
-                    TableRow<Publication> row = new TableRow<Publication>() {
+                public TableCell call(TableColumn tableColumn) {
+                    TableCell cell = new TableCell() {
                         @Override
-                        protected void updateItem(Publication publication, boolean b) {
-                            if (publication != null) {
-                                super.updateItem(publication, b);
-                                this.setTooltip(new Tooltip(publication.getDescription()));
-                            }
+                        protected void updateItem(Object o, boolean b) {
+                            super.updateItem(o, b);
+                            final VBox vbox = new VBox(5);
+                            Image image = new Image("file:///" + getClass().getResource("icons/commentPub.png").getPath());
+                            Button button = new Button("", new ImageView(image));
+                            final TableCell c = this;
+                            button.setOnAction(new EventHandler<ActionEvent>() {
+                                @Override
+                                public void handle(ActionEvent actionEvent) {
+                                    TableRow row = c.getTableRow();
+                                    Publication pub = (Publication) row.getTableView().getItems().get(row.getIndex());
+                                    FXMLDialog dial = screens.commentDialog();
+                                    dial.show();
+                                    ((CommentDialogController)dial.getController()).loadPublication(pub, feed);
+                                }
+                            });
+                            vbox.getChildren().add(button);
+                            setGraphic(vbox);
                         }
                     };
-                    return row;
+                    return cell;
                 }
             });
             table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
             //table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
             //todo if checked not only non read
-            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub, sharePub);
+            table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub, sharePub, commentPub);
             pane.setContent(table);
             pane.setMinWidth(800);
             accordion.getPanes().add(pane);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -65,18 +66,6 @@
           </children>
         </StackPane>
         <Pane maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="568.0" />
-        <Button fx:id="logout" onAction="#refresh" text="">
-          <graphic>
-            <ImageView>
-               <image>
-                 <Image url="@../icons/refresh.png" />
-               </image>
-            </ImageView>
-          </graphic>
-            <tooltip>
-                <Tooltip text="Refresh feed and notifications" />
-            </tooltip>
-        </Button>
         <Button id="logout" onAction="#logout" text="">
           <graphic>
             <ImageView>
