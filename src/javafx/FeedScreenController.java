@@ -65,35 +65,17 @@ public class FeedScreenController implements DialogController {
         screens.loginDialog().show();
     }
 
-    public ArrayList<User> searchFirend(String search) {
-        search = escapeXml(search);
-        Database db = new Database();
-        String query = "SELECT * FROM `user` WHERE `email` = \"" + search + "\" OR `nickname` = \"" + search + "\"";
-        ResultSet res = db.querry(query);
-        ArrayList<User> requests = new ArrayList<User>();
-        try {
-            while (res.next()) {
-                requests.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
-                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return requests;
-
-    }
-
     public void addFriend() {
         FXMLDialog dial = this.screens.findFriendDialog();
-        dial.show();
         ((FindFriendController) dial.getController()).populateCriteria();
+        dial.showAndWait();
     }
 
     public void acceptFriend() {
         FXMLDialog dial = this.screens.friendRequestDialog();
-        dial.show();
         ((FriendRequestController) dial.getController()).showRequest();
-        this.setFriendRequestCount();
+        dial.showAndWait();
+        this.refresh();
     }
 
     public void share(Publication publication, String text) {
@@ -128,6 +110,7 @@ public class FeedScreenController implements DialogController {
             Feed feed = Feed.getFeedFromFile(file.getAbsolutePath());
             screens.getConnectedUser().subscribe(feed);
         }
+        refresh();
     }
 
     private void configureFileChooser(final FileChooser fileChooser) {
@@ -254,7 +237,7 @@ public class FeedScreenController implements DialogController {
                             super.updateItem(o, b);
 
                             final VBox vbox = new VBox(5);
-                            Image image = new Image("file:///" + getClass().getResource("icons/addFeed.png").getPath());
+                            Image image = new Image("file:///" + getClass().getResource("icons/openPub.png").getPath());
                             Button button = new Button("", new ImageView(image));
                             final TableCell c = this;
                             button.setOnAction(new EventHandler<ActionEvent>() {
@@ -284,7 +267,7 @@ public class FeedScreenController implements DialogController {
                             super.updateItem(o, b);
 
                             final VBox vbox = new VBox(5);
-                            Image image = new Image("file:///" + getClass().getResource("icons/addFeed.png").getPath());
+                            Image image = new Image("file:///" + getClass().getResource("icons/sharePub.png").getPath());
                             Button button = new Button("", new ImageView(image));
                             final TableCell c = this;
                             button.setOnAction(new EventHandler<ActionEvent>() {
