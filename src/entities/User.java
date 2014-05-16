@@ -105,7 +105,7 @@ public class User {
                     new java.sql.Date(this.getJoinedDateS().getTime()) + "')");
         } else {
             String query = "UPDATE `user` SET"
-                    + " `nickname` = '" + this.getNickname() + "', `password` =PASSWORD(\"" + this.getPassword() + "\"), `country` = '" + country + "', `city` = '" + city + "', "
+                    + " `nickname` = '" + this.getNickname() + "', `password` =PASSWORD(\"" + this.getPassword() + "\"), `country` = '" + this.getCountry() + "', `city` = '" + this.getCity() + "', "
                     + "`avatar` = '" + this.getAvatarS() + "', `biography` = '" + this.getBiography() + "' WHERE `email` = \"" + this.getEmail() + "\"";
             db.update(query);
         }
@@ -258,9 +258,9 @@ public class User {
         return publications;
     }
 
-    public ArrayList<User> getFriend(){
+    /*public ArrayList<User> getFriend(){
         ArrayList<User> friends = new ArrayList<User>();
-        String query = "SELECT u.email, u.password, u.nickname, u.city, u.cournty, u.avatar, u.biography, u.joinedDate FROM user u " +
+        String query = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u " +
                 "INNER JOIN friendship fs ON fs.user1_email = u.email OR fs.user2_email = u.email " +
                 "WHERE " +
                 "(fs.user1_email = \""+this.getEmail()+"\" OR fs.user2_email = \""+this.getEmail()+"\") " +

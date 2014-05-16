@@ -167,7 +167,6 @@ public class FeedScreenController implements DialogController {
         List<Feed> feeds = screens.getConnectedUser().getAllSubscription();
     	System.out.println("hello");
         for (int i = 0; i < feeds.size(); ++i) {
-        	System.out.println(feeds.get(i).getTitle());
             final Feed feed = feeds.get(i);
             TitledPane pane = new TitledPane();
             pane.setText(feed.getTitle());
@@ -316,7 +315,6 @@ public class FeedScreenController implements DialogController {
             pane.setContent(table);
             accordion.getPanes().add(pane);
         }
-    	System.out.println("hello");
     }
 
     private void openBrowser(String url) {
