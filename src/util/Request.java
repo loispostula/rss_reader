@@ -88,7 +88,7 @@ public class Request {
 		Database db = new Database();
 		ResultSet res = db.querry(
 				"SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u "
-				+ "INNER JOIN shared publication s ON s.user_email = u.email "
+				+ "INNER JOIN sharedpublication s ON s.user_email = u.email "
 				+ "INNER JOIN (SELECT publication_url FROM sharedpublication WHERE user_email = \""+ email +"\") a "
 				+ "ON s.publication_url = a.publication_url "
 				+ "GROUP BY s.user_email "
@@ -162,10 +162,24 @@ public class Request {
 				+ "WHERE (f.user1_email = \""+ email +"\" AND u.email <> f.user1_email) OR (f.user2_email = \""+ email +"\" AND u.email <> f.user2_email) "
 				+ "ORDER BY mread");
         ArrayList<User> requests = new ArrayList<User>();
+        System.out.println(
+				"SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate, "
+				+ "(SELECT COUNT(*) FROM readstatus rs WHERE rs.user_email = u.email)/(TO_DAYS(NOW())-TO_DAYS(u.joinedDate)) AS mread, "
+				+ "(SELECT COUNT(u2.email) FROM user u2 INNER JOIN friendship f2 ON f2.user1_email = u2.email OR f2.user2_email = u2.email WHERE u2.email = u.email GROUP BY u2.email) AS nfriend "
+				+ "FROM user u "
+				+ "INNER JOIN friendship f ON f.user1_email = u.email OR f.user2_email = u.email "
+				+ "WHERE (f.user1_email = \""+ email +"\" AND u.email <> f.user1_email) OR (f.user2_email = \""+ email +"\" AND u.email <> f.user2_email) "
+				+ "ORDER BY mread");
+        int i = 0;
         try {
             while (res.next()) {
                 requests.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
                 		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
+                System.out.println(res.getDouble("mread"));
+                System.out.println(requests.get(i).getEmail());
+                requests.get(i).setPubByDay(res.getDouble("mread"));
+                requests.get(i).setNumOfFriend(res.getInt("nfriend"));
+                i++;
             }
         } catch (SQLException e) {
             e.printStackTrace();

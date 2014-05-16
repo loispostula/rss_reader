@@ -50,9 +50,9 @@ public class FindFriendController implements DialogController {
         criteriaBox.getItems().addAll(
                 "Email",
                 "Nickname",
-                "R1 : User with less than two friend",
-                "Rechared no more than three times",
-                "Friend of X"
+                "R1 : User with two or less friends",
+                "R4 : Rechared X three or more times",
+                "R6 : Friends fo X and some stats"
         );
         criteriaBox.getSelectionModel().selectFirst();
         this.constructTableForResult();
@@ -136,46 +136,45 @@ public class FindFriendController implements DialogController {
         ArrayList<User> searchResult = new ArrayList<User>();
         int querryType = criteriaBox.getSelectionModel().getSelectedIndex();
         String querry = "";
+        Boolean b = false;
         switch (querryType) {
             case 0:
                 //email search
+            	b = true;
                 querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u WHERE email = \"" + querryVal.getText() + "\"";
                 break;
             case 1:
                 //nickname
+            	b = true;
                 querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u WHERE nickname = \"" + querryVal.getText() + "\"";
                 break;
             case 2:
-                //numberOfFriend
+                //R1
             	searchResult = Request.noMoreThanTwoFriend();
                 break;
             case 3:
-                //shared publication
+                //R4
             	searchResult = Request.resharedMoreThanThreeTime(querryVal.getText());
                 break;
             case 4:
-                //friends of X
-                querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u " +
-                        "INNER JOIN friendship f " +
-                        "ON f.user1_email = u.email OR " +
-                        "f.user2_email = u.email " +
-                        "WHERE (f.user1_email = \"" + querryVal.getText() + "\" OR " +
-                        "f.user2_email = \"" + querryVal.getText() + "\") AND (u.email != \""+querryVal.getText()+"\") AND (f.accepted = 1)";
+                //R6
+            	searchResult = Request.friendReadFriendInfo(querryVal.getText());
                 break;
         }
-        Database db = new Database();
-        ResultSet res = db.querry(querry);
-        try {
-            while (res.next()) {
-                User user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
-                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
-                if (!user.equals(screens.getConnectedUser())) {
-                    user.computeStat();
-                    searchResult.add(user);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
+        if (b){
+        	Database db = new Database();
+        	ResultSet res = db.querry(querry);
+	        try {
+	            while (res.next()) {
+	                User user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
+	                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
+	                if (!user.equals(screens.getConnectedUser())) {
+	                    searchResult.add(user);
+	                }
+	            }
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
         }
         tableView.setItems(FXCollections.observableArrayList(searchResult));
     }
