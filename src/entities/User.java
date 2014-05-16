@@ -1,5 +1,6 @@
 package entities;
 
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -32,8 +33,8 @@ public class User {
     private SimpleStringProperty joinedDate;
     private Date joinedDateS;
 
-    private SimpleIntegerProperty pubByDay;
-    private SimpleIntegerProperty numOfFriend;
+    private SimpleDoubleProperty pubByDay = new SimpleDoubleProperty(0.0);
+    private SimpleIntegerProperty numOfFriend = new SimpleIntegerProperty(0);
 
 
     public User() {
@@ -195,7 +196,7 @@ public class User {
         return joinedDateS;
     }
 
-    public int getPubByDay() {
+    public double getPubByDay() {
         return pubByDay.get();
     }
 
@@ -203,7 +204,7 @@ public class User {
         return numOfFriend.get();
     }
 
-    public void setPubByDay(int pubByDay) {
+    public void setPubByDay(double pubByDay) {
         this.pubByDay.set(pubByDay);
     }
 
@@ -245,7 +246,8 @@ public class User {
         String query = "SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
                 + "INNER JOIN contain c ON c.publication_url = p.url "
                 + "INNER JOIN feedsubscription fs ON fs.feed_url = c.feed_url "
-                + "WHERE fs.user_email = \"" + this.getEmail() + "\"";
+                + "WHERE fs.user_email = \"" + this.getEmail() + "\" "
+                + "ORDER BY p.releaseDate DESC";
         ResultSet res = db.querry(query);
         try {
             while (res.next()) {
@@ -258,58 +260,6 @@ public class User {
         return publications;
     }
 
-    /*public ArrayList<User> getFriend(){
-        ArrayList<User> friends = new ArrayList<User>();
-        String query = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u " +
-                "INNER JOIN friendship fs ON fs.user1_email = u.email OR fs.user2_email = u.email " +
-                "WHERE " +
-                "(fs.user1_email = \""+this.getEmail()+"\" OR fs.user2_email = \""+this.getEmail()+"\") " +
-                "AND " +
-                "( fs.accepted = 1) " +
-                "AND " +
-                "(u.email != \""+this.getEmail()+"\");";
-        Database db = new Database();
-        ResultSet res = db.querry(query);
-        try {
-            while(res.next()){
-                friends.add(User.getUserFromDb(res.getString("email")));
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return friends;
-    }
-
-    public ArrayList<Feed> getAllFriendsSubscription() {
-        ArrayList<User> friends = getFriend();
-        ArrayList<Feed> feeds = new ArrayList<Feed>();
-        for(User friend : friends){
-            feeds.add(friend.createSharedFeed());
-        }
-        return feeds;
-    }
-
-    public Feed createSharedFeed(){
-        Feed feed = new Feed(getEmail(), getNickname(), "Shared Feed of " + getNickname(), getEmail(), "file:///" + getAvatarS());
-        ArrayList<Publication> pubs = new ArrayList<Publication>();
-        String querry = "SELECT * FROM sharedpublication WHERE user_email = \""+getEmail()+"\"";
-        Database db =  new Database();
-        ResultSet res = db.querry(querry);
-        try {
-            while(res.next()){
-                Publication pub = Publication.getPublicationFromDb(res.getString("publication_url"));
-                if(pub != null){
-                    pub.setReleaseDate(res.getString("sharedDate"));
-                    pub.setDescription(res.getString("text"));
-                    feed.addPublication(pub);
-                }
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return feed;
-    }*/
-
     public void receiveRequest(User sender) {
         String email = sender.getEmail();
         if (User.getUserFromDb(email) != null) {
@@ -318,11 +268,6 @@ public class User {
                     + "('" + email + "', '" + this.getEmail() + "', NOW(), 0)");
             db.close();
         }
-    }
-
-    public void computeStat() {
-        pubByDay = new SimpleIntegerProperty(0);
-        numOfFriend = new SimpleIntegerProperty(0);
     }
 
     @Override
