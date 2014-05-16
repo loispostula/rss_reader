@@ -29,7 +29,7 @@ public class SharedPublication {
 
     public void save(){
         Database db = new Database();
-        db.update("INSERT INTO `sharedPublication` (`publication_url`, `user_email`, `text`, `sharedDate`) VALUES "
+        db.update("INSERT INTO `sharedpublication` (`publication_url`, `user_email`, `text`, `sharedDate`) VALUES "
             	+ "('"+ publication.getUrl() +"', '"+ user.getEmail() +"', '"+ text +"', '"+ new java.sql.Date(sharedDate.getTime()) +"')");
         db.update("INSERT INTO contain (`publication_url`, `feed_url`) VALUES "
             	+ "('"+ publication.getUrl() +"', 'feed://"+ user.getEmail() +"')");
