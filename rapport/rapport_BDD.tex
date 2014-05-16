@@ -6,6 +6,15 @@
 
 \usepackage{tikz}
 
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={210mm,297mm},
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
 
 \lstset{
   breaklines=true,                                     % line wrapping on
@@ -92,19 +101,38 @@ aucune publication.
 \begin{lstlisting}
 SELECT * FROM feed f
 INNER JOIN feedsubscription fs1 
-ON 
-fs1.feed_url=f.url AND fs1.user_email=<user>.email
-WHERE NOT EXISTS ( "
-	SELECT c1.feed_url FROM contain c1 "
-	INNER JOIN contain c2 ON c2.publication_url = c1.publication_url AND c2.feed_url = \"feed://"+ email +"\" "
-	WHERE c1.feed_url=f.url ) "
-AND NOT EXISTS ( "
-	SELECT fs2.feed_url FROM feedsubscription fs2 "
-	INNER JOIN friendship fr ON ("
-		(fr.user1_email=fs2.user_email AND fr.user2_email=\""+ email +"\") "
-		OR (fr.user2_email=fs2.user_email AND fr.user1_email=\""+ email +"\") "
-		AND accepted = TRUE) "
-	WHERE fs2.feed_url = f.url )"
+  ON 
+  fs1.feed_url=f.url AND fs1.user_email = <user>.email
+WHERE NOT EXISTS 
+  (
+  SELECT c1.feed_url FROM contain c1
+    INNER JOIN contain c2 
+      ON 
+      c2.publication_url = c1.publication_url
+      AND 
+      c2.feed_url = "feed://" + <user>.email
+  WHERE c1.feed_url=f.url 
+  )
+AND NOT EXISTS 
+  (
+  SELECT fs2.feed_url FROM feedsubscription fs2
+    INNER JOIN friendship fr 
+    ON 
+      (
+	fr.user1_email = fs2.user_email
+	AND
+	fr.user2_email = <user>.email
+      )
+      OR 
+      (
+	fr.user2_email = fs2.user_email
+	AND
+	fr.user1_email = <user>.email
+      )
+      AND 
+	accepted = TRUE
+   )
+WHERE fs2.feed_url = f.url"
 
 \end{lstlisting}
 \subsubsection{Algèbre relationnel}
@@ -144,8 +172,48 @@ partagées, le pourcentage de ces dernières par rapport aux premières, cela po
 par le nombre de publications partagées.
 \subsubsection{SQL}
 \begin{lstlisting}
-
-
+SELECT f.url, f.title, f.description, f.link, f.image, 
+(
+  SELECT COUNT(*) FROM readstatus rs 
+  WHERE 
+    rs.feed_url = f.url
+  AND 
+    rs.user_email = fs2.user_email
+  AND 
+    TO_DAYS(NOW())-TO_DAYS(rs.date) < 30
+)
+AS nread,
+(
+  SELECT COUNT(*) FROM sharedpublication sp
+  INNER JOIN feedsubscription fs 
+    ON 
+      sp.user_email = fs.user_email
+  INNER JOIN contain c 
+    ON 
+	fs.feed_url = c.feed_url
+      AND 
+	sp.publication_url = c.publication_url
+  WHERE 
+    c.feed_url = f.url
+  AND 
+    sp.user_email = fs2.user_email
+  AND 
+    TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30
+) 
+AS nshared,
+( 
+  SELECT nshared/nread 
+)
+AS ratio 
+FROM feed f
+INNER JOIN feedsubscription fs2 
+ON 
+  fs2.feed_url = f.url
+WHERE 
+  fs2.user_email = <user>.email 
+GROUP BY 
+  f.url 
+ORDER BY nshared
 \end{lstlisting}
 \subsection{Requête 6}
 La liste des amis d’un utilisateur avec pour chacun le nombre de publications lues par jour et le nombre
