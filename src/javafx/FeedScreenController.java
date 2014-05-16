@@ -449,6 +449,7 @@ public class FeedScreenController implements DialogController {
 
     public void searchFeed() {
         FXMLDialog dial = screens.searchFeedDialog();
+        ((SearchFeedController)dial.getController()).populateCriteria();
         dial.showAndWait();
         refresh();
     }

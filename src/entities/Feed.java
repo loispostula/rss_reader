@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.image.Image;
@@ -28,6 +30,10 @@ public class Feed {
     private ArrayList<Publication> pubs = null;
     private String imageS;
     private SimpleObjectProperty image;
+
+    private SimpleIntegerProperty pubView = new SimpleIntegerProperty(0);
+    private SimpleIntegerProperty pubShared = new SimpleIntegerProperty(0);
+    private SimpleDoubleProperty pubRatio = new SimpleDoubleProperty(0.0);
 
     public Feed() {
     }
@@ -207,5 +213,32 @@ public class Feed {
 
     public String getImageS() {
         return imageS;
+    }
+
+
+
+
+    public int getPubView() {
+        return pubView.get();
+    }
+
+    public void setPubView(int pubView) {
+        this.pubView.set(pubView);
+    }
+
+    public int getPubShared() {
+        return pubShared.get();
+    }
+
+    public void setPubShared(int pubShared) {
+        this.pubShared.set(pubShared);
+    }
+
+    public Double getPubRatio() {
+        return pubRatio.get();
+    }
+
+    public void setRatio(Double ratio) {
+        this.pubRatio.set(ratio);
     }
 }

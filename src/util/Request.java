@@ -32,10 +32,10 @@ public class Request {
 	public static ArrayList<Feed> feedFollowedByUserWhoFollowTwoOrMoreFeedOfX(String email){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT f.url, f.title, f.description, f.link, f.image FROM feed f FROM publication f "
+				"SELECT f.url, f.title, f.description, f.link, f.image FROM feed f "
 				+ "INNER JOIN feedsubscription c ON c.feed_url = f.url "
 				+ "INNER JOIN ("
-					+ "SELECT b.user_email FROM `feedsubscription` b "
+					+ "SELECT b.user_email FROM feedsubscription b "
 					+ "INNER JOIN ("
 						+ "SELECT feed_url FROM feedsubscription "
 						+ "WHERE user_email = \""+ email +"\""
@@ -108,13 +108,28 @@ public class Request {
 	public static ArrayList<Feed> feedReadShareInfo(String email){
 		Database db = new Database();
 		ResultSet res = db.querry(
-				"SELECT f.url, f.title, f.description, f.link, f.image FROM feed f "
-				+ "SELECT fs.feed_url, "
-				+ "(SELECT COUNT(*) FROM readstatus rs WHERE rs.publication_url = c.publication_url AND rs.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30) AS nread, "
-				+ "(SELECT COUNT(*) FROM sharedpublication sp WHERE sp.publication_url = c.publication_url AND sp.user_email = fs.user_email AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30) AS nshared "
-				+ ", (SELECT nshared/nread) AS ratio "
-				+ "FROM publication f "
-				+ "INNER JOIN feedsubscription fs ON fs.feed_url = f.url"
+				"SELECT f.url, f.title, f.description, f.link, f.image, "
+				+ "(" +
+                        "SELECT COUNT(*) FROM readstatus rs " +
+                        "WHERE rs.publication_url = f.publication_url " +
+                        "AND " +
+                        "rs.user_email = fs.user_email " +
+                        "AND TO_DAYS(NOW())-TO_DAYS(rs.date) < 30" +
+                ") " +
+                "AS nread, "
+				+ "(" +
+                        "SELECT COUNT(*) FROM sharedpublication sp " +
+                        "WHERE sp.publication_url = c.publication_url " +
+                        "AND " +
+                        "sp.user_email = fs.user_email " +
+                        "AND TO_DAYS(NOW())-TO_DAYS(sp.sharedDate) < 30" +
+                ") " +
+                "AS nshared, "
+				+ "(" +
+                        "SELECT nshared/nread" +
+                ") " +
+                "AS ratio FROM feed f "
+				+ "INNER JOIN feedsubscription fs ON fs.feed_url = f.url "
 				+ "INNER JOIN contain c ON c.feed_url = fs.feed_url "
 				+ "WHERE fs.user_email = \""+ email +"\" "
 				+ "GROUP BY fs.feed_url "
@@ -122,7 +137,13 @@ public class Request {
         ArrayList<Feed> requests = new ArrayList<Feed>();
         try {
             while (res.next()) {
-            	requests.add(new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image")));
+                Feed cand = new Feed(res.getString("url"), res.getString("title"), res.getString("description"), res.getString("link"), res.getString("image"));
+                cand.setPubView(res.getInt("nread"));
+                cand.setPubShared(res.getInt("nshared"));
+                cand.setRatio(res.getDouble("ratio"));
+                System.out.println(res.getInt("nread"));
+                System.out.println(res.getInt("nshared"));
+                requests.add(cand);
             }
         } catch (SQLException e) {
             e.printStackTrace();

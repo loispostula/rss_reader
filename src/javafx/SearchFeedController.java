@@ -107,17 +107,13 @@ public class SearchFeedController implements DialogController {
         int querryType = criteriaBox.getSelectionModel().getSelectedIndex();
         switch (querryType) {
             case 0:
-                //email search
-                User user = User.getUserFromDb(querryVal.getText());
-                if (user != null){
-
-                }
+                    searchResult = Request.feedFollowedByUserWhoFollowTwoOrMoreFeedOfX(querryVal.getText());
                 break;
             case 1:
-                //nickname
+                searchResult = Request.notFollowedByFriendAndNotShared(querryVal.getText());
                 break;
             case 2:
-                //numberOfFriend
+                searchResult = Request.feedReadShareInfo(querryVal.getText());
                 break;
         }
         tableView.setItems(FXCollections.observableArrayList(searchResult));
