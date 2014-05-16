@@ -204,4 +204,8 @@ public class Feed {
         }
         pubs.add(pub);
     }
+
+    public String getImageS() {
+        return imageS;
+    }
 }

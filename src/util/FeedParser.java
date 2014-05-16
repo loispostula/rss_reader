@@ -82,7 +82,7 @@ public class FeedParser {
 			try{
 				imagePub = escapeXml(current.getChild("enclosure").getAttribute("url").getValue());
 			}catch (Exception e){
-				imagePub = "";
+				imagePub = ("file:////"+System.getProperty("user.dir").replace("\\","//")+"//src//javafx//icons//rss_icon.png");
 			}
 
 			Publication publication = new Publication(linkPub, titlePub, datePub, descriptionPub, imagePub);

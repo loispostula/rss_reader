@@ -13,6 +13,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.util.Callback;
 import util.Database;
+import util.Request;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -49,8 +50,8 @@ public class FindFriendController implements DialogController {
         criteriaBox.getItems().addAll(
                 "Email",
                 "Nickname",
-                "Number Of Friend (#start, #end)",
-                "Shared # Publications with X (#, X)",
+                "R1 : User with less than two friend",
+                "Rechared no more than three times",
                 "Friend of X"
         );
         criteriaBox.getSelectionModel().selectFirst();
@@ -146,41 +147,11 @@ public class FindFriendController implements DialogController {
                 break;
             case 2:
                 //numberOfFriend
-                String[] born = querryVal.getText().split(",");
-                if (born.length == 2) {
-                    querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate, COUNT(u.email) FROM user u " +
-                            "INNER JOIN friendship f " +
-                            "ON f.user1_email = u.email OR " +
-                            "f.user2_email = u.email " +
-                            "GROUP BY u.email " +
-                            "HAVING COUNT(u.email) < " + born[1];
-                    if (born[0] == "0") {
-                        querry += " UNION " +
-                                "SELECT u.email, 0 FROM user u " +
-                                "WHERE u.email not in (SELECT user1_email from friendship) " +
-                                "AND u.email not in (SELECT user2_email from friendship)";
-                    } else {
-                        querry += " AND COUNT(u.email) > " + born[0];
-                    }
-                }
-                System.out.println(querry);
+            	searchResult = Request.noMoreThanTwoFriend();
                 break;
             case 3:
                 //shared publication
-                String[] arg = querryVal.getText().split(",");
-                if (arg.length == 2) {
-                    querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u "
-                    		+ "INNER JOIN sharedpublication s ON s.user_email = u.email " +
-                            "INNER JOIN " +
-                            "(" +
-                            "SELECT publication_url " +
-                            "FROM sharedpublication " +
-                            "WHERE user_email = \"" + arg[1] + "\"" +
-                            ") a " +
-                            "ON s.publication_url = a.publication_url " +
-                            "GROUP BY s.user_email " +
-                            "HAVING COUNT(s.user_email) > " + arg[0];
-                }
+            	searchResult = Request.resharedMoreThanThreeTime(querryVal.getText());
                 break;
             case 4:
                 //friends of X

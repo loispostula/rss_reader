@@ -176,8 +176,8 @@ public class FeedScreenController implements DialogController {
             TitledPane pane = new TitledPane();
             pane.setText(feed.getTitle());
             pane.setTooltip(new Tooltip(feed.getDescription()));
-            if (!feed.getImage().isEmpty()) {
-                ImageView temp = new ImageView(new Image(feed.getImage()));
+            if (!feed.getImageS().isEmpty()) {
+                ImageView temp = new ImageView((Image)feed.getImage());
                 temp.setPreserveRatio(true);
                 temp.setFitHeight(40);
                 temp.setFitWidth(120);
@@ -202,6 +202,9 @@ public class FeedScreenController implements DialogController {
                                 HBox box = new HBox();
                                 box.setSpacing(10);
                                 imageView.setImage((Image) o);
+                                imageView.setPreserveRatio(true);
+                                imageView.setFitHeight(70);
+                                imageView.setFitWidth(140);
                                 btn.setOnAction(new EventHandler<ActionEvent>() {
                                     @Override
                                     public void handle(ActionEvent actionEvent) {
@@ -209,6 +212,9 @@ public class FeedScreenController implements DialogController {
                                         Publication curr = table.getItems().get(index);
                                         Image newI = new Image(curr.getImageUrl());
                                         imageView.setImage(newI);
+                                        imageView.setPreserveRatio(true);
+                                        imageView.setFitHeight(70);
+                                        imageView.setFitWidth(140);
                                     }
                                 });
                                 box.getChildren().add(btn);
