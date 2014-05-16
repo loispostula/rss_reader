@@ -39,6 +39,15 @@ $$Result \leftarrow \pi_* (mail\ \sigma_{COUNT(email)\ <\ 3}\ (Request_Accepted)
 \subsection{Requête 3}
 \subsubsection{SQL}
 \begin{verbatim}
+$$Friend\_Feed \leftarrow feedsubscription\Join_{((user1\_email=email \wdge user2\_email=[user.email]) \vee (user2\_email=email \wdge user2\_ema1l=[user.email])) \wdge accepted=TRUE}( friendship)$$
+$$Friend\_Subscribed \leftarrow \pi_feed_url \sigma_{feed\_url=url}\ (Friend\_Feedsubscriptions)$$
+
+$$Shared\_Feed \leftarrow contain\Join_{publication\_url\_1=publication\_url\_2 \wdge feed\_url\_2 = "feed://"[user.email]}( contain)$$
+$$Shared\_Feed \leftarrow \pi_feed_url \sigma_{feed\_url\_2=url}\ (Shared\_Feed)$$
+
+$$User\_Feed \leftarrow feed\Join_{feed\_url=url \wdge user\_ema1l=[user.email]}( feedsubscription)$$
+
+$$Result \leftarrow\ (User\_Feed \textminus Shared\_Feed) \textminus Friend\_Subscribed$$
 
 
 \end{verbatim}
