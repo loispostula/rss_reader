@@ -215,13 +215,50 @@ GROUP BY
   f.url 
 ORDER BY nshared
 \end{lstlisting}
+\clearpage
 \subsection{Requête 6}
 La liste des amis d’un utilisateur avec pour chacun le nombre de publications lues par jour et le nombre
 d’amis, ordonnée par la moyenne des lectures par jour depuis la date d’inscription de cet ami
 
 \subsubsection{SQL}
 \begin{lstlisting}
-
-
+SELECT u.*,
+(
+  SELECT COUNT(*) FROM readstatus rs 
+  WHERE 
+  rs.user_email = u.email)/(TO_DAYS(NOW())-TO_DAYS(u.joinedDate)
+) 
+AS mread,
+(
+  SELECT COUNT(u2.email) FROM user u2
+  INNER JOIN friendship f2 
+  ON 
+      f2.user1_email = u2.email 
+    OR 
+      f2.user2_email = u2.email
+  WHERE 
+  u2.email = u.email 
+  GROUP BY u2.email
+) 
+AS nfriend
+FROM user u
+INNER JOIN friendship f 
+ON 
+    f.user1_email = u.email 
+  OR 
+    f.user2_email = u.email
+WHERE 
+  (
+    f.user1_email = <user>.email 
+  AND 
+    u.email <> f.user1_email
+  ) 
+OR 
+  (
+    f.user2_email = <user>.email 
+  AND 
+    u.email <> f.user2_email
+  )
+ORDER BY mread
 \end{lstlisting}
 \end{document}
