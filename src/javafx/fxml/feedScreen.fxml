@@ -65,6 +65,42 @@
             </Button>
           </children>
         </StackPane>
+            <ToggleButton fx:id="switchRead" onAction="#switchRead" text="">
+               <graphic>
+                  <ImageView fx:id="switchReadIV">
+                     <image>
+                        <Image url="@../icons/pubUnread.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Show All Publications" />
+               </tooltip>
+            </ToggleButton>
+            <ToggleButton fx:id="switchFeed" onAction="#switchFeed" text="">
+               <graphic>
+                  <ImageView fx:id="switchFeedIV">
+                     <image>
+                        <Image url="@../icons/switchFeed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Show All Publication" />
+               </tooltip>
+            </ToggleButton>
+            <Button fx:id="searchFeed" onAction="#searchFeed" text="">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../icons/searchFeed.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <tooltip>
+                  <Tooltip text="Add Friend" />
+               </tooltip>
+            </Button>
         <Pane maxWidth="1.7976931348623157E308" prefHeight="45.0" prefWidth="568.0" />
         <Button id="logout" onAction="#logout" text="">
           <graphic>

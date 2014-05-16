@@ -52,6 +52,20 @@ public class FeedScreenController implements DialogController {
     ImageView friendRequest;
     @FXML
     StackPane stackPane;
+    @FXML
+    ToggleButton switchRead;
+    @FXML
+    ImageView switchReadIV;
+    Image unread = new Image("file:///" + getClass().getResource("icons/pubUnread.png").getPath());
+    Image read = new Image("file:///" + getClass().getResource("icons/pubRead.png").getPath());
+
+    @FXML
+    ToggleButton switchFeed;
+    @FXML
+    ImageView switchFeedIV;
+    Image sFeed = new Image("file:///" + getClass().getResource("icons/switchFeed.png").getPath());
+    Image sPub = new Image("file:///" + getClass().getResource("icons/switchPub.png").getPath());
+
 
     List<TitledPane> feedPane;
 
@@ -149,8 +163,14 @@ public class FeedScreenController implements DialogController {
 
     private void loadFeeds() {
         accordion.getPanes().removeAll(accordion.getPanes());
-        List<Feed> feeds = screens.getConnectedUser().getAllSubscription();
-    	System.out.println("hello");
+        List<Feed> feeds = null;
+        if(!switchFeed.isSelected()){
+        feeds = screens.getConnectedUser().getAllSubscription();
+        }
+        else{
+            feeds = new ArrayList<Feed>();
+            feeds.add(new Feed("", "All Publication","", "", "file://" + getClass().getResource("icons/rss_icon.png") ));
+        }
         for (int i = 0; i < feeds.size(); ++i) {
             final Feed feed = feeds.get(i);
             TitledPane pane = new TitledPane();
@@ -286,6 +306,9 @@ public class FeedScreenController implements DialogController {
                                     share(pub, sharedComment);//todo get the text
                                 }
                             });
+                            if (switchFeed.isSelected()){
+                                button.setDisable(true);
+                            }
                             vbox.getChildren().add(button);
                             setGraphic(vbox);
                         }
@@ -313,9 +336,12 @@ public class FeedScreenController implements DialogController {
                                     Publication pub = (Publication) row.getTableView().getItems().get(row.getIndex());
                                     FXMLDialog dial = screens.commentDialog();
                                     dial.show();
-                                    ((CommentDialogController)dial.getController()).loadPublication(pub, feed);
+                                    ((CommentDialogController) dial.getController()).loadPublication(pub, feed);
                                 }
                             });
+                            if (switchFeed.isSelected()){
+                                button.setDisable(true);
+                            }
                             vbox.getChildren().add(button);
                             setGraphic(vbox);
                         }
@@ -323,9 +349,18 @@ public class FeedScreenController implements DialogController {
                     return cell;
                 }
             });
-            table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
-            //table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
-            //todo if checked not only non read
+            if(switchRead.isSelected()){
+                table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
+            }
+            else
+            {
+                if(switchFeed.isSelected()){
+                    table.setItems(FXCollections.observableArrayList(screens.getConnectedUser().getAllpublication()));
+                }
+                else{
+                    table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
+                }
+            }
             table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub, sharePub, commentPub);
             pane.setContent(table);
             pane.setMinWidth(800);
@@ -377,5 +412,38 @@ public class FeedScreenController implements DialogController {
                 .message("Please insert your comment")
                 .showTextInput();
         return comment;
+    }
+
+    public void switchFeed() {
+        if (switchFeed.isSelected()){
+            //first we change the image
+            switchFeedIV.setImage(sFeed);
+            switchRead.setSelected(false);
+            switchRead.setDisable(true);
+        }
+        else{
+            //first we change the image
+            switchFeedIV.setImage(sPub);
+            switchRead.setDisable(false);
+        }
+        refresh();
+    }
+
+    public void switchRead() {
+        if (switchRead.isSelected()){
+            //first we change the image
+            switchReadIV.setImage(read);
+        }
+        else{
+            //first we change the image
+            switchReadIV.setImage(unread);
+        }
+        refresh();
+    }
+
+    public void searchFeed() {
+        FXMLDialog dial = screens.searchFeedDialog();
+        dial.showAndWait();
+        refresh();
     }
 }

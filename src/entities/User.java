@@ -243,9 +243,9 @@ public class User {
         Database db = new Database();
         //todo jointur subscribe
         String query = "SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
-        		+ "INNER JOIN feedsubscription fs ON fs.publication_url = p.url "
-        		+ "INNER JOIN contain c ON c.feed_url = fs.feed_url " +
-                "WHERE fs.user_email = \"" + this.getEmail() + "\"";
+                + "INNER JOIN contain c ON c.publication_url = p.url "
+                + "INNER JOIN feedsubscription fs ON fs.feed_url = c.feed_url "
+                + "WHERE fs.user_email = \"" + this.getEmail() + "\"";
         ResultSet res = db.querry(query);
         try {
             while (res.next()) {

@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.image.Image;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 import util.Database;
@@ -19,11 +22,12 @@ import static org.apache.commons.lang3.StringEscapeUtils.*;
 public class Feed {
 
     private String url;
-    private String title;
+    private SimpleStringProperty title;
     private String description;
     private String link;
     private ArrayList<Publication> pubs = null;
-    private String image;
+    private String imageS;
+    private SimpleObjectProperty image;
 
     public Feed() {
     }
@@ -33,10 +37,11 @@ public class Feed {
     public Feed(String url, String title, String description, String link, String image) {
 		super();
 		this.url = url;
-		this.title = title;
+		this.title = new SimpleStringProperty(title);
 		this.description = description;
 		this.link = link;
-		this.image = image;
+		this.imageS = image;
+        this.image = new SimpleObjectProperty(new Image(image));
 	}
 
     public static Feed getFeedFromFile(String url){
@@ -72,7 +77,6 @@ public class Feed {
         String query ="SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
         		+ "INNER JOIN contain c ON c.publication_url = p.url " +
                 "WHERE c.feed_url = \""+ escapeXml(this.getUrl()) + "\"";
-        System.out.println(query);
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
@@ -145,7 +149,7 @@ public class Feed {
         Database db = new Database();
         if (getFeedFromDb(url) == null){
         	db.update("INSERT INTO `feed` (`url`, `title`, `link`, `description`, `image`) VALUES "
-        		+ "('"+ url +"', '"+title +"', '"+ link +"', '"+ description +"', '"+image+"')");
+        		+ "('"+ url +"', '"+title.get() +"', '"+ link +"', '"+ description +"', '"+imageS+"')");
         }
         db.close();
     }
@@ -161,11 +165,11 @@ public class Feed {
     }
 
     public String getTitle() {
-        return title;
+        return title.get();
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title.set(title);
     }
 
     public String getDescription() {
@@ -186,12 +190,12 @@ public class Feed {
 
 
 
-    public String getImage() {
-        return image;
+    public Object getImage() {
+        return image.get();
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImage(Image image) {
+        this.image.set(image);
     }
 
     public void addPublication(Publication pub) {
