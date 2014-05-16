@@ -141,7 +141,9 @@ WHERE fs2.feed_url = f.url"
 \begin{tabular}{lll}
 $Shared\_Feeds$ & $\leftarrow$ & $contain \Join_{publication\_url\_1=publication\_url\_2 \wedge feed\_url\_2 = {user.email}}\ (contain)$\\
 $Shared\_Feed\_URL$ & $\leftarrow$ & $\pi_{feed_url} \sigma_{feed\_url\_2=url}\ (Shared\_Feeds)$\\
-$Friend\_Feeds$ & $\leftarrow$ & $feedsubscription \Join_{((user1\_email=email \wedge user2\_email={user.email}) \vee (user2\_email=email \wedge user2\_ema1l=[user.email])) \wedge accepted=TRUE}\ (friendship)$\\
+$Friend\_Feeds$ & $\leftarrow$ & $feedsubscription \Join_{((user1\_email=email \wedge user2\_email={user.email}) }$\\
+&&$_{\vee (user2\_email=email \wedge user2\_email=[user.email]))} $\\
+&&$_{\wedge accepted=TRUE}\ (friendship)$\\
 $Friend\_Feed\_URL$ & $\leftarrow$ & $\pi_{feed\_url} \sigma_{feed\_url=url}\ (Friend\_Feeds)$\\
 $User\_Feed$ & $\leftarrow$ & $feed \Join_{feed\_url=url \wedge user\_ema1l={user.email}}\ (feedsubscription)$\\
 $Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_URL) - Friend\_Subscribed\_URL$
