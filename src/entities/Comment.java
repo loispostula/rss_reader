@@ -4,6 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Date;
 
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 import util.Database;
 
 /**
@@ -15,8 +17,10 @@ public class Comment {
     private Feed feed;
     private Publication publication;
     private User user;
+    private SimpleStringProperty userNick;
     private Date date;
-    private String text;
+    private SimpleStringProperty dateP;
+    private SimpleStringProperty text;
 
     public Comment() {
     }
@@ -28,8 +32,10 @@ public class Comment {
 		this.feed = feed;
 		this.publication = publication;
 		this.user = user;
+        this.userNick = new SimpleStringProperty(user.getNickname());
 		this.date = date;
-		this.text = text;
+        this.dateP = new SimpleStringProperty(date.toString());
+		this.text = new SimpleStringProperty(text);
 	}
 
     public static Comment getCommentFromDb(String feed_url, String user_email, String publication_url){
@@ -40,7 +46,7 @@ public class Comment {
     	try {
 			if (res.next()){
 				comment = new Comment(Feed.getFeedFromDb(feed_url), Publication.getPublicationFromDb(publication_url), User.getUserFromDb(user_email), res.getDate("date")
-						, res.getString("test"));
+						, res.getString("text"));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -52,9 +58,11 @@ public class Comment {
 
     public void save(){
         Database db = new Database();
+        java.text.SimpleDateFormat sdf =
+                new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         if (getCommentFromDb(feed.getUrl(), user.getEmail(), publication.getUrl()) == null){
-        	db.update("INSERT INTO `comment` (`feed_url`, `publication_url`, `user_email`, `text`, `date`"
-        		+ "('"+ feed.getUrl() +"', '"+ publication.getUrl() +"', '"+ user.getEmail() +"', '"+ text +"', '"+ date +"')");
+        	db.update("INSERT INTO comment (feed_url, publication_url, user_email, text, date) "
+        		+ "VALUES (\""+ feed.getUrl() +"\", \""+ publication.getUrl() +"\", \""+ user.getEmail() +"\", '"+ getText() +"', '"+ sdf.format(date) +"')");
         	db.close();
         }
     }
@@ -89,15 +97,21 @@ public class Comment {
         return date;
     }
 
+    public String getDateP(){return dateP.get();}
+
     public void setDate(Date date) {
         this.date = date;
     }
 
     public String getText() {
-        return text;
+        return text.get();
     }
 
     public void setText(String text) {
-        this.text = text;
+        this.text.set(text);
+    }
+
+    public String getUserNick(){
+        return this.userNick.get();
     }
 }
