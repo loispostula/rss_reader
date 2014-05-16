@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 import util.Database;
 import util.FeedParser;
 import static org.apache.commons.lang3.StringEscapeUtils.*;
@@ -67,13 +69,14 @@ public class Feed {
         if (pubs == null){
         Database db = new Database();
         ArrayList<Publication> publications = new ArrayList<Publication>();
-        String query ="SELECT c.publication_url FROM contain c " +
+        String query ="SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
+        		+ "INNER JOIN contain c ON c.publication_url = p.url " +
                 "WHERE c.feed_url = \""+ escapeXml(this.getUrl()) + "\"";
         System.out.println(query);
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
-                publications.add(Publication.getPublicationFromDb(res.getString("publication_url")));
+                publications.add(new Publication(res.getString("url"), StringEscapeUtils.unescapeHtml4(res.getString("title")).replace("&apos;", "'"), res.getDate("releaseDate"), res.getString("description"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -89,13 +92,14 @@ public class Feed {
         if (pubs == null){
         Database db = new Database();
         ArrayList<Publication> publications = new ArrayList<Publication>();
-        String query ="SELECT cnt.publication_url FROM contain cnt "
+        String query ="SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
+        		+ "INNER JOIN contain cnt ON cnt.publication_url = p.url "
         		+ "WHERE cnt.feed_url = \""+getUrl()+"\" AND NOT EXISTS "
         		+ "(SELECT * FROM readstatus r WHERE r.publication_url = cnt.publication_url AND r.feed_url = cnt.feed_url AND r.user_email = \""+user.getEmail()+"\")";
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
-            	publications.add(Publication.getPublicationFromDb(res.getString("publication_url")));
+            	publications.add(new Publication(res.getString("url"), StringEscapeUtils.unescapeHtml4(res.getString("title")).replace("&apos;", "'"), res.getDate("releaseDate"), res.getString("description"), res.getString("image")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -104,7 +108,7 @@ public class Feed {
     else return pubs;
     }
 
-    public List<Publication> getAllShares(){
+    /*public List<Publication> getAllShares(){
         Database db = new Database();
         ArrayList<Publication> publications = new ArrayList<Publication>();
         String query ="SELECT * FROM sharedpublication s " +
@@ -135,7 +139,7 @@ public class Feed {
             e.printStackTrace();
         }
         return publications;
-    }
+    }*/
 
     public void save(){
         Database db = new Database();

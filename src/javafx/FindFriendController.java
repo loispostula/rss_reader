@@ -138,17 +138,17 @@ public class FindFriendController implements DialogController {
         switch (querryType) {
             case 0:
                 //email search
-                querry = "SELECT email FROM user WHERE email = \"" + querryVal.getText() + "\"";
+                querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u WHERE email = \"" + querryVal.getText() + "\"";
                 break;
             case 1:
                 //nickname
-                querry = "SELECT email FROM user WHERE nickname = \"" + querryVal.getText() + "\"";
+                querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u WHERE nickname = \"" + querryVal.getText() + "\"";
                 break;
             case 2:
                 //numberOfFriend
                 String[] born = querryVal.getText().split(",");
                 if (born.length == 2) {
-                    querry = "SELECT u.email, COUNT(u.email)  FROM user u " +
+                    querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate, COUNT(u.email)  FROM user u " +
                             "INNER JOIN friendship f " +
                             "ON f.user1_email = u.email OR " +
                             "f.user2_email = u.email " +
@@ -169,7 +169,8 @@ public class FindFriendController implements DialogController {
                 //shared publication
                 String[] arg = querryVal.getText().split(",");
                 if (arg.length == 2) {
-                    querry = "SELECT s.user_email FROM  sharedpublication s " +
+                    querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u "
+                    		+ "INNER JOIN sharedpublication s ON s.user_email = u.email " +
                             "INNER JOIN " +
                             "(" +
                             "SELECT publication_url " +
@@ -183,7 +184,7 @@ public class FindFriendController implements DialogController {
                 break;
             case 4:
                 //friends of X
-                querry = "SELECT u.email FROM user u " +
+                querry = "SELECT u.email, u.password, u.nickname, u.city, u.country, u.avatar, u.biography, u.joinedDate FROM user u " +
                         "INNER JOIN friendship f " +
                         "ON f.user1_email = u.email OR " +
                         "f.user2_email = u.email " +
@@ -195,7 +196,8 @@ public class FindFriendController implements DialogController {
         ResultSet res = db.querry(querry);
         try {
             while (res.next()) {
-                User user = User.getUserFromDb(res.getString("email"));
+                User user = new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
+                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate"));
                 if (!user.equals(screens.getConnectedUser())) {
                     user.computeStat();
                     searchResult.add(user);

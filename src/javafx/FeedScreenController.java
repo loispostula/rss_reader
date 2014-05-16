@@ -68,12 +68,13 @@ public class FeedScreenController implements DialogController {
     public ArrayList<User> searchFirend(String search) {
         search = escapeXml(search);
         Database db = new Database();
-        String query = "SELECT `email` FROM `user` WHERE `email` = \"" + search + "\" OR `nickname` = \"" + search + "\"";
+        String query = "SELECT * FROM `user` WHERE `email` = \"" + search + "\" OR `nickname` = \"" + search + "\"";
         ResultSet res = db.querry(query);
         ArrayList<User> requests = new ArrayList<User>();
         try {
             while (res.next()) {
-                requests.add(User.getUserFromDb(res.getString("email")));
+                requests.add(new User(res.getString("email"), res.getString("password"), res.getString("nickname"), res.getString("city"),
+                		res.getString("country"), res.getString("avatar"), res.getString("biography"), res.getDate("joinedDate")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -99,6 +100,8 @@ public class FeedScreenController implements DialogController {
         Database db = new Database();
         db.update("INSERT INTO `rssreader`.`sharedpublication` (`user_email`, `publication_url`, `sharedDate`, `text`) VALUES"
                 + "('" + screens.getConnectedUser().getEmail() + "', '" + publication.getUrl() + "', NOW(), '" + escapeXml(text) + "')");
+        db.update("INSERT INTO `rssreader`.`contain` (`feed_url`, `publication_url`) VALUES"
+                + "('" + "feed://"+screens.getConnectedUser().getEmail() + "', '" + publication.getUrl() + "')");
         db.close();
     }
 
@@ -163,6 +166,7 @@ public class FeedScreenController implements DialogController {
     private void loadFeeds() {
         accordion.getPanes().removeAll(accordion.getPanes());
         List<Feed> feeds = screens.getConnectedUser().getAllSubscription();
+    	System.out.println("hello");
         for (int i = 0; i < feeds.size(); ++i) {
             final Feed feed = feeds.get(i);
             TitledPane pane = new TitledPane();
@@ -250,7 +254,7 @@ public class FeedScreenController implements DialogController {
                             super.updateItem(o, b);
 
                             final VBox vbox = new VBox(5);
-                            Image image = new Image("file:///" + getClass().getResource("icons/openPub.png").getPath());
+                            Image image = new Image("file:///" + getClass().getResource("icons/addFeed.png").getPath());
                             Button button = new Button("", new ImageView(image));
                             final TableCell c = this;
                             button.setOnAction(new EventHandler<ActionEvent>() {
@@ -280,7 +284,7 @@ public class FeedScreenController implements DialogController {
                             super.updateItem(o, b);
 
                             final VBox vbox = new VBox(5);
-                            Image image = new Image("file:///" + getClass().getResource("icons/sharePub.png").getPath());
+                            Image image = new Image("file:///" + getClass().getResource("icons/addFeed.png").getPath());
                             Button button = new Button("", new ImageView(image));
                             final TableCell c = this;
                             button.setOnAction(new EventHandler<ActionEvent>() {
@@ -315,6 +319,8 @@ public class FeedScreenController implements DialogController {
                 }
             });
             table.setItems(FXCollections.observableArrayList(feed.getUnreadPublications(screens.getConnectedUser())));
+            //table.setItems(FXCollections.observableArrayList(feed.getAllPublications()));
+            //todo if checked not only non read
             table.getColumns().addAll(pubEnclosure, pubDate, pubTitle, openPub, sharePub);
             pane.setContent(table);
             pane.setMinWidth(800);

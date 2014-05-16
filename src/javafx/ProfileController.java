@@ -15,6 +15,8 @@ import javafx.stage.FileChooser;
 
 import java.io.File;
 
+import util.Database;
+
 /**
  * Created by lpostula on 08/05/14.
  * Documentation de la classe ProfileController
@@ -101,7 +103,15 @@ public class ProfileController implements DialogController {
         }
         user.save();
         //todo save the profil
+        modifyNicknameFeed();
         this.dialog.close();
+    }
+    
+    private void modifyNicknameFeed(){
+    	Database db = new Database();
+    	db.update("UPDATE feed f SET f.description = \"Feed with all the publication which "+ nicknameField.getText()+" shares.\", "
+    			+ "f.title = \""+nicknameField.getText()+" personnal feed\" "
+    			+ "WHERE f.url = \"feed://"+user.getEmail()+"\"");
     }
 
     public void savePassword(){
