@@ -150,7 +150,19 @@ $Result$		& $\leftarrow$ & $ \pi_* (email\ \sigma_{COUNT(email)\ <\ 3}\ (Request
 \end{center}
 
 \subsubsection{Calcul relationnel tuple}
-$\{u|User(u) \wedge \exists d (Friendship(d) \wedge (d.user1\_email = u.email \vee d.user2\_email = u.email)\}$
+Définissons le prédicat \emph{Friends(user1, user2)} comme étant:
+\\
+      $Friends(u_1, u_2):\ \exists\ d\ (Friendship(d)\ \wedge $\\
+      $(d.user_1\_email\ =\ u_1.email\ \vee\ d.user_2\_email\ =\ u_2.email)\ \wedge $\\
+      $(d.user_2\_email\ =\ u_1.email\ \vee\ d.user_1\_email\ =\ u_2.email)\ \wedge $\\
+      $d.accepted\ =\ 1$
+
+La requête devient alors:
+
+       $u | User(u) \wedge$ \\
+       $\exists friend_1 ((User(friend_1) \wedge Friends(u, friend_1)) \rightarrow$ \\
+       $\exists friend_2 ((User(friend_2) \wedge friend_1 \neq friend_2 \wedge Friends(u, friend_2)) \rightarrow$ \\
+       $\nexists friend_3 ((User(friend_3) \wedge friend_1 \neq friend_2 \neq friend_3 \wedge Friends(u, friend_3)))))$
 \clearpage
 \subsection{Requête 2}
 La liste des flux auxquels a souscrit au moins un utilisateur qui a souscrit à au moins deux flux auxquel X
@@ -243,13 +255,6 @@ $Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_URL) - Friend\_Subscribed
 \end{center}
 
 \subsubsection{Calcul relationnel tuple}
-\begin{equation}
-\begin{split}
-F = \{F_{x} \in  F_{c} &: (|S| > |C|) \\
- &\quad \cap (\text{minPixels}  < |S| < \text{maxPixels}) \\
- &\quad \cap (|S_{\text{conected}}| > |S| - \epsilon) \}
-\end{split}
-\end{equation}
 
 \begin{equation*}
  \begin{split}
