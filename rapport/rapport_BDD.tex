@@ -40,7 +40,7 @@
 	\textbf{\textsc{Département d'Informatique}}
 	\vfill{}\vfill{}
 	\begin{center}{\Huge INFO-H-303 Bases de données : Rapport de projet -- Partie 2}\end{center}{\Huge \par}
-	\begin{center}{\large \textsc{Postula} Loïs \\\textsc{Picard} Simon}\end{center}{\Huge \par}
+	\begin{center}{\large \textsc{Postula} Loïs \\ \textsc{Picard} Simon}\end{center}{\Huge \par}
 	\vfill{}\vfill{}
 	\vfill{}\vfill{}\enlargethispage{3cm}
 	\textbf{Année académique 2013~-~2014}
@@ -48,23 +48,37 @@
 	\end{titlepage}
 	
     \pagebreak
+	\tableofcontents
+	\clearpage
 
     \section{Modélisation entités-relations}
+	
+	\begin{figure}[ht]
+	\includegraphics[width = \textwidth]{dea.png}
+	\caption{Nous avons ici la modélisation entités-relations du projet.}
+	\end{figure}
 
-    Nous avons ici la modélisation entités-relations du projet. Les quelques points floux seront éclaircis ici:
+    \section{Contraintes d'intégrité}
     
     \begin{enumerate}
-	\item Lorsqu'un User1 désire effectuer une demande d'amitier il demande a un autre User2 qui peut ou non accepter. Si User2 accepte les Users sont 'Friends'. La demande ne peut être acceptée que par User2 si elle
-	a été demandée par User1.
-	\item Une Publication peut se trouver dans de multiples Feeds : toujours son feed d'origine mais aussi des feeds partagés des Users et donc dans leur Personal Feeds.
-	\item Un Comment ne doit etre affiché que pour certaines Feeds. En effet, le User ne peut qu'écrire un Comment que lorsqu'il l'a Share ou si elle lui a été Share. Comme il ne peut y avoir qu'un Comment par Publication d'un Feed, ces trois éléments sont suffisants pour identifier un Comment.
+	\item Lorsqu'un utilisateur A désire effectuer une demande d'amitier il demande a un autre utlisateur B qui peut ou non accepter. Si utilisateur B accepte les utilisateurs sont amis. La demande ne peut être acceptée que par B si elle
+	a été demandée par A.
+	\item La date d'inscription d'un utilisateur précède les dates de lectures, les dates de commentaires et les dates d'acceptation d'amis.
+	\item La date d'une publication précède les dates de lectrue et de commentaires de cette publication.
+	\item Les dates de lecture d'un publication précède les dates de commentaires de cette publication.
+	\item Les publication d'un flux utilisateur sont exactement les publications que cet utilisateur a partagées.
+	\item Un utilisateur ne peut partager ou lire que des publicatipns composant un flux qu'il suit.
+	\item Un utlisateur ne peut faire de commentaires que sur une publication partagée par un de ses amis (au moment du commentaire)
+	\item Un utilisateur ne peut pas être amis avec lui-même.
+	\item L'association d'amitié est bidirectionnelle. Si l'utilisateur A est ami de l'utilisateur B, alors B est ami de l'utilisateur A.
+	\item Un utilisateur suit les flux de ses amis.
     \end{enumerate}
 
     \section{Modélisation relationnelle}
 
-        User : \textbf{email}, password, nickname, city, country, avatar, \textit{biography}, subscription date.
-            seul le champ \textit{biography} peut être nul
+        User (\textbf{email}, password, nickname, city, country, avatar, \textit{biography}, subscription date.)
             \begin{itemize}            
+             \item seul le champ \textit{biography} peut être nul
              \item \textit{subscription date} ne peut être dans le futur
              \item \textit{email} doit respecter le format d'e-mail
              \item \textit{city} implique \textit{pays}
@@ -89,22 +103,25 @@
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
         
-        Friend(\textbf{user\_1, user\_2}, accepted)
+        Friendship(\textbf{user\_1, user\_2}, accepted, date)
         \begin{itemize}            
             \item \textit{user\_1} référence \textit{User.email}
             \item \textit{user\_2} référence \textit{User.email}
+            \item \textit{date} ne peut être dans le futur
         \end{itemize}
 
-        Subscribes(\textbf{user, feed})
+        Subscribes(\textbf{user, feed}, date)
         \begin{itemize}            
             \item \textit{user} référence \textit{User.email}
             \item \textit{feed} référence \textit{Feed.URL}
+            \item \textit{date} ne peut être dans le futur
         \end{itemize}
 
-        Read(\textbf{user, publication})
+        Read(\textbf{user, publication, feed}, date)
         \begin{itemize}            
             \item \textit{user} référence \textit{User.email}
             \item \textit{publication} référence \textit{Publication.URL}
+            \item \textit{date} ne peut être dans le futur
         \end{itemize}
             
         Contains(\textbf{feed, publication})
@@ -122,7 +139,38 @@
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
 		
-\section{Script SQL DDL}
+\section{Hypothèse}
+\begin{itemize}
+\item Dans Friendship, user1 est celui qui a fait la demande d'ami et user2 celui qui la recoit.
+\item Dans Friendship, une requete avec le flag accepted à 0 est en attente de validation, à 1 elle est validée et si elle est refusé, elle supprimé de la table.
+\item Dans Friendship, si accepted vaut 0 alors le champ date vaut celle de la demande, s'il est à 1 alors le champs date représente la date d'ajout en amis.
+\item Dans la table Contain, il peut y avoir plusieur référence vers une même publication car cette derniere peut se trouver dans des fluxs personnels en plus de celui du rss de base.
+\item Un commentaire ne doit etre affiché que sur certains fluxs. En effet, l'utilisateur ne peut écrire un commentaire uniquement lorsqu'il l'a partagée ou si elle lui a été partagée. Comme il ne peut y avoir qu'un commentaire par publication d'un flux, ces trois éléments sont suffisants pour identifier un commentaire.
+\end{itemize}
+\section{Choix d'implémentation}
+\subsection{Language}
+\subsection{Librairie graphique}
+		
+\section{Instructions d'installation}
+		
+\section{Scénario de démonstration}
+\begin{itemize}
+\item Creation d'un compte A
+\item Connexion de A
+\item Ajout d'un flux
+\item Ouvrir une publication
+\item Passer en mode lu
+\item Envoyer une demande d'amis à B
+\item Partager une publication
+\item Connexion B
+\item Accepter A
+\item Commenter publication de A
+\item Retour compte A, ajouter un deuxième flux
+\item Passer en mode toute les publications
+\item Modifier son avatar
+\item Rechercher un ami et montrer les requètes
+\item Rechercher un flux et montrer les requètes
+\end{itemize}
 		
 \section{Requêtes}
 \subsection{Requête 1}
@@ -288,7 +336,7 @@ ON s.publication_url = a.publication_url
 GROUP BY s.user_email
 HAVING COUNT(s.user_email) > 2
 \end{lstlisting}
-\subsubsection{Algèbre relationnel tuple}
+\subsubsection{Algèbre relationnelle}
 \begin{center}
 \begin{tabular}{lll}
 $a$		& $\leftarrow$ & $\pi_{publication\_url}\ (\ \sigma_{user\_email=<user>.email}\ (sharedpublication))$\\
@@ -299,6 +347,19 @@ $Result$	& $\leftarrow$ & $\pi_*\ (s.user\_email\ \sigma_{COUNT(s.user_email) > 
 \end{center}
 
 \subsubsection{Calcul relationnel tuple}
+Définissons le prédicat \emph{ResharedPublication(user1, user2)} comme étant:
+\\
+      $ResharedPublication(u_1, u_2):\ $\\
+	  $\exists\ s\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_1.email)\ \wedge $\\
+	  $\exists\ a\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_2.email)\ \wedge $\\
+	  $a.publication\_url = s.publication\_url$
+
+La requête devient alors:
+
+       $u\ |\ User(u) \wedge$ \\
+       $\exists \ publication_1 \ ((Sharedpublication(publication_1) \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
+       $\exists \ publication_2 \ (Sharedpublication(publication_2) \ \wedge \ publication_1 \ \neq \ publication_2 \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
+       $\exists \ publication_3 \ (Sharedpublication(publication_3) \ \wedge \ publication_1 \ \neq \ publication_2 \ \neq \ publication_3 \ \wedge  \ ResharedPublication(u, \ <user>)))$
 \clearpage
 \subsection{Requête 5}
 La liste des flux auquel un utilisateur est inscrit avec le nombre de publications lues, le nombre de publications
@@ -396,9 +457,158 @@ OR
 ORDER BY mread
 \end{lstlisting}
 		
-\section{Instructions d'installation}
-		
-\section{Scénario de démonstration}
-		
-\section{Hypothèse}
+\section{Script SQL DDL}
+\begin{lstlisting}
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Bdd :  `rssreader`
+--
+CREATE DATABASE IF NOT EXISTS `rssreader` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `rssreader`;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `comment`
+--
+
+CREATE TABLE IF NOT EXISTS `comment` (
+  `feed_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `publication_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `user_email` varchar(200) COLLATE utf8_bin NOT NULL,
+  `date` date NOT NULL,
+  `text` text COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`feed_url`,`publication_url`,`user_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `contain`
+--
+
+CREATE TABLE IF NOT EXISTS `contain` (
+  `feed_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `publication_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`feed_url`,`publication_url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `feed`
+--
+
+CREATE TABLE IF NOT EXISTS `feed` (
+  `url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `title` varchar(200) COLLATE utf8_bin NOT NULL,
+  `link` varchar(200) COLLATE utf8_bin NOT NULL,
+  `description` text COLLATE utf8_bin NOT NULL,
+  `image` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `feedsubscription`
+--
+
+CREATE TABLE IF NOT EXISTS `feedsubscription` (
+  `user_email` varchar(200) COLLATE utf8_bin NOT NULL,
+  `feed_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `subscribedDate` date NOT NULL,
+  PRIMARY KEY (`user_email`,`feed_url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `friendship`
+--
+
+CREATE TABLE IF NOT EXISTS `friendship` (
+  `user1_email` varchar(200) COLLATE utf8_bin NOT NULL,
+  `user2_email` varchar(200) COLLATE utf8_bin NOT NULL,
+  `requestDate` date NOT NULL,
+  `accepted` tinyint(1) NOT NULL,
+  PRIMARY KEY (`user1_email`,`user2_email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `publication`
+--
+
+CREATE TABLE IF NOT EXISTS `publication` (
+  `url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `title` varchar(200) COLLATE utf8_bin NOT NULL,
+  `releaseDate` date NOT NULL,
+  `description` text COLLATE utf8_bin NOT NULL,
+  `image` varchar(200) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `readstatus`
+--
+
+CREATE TABLE IF NOT EXISTS `readstatus` (
+  `user_email` varchar(200) COLLATE utf8_bin NOT NULL,
+  `publication_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `feed_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`user_email`,`publication_url`,`feed_url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `sharedpublication`
+--
+
+CREATE TABLE IF NOT EXISTS `sharedpublication` (
+  `user_email` varchar(200) COLLATE utf8_bin NOT NULL,
+  `publication_url` varchar(200) COLLATE utf8_bin NOT NULL,
+  `sharedDate` date NOT NULL,
+  `text` text COLLATE utf8_bin,
+  PRIMARY KEY (`user_email`,`publication_url`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `email` varchar(200) COLLATE utf8_bin NOT NULL,
+  `nickname` varchar(100) COLLATE utf8_bin NOT NULL,
+  `password` varchar(100) COLLATE utf8_bin NOT NULL,
+  `country` varchar(100) COLLATE utf8_bin NOT NULL,
+  `city` varchar(100) COLLATE utf8_bin NOT NULL,
+  `avatar` varchar(200) COLLATE utf8_bin NOT NULL,
+  `biography` text COLLATE utf8_bin,
+  `joinedDate` date NOT NULL,
+  PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+\end{lstlisting}
+
 \end{document}
