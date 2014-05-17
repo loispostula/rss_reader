@@ -287,7 +287,7 @@ ON s.publication_url = a.publication_url
 GROUP BY s.user_email
 HAVING COUNT(s.user_email) > 2
 \end{lstlisting}
-\subsubsection{Algèbre relationnel tuple}
+\subsubsection{Algèbre relationnelle}
 \begin{center}
 \begin{tabular}{lll}
 $a$		& $\leftarrow$ & $\pi_{publication\_url}\ (\ \sigma_{user\_email=<user>.email}\ (sharedpublication))$\\
@@ -298,6 +298,19 @@ $Result$	& $\leftarrow$ & $\pi_*\ (s.user\_email\ \sigma_{COUNT(s.user_email) > 
 \end{center}
 
 \subsubsection{Calcul relationnel tuple}
+Définissons le prédicat \emph{ResharedPublication(user1, user2)} comme étant:
+\\
+      $ResharedPublication(u_1, u_2):\ $\\
+	  $\exists\ s\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_1.email)\ \wedge $\\
+	  $\exists\ a\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_2.email)\ \wedge $\\
+	  $a.publication\_url = s.publication\_url$
+
+La requête devient alors:
+
+       $u\ |\ User(u) \wedge$ \\
+       $\exists \ publication_1 \ ((Sharedpublication(publication_1) \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
+       $\exists \ publication_2 \ (Sharedpublication(publication_2) \ \wedge \ publication_1 \ \neq \ publication_2 \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
+       $\exists \ publication_3 \ (Sharedpublication(publication_3) \ \wedge \ publication_1 \ \neq \ publication_2 \ \neq \ publication_3 \ \wedge  \ ResharedPublication(u, \ <user>)))$
 \clearpage
 \subsection{Requête 5}
 La liste des flux auquel un utilisateur est inscrit avec le nombre de publications lues, le nombre de publications
