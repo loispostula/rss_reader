@@ -50,21 +50,33 @@
     \pagebreak
 
     \section{Modélisation entités-relations}
+	
+	\begin{figure}[ht]
+	\includegraphics[width = \textwidth]{dea.png}
+	\caption{Nous avons ici la modélisation entités-relations du projet.}
+	\end{figure}
 
-    Nous avons ici la modélisation entités-relations du projet. Les quelques points floux seront éclaircis ici:
+    \section{Contraintes d'intégrité}
     
     \begin{enumerate}
-	\item Lorsqu'un User1 désire effectuer une demande d'amitier il demande a un autre User2 qui peut ou non accepter. Si User2 accepte les Users sont 'Friends'. La demande ne peut être acceptée que par User2 si elle
-	a été demandée par User1.
-	\item Une Publication peut se trouver dans de multiples Feeds : toujours son feed d'origine mais aussi des feeds partagés des Users et donc dans leur Personal Feeds.
-	\item Un Comment ne doit etre affiché que pour certaines Feeds. En effet, le User ne peut qu'écrire un Comment que lorsqu'il l'a Share ou si elle lui a été Share. Comme il ne peut y avoir qu'un Comment par Publication d'un Feed, ces trois éléments sont suffisants pour identifier un Comment.
+	\item Lorsqu'un utilisateur A désire effectuer une demande d'amitier il demande a un autre utlisateur B qui peut ou non accepter. Si utilisateur B accepte les utilisateurs sont amis. La demande ne peut être acceptée que par B si elle
+	a été demandée par A.
+	\item La date d'inscription d'un utilisateur précède les dates de lectures, les dates de commentaires et les dates d'acceptation d'amis.
+	\item La date d'une publication précède les dates de lectrue et de commentaires de cette publication.
+	\item Les dates de lecture d'un publication précède les dates de commentaires de cette publication.
+	\item Les publication d'un flux utilisateur sont exactement les publications que cet utilisateur a partagées.
+	\item Un utilisateur ne peut partager ou lire que des publicatipns composant un flux qu'il suit.
+	\item Un utlisateur ne peut faire de commentaires que sur une publication partagée par un de ses amis (au moment du commentaire)
+	\item Un utilisateur ne peut pas être amis avec lui-même.
+	\item L'association d'amitié est bidirectionnelle. Si l'utilisateur A est ami de l'utilisateur B, alors B est ami de l'utilisateur A.
+	\item Un utilisateur suit les flux de ses amis.
     \end{enumerate}
 
     \section{Modélisation relationnelle}
 
-        User : \textbf{email}, password, nickname, city, country, avatar, \textit{biography}, subscription date.
-            seul le champ \textit{biography} peut être nul
+        User (\textbf{email}, password, nickname, city, country, avatar, \textit{biography}, subscription date.)
             \begin{itemize}            
+             \item seul le champ \textit{biography} peut être nul
              \item \textit{subscription date} ne peut être dans le futur
              \item \textit{email} doit respecter le format d'e-mail
              \item \textit{city} implique \textit{pays}
@@ -89,22 +101,25 @@
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
         
-        Friend(\textbf{user\_1, user\_2}, accepted)
+        Friendship(\textbf{user\_1, user\_2}, accepted, date)
         \begin{itemize}            
             \item \textit{user\_1} référence \textit{User.email}
             \item \textit{user\_2} référence \textit{User.email}
+            \item \textit{date} ne peut être dans le futur
         \end{itemize}
 
-        Subscribes(\textbf{user, feed})
+        Subscribes(\textbf{user, feed}, date)
         \begin{itemize}            
             \item \textit{user} référence \textit{User.email}
             \item \textit{feed} référence \textit{Feed.URL}
+            \item \textit{date} ne peut être dans le futur
         \end{itemize}
 
-        Read(\textbf{user, publication})
+        Read(\textbf{user, publication, feed}, date)
         \begin{itemize}            
             \item \textit{user} référence \textit{User.email}
             \item \textit{publication} référence \textit{Publication.URL}
+            \item \textit{date} ne peut être dans le futur
         \end{itemize}
             
         Contains(\textbf{feed, publication})
@@ -122,7 +137,38 @@
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
 		
-\section{Script SQL DDL}
+\section{Hypothèse}
+\begin{itemize}
+\item Dans Friendship, user1 est celui qui a fait la demande d'ami et user2 celui qui la recoit.
+\item Dans Friendship, une requete avec le flag accepted à 0 est en attente de validation, à 1 elle est validée et si elle est refusé, elle supprimé de la table.
+\item Dans Friendship, si accepted vaut 0 alors le champ date vaut celle de la demande, s'il est à 1 alors le champs date représente la date d'ajout en amis.
+\item Dans la table Contain, il peut y avoir plusieur référence vers une même publication car cette derniere peut se trouver dans des fluxs personnels en plus de celui du rss de base.
+\item Un commentaire ne doit etre affiché que sur certains fluxs. En effet, l'utilisateur ne peut écrire un commentaire uniquement lorsqu'il l'a partagée ou si elle lui a été partagée. Comme il ne peut y avoir qu'un commentaire par publication d'un flux, ces trois éléments sont suffisants pour identifier un commentaire.
+\end{itemize}
+\section{Choix d'implémentation}
+\subsection{Language}
+\subsection{Librairie graphique}
+		
+\section{Instructions d'installation}
+		
+\section{Scénario de démonstration}
+\begin{itemize}
+\item Creation d'un compte A
+\item Connexion de A
+\item Ajout d'un flux
+\item Ouvrir une publication
+\item Passer en mode lu
+\item Envoyer une demande d'amis à B
+\item Partager une publication
+\item Connexion B
+\item Accepter A
+\item Commenter publication de A
+\item Retour compte A, ajouter un deuxième flux
+\item Passer en mode toute les publications
+\item Modifier son avatar
+\item Rechercher un ami et montrer les requètes
+\item Rechercher un flux et montrer les requètes
+\end{itemize}
 		
 \section{Requêtes}
 \subsection{Requête 1}
@@ -408,9 +454,7 @@ OR
 ORDER BY mread
 \end{lstlisting}
 		
-\section{Instructions d'installation}
+\section{Script SQL DDL}
+
 		
-\section{Scénario de démonstration}
-		
-\section{Hypothèse}
 \end{document}
