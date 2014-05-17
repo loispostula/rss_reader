@@ -122,7 +122,7 @@ public class GenerateXML {
         	output.write("<users>\n");
         	
         	for (int i = 0; i < 50; ++i) {
-            	output.write("\t<user>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<password>azerty</password>\n\t\t<nickname>"+email.get(i)+Integer.toString((int) (Math.random()*100))+"</nickname>\n\t\t<country>"+country.get((int) (Math.random()*country.size()))+"</country>\n\t\t<city>"+city.get(i)+"</city>\n\t\t<biography></biography>\n\t\t<avatar>avatar.jpg</avatar>\n\t\t<date>"+date.get(i)+"</date>\n\t</user>\n\n");
+            	output.write("\t<user>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<password>azerty</password>\n\t\t<nickname>"+email.get(i).substring(0, email.get(i).length()-9)+Integer.toString((int) (Math.random()*100))+"</nickname>\n\t\t<country>"+country.get((int) (Math.random()*country.size()))+"</country>\n\t\t<city>"+city.get(i)+"</city>\n\t\t<biography></biography>\n\t\t<avatar>avatar.jpg</avatar>\n\t\t<date>"+date.get(i)+"</date>\n\t</user>\n\n");
         	}
         	output.write("</users>\n\n");
         	

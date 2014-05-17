@@ -1,0 +1,17 @@
+TODO
+Rapport :
+
+Algèbre relationnel
+- R1
+- R2
+- R4
+Choix d'implémentation
+Instruction d'installation
+Calcul relationnel tuple
+-R2
+
+
+Code :
+prendre fichier pour config bdd 
+
+BDD : peuplé une bdd avec des commentaires
