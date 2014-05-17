@@ -32,6 +32,97 @@
 
 
 \begin{document}
+\begin{titlepage}
+	\begin{center}
+	\textbf{\textsc{UNIVERSIT\'E LIBRE DE BRUXELLES}}\\
+	\textbf{\textsc{Faculté des Sciences}}\\
+	\textbf{\textsc{Département d'Informatique}}
+	\vfill{}\vfill{}
+	\begin{center}{\Huge INFO-H-303 Bases de données : Rapport de projet -- Partie 2}\end{center}{\Huge \par}
+	\begin{center}{\large \textsc{Postula} Loïs \\\textsc{Picard} Simon}\end{center}{\Huge \par}
+	\vfill{}\vfill{}
+	\vfill{}\vfill{}\enlargethispage{3cm}
+	\textbf{Année académique 2013~-~2014}
+	\end{center}
+	\end{titlepage}
+	
+    \pagebreak
+
+    \section{Modélisation entités-relations}
+
+    Nous avons ici la modélisation entités-relations du projet. Les quelques points floux seront éclaircis ici:
+    
+    \begin{enumerate}
+	\item Lorsqu'un User1 désire effectuer une demande d'amitier il demande a un autre User2 qui peut ou non accepter. Si User2 accepte les Users sont 'Friends'. La demande ne peut être acceptée que par User2 si elle
+	a été demandée par User1.
+	\item Une Publication peut se trouver dans de multiples Feeds : toujours son feed d'origine mais aussi des feeds partagés des Users et donc dans leur Personal Feeds.
+	\item Un Comment ne doit etre affiché que pour certaines Feeds. En effet, le User ne peut qu'écrire un Comment que lorsqu'il l'a Share ou si elle lui a été Share. Comme il ne peut y avoir qu'un Comment par Publication d'un Feed, ces trois éléments sont suffisants pour identifier un Comment.
+    \end{enumerate}
+
+    \section{Modélisation relationnelle}
+
+        User : \textbf{email}, password, nickname, city, country, avatar, \textit{biography}, subscription date.
+            seul le champ \textit{biography} peut être nul
+            \begin{itemize}            
+             \item \textit{subscription date} ne peut être dans le futur
+             \item \textit{email} doit respecter le format d'e-mail
+             \item \textit{city} implique \textit{pays}
+            \end{itemize}
+
+
+        Feed(\textbf{URL}, title, description, \textit{link})
+            \begin{itemize}
+            \item \textit{URL} doit être une URL valide
+	    \end{itemize}
+        
+        Publication(\textbf{URL}, title, releaseDate, description)
+        \begin{itemize}            
+            \item \textit{releaseDate} ne peut être dans le futur
+        \end{itemize}
+
+        Comment(\textbf{user, publication, feed}, date, text)
+        \begin{itemize}
+            \item \textit{user} référence \textit{User.email}
+            \item \textit{publication} référence \textit{Publication.URL}
+            \item \textit{feed} référence \textit{Feed.URL}
+            \item \textit{date} ne peut être dans le futur
+        \end{itemize}
+        
+        Friend(\textbf{user\_1, user\_2}, accepted)
+        \begin{itemize}            
+            \item \textit{user\_1} référence \textit{User.email}
+            \item \textit{user\_2} référence \textit{User.email}
+        \end{itemize}
+
+        Subscribes(\textbf{user, feed})
+        \begin{itemize}            
+            \item \textit{user} référence \textit{User.email}
+            \item \textit{feed} référence \textit{Feed.URL}
+        \end{itemize}
+
+        Read(\textbf{user, publication})
+        \begin{itemize}            
+            \item \textit{user} référence \textit{User.email}
+            \item \textit{publication} référence \textit{Publication.URL}
+        \end{itemize}
+            
+        Contains(\textbf{feed, publication})
+        \begin{itemize}            
+            \item \textit{feed} référence \textit{Feed.URL}
+            \item \textit{publication} référence \textit{Publication.URL}
+        \end{itemize}
+            
+        Share(\textbf{user, publication, feed}, date, text)
+        \begin{itemize}
+			\item seul le champ \textit{text} peut être nul
+            \item \textit{user} référence \textit{User.email}
+            \item \textit{publication} référence \textit{Publication.URL}
+            \item \textit{feed} référence \textit{Feed.URL}
+            \item \textit{date} ne peut être dans le futur
+        \end{itemize}
+		
+\section{Script SQL DDL}
+		
 \section{Requêtes}
 \subsection{Requête 1}
 Tous les utilisateurs qui ont au plus 2 amis.
@@ -273,4 +364,10 @@ OR
   )
 ORDER BY mread
 \end{lstlisting}
+		
+\section{Instructions d'installation}
+		
+\section{Scénario de démonstration}
+		
+\section{Hypothèse}
 \end{document}
