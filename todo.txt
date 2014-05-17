@@ -2,16 +2,16 @@ TODO
 Rapport :
 
 Algèbre relationnel
-- R1
-- R2
-- R4
-Choix d'implémentation
-Instruction d'installation
+- R1  LOIS
+- R2  LOIS
+- R4  SIMON
+Choix d'implémentation LOIS + SIMON
+Instruction d'installation  LOIS
 Calcul relationnel tuple
--R2
+-R2 LOIS
 
 
 Code :
-prendre fichier pour config bdd 
+prendre fichier pour config bdd  LOIS
 
-BDD : peuplé une bdd avec des commentaires
+BDD : peuplé une bdd avec des commentaires SIMON
