@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
  \usepackage{latexsym}
 \usepackage{listings}
+\usepackage{amssymb, amsmath}
 \usepackage[usenames,dvipsnames]{color}
 
 \usepackage{tikz}
@@ -139,7 +140,7 @@ f.user2_email = u.email
 GROUP BY u.email
 HAVING COUNT(u.email) < 3
 \end{lstlisting}
-\subsubsection{Algèbre relationnel tuple}
+\subsubsection{Algèbre relationnel}
 \begin{center}
 \begin{tabular}{lll}
 $Request$		& $\leftarrow$ & $ user\sqsupset\Join_{email=user1\_email \vee email=user2\_email}( friendship)$\\
@@ -149,6 +150,7 @@ $Result$		& $\leftarrow$ & $ \pi_* (email\ \sigma_{COUNT(email)\ <\ 3}\ (Request
 \end{center}
 
 \subsubsection{Calcul relationnel tuple}
+$\{u|User(u) \wedge \exists d (Friendship(d) \wedge (d.user1\_email = u.email \vee d.user2\_email = u.email)\}$
 \clearpage
 \subsection{Requête 2}
 La liste des flux auxquels a souscrit au moins un utilisateur qui a souscrit à au moins deux flux auxquel X
@@ -241,7 +243,30 @@ $Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_URL) - Friend\_Subscribed
 \end{center}
 
 \subsubsection{Calcul relationnel tuple}
-\clearpage
+\begin{equation}
+\begin{split}
+F = \{F_{x} \in  F_{c} &: (|S| > |C|) \\
+ &\quad \cap (\text{minPixels}  < |S| < \text{maxPixels}) \\
+ &\quad \cap (|S_{\text{conected}}| > |S| - \epsilon) \}
+\end{split}
+\end{equation}
+
+\begin{equation*}
+ \begin{split}
+  \{\ f |\ feed(f)\ \wedge\ \\
+  &\quad (\ \exists\ s\ (feedsubscription(s)\ \wedge\ (\ s.feed\_url\ =\ f.url\ \wedge\ s.user\_email\ =\ <\text{user}>.email\ ))\   \wedge \\
+  &\quad \quad(\nexists\ c\ (contain(c)\ \wedge\ \exists\ d\ (contain(d)\ \wedge\ d.publication\_url = c.publication\_url\ \wedge\ \\
+  &\qquad \qquad d.feed\_url = \text{"feed:// + "}<\text{user}>.email) )\ \wedge \\
+  &\quad (\nexists\ e\ (feedsubscription(e)\ \wedge\ \exists\ fs\ (friendship(fs)\ \wedge\ \\
+  &\qquad \qquad ((fs.user1\_email\ =\ e.user\_email\ \wedge\ fs.user2\_email\ =\ <\text{user}>.email)\\
+  &\qquad \qquad \vee\\
+  &\qquad \qquad (fs.user2\_email\ =\ e.user\_email\ \wedge\ fs.user1\_email\ =\ <\text{user}>.email))\\
+  &\qquad \qquad \wedge\\
+  &\qquad \qquad (fs.accepted\ =\ 1))))\ \wedge \\
+  &\quad (e.feed\_url = f.url)
+  \end{split}
+\end{equation*}
+
 \subsection{Requête 4}
 La liste des utilisateurs qui ont partagé au moins 3 publications que X a partagé.
 \subsubsection{SQL}
