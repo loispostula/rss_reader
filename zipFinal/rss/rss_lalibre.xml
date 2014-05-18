@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Lalibre.be - La Une</title>
+        <description><![CDATA[La Une sur Lalibre.be]]></description>
+        <link>http://www.lalibre.be/</link>
+        <lastBuildDate>Mon, 07 Apr 2014 12:48:51 +0100</lastBuildDate>
+        <generator>FeedCreator 1.7.2-ppt (info@mypapit.net)</generator>
+        <image>
+            <url>http://r.llb.be/frontend/llb/img/logoRss.png</url>
+            <title>Lalibre.be - La Une</title>
+            <link>http://www.lalibre.be/</link>
+            <width>250</width>
+            <height>40</height>
+        </image>
+        <language>fr-be</language>
+        <copyright>© Copyright 2003-2012 La Libre Belgique</copyright>
+        <managingEditor>llb.redaction@saipm.com (La Libre Belgique)</managingEditor>
+        <webMaster>ipm.multimedia@saipm.com (IPM Multimedia)</webMaster>
+        <category>UNE</category>
+        <docs>http://cyber.law.harvard.edu/rss/rss.html</docs>
+        <ttl>5</ttl>
+        <atom:link href="http://www.lalibre.be/rss.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Dix raisons de se souvenir de Mickey Rooney</title>
+            <link>http://www.lalibre.be/culture/cinema/dix-raisons-de-se-souvenir-de-mickey-rooney-534280003570aae038afda0a</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/62/53427fb23570d35ee3e8e862.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Quelque deux mois après Shirley Temple, Hollywood dit adieu à l'autre enfant-star de son âge d'or. 
+Retour en dix points sur une carrière exceptionnelle avec Alain Lorfèvre.</description>
+            <dc:creator>Alain Lorfèvre</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 10:47:07 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|534280003570aae038afda0a</guid>
+            <enclosure url="http://r.llb.be/image/62/53427fb23570d35ee3e8e862.jpg" length="19536" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Génocide rwandais : les commémorations ont commencé</title>
+            <link>http://www.lalibre.be/actu/international/genocide-rwandais-les-commemorations-ont-commence-534279da3570d35ee3e8e835</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/2b/534279893570d35ee3e8e82b.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;La commémoration principale du 20ème anniversaire du génocide au Rwanda a débuté lundi en fin de matinée dans le stade Amahoro (&quot;paix&quot;) de Kigali. 
+Suivez la cérémonie en direct.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 10:13:09 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|534279da3570d35ee3e8e835</guid>
+            <enclosure url="http://r.llb.be/image/2b/534279893570d35ee3e8e82b.jpg" length="3522" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Une sportive heurtée à la tête par un drone !</title>
+            <link>http://www.lalibre.be/light/insolite/une-sportive-heurtee-a-la-tete-par-un-drone-534278983570aae038afd9de</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/21/534278b43570d35ee3e8e821.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;La malheureuse triathlète australienne a été heurtée par un appareil tombé du ciel.</description>
+            <dc:creator>M. BR.</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 10:06:16 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|534278983570aae038afd9de</guid>
+            <enclosure url="http://r.llb.be/image/21/534278b43570d35ee3e8e821.jpg" length="3262" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Méditer au bureau, pour lutter contre le stress</title>
+            <link>http://www.lalibre.be/lifestyle/psycho/mediter-au-bureau-pour-lutter-contre-le-stress-53426c0c3570d35ee3e8d3f7</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/24/53426c8a3570aae038afd824.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Aux Etats-Unis, de plus en plus de sociétés peuvent profiter de cours de méditation pendant l'heure de bureau. Ces derniers seraient plus épanouis. Reportage.</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 09:16:29 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|53426c0c3570d35ee3e8d3f7</guid>
+            <enclosure url="http://r.llb.be/image/24/53426c8a3570aae038afd824.jpg" length="13919" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>&quot;Pour une fois que ce n'est pas le Front National qui parle ici&quot;</title>
+            <link>http://www.lalibre.be/culture/medias-tele/pour-une-fois-que-ce-n-est-pas-le-front-national-qui-parle-ici-53425eb93570d35ee3e8d365</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/94/534267343570d35ee3e8d394.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Comme il l'avait expliqué à La Libre, face à des journalistes, Jean-Luc Mélenchon se met en position de combat. Ce lundi matin, alors qu'il avait revêtu son armure de circonstance, il a provoqué la colère du sanguin journaliste de BFM TV. 
+Découvrez la scène en vidéo.</description>
+            <dc:creator>J. LGG.</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 09:14:29 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|53425eb93570d35ee3e8d365</guid>
+            <enclosure url="http://r.llb.be/image/94/534267343570d35ee3e8d394.jpg" length="3478" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Branle-bas de combat à Paris</title>
+            <link>http://www.lalibre.be/debats/opinions/branle-bas-de-combat-a-paris-53425f003570aae038afc49e</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/9b/53425ef23570aae038afc49b.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Les humoristes français reprochaient à Jean-Marc Ayrault de dormir – et d'endormir. Que le reproche fût fondé ou non, l'heure du réveil a en tout cas sonné à Matignon, avec des airs de sonnerie de clairon dans une caserne. 
+ Philippe Paquet débriefe le remaniement. </description>
+            <dc:creator>Philippe Paquet</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:17:04 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|53425f003570aae038afc49e</guid>
+            <enclosure url="http://r.llb.be/image/9b/53425ef23570aae038afc49b.jpg" length="11859" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>La Flandre cogite sur l’avenir des musées</title>
+            <link>http://www.lalibre.be/culture/politique/la-flandre-cogite-sur-l-avenir-des-musees-534241fa3570aae038afae34</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/3c/534241b83570d35ee3e8bc3c.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Quel avenir pour nos musées ? La N-VA, en tout cas, voudrait leur accorder une plus grande autonomie 
+ “sous le contrôle des communautés flamande et française”. Joke Schauvliege invite discrètement les seuls responsables néerlandophones.</description>
+            <dc:creator>Guy Duplat</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 06:13:19 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|534241fa3570aae038afae34</guid>
+            <enclosure url="http://r.llb.be/image/3c/534241b83570d35ee3e8bc3c.jpg" length="3219" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Rwanda : Juppé, diable dans un bénitier</title>
+            <link>http://www.lalibre.be/actu/international/rwanda-juppe-diable-dans-un-benitier-534192973570d35ee3e83d86</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/04/5342546f3570d35ee3e8d304.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Une interview de Paul Kagame sur le rôle de la France et la Belgique dans le génocide a jeté le feu aux poudres. Christine Taubira ne se rendra pas au Rwanda. Alain Juppé était ministre des Affaires étrangères français à l'époque. 
+Un commentaire de Marie-France Cros.</description>
+            <dc:creator>Marie-France Cros</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 17:44:56 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|534192973570d35ee3e83d86</guid>
+            <enclosure url="http://r.llb.be/image/04/5342546f3570d35ee3e8d304.jpg" length="16237" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Quand Gandhi aimait un homme</title>
+            <link>http://www.lalibre.be/culture/livres/quand-gandhi-aimait-un-homme-533d642c3570aae038acd3a6</link>
+            <description>&lt;img src=&quot;http://r.llb.be/image/27/534279823570d35ee3e8e827.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Gilbert Sinoué raconte un épisode méconnu de la vie du Mahatma Gandhi.</description>
+            <dc:creator>Camille de Marcilly</dc:creator>
+            <pubDate>Thu, 03 Apr 2014 13:37:48 +0100</pubDate>
+            <guid isPermaLink="false">www.lalibre.be|533d642c3570aae038acd3a6</guid>
+            <enclosure url="http://r.llb.be/image/27/534279823570d35ee3e8e827.jpg" length="8401" type="image/jpeg"/>
+        </item>
+    </channel>
+</rss>

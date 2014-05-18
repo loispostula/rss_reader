@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>DH.be - La Une</title>
+        <description><![CDATA[La Une sur DH.be]]></description>
+        <link>http://www.dhnet.be/</link>
+        <lastBuildDate>Mon, 07 Apr 2014 12:49:58 +0100</lastBuildDate>
+        <generator>FeedCreator 1.7.2-ppt (info@mypapit.net)</generator>
+        <image>
+            <url>http://r.ldh.be/frontend/dh/img/logoRss.png</url>
+            <title>DH.be - La Une</title>
+            <link>http://www.dhnet.be/</link>
+            <width>250</width>
+            <height>40</height>
+        </image>
+        <language>fr-be</language>
+        <copyright>Copyright 2003-2012 La Dernière Heure / Les Sports</copyright>
+        <managingEditor>dh.redaction@saipm.com (La Dernière Heure / Les Sports)</managingEditor>
+        <webMaster>ipm.multimedia@saipm.com (IPM Multimedia)</webMaster>
+        <category>UNE</category>
+        <docs>http://cyber.law.harvard.edu/rss/rss.html</docs>
+        <ttl>5</ttl>
+        <atom:link href="http://www.dhnet.be/rss.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Barrages pour le groupe mondial: la Belgique tête de série en Coupe Davis</title>
+            <link>http://www.dhnet.be/sports/tennis/barrages-pour-le-groupe-mondial-la-belgique-tete-de-serie-en-coupe-davis-53427b943570d35ee3e8e841</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/4c/53427d4a3570d35ee3e8e84c.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Le tirage au sort des barrages pour le groupe mondial de la Coupe Davis se tiendra mardi à Londres à 12h.</description>
+            <dc:creator>Belga</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 10:28:11 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53427b943570d35ee3e8e841</guid>
+            <enclosure url="http://r.ldh.be/image/4c/53427d4a3570d35ee3e8e84c.jpg" length="9162" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Vadis s'énerve sur un caméraman</title>
+            <link>http://www.dhnet.be/sports/football/vadis-s-enerve-sur-un-cameraman-534276273570aae038afd9cb</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/d9/5342785c3570aae038afd9d9.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Visiblement frustré après la lourde défaite subie face aux Mauves, le médian brugeois s'en est pris à un caméraman.</description>
+            <dc:creator>Rédaction en ligne</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 10:03:57 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534276273570aae038afd9cb</guid>
+            <enclosure url="http://r.ldh.be/image/d9/5342785c3570aae038afd9d9.jpg" length="10606" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Pièces de 1 et 2 cents supprimées: les supermarchés n'arrondiront pas les tickets de caisse</title>
+            <link>http://www.dhnet.be/conso/consommation/pieces-de-1-et-2-cents-supprimees-les-supermarches-n-arrondiront-pas-les-tickets-de-caisse-534275d53570aae038afd9ca</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/cd/534276a73570aae038afd9cd.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;&quot;Deux centimes, cela peut sembler dérisoire, mais multipliés par les millions de transactions effectuées chaque année, cela peut vite faire une jolie somme.&quot;</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 09:55:22 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534275d53570aae038afd9ca</guid>
+            <enclosure url="http://r.ldh.be/image/cd/534276a73570aae038afd9cd.jpg" length="36396" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Trois corps repêchés dans le canal à Ham après un accident de voiture</title>
+            <link>http://www.dhnet.be/actu/faits/trois-corps-repeches-dans-le-canal-a-ham-apres-un-accident-de-voiture-534274b53570d35ee3e8e80b</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/c8/534275283570aae038afd9c8.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Une enquête a été ouverte pour connaître les circonstances exactes de l'accident.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 09:49:42 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534274b53570d35ee3e8e80b</guid>
+            <enclosure url="http://r.ldh.be/image/c8/534275283570aae038afd9c8.jpg" length="2887" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Vanden Borre a gagné son duel à distance</title>
+            <link>http://www.dhnet.be/sports/football/diablesrouges/vanden-borre-a-gagne-son-duel-a-distance-5341afd83570d35ee3e85347</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/62/53425e543570aae038afc462.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Sa parfaite entente avec Andy Najar sur l’aile droite y est également pour beaucoup.</description>
+            <dc:creator>R. V.P.</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 09:22:21 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341afd83570d35ee3e85347</guid>
+            <enclosure url="http://r.ldh.be/image/62/53425e543570aae038afc462.jpg" length="11378" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Mourinho voudrait voir Courtois titulaire à Chelsea</title>
+            <link>http://www.dhnet.be/sports/football/mercato/mourinho-voudrait-voir-courtois-titulaire-a-chelsea-53426bfa3570aae038afd818</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/f2/53426bd73570d35ee3e8d3f2.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;L'arrivée du Diable rouge entre les perches des Blues se préciserait...</description>
+            <dc:creator>Rédaction en ligne</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 09:19:19 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53426bfa3570aae038afd818</guid>
+            <enclosure url="http://r.ldh.be/image/f2/53426bd73570d35ee3e8d3f2.jpg" length="9658" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Batshuayi et N'Sakala sur les tablettes de l'AS Monaco</title>
+            <link>http://www.dhnet.be/sports/football/mercato/batshuayi-et-n-sakala-sur-les-tablettes-de-l-as-monaco-53426be23570d35ee3e8d3f5</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/fb/53426c623570d35ee3e8d3fb.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Il est un fait certain que les deux joueurs ne laissent pas indifférents les émissaires du Rocher, bien décidés à surveiller leurs prestations conjointes.</description>
+            <dc:creator>Rédaction en ligne</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 09:14:15 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53426be23570d35ee3e8d3f5</guid>
+            <enclosure url="http://r.ldh.be/image/fb/53426c623570d35ee3e8d3fb.jpg" length="3567" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Les médecins discutent de prélever les organes d'un patient... conscient</title>
+            <link>http://www.dhnet.be/actu/faits/les-medecins-discutent-de-prelever-les-organes-d-un-patient-conscient-534266a63570d35ee3e8d38d</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/65/53425e583570aae038afc465.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;L'homme de 43 ans a porté plainte contre l'hôpital qui le soignait après avoir entendu une conversation entre les médecins et sa compagne sur le prélèvement de ses organes.</description>
+            <dc:creator>Rédaction en ligne</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:59:49 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534266a63570d35ee3e8d38d</guid>
+            <enclosure url="http://r.ldh.be/image/65/53425e583570aae038afc465.jpg" length="3900" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Une sportive heurtée à la tête par un drone !</title>
+            <link>http://www.dhnet.be/people-buzz/sports/une-sportive-heurtee-a-la-tete-par-un-drone-534266c73570aae038afd7ed</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/ea/534266c33570aae038afd7ea.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;La malheureuse triathlète australienne a été heurtée par un appareil tombé du ciel.</description>
+            <dc:creator>M. Br.</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:49:03 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534266c73570aae038afd7ed</guid>
+            <enclosure url="http://r.ldh.be/image/ea/534266c33570aae038afd7ea.jpg" length="3261" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>L'ancien patron de bpost rejoint le conseil d'administration de Delhaize</title>
+            <link>http://www.dhnet.be/actu/economie/l-ancien-patron-de-bpost-rejoint-le-conseil-d-administration-de-delhaize-5342611d3570aae038afc4b2</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/70/534261683570d35ee3e8d370.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Il est actuellement président du conseil d'administration de Spadel.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:26:04 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5342611d3570aae038afc4b2</guid>
+            <enclosure url="http://r.ldh.be/image/70/534261683570d35ee3e8d370.jpg" length="1778" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>L'arme secrète de la confiance en soi</title>
+            <link>http://www.dhnet.be/conso/pourelle/l-arme-secrete-de-la-confiance-en-soi-534260cb3570d35ee3e8d36c</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/ab/534260be3570aae038afc4ab.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Vous devez parler en public ? Vous êtes en période d’examen ? Vous devez demander une augmentation à votre patron ? Vous manquez tout simplement de confiance en vous ? Il existe un truc tout simple que nous dévoile le naturopathe Terry Lidarssi.</description>
+            <dc:creator>Terry Lidarssi</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:25:52 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534260cb3570d35ee3e8d36c</guid>
+            <enclosure url="http://r.ldh.be/image/ab/534260be3570aae038afc4ab.jpg" length="21086" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Un homme victime d'une tentative de meurtre à la chevrotine à Autreppe</title>
+            <link>http://www.dhnet.be/actu/faits/un-homme-victime-d-une-tentative-de-meurtre-a-la-chevrotine-a-autreppe-53425d403570d35ee3e8d346</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/4d/53425ddd3570aae038afc44d.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;L'agresseur est quant à lui toujours en fuite et activement recherché.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:09:34 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53425d403570d35ee3e8d346</guid>
+            <enclosure url="http://r.ldh.be/image/4d/53425ddd3570aae038afc44d.jpg" length="11673" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Proto: &quot;Tant mieux pour moi si Wilmots m’appelle&quot;</title>
+            <link>http://www.dhnet.be/sports/football/diablesrouges/proto-tant-mieux-pour-moi-si-wilmots-m-appelle-5341d0273570d35ee3e86835</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/3f/53424dae3570d35ee3e8d23f.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Suite à la grave blessure de Koen Casteels, Silvio Proto peut revenir dans la liste des 23 qui iront au Brésil.</description>
+            <dc:creator>Interview &gt; Romain Van der Pluym</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:03:34 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341d0273570d35ee3e86835</guid>
+            <enclosure url="http://r.ldh.be/image/3f/53424dae3570d35ee3e8d23f.jpg" length="2581" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Albert n'aurait pas rendu visite à Laurent</title>
+            <link>http://www.dhnet.be/people-buzz/familles-royales/albert-n-aurait-pas-rendu-visite-a-laurent-534259803570aae038afc410</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/0e/534259513570aae038afc40e.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;D'après VTM, Paola serait entrée dans la chambre de son fils. Le roi Albert aurait préféré rester dans les couloirs de l’hôpital...</description>
+            <dc:creator>Rédaction en ligne</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 08:00:27 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534259803570aae038afc410</guid>
+            <enclosure url="http://r.ldh.be/image/0e/534259513570aae038afc40e.jpg" length="8804" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>ATP Casablanca: David Goffin au 3e et dernier tour des qualifications</title>
+            <link>http://www.dhnet.be/sports/tennis/atp-casablanca-david-goffin-au-3e-et-dernier-tour-des-qualifications-5342532b3570d35ee3e8d2ee</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/d2/534253843570aae038afb0d2.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Encore un petit effort David !</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 07:27:05 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5342532b3570d35ee3e8d2ee</guid>
+            <enclosure url="http://r.ldh.be/image/d2/534253843570aae038afb0d2.jpg" length="2214" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Giggs souhaiterait quitter Manchester United</title>
+            <link>http://www.dhnet.be/sports/football/europe/championnatsetrangers/giggs-souhaiterait-quitter-manchester-united-53424ee23570d35ee3e8d2b5</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/dd/5342516a3570d35ee3e8d2dd.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;En froid avec David Moyes, l'ailier légendaire d'Old Trafford envisagerait de quitter les Red Devils en fin de saison.</description>
+            <dc:creator>J.Le.</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 07:24:16 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53424ee23570d35ee3e8d2b5</guid>
+            <enclosure url="http://r.ldh.be/image/dd/5342516a3570d35ee3e8d2dd.jpg" length="9753" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>ATP Houston: Ruben Bemelmans à une victoire du tableau final</title>
+            <link>http://www.dhnet.be/sports/tennis/atp-houston-ruben-bemelmans-a-une-victoire-du-tableau-final-534252983570d35ee3e8d2e8</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/e9/534252df3570d35ee3e8d2e9.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Au 3e tour, Ruben Bemelmans jouera son accès au tableau final face à l'Américain Ryan Harrison, 115e mondial.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 07:24:15 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534252983570d35ee3e8d2e8</guid>
+            <enclosure url="http://r.ldh.be/image/e9/534252df3570d35ee3e8d2e9.jpg" length="2159" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Casteels forfait: qui sera notre 3e gardien au Brésil ?</title>
+            <link>http://www.dhnet.be/sports/football/diablesrouges/casteels-forfait-qui-sera-notre-3e-gardien-au-bresil-53424f7a3570d35ee3e8d2bb</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/af/5342501d3570aae038afb0af.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Koen Casteels s'est occasionné une fracture du tibia, ce dimanche, avec Hoffenheim. Sa participation au Mondial n'est plus d'actualité et Marc Wilmots doit chercher un autre troisième gardien. 
+Notre spécialiste Benoît Delhauteur évoque les différents candidats à cette place.</description>
+            <dc:creator>N. Ch.</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 07:11:50 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53424f7a3570d35ee3e8d2bb</guid>
+            <enclosure url="http://r.ldh.be/image/af/5342501d3570aae038afb0af.jpg" length="12568" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>L'axe ferroviaire Bruxelles Nord-Sud dégagé</title>
+            <link>http://www.dhnet.be/actu/belgique/l-axe-ferroviaire-bruxelles-nord-sud-degage-53424f273570d35ee3e8d2b6</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/b9/53424f5e3570d35ee3e8d2b9.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Des retards sont à prévoir pour les trains à venir.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 07:09:37 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53424f273570d35ee3e8d2b6</guid>
+            <enclosure url="http://r.ldh.be/image/b9/53424f5e3570d35ee3e8d2b9.jpg" length="3941" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Classements ATP et WTA: David Goffin 106e, Kirsten Flipkens repasse 24e</title>
+            <link>http://www.dhnet.be/sports/tennis/classements-atp-et-wta-david-goffin-106e-kirsten-flipkens-repasse-24e-534249743570d35ee3e8d15f</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/f9/534249cc3570aae038afaff9.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Au sommet, l'Américaine Serena Williams conserve la première place et même si son avance s'est quelque peu réduite.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 06:45:04 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534249743570d35ee3e8d15f</guid>
+            <enclosure url="http://r.ldh.be/image/f9/534249cc3570aae038afaff9.jpg" length="3733" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Busine$$ du vin: comment le fric tue l'âme des grands crus</title>
+            <link>http://www.dhnet.be/conso/consommation/busine-du-vin-comment-le-fric-tue-l-ame-des-grands-crus-533eb9af3570aae038ad99d8</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/bb/534251333570aae038afb0bb.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Isabelle Saporta, auteur de Vino Business, dénonce les magouilles qui profitent aux grands crus.</description>
+            <dc:creator>Vincent Schmidt</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 06:11:06 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|533eb9af3570aae038ad99d8</guid>
+            <enclosure url="http://r.ldh.be/image/bb/534251333570aae038afb0bb.jpg" length="4643" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>WTA: Facile victoire d'Ana Ivanovic à Monterrey</title>
+            <link>http://www.dhnet.be/sports/tennis/wta-facile-victoire-d-ana-ivanovic-a-monterrey-53423c243570d35ee3e8ba7d</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/84/53423c6d3570d35ee3e8ba84.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Ana Ivanovic n'a jamais été inquiétée par sa compatriote Jaksic.</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 05:48:43 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53423c243570d35ee3e8ba7d</guid>
+            <enclosure url="http://r.ldh.be/image/84/53423c6d3570d35ee3e8ba84.jpg" length="2369" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Une fête à tout casser en Californie: 100 interpellations, 44 blessés</title>
+            <link>http://www.dhnet.be/actu/monde/une-fete-a-tout-casser-en-californie-100-interpellations-44-blesses-534233bd3570aae038af9891</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/4a/5342340f3570d35ee3e8ba4a.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;La police a dû faire usage de gaz lacrymogènes et de balles en caoutchouc pour disperser la foule.</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 05:13:56 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534233bd3570aae038af9891</guid>
+            <enclosure url="http://r.ldh.be/image/4a/5342340f3570d35ee3e8ba4a.jpg" length="2345" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Pistorius, en pleurs, s'excuse pour le meurtre de sa petite amie</title>
+            <link>http://www.dhnet.be/actu/monde/pistorius-en-pleurs-s-excuse-pour-le-meurtre-de-sa-petite-amie-534231db3570aae038af9887</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/2d/534281233570aae038afda2d.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;&quot;Je me réveille la nuit avec l'odeur du sang.&quot;</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 05:04:24 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534231db3570aae038af9887</guid>
+            <enclosure url="http://r.ldh.be/image/2d/534281233570aae038afda2d.jpg" length="1929" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Décès de l'acteur américain Mickey Rooney</title>
+            <link>http://www.dhnet.be/medias/cinema/deces-de-l-acteur-americain-mickey-rooney-5342311f3570aae038af9884</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/2c/5342315f3570d35ee3e8ba2c.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Mickey Rooney, très apprécié et respecté à Hollywood, n'a quasiment jamais cessé de travailler.</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 05:01:19 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5342311f3570aae038af9884</guid>
+            <enclosure url="http://r.ldh.be/image/2c/5342315f3570d35ee3e8ba2c.jpg" length="17234" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Le cdH est sur-représenté dans la magistrature</title>
+            <link>http://www.dhnet.be/actu/belgique/le-cdh-est-sur-represente-dans-la-magistrature-53422ffb3570d35ee3e8ba22</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/80/534230d43570aae038af9880.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Un premier élément d'explication est à trouver dans l'historique attirance des familles catholiques pour la magistrature.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 04:56:26 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53422ffb3570d35ee3e8ba22</guid>
+            <enclosure url="http://r.ldh.be/image/80/534230d43570aae038af9880.jpg" length="2672" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Vol MH370: l'Australie annonce la détection de nouveaux signaux</title>
+            <link>http://www.dhnet.be/actu/monde/vol-mh370-l-australie-annonce-la-detection-de-nouveaux-signaux-53422ee93570aae038af9870</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/1d/53422f1f3570d35ee3e8ba1d.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;&quot;Je peux faire état d'informations très encourageantes parvenues au cours des dernières 24 heures.&quot;</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 04:51:53 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53422ee93570aae038af9870</guid>
+            <enclosure url="http://r.ldh.be/image/1d/53422f1f3570d35ee3e8ba1d.jpg" length="2713" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Un Belge de 23 ans décède dans une prison équatorienne</title>
+            <link>http://www.dhnet.be/actu/faits/un-belge-de-23-ans-decede-dans-une-prison-equatorienne-53422bf23570d35ee3e8b9fb</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/5f/53422c553570aae038af985f.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Une rumeur évoquant un décès dans des circonstances suspectes circule.</description>
+            <dc:creator>BELGA</dc:creator>
+            <pubDate>Mon, 07 Apr 2014 04:39:36 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53422bf23570d35ee3e8b9fb</guid>
+            <enclosure url="http://r.ldh.be/image/5f/53422c553570aae038af985f.jpg" length="2433" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Praet: &quot;Nous sommes obligés de viser la 1re place&quot;</title>
+            <link>http://www.dhnet.be/sports/football/division1/anderlecht/praet-nous-sommes-obliges-de-viser-la-1re-place-5341c93b3570aae038af7cde</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/39/5342274e3570aae038af9839.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Dennis Praet tient un autre discours qu’après la défaite à Sclessin.</description>
+            <dc:creator>Y. T.</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 21:38:03 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341c93b3570aae038af7cde</guid>
+            <enclosure url="http://r.ldh.be/image/39/5342274e3570aae038af9839.jpg" length="3253" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>France: un adolescent inculpé pour le meurtre d'une fillette</title>
+            <link>http://www.dhnet.be/actu/faits/france-un-adolescent-inculpe-pour-le-meurtre-d-une-fillette-5341c5683570aae038af7cd4</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/1f/5341c5623570d35ee3e8681f.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Le jeune homme de 16 ans est soupçonné d'avoir violé puis tué la fillette de 12 ans...</description>
+            <dc:creator>Belga</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 21:21:43 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341c5683570aae038af7cd4</guid>
+            <enclosure url="http://r.ldh.be/image/1f/5341c5623570d35ee3e8681f.jpg" length="3122" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Ligue 1: Monaco retarde la fête parisienne</title>
+            <link>http://www.dhnet.be/sports/football/europe/championnatsetrangers/ligue-1-monaco-retarde-la-fete-parisienne-5341c3983570d35ee3e8681a</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/cc/5341c38c3570aae038af7ccc.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Auteur d'un doublé, James Rodriguez a permis à Monaco de revenir à treize points de Paris (3-1).</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 21:14:00 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341c3983570d35ee3e8681a</guid>
+            <enclosure url="http://r.ldh.be/image/cc/5341c38c3570aae038af7ccc.jpg" length="3165" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Olivier Deschacht : &quot;Gagnons en déplacement, après on parlera du titre&quot;</title>
+            <link>http://www.dhnet.be/sports/football/division1/olivier-deschacht-gagnons-en-deplacement-apres-on-parlera-du-titre-5341c24e3570d35ee3e86814</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/12/5341c2323570d35ee3e86812.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Découvrez les réactions des protagonistes du 
+Topper au micro de nos confrères de VOO Foot.</description>
+            <dc:creator>L.-P. E.</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 21:08:30 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341c24e3570d35ee3e86814</guid>
+            <enclosure url="http://r.ldh.be/image/12/5341c2323570d35ee3e86812.jpg" length="9404" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Teklak: &quot;Luzon n'a pas trouvé de réponse tactique&quot;</title>
+            <link>http://www.dhnet.be/sports/football/division1/teklak-luzon-n-a-pas-trouve-de-reponse-tactique-5341bab03570aae038af6839</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/0e/5341bdab3570d35ee3e8680e.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Alex Teklak débriefe en sept analyses le week-end de Pro League. Kouyaté, Hasi, Luzon, Mons et Mazzu passent sous l’œil expert de notre consultant.</description>
+            <dc:creator>Propos recueillis par Benoit Delhauteur</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 20:50:11 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341bab03570aae038af6839</guid>
+            <enclosure url="http://r.ldh.be/image/0e/5341bdab3570d35ee3e8680e.jpg" length="10104" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>WTA Charleston: Victoire de l'Allemande Andrea Petkovic</title>
+            <link>http://www.dhnet.be/sports/tennis/wta-charleston-victoire-de-l-allemande-andrea-petkovic-5341b2e93570d35ee3e8535b</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/59/5341b2d83570d35ee3e85359.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Elle a battu Cepelova en finale, sur le score de 7-5; 6-2. C'est le 3e titre de la carrière de &quot;Petko&quot;.</description>
+            <dc:creator>Belga</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 19:59:53 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341b2e93570d35ee3e8535b</guid>
+            <enclosure url="http://r.ldh.be/image/59/5341b2d83570d35ee3e85359.jpg" length="8600" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Anderlecht-FC Bruges: l'analyse de notre spécialiste et les notes des Mauves</title>
+            <link>http://www.dhnet.be/sports/football/division1/anderlecht/anderlecht-fc-bruges-l-analyse-de-notre-specialiste-et-les-notes-des-mauves-5341b1613570aae038af6800</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/11/53422d7c3570d35ee3e8ba11.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Non, le Club n'est pas invincible, comme Anderlecht en a apporté la preuve. 
+Découvrez les notes des Mauves et le débrief' du Topper après le succès incontestable su Sporting face à Bruges.</description>
+            <dc:creator>Yves Taildeman</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 19:56:17 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341b1613570aae038af6800</guid>
+            <enclosure url="http://r.ldh.be/image/11/53422d7c3570d35ee3e8ba11.jpg" length="4567" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Le bulletin de notes de Bruges</title>
+            <link>http://www.dhnet.be/sports/football/division1/fc-bruges/le-bulletin-de-notes-de-bruges-5341b0503570d35ee3e85348</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/f9/5341b6623570d35ee3e867f9.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Dépassés par Anderlecht en première période, les Brugeois n'ont jamais semblé en mesure de revenir dans ce 
+Topper.</description>
+            <dc:creator>M. D.</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 19:51:45 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341b0503570d35ee3e85348</guid>
+            <enclosure url="http://r.ldh.be/image/f9/5341b6623570d35ee3e867f9.jpg" length="8708" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Boonen : &quot;Je ne suis pas déçu&quot;</title>
+            <link>http://www.dhnet.be/sports/cyclisme/boonen-je-ne-suis-pas-decu-5341ab5e3570d35ee3e85332</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/62/53422ccd3570aae038af9862.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Le Belge reconnaît avoir été trop juste dans la dernière demi-heure de course.</description>
+            <dc:creator>Julien Gillebert</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 19:30:38 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341ab5e3570d35ee3e85332</guid>
+            <enclosure url="http://r.ldh.be/image/62/53422ccd3570aae038af9862.jpg" length="12220" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Cancer du cerveau chez l'enfant: de nouvelles pistes thérapeutiques</title>
+            <link>http://www.dhnet.be/actu/sante/cancer-du-cerveau-chez-l-enfant-de-nouvelles-pistes-therapeutiques-5341a9933570d35ee3e85317</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/c6/5341a9e33570aae038af67c6.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;La découverte d'anomalies sur un gène présent dans des tumeurs incurables du cerveau de l'enfant laisse espérer de nouvelles possibilités de traitement pour combattre cette forme de cancer, selon des travaux publiés dimanche.</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 19:23:00 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341a9933570d35ee3e85317</guid>
+            <enclosure url="http://r.ldh.be/image/c6/5341a9e33570aae038af67c6.jpg" length="14803" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Et le champion du monde sera...</title>
+            <link>http://www.dhnet.be/sports/f1/et-le-champion-du-monde-sera-5341a78d3570d35ee3e852f7</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/07/5341a81e3570d35ee3e85307.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Lewis Hamilton sera champion du monde de Formule 1 cette saison ! Du moins, si son équipier Nico Rosberg ne l'en empêche pas. Mais le titre semble d'ores et déjà promis à l'un des deux hommes. Nos spécialistes décryptent pour vous les arguments qu'ont à faire valoir les deux pilotes Mercedes.</description>
+            <dc:creator>Christian Lahaye et Olivier de Wilde</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 19:14:22 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341a78d3570d35ee3e852f7</guid>
+            <enclosure url="http://r.ldh.be/image/07/5341a81e3570d35ee3e85307.jpg" length="11676" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Coupe Davis : Federer qualifie la Suisse pour les demi-finales</title>
+            <link>http://www.dhnet.be/sports/tennis/coupe-davis-federer-qualifie-la-suisse-pour-les-demi-finales-5341a3b53570d35ee3e852b0</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/b5/5341a3c13570d35ee3e852b5.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Roger Federer a envoyé la Suisse en demi-finales de la Coupe Davis aux dépens du Kazakhstan. 
+7-6 (7/6), 6-2, 6-3 </description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:57:58 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341a3b53570d35ee3e852b0</guid>
+            <enclosure url="http://r.ldh.be/image/b5/5341a3c13570d35ee3e852b5.jpg" length="2506" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>WTA Charleston: victoire de l'Allemande Andrea Petkovic</title>
+            <link>http://www.dhnet.be/sports/tennis/wta-charleston-victoire-de-l-allemande-andrea-petkovic-5341a2f53570d35ee3e852ab</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/a3/5341a2ec3570d35ee3e852a3.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;L'Allemande Andrea Petkovic a remporté le tournoi WTA de Charleston (terre battue) en battant en finale la Slovaque Jana Cepelova 7-5, 6-2, dimanche.</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:54:41 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341a2f53570d35ee3e852ab</guid>
+            <enclosure url="http://r.ldh.be/image/a3/5341a2ec3570d35ee3e852a3.jpg" length="3030" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Il traverse la Seine sur un fil à 25 mètres de hauteur</title>
+            <link>http://www.dhnet.be/actu/monde/il-traverse-la-seine-sur-un-fil-a-25-metres-de-hauteur-5341a1f23570aae038af52ed</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/e3/5341a1c03570aae038af52e3.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Un exploit !</description>
+            <dc:creator>Belga</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:49:58 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341a1f23570aae038af52ed</guid>
+            <enclosure url="http://r.ldh.be/image/e3/5341a1c03570aae038af52e3.jpg" length="3089" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>L’Alliance renoue avec le succès (4-0)</title>
+            <link>http://www.dhnet.be/sports/football/division2/eupen/l-alliance-renoue-avec-le-succes-4-0-5341a0613570d35ee3e85274</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/2b/5341b8ad3570aae038af682b.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Après un début de match laborieux, les 
+Pandas ont fait la différence en l’espace de 10 minutes.</description>
+            <dc:creator>F. D.</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:43:46 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341a0613570d35ee3e85274</guid>
+            <enclosure url="http://r.ldh.be/image/2b/5341b8ad3570aae038af682b.jpg" length="10878" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Elections hongroises: Viktor Orban en tête devant la gauche</title>
+            <link>http://www.dhnet.be/actu/monde/elections-hongroises-viktor-orban-en-tete-devant-la-gauche-53419e023570aae038af52bd</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/b4/53419df23570aae038af52b4.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Le parti conservateur du populiste Viktor Orban, accusé de dérives antidémocratiques, est arrivé en tête des élections législatives de dimanche, selon les sondages à la sortie des urnes.</description>
+            <dc:creator>AFP</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:33:33 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53419e023570aae038af52bd</guid>
+            <enclosure url="http://r.ldh.be/image/b4/53419df23570aae038af52b4.jpg" length="10893" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Pairi Daiza : du monde pour voir les pandas</title>
+            <link>http://www.dhnet.be/actu/belgique/pairi-daiza-du-monde-pour-voir-les-pandas-53419a493570aae038af529d</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/95/53419a2e3570aae038af5295.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Le parc Pairi Daiza a reçu samedi et dimanche sensiblement plus de visiteurs que lors d'un week-end normal d'ouverture. L'effet panda a joué !</description>
+            <dc:creator>Belga</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:17:45 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|53419a493570aae038af529d</guid>
+            <enclosure url="http://r.ldh.be/image/95/53419a2e3570aae038af5295.jpg" length="2704" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Le Well à nouveau au sommet</title>
+            <link>http://www.dhnet.be/sports/hockey/le-well-a-nouveau-au-sommet-534196af3570aae038af5282</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/7d/534196943570aae038af527d.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Les Uccloises ont reconduit leur titre après celui de 2011.</description>
+            <dc:creator>Boris De Vaere</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:02:22 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534196af3570aae038af5282</guid>
+            <enclosure url="http://r.ldh.be/image/7d/534196943570aae038af527d.jpg" length="4067" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Casteels privé de Mondial</title>
+            <link>http://www.dhnet.be/sports/football/diablesrouges/casteels-prive-de-mondial-534196653570aae038af526e</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/18/5341965a3570d35ee3e85218.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Le Diable rouge a dû quitter la pelouse à un quart d'heure du terme. Il souffre d'une fracture du tibia.</description>
+            <dc:creator>Rédaction en ligne</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 18:01:08 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534196653570aae038af526e</guid>
+            <enclosure url="http://r.ldh.be/image/18/5341965a3570d35ee3e85218.jpg" length="8917" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Milquet vise la présidence de la Région bruxelloise</title>
+            <link>http://www.dhnet.be/actu/belgique/milquet-vise-la-presidence-de-la-region-bruxelloise-534194203570aae038af5252</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/4c/53422b1a3570aae038af984c.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Le cdH veut lancer un grand plan de déploiement sur dix ans pour la Région-Capitale.</description>
+            <dc:creator>Li. B.</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 17:51:27 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534194203570aae038af5252</guid>
+            <enclosure url="http://r.ldh.be/image/4c/53422b1a3570aae038af984c.jpg" length="1862766" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Rwanda: 20 ans après la mort des 10 paras - Suivez les commémorations en direct</title>
+            <link>http://www.dhnet.be/actu/monde/rwanda-20-ans-apres-la-mort-des-10-paras-suivez-les-commemorations-en-direct-534191c43570d35ee3e83d7f</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/69/53422de43570aae038af9869.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Les familles des victimes belges sont parties pour Kigali pour ne pas oublier. 
+Suivez la cérémonie en direct.</description>
+            <dc:creator>H. Le.</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 17:41:25 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|534191c43570d35ee3e83d7f</guid>
+            <enclosure url="http://r.ldh.be/image/69/53422de43570aae038af9869.jpg" length="8922" type="image/jpeg"/>
+        </item>
+        <item>
+            <title>Promotion D: Kinet viré du RFC Liège, qui a peut-être perdu le titre</title>
+            <link>http://www.dhnet.be/regions/liege/promotion-d-kinet-vire-du-rfc-liege-qui-a-peut-etre-perdu-le-titre-5341907e3570d35ee3e83d72</link>
+            <description>&lt;img src=&quot;http://r.ldh.be/image/80/534191e93570d35ee3e83d80.jpg&quot; width=&quot;140&quot; height=&quot;70&quot; alt=&quot;&quot; border=&quot;0&quot; hspace=&quot;4&quot; vspace=&quot;4&quot; align=&quot;left&quot; /&gt;Après ce non-match, la direction a mis fin à sa collaboration avec l'entraîneur Christophe Kinet. Retrouvez les réactions des principaux protagonistes dans cet article...</description>
+            <dc:creator>J.-P. N.</dc:creator>
+            <pubDate>Sun, 06 Apr 2014 17:35:38 +0100</pubDate>
+            <guid isPermaLink="false">www.dhnet.be|5341907e3570d35ee3e83d72</guid>
+            <enclosure url="http://r.ldh.be/image/80/534191e93570d35ee3e83d80.jpg" length="26277" type="image/jpeg"/>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<GridPane alignment="CENTER" gridLinesVisible="false" hgap="10.0" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.LoginController">
+  <children>
+    <Label fx:id="labelTitle" prefWidth="547.0" text="Welcome to RSS Reader" textAlignment="CENTER" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.rowIndex="0">
+      <font>
+        <Font name="System Bold" size="36.0" />
+      </font>
+    </Label>
+    <Label fx:id="labelEmail" prefWidth="62.0" text="Email" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <labelFor>
+        <TextField fx:id="textEmail" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      </labelFor>
+    </Label>
+    <Label fx:id="labelPassword" text="Password" GridPane.columnIndex="0" GridPane.rowIndex="3">
+      <labelFor>
+        <PasswordField fx:id="textPassword" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      </labelFor>
+    </Label>
+    <Label fx:id="labelHeader" prefWidth="318.0" text="Please enter with your credentials:" textFill="GREY" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Label>
+    <fx:reference source="textEmail" />
+    <fx:reference source="textPassword" />
+    <Button fx:id="buttonLogin" contentDisplay="LEFT" mnemonicParsing="false" onAction="#login" prefWidth="246.0" text="Login" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    <ImageView fitHeight="149.0" fitWidth="149.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.rowSpan="4">
+      <Image url="@../icons/rss_icon.png" />
+      <GridPane.margin>
+        <Insets />
+      </GridPane.margin>
+    </ImageView>
+    <Button fx:id="newUser" mnemonicParsing="false" onAction="#newUser" prefWidth="115.0" text="New User" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="105.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="203.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="219.0" />
+  </columnConstraints>
+  <padding>
+    <Insets bottom="2.0" left="20.0" right="20.0" top="20.0" />
+  </padding>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<FlowPane prefHeight="414.0" prefWidth="451.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="javafx.FriendRequestController">
+  <children>
+    <Label prefWidth="451.0" text="Your Friend Requests:" textAlignment="LEFT">
+      <font>
+        <Font name="Lucida Sans Regular" size="30.0" />
+      </font>
+    </Label>
+    <TableView prefHeight="379.0" prefWidth="451.0" fx:id="tableView"/>
+  </children>
+</FlowPane>

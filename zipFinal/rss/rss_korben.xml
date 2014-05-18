@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2full.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feeds.feedburner.com/~d/styles/itemcontent.css"?><rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:creativeCommons="http://backend.userland.com/creativeCommonsRssModule" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0">
+
+<channel>
+	<title>Korben</title>
+	
+	<link>http://korben.info</link>
+	<description>Upgrade your mind</description>
+	<lastBuildDate>Fri, 16 May 2014 09:45:41 +0000</lastBuildDate>
+	<language>fr-FR</language>
+		<sy:updatePeriod>hourly</sy:updatePeriod>
+		<sy:updateFrequency>1</sy:updateFrequency>
+	<generator>http://wordpress.org/?v=3.9.1</generator>
+	<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feeds.feedburner.com/KorbensBlog-UpgradeYourMind" /><feedburner:info uri="korbensblog-upgradeyourmind" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><creativeCommons:license>http://creativecommons.org/licenses/by-nc-nd/2.0/</creativeCommons:license><image><link>http://creativecommons.org/licenses/by-nc-nd/2.0/</link><url>http://creativecommons.org/images/public/somerights20.gif</url><title>Some Rights Reserved</title></image><feedburner:feedFlare href="http://add.my.yahoo.com/rss?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://us.i1.yimg.com/us.yimg.com/i/us/my/addtomyyahoo4.gif">Subscribe with My Yahoo!</feedburner:feedFlare><feedburner:feedFlare href="http://www.newsgator.com/ngs/subscriber/subext.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.newsgator.com/images/ngsub1.gif">Subscribe with NewsGator</feedburner:feedFlare><feedburner:feedFlare href="http://feeds.my.aol.com/add.jsp?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://o.aolcdn.com/favorites.my.aol.com/webmaster/ffclient/webroot/locale/en-US/images/myAOLButtonSmall.gif">Subscribe with My AOL</feedburner:feedFlare><feedburner:feedFlare href="http://www.bloglines.com/sub/http://feeds.feedburner.com/KorbensBlog-UpgradeYourMind" src="http://www.bloglines.com/images/sub_modern11.gif">Subscribe with Bloglines</feedburner:feedFlare><feedburner:feedFlare href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.netvibes.com/img/add2netvibes.gif">Subscribe with Netvibes</feedburner:feedFlare><feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google</feedburner:feedFlare><feedburner:feedFlare href="http://www.pageflakes.com/subscribe.aspx?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.pageflakes.com/ImageFile.ashx?instanceId=Static_4&amp;fileName=ATP_blu_91x17.gif">Subscribe with Pageflakes</feedburner:feedFlare><feedburner:feedFlare href="http://www.plusmo.com/add?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://plusmo.com/res/graphics/fbplusmo.gif">Subscribe with Plusmo</feedburner:feedFlare><feedburner:feedFlare href="http://www.thefreedictionary.com/_/hp/AddRSS.aspx?http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://img.tfd.com/hp/addToTheFreeDictionary.gif">Subscribe with The Free Dictionary</feedburner:feedFlare><feedburner:feedFlare href="http://www.bitty.com/manual/?contenttype=rssfeed&amp;contentvalue=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.bitty.com/img/bittychicklet_91x17.gif">Subscribe with Bitty Browser</feedburner:feedFlare><feedburner:feedFlare href="http://www.live.com/?add=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://tkfiles.storage.msn.com/x1piYkpqHC_35nIp1gLE68-wvzLZO8iXl_JMledmJQXP-XTBOLfmQv4zhj4MhcWEJh_GtoBIiAl1Mjh-ndp9k47If7hTaFno0mxW9_i3p_5qQw">Subscribe with Live.com</feedburner:feedFlare><feedburner:feedFlare href="http://mix.excite.eu/add?feedurl=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://image.excite.co.uk/mix/addtomix.gif">Subscribe with Excite MIX</feedburner:feedFlare><feedburner:feedFlare href="http://www.webwag.com/wwgthis.php?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.webwag.com/images/wwgthis.gif">Subscribe with Webwag</feedburner:feedFlare><feedburner:feedFlare href="http://www.podcastready.com/oneclick_bookmark.php?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.podcastready.com/images/podcastready_button.gif">Subscribe with Podcast Ready</feedburner:feedFlare><feedburner:feedFlare href="http://www.wikio.com/subscribe?url=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.wikio.com/shared/img/add2wikio.gif">Subscribe with Wikio</feedburner:feedFlare><feedburner:feedFlare href="http://www.dailyrotation.com/index.php?feed=http%3A%2F%2Ffeeds.feedburner.com%2FKorbensBlog-UpgradeYourMind" src="http://www.dailyrotation.com/rss-dr2.gif">Subscribe with Daily Rotation</feedburner:feedFlare><item>
+		<title>Warsow – Le petit FPS freeware qu’il vous faut</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/2Ygow8pz6r0/warsow-petit-fps-freeware-quil-faut.html</link>
+		<comments>http://korben.info/warsow-petit-fps-freeware-quil-faut.html#comments</comments>
+		<pubDate>Fri, 16 May 2014 09:45:07 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Jeux vidéos]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=51047</guid>
+		<description><![CDATA[<p>Aujourd'hui, c'est vendredi alors pour vous détendre un peu avant le weekend, je vous propose d'installer Warsow. Warsow est un jeu à la Unreal Tournament (FPS) au look très cartoon, qui se déroule dans un monde où les cyberpunks équipés de lance-roquettes et les cochons mutants sont légions. Le jeu se joue en réseau, vous [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/warsow-petit-fps-freeware-quil-faut.html">Warsow &#8211; Le petit FPS freeware qu&rsquo;il vous faut</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Aujourd'hui, c'est vendredi alors pour vous détendre un peu avant le weekend, je vous propose d'installer Warsow.</p>
+<p>Warsow est un jeu à la Unreal Tournament (FPS) au look très cartoon, qui se déroule dans un monde où les cyberpunks équipés de lance-roquettes et les cochons mutants sont légions. Le jeu se joue en réseau, vous pouvez même monter votre propre serveur et il faudra être rapide et dégommer vite si vous voulez rester dans la course.</p>
+<p>Warsow est conçu pour consommer le moins possible de ressources machines, ce qui est plutôt une bonne nouvelle pour jouer au bureau et supporte nativement <a href="http://www.warsow.net/wiki/IndexDocument#4">les mods et les scripts en tout genre</a>. Il est très customisable et orienté e-sport.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/kUPlwxQ0cC4?feature=player_embedded" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Le plus beau là-dedans, c'est que Warsow est <strong>totalement gratuit</strong> et téléchargeable sous Windows, Linux et même Mac OSX.</p>
+<p><a href="http://www.warsow.net/">Fonçez, vous ne le regretterez pas !</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/warsow-petit-fps-freeware-quil-faut.html">Warsow &#8211; Le petit FPS freeware qu&rsquo;il vous faut</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2Ygow8pz6r0:ilx9oH3WVjg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2Ygow8pz6r0:ilx9oH3WVjg:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=2Ygow8pz6r0:ilx9oH3WVjg:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2Ygow8pz6r0:ilx9oH3WVjg:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=2Ygow8pz6r0:ilx9oH3WVjg:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2Ygow8pz6r0:ilx9oH3WVjg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2Ygow8pz6r0:ilx9oH3WVjg:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=2Ygow8pz6r0:ilx9oH3WVjg:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2Ygow8pz6r0:ilx9oH3WVjg:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/2Ygow8pz6r0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/warsow-petit-fps-freeware-quil-faut.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/warsow-petit-fps-freeware-quil-faut.html</feedburner:origLink></item>
+		<item>
+		<title>The Flash revient dans une nouvelle série</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/5o7unSwgK04/the-flash-revient-nouvelle-serie.html</link>
+		<comments>http://korben.info/the-flash-revient-nouvelle-serie.html#comments</comments>
+		<pubDate>Fri, 16 May 2014 09:13:18 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Série]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=51045</guid>
+		<description><![CDATA[<p>Je me suis à peine remis de la série Flash des années 90 avec John Wesley Shipp dans son costume moulboul de folie, que j'apprends l'arrivée d'une version 2014 baptisée The Flash (Tout est dans le "ze") qui va raconter plus ou moins la même avec un héros un peu moins musclé et un peu [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/the-flash-revient-nouvelle-serie.html">The Flash revient dans une nouvelle série</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Je me suis à peine remis de la série <strong>Flash</strong> des années 90 avec <strong>John Wesley Shipp</strong> dans son costume moulboul de folie, que j'apprends l'arrivée d'une version 2014 baptisée <strong>The Flash</strong> (Tout est dans le "ze") qui va raconter plus ou moins la même avec un héros un peu moins musclé et un peu plus jeune.</p>
+<p>Diffusée dès cet automne sur la chaine américaine CW, elle met en scène Grant Gustin, (né lui aussi en 1990 comme la série d'origine) qui incarne donc Barry Allen transformé en homme le plus rapide du monde.</p>
+<p>On y verra des apparitions de Arrow, l'autre super héros de la CW et je vous rassure, vous n'aurez pas besoin de regarder cette première saison, car elle est intégralement résumée dans la bande annonce officielle qui n'est autre qu'un monumental spoiler.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/Yj0l7iGKh8g?feature=player_embedded" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p style="text-align: left;">Et en bonus, je vous remets le bande annonce du Flash des années 90 ;-)</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/3fPnyQUKt6Y" width="640" height="480" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p style="text-align: left;"><a href="http://io9.com/this-5-minute-extended-flash-trailer-is-the-justice-lea-1576975533">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/the-flash-revient-nouvelle-serie.html">The Flash revient dans une nouvelle série</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5o7unSwgK04:2p7BLlD3TBE:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5o7unSwgK04:2p7BLlD3TBE:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=5o7unSwgK04:2p7BLlD3TBE:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5o7unSwgK04:2p7BLlD3TBE:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=5o7unSwgK04:2p7BLlD3TBE:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5o7unSwgK04:2p7BLlD3TBE:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5o7unSwgK04:2p7BLlD3TBE:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=5o7unSwgK04:2p7BLlD3TBE:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5o7unSwgK04:2p7BLlD3TBE:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/5o7unSwgK04" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/the-flash-revient-nouvelle-serie.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/the-flash-revient-nouvelle-serie.html</feedburner:origLink></item>
+		<item>
+		<title>La SCPP totalement à la ramasse</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/CxnTvY5ID2c/scpp-totalement-ramasse.html</link>
+		<comments>http://korben.info/scpp-totalement-ramasse.html#comments</comments>
+		<pubDate>Thu, 15 May 2014 17:27:15 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Copyright]]></category>
+		<category><![CDATA[Download]]></category>
+		<category><![CDATA[Infos]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=51015</guid>
+		<description><![CDATA[<p>Nos amis de la SCPP (Société civile des producteurs phonographiques) qui ont toujours un métro de retard, ont décidé de copier avec des années de retard nos voisins européens en assignant en justice les principaux FAI français pour qu'ils bloquent The Pirate Bay et une bonne centaine de sites miroirs. L'info a été confirmée par [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/scpp-totalement-ramasse.html">La SCPP totalement à la ramasse</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Nos amis de la <strong>SCPP</strong> (Société civile des producteurs phonographiques) qui ont toujours un métro de retard, ont décidé de copier avec des années de retard nos voisins européens en assignant en justice les principaux FAI français pour qu'ils bloquent <strong>The Pirate Bay</strong> et une bonne centaine de sites miroirs.</p>
+<p>L'info a été confirmée par <a href="http://www.nextinpact.com/news/87564-procedure-blocage-contre-the-pirate-bay-sfr-confirme.htm">SFR</a> et mis à part celui-là, les autres FAI qui ont reçu cette assignation sont Bouygues, Free et Orange. Bizarrement, mon FAI, Numéricable n'est pas de la partie.</p>
+<p><a href="http://www.wired.co.uk/news/archive/2014-01/28/the-pirate-bay-blockade-lifted-in-holland">Reconnu totalement inefficace dans d'autres pays</a>, ce blocage est rendu possible grâce à la plus grande saloperie jamais inventée par l'Homme : <strong>HADOPI</strong>.</p>
+<p>En effet, la SCPP invoque tel un rite vaudou, l'article L336-2 du Code de la propriété intellectuelle pour qu'un juge impose aux FAI de bloquer TPB qui soi-disant porte atteinte à leurs intérêts.</p>
+<p>Le truc marrant donc, c'est que ce genre de blocage ne fonctionne pas. Les gens le contournent assez facilement, soit via <a href="http://proxybay.info/">un petit miroir non bloqué</a>, soit en changeant leurs DNS, soit via un proxy, un VPN, en se connectant du boulot ou encore en chopant les .torrent et les liens magnets sur d'autres services. <strong>Ne cherchez pas c'est impossible de bloquer The Pirate Bay ou d'autres.</strong></p>
+<p>Tout ce que réussira à faire la SCPP, c'est aiguiser encore plus les capacités techniques de contournement des internautes français tout en faisant perdre du temps à la justice, aux FAI et en se ridiculisant par la même occasion (une fois de plus, je veux dire.)</p>
+<p>Bref, vous pouvez lever les yeux au ciel et commencer à vous moquer :</p>
+<p>AHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAH</p>
+<p>HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA</p>
+<p>HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAH</p>
+<p>AHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHA</p>
+<p>HAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAHAH</p>
+<p>Bon, allez maintenant, passons à autre chose de plus sérieux, voulez-vous ?</p>
+<p>&nbsp;</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/scpp-totalement-ramasse.html">La SCPP totalement à la ramasse</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=CxnTvY5ID2c:hE6CGnZj5_k:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=CxnTvY5ID2c:hE6CGnZj5_k:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=CxnTvY5ID2c:hE6CGnZj5_k:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=CxnTvY5ID2c:hE6CGnZj5_k:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=CxnTvY5ID2c:hE6CGnZj5_k:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=CxnTvY5ID2c:hE6CGnZj5_k:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=CxnTvY5ID2c:hE6CGnZj5_k:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=CxnTvY5ID2c:hE6CGnZj5_k:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=CxnTvY5ID2c:hE6CGnZj5_k:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/CxnTvY5ID2c" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/scpp-totalement-ramasse.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/scpp-totalement-ramasse.html</feedburner:origLink></item>
+		<item>
+		<title>L’éditeur « Distraction Free » de l’auteur de Game of Thrones</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/2IgtQdCF90E/lediteur-distraction-free-lauteur-game-of-thrones.html</link>
+		<comments>http://korben.info/lediteur-distraction-free-lauteur-game-of-thrones.html#comments</comments>
+		<pubDate>Thu, 15 May 2014 13:57:01 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Littérature]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=51012</guid>
+		<description><![CDATA[<p>Si vous regardez la série ou que vous avez lu les bouquins Game of Thrones, vous connaissez surement l'auteur : George R.R. Martin. Écrivain américain né en 1948, il a publié le premier volume de la série en 1996 et depuis, il ne s'arrête plus... Récemment, dans une émission présentée par Conan O’Brien sur la [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/lediteur-distraction-free-lauteur-game-of-thrones.html">L&rsquo;éditeur &laquo;&nbsp;Distraction Free&nbsp;&raquo; de l&rsquo;auteur de Game of Thrones</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous regardez la série ou que vous avez lu les bouquins Game of Thrones, vous connaissez surement l'auteur : George R.R. Martin.</p>
+<p>Écrivain américain né en 1948, il a publié le premier volume de la série en 1996 et depuis, il ne s'arrête plus...</p>
+<p>Récemment, dans une émission présentée par Conan O’Brien sur la télévision américaine, il a expliqué sur quoi il bossait. D'un côté il a un ordinateur récent avec Internet pour ses mails, consulter des sites <del>et bien sûr Youporn</del> et de l'autre, un vieux coucou qui tourne exclusivement sous DOS, où est installé WordStar 4.0 et sur lequel il écrit sa saga du Trône de Fer.</p>
+<p>Pour ceux qui sont trop jeunes pour connaitre, voici à quoi ressemblait WordStar 4.0.</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/wordstar-40.jpg"><img class="aligncenter size-full wp-image-51013" src="http://korben.info/wp-content/uploads/2014/05/wordstar-40.jpg" alt="wordstar 40 Léditeur Distraction Free de lauteur de Game of Thrones" width="640" height="400" title="Léditeur Distraction Free de lauteur de Game of Thrones" /></a></p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/lediteur-distraction-free-lauteur-game-of-thrones.jpg"><img class="aligncenter  wp-image-51017" src="http://korben.info/wp-content/uploads/2014/05/lediteur-distraction-free-lauteur-game-of-thrones.jpg" alt="lediteur distraction free lauteur game of thrones Léditeur Distraction Free de lauteur de Game of Thrones" width="647" height="402" title="Léditeur Distraction Free de lauteur de Game of Thrones" /></a></p>
+<p>Ce traitement de texte édité par la société MicroPro est sorti sur les IBM-PC en février 1987 et fusionnait en réalité, le code de WordStar 3.3 et de NewWord, un autre traitement de texte clone des premiers WordStar, racheté en 1986 par MicroPro. Si le sujet vous intéresse, tout l'historique de WordStar <a href="http://www.wordstar.org/index.php/wordstar-history">est ici</a>.</p>
+<p>George RR Martin explique qu'il aime cet ordinateur et ce traitement de texte. Quand il écrit quelque chose, ça ne le corrige pas automatiquement ou ça ne rajoute pas des majuscules là où il n'y en a pas besoin, ce qui est appréciable surtout quand on a à écrire plus de 1000 pages remplies de noms exotiques comme Daenerys Targaryen...</p>
+<p>Ça permet d'écrire du texte et il n'en demande pas plus.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/X5REM-3nWHg?feature=player_detailpage" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>A l'heure où chacun est submergé par les distractions (Twitter, Facebook, emails...etc.) et où tout le monde se trouve un petit éditeur "Distraction-Free" pour rester concentré uniquement sur son texte, c'est plutôt amusant de voir à quel point George RR Martin est à la pointe ;-)</p>
+<p>Pas de jeu, pas de notification, pas d'icônes, pas de correcteur orthographique, ni même de curseur... mais probablement pas non plus de sauvegarde automatique ou d'historique ;-)</p>
+<p>George RR Martin allie à la fois la puissance du rétrocomputing avec ce qui se fait de plus épuré en terme de traitement de texte, et ça lui réussit plutôt bien !</p>
+<p>Amusant en tout cas...</p>
+<p>PS: <a href="http://vetusware.com/download/WordStar%204.00/?id=3443">Et pour télécharger WordStar 4.0...</a> A coupler avec <a href="http://www.dosbox.com/download.php?main=1">DosBox</a>...</p>
+<p><a href="http://www.webpronews.com/george-r-r-martin-writes-everything-on-a-dos-machine-because-spell-check-is-a-huge-pain-in-the-ass-2014-05">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/lediteur-distraction-free-lauteur-game-of-thrones.html">L&rsquo;éditeur &laquo;&nbsp;Distraction Free&nbsp;&raquo; de l&rsquo;auteur de Game of Thrones</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2IgtQdCF90E:KcIXPJCqojM:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2IgtQdCF90E:KcIXPJCqojM:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=2IgtQdCF90E:KcIXPJCqojM:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2IgtQdCF90E:KcIXPJCqojM:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=2IgtQdCF90E:KcIXPJCqojM:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2IgtQdCF90E:KcIXPJCqojM:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2IgtQdCF90E:KcIXPJCqojM:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=2IgtQdCF90E:KcIXPJCqojM:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=2IgtQdCF90E:KcIXPJCqojM:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/2IgtQdCF90E" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/lediteur-distraction-free-lauteur-game-of-thrones.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/lediteur-distraction-free-lauteur-game-of-thrones.html</feedburner:origLink></item>
+		<item>
+		<title>Découvrez Prodigy et gagnez des figurines</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/PWpi3s7D76U/prodigy.html</link>
+		<comments>http://korben.info/prodigy.html#comments</comments>
+		<pubDate>Thu, 15 May 2014 11:54:10 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Jeux vidéos]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50944</guid>
+		<description><![CDATA[<p>Avez-vous entendu parlé de Prodigy ? Il s'agit d'un tactical RPG, réalisé par des Français, qui se joue avec des figurines, des cartes NFC et un plateau branché sur un PC. Une campagne de financement participatif sur Kickstarter a explosé les compteurs en 3 jours et la version alpha sera disponible pour les backers dès [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/prodigy.html">Découvrez Prodigy et gagnez des figurines</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Avez-vous entendu parlé de <a href="http://prodigythegame.com/fr/">Prodigy</a> ?</p>
+<p>Il s'agit d'un tactical RPG, réalisé par <a href="%20https://www.youtube.com/watch?v=V_mGLStU3GY">des Français</a>, qui se joue avec des figurines, des cartes NFC et un plateau branché sur un PC. Une campagne de financement participatif sur <a href="https://www.kickstarter.com/projects/121511007/prodigy-the-game">Kickstarter</a> a explosé les compteurs en 3 jours et la version alpha sera disponible pour les backers dès la fin de cette année. Il y a d'ailleurs déjà des milliers de joueurs enregistrés qui n'attendent que ça.</p>
+<p>Dans Prodigy, chaque action et mouvement des figurines et des cartes sur le plateau est reproduit instantanément sur l'ordinateur et on pourra y jouer en multi local (face à face) ou en solo.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/rT2PZzii1As" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Jean Bey, le CEO d'<strong>Hanakai Studio</strong> est aussi à l'origine du jeu de plateau <a href="http://fr.wikipedia.org/wiki/Confrontation_(jeu_de_figurines)">Confrontation</a> et il s'est dit que ce serait vraiment cool de produit un jeu de plateau qui soit à la fois un jeu vidéo et un jeu IRL. D'où l'idée de <strong>Prodigy</strong>.</p>
+<p>D'un côté, on a donc des figurines sont ultra détaillées, certaines collectors et d'autre atteignant les 20 cm de haut, toutes équipées de puces NFC ainsi que des cartes NFC qui représentent des actions (attaque, défense, mana...) et qui peuvent être combinées pour lancer des attaques. Et en face, un logiciel utilisant le moteur Unreal Engine 4 qui met en scène les personnages et les combats et qui sauvegarde les parties sur les serveurs de Prodigy. Enfin, au milieu de tout ça, un plateau capable de faire le lien entre les objets et la machine.</p>
+<p>Il existe pour le moment deux races, les thorns et les storms luttant l'une contre l'autre. Chaque race dispose d'un gardien, grosse créature qui gère le mana de l'équipe, mais qui est aussi destinée à servir de bouclier. D'ailleurs, une des tactiques consiste à faire prendre les coups à cette créature pour protéger l'équipe quitte à perdre définitivement la possibilité de se soigner ou lancer des attaques spéciales si la créature meurt. Notez que certaines figurines sont démontables. Vous pouvez donc tuer un personnage sur une monture, et cette dernière restera sur le champ de bataille.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/MwWme3VDvQY" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Enfin, pour ne rien gâcher au plaisir de ce jeu épique, la bande originale sera composée par Nicolas Neidhardt (Batman, Pirates des caraïbes...) et Satnam Ramgotra (Man of Steel, Inception...). Ça risque d'envoyer du lourd à la maison.</p>
+<p>Prodigy sera disponible pour tous dès fin 2015 sur Windows puis Linux, OSX et consoles (Xbox One, Xbox 360 PS4 et Wii-U) au prix de 60 € environ.</p>
+<p>J'ai malheureusement loupé le Kickstarter et les packs qui restent sont un peu chers pour ma bourse, mais j'ai hâte de tester ça pour de vrai ;-)</p>
+<p>Le plus mortel là-dedans, c'est que j'ai 20 figurines Prodigy à vous faire gagner. 10 <a href="http://prodigythegame.com/fr/elae/">Elae</a> et 10 <a href="http://prodigythegame.com/fr/toboro/">Toboro</a>. Pour participer, c'est simple, il suffit d'indiquer votre email dans le widget <a href="http://kontestapp.com/">Kontest</a> ci-dessous. Fin du jeu, le 21 mai 2014)</p>
+<div style="width: 520px;"><iframe src="http://contest-xuc8i7.xg1.li/widget" width="520" height="365" frameborder="0"></iframe></div>
+<p>Toutes les infos sont <a href="http://prodigythegame.com/fr/">sur le site de Prodigy</a>.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/prodigy.html">Découvrez Prodigy et gagnez des figurines</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=PWpi3s7D76U:LZ79gF0vgFA:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=PWpi3s7D76U:LZ79gF0vgFA:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=PWpi3s7D76U:LZ79gF0vgFA:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=PWpi3s7D76U:LZ79gF0vgFA:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=PWpi3s7D76U:LZ79gF0vgFA:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=PWpi3s7D76U:LZ79gF0vgFA:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=PWpi3s7D76U:LZ79gF0vgFA:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=PWpi3s7D76U:LZ79gF0vgFA:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=PWpi3s7D76U:LZ79gF0vgFA:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/PWpi3s7D76U" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/prodigy.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/prodigy.html</feedburner:origLink></item>
+		<item>
+		<title>DRM – Pourquoi Mozilla a pris la bonne décision</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/o_W91jWmdf0/drm-mozilla-pris-bonne-decision.html</link>
+		<comments>http://korben.info/drm-mozilla-pris-bonne-decision.html#comments</comments>
+		<pubDate>Thu, 15 May 2014 09:08:48 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Navigateur]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50973</guid>
+		<description><![CDATA[<p>Je suis tombé ce matin sur cet article de l'Electronic Frontier Foundation (EFF) qui regrette la décision de Mozilla d'intégrer le support des DRM (tel que préconisé par le W3C) dans les prochaines versions de Firefox. Baptisée EME pour Encrypted Media Extension, cette techno va permettre à des distributeurs de contenu comme Google, Netflix, Amazon, [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/drm-mozilla-pris-bonne-decision.html">DRM &#8211; Pourquoi Mozilla a pris la bonne décision</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Je suis tombé ce matin sur cet article de l'<a href="https://www.eff.org/deeplinks/2014/05/mozilla-and-drm">Electronic Frontier Foundation</a> (EFF) qui regrette la décision de Mozilla d'intégrer le<strong> support des DRM</strong> (tel que préconisé par le W3C) dans les prochaines versions de Firefox.</p>
+<p>Baptisée <strong>EME</strong> pour Encrypted Media Extension, cette techno va permettre à des distributeurs de contenu comme Google, Netflix, Amazon, Microsoft et d'autres de diffuser leurs trucs avec DRM.</p>
+<p>Comme nous l'a expliqué <a href="http://korben.info/retour-sur-le-drm-dans-html5-le-point-de-vue-de-robin-du-w3c.html">Robin Berjon</a> il y a peu de temps, les discussions du W3C autour de l'EME sont encore en cours et il ne s'agit pas d'un DRM en tant que tel, mais plutôt d'une spécification qui va permettre de faire fonctionner des DRM via HTML5.</p>
+<p>On le sait tous, les DRM, ça ne sert à rien. Ça n'évite pas le piratage, ça ne protège pas les œuvres, pire, ça incite même les gens à pirater ou contourner ces verrous numériques pour pouvoir lire un contenu sur un OS ou un appareil qui ne supporte pas tel ou tel DRM. Je vomis les DRM et nous sommes nombreux à le faire.</p>
+<p>Et Mozilla qui vient donc d'annoncer le support de l'EME et qui se prend une volée de bois vert. Scandale !</p>
+<p>Comment une société prônant le logiciel libre, l'ouverture et la défense de la vie privée peut-elle accepter cela ?</p>
+<p>C'est en substance la position de l'EFF et de beaucoup d'autres barbus sur la toile. Mais à mon sens, la décision de Mozilla est parfaitement logique et est motivée principalement par les internautes eux-mêmes.</p>
+<p>Je m'explique.</p>
+<p>D'un côté, on a tous les fournisseurs de contenus qui veulent mettre leurs DRM. Ce ne sont pas des petites entreprises. On parle ici de Microsoft, de Netflix, de Google, d'Apple et beaucoup d'autres. À côté de ceux-là, on a des navigateurs qui appartiennent à ces mêmes entreprises. Internet Explorer, Chrome, Safari...</p>
+<p>Ensuite de l'autre côté, on a les internautes. Je ne parle pas des 0,5 % d'anti-DRM qui ont des convictions et qui s'y tiennent. Non, je parle de monsieur et madame Tout-le-monde qui veulent que ça marche quand ils vont sur un site.</p>
+<p>Et au milieu, pris dans l'étau... Mozilla.</p>
+<p>Mozilla qui ne veut pas de DRM sur le web et qui se dit forcé d'accepter cette spécification d'EME du W3C. Pour mieux comprendre pourquoi, le mieux c'est peut être de se mettre dans la peau de Mozilla.</p>
+<p>Mozilla c'est une énorme communauté, des employés dans le monde entier, des tonnes de projets sur lesquels ils sont engagés, et des sponsors pour financer tout ça. Mozilla existe depuis juillet 2003 et a parcouru un énorme chemin. La lutte entre les navigateurs est rude et c'est le seul qui soit vraiment libre et indépendant. Mozilla est un trésor commun que nous devons défendre.</p>
+<p>Maintenant, admettons que Mozilla dise au W3C et aux producteurs de contenu : "<em>Go fuck yourself fucking fat ass bitches</em>". En traduction mot à mot : "<em>Allez vous faire voir avec vos DRM de merde</em>".</p>
+<p>Que va-t-il se passer à votre avis ?</p>
+<p>Oui, Netflix, Youtube, Apple and co vont imposer leur DRM partout. IE, Safari et Chrome vont correctement fonctionner avec tous ces sites. Et les utilisateurs de Firefox, eux, vont péter un câble, car pour eux, ça ne fonctionnera pas. Ô bien sûr, ils pourraient suivre Mozilla dans ses convictions et pratiquer un boycott massif des site web qui imposent leurs DRM, mais l'appel d'une bande annonce de X-men sur Youtube ou d'un Game of Thrones sur Netflix sera toujours plus fort.</p>
+<p>Pas toutes mais suffisamment de personnes vont alors déserter Firefox pour cette seule et unique raison.</p>
+<p>Repensez à l'époque pré-HTML5, et imaginez votre vie d'alors sans plugin flash...</p>
+<p>Mozilla le sait et malheureusement, sa seule solution pour ne pas perdre en force, voire mourir, c'est de suivre cette spécification EME. Il y a des symboles et des convictions qu'il faut défendre et il y a la réalité du marché et du monde. Et pour moi, si on veut que les premiers survivent, il faut être suffisamment malin pour savoir s'adapter aux règles de cette réalité.</p>
+<p>C'est moche, c'est difficile, mais il en va de la survie de Mozilla et de ses valeurs. Faire une concession quand on n'est pas en position de force pour pouvoir continuer la partie jusqu'au bout et ne pas laisser le champ libre à des Microsoft, Google ou Apple, c'est, je pense, la meilleure stratégie qu'il y avait à adopter.</p>
+<p>Si demain Mozilla disparaissait, nous serions dans une belle merde et nous n'aurions plus d'alternative sérieuse et ouverte en terme de navigateur.</p>
+<p>Maintenant, je fais confiance à Mozilla depuis longtemps et en ce qui concerne l'intégration de l'EME dans le navigateur Firefox, cela se fera de manière très soft et respectera les convictions de l'internaute. En effet, il sera présent sous la forme d'un module ou d'une option à activer (et non pas activée par défaut), tournera en vase clos dans une sandbox open source, et identifiera les utilisateurs grâce à un ID unique à chaque service et fourni par Firefox, ce qui ne laissera transparaitre aucune info sur vous ou votre machine.</p>
+<p>En gros, le DRM (CDM d'Adobe) n'échangera avec Firefox que des streams de contenu vidéo ou audio et cet ID... C'est un moindre mal et au moins, puisque l'internaute aura le choix, ce qui ne sera probablement pas le cas avec les autres navigateurs.</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/cdm-graphic30.png"><img class="aligncenter size-full wp-image-51004" src="http://korben.info/wp-content/uploads/2014/05/cdm-graphic30.png" alt="cdm graphic30 DRM   Pourquoi Mozilla a pris la bonne décision" width="500" height="742" title="DRM   Pourquoi Mozilla a pris la bonne décision" /></a></p>
+<p>Je vois les insultes et les critiques passer et je trouve la communauté très peu reconnaissante. Le boulot abattu, les combats menés, les outils formidables proposés par Mozilla sont balayés et dénigrés par les mêmes qui encensaient la fondation il y a encore quelques jours. C'est assez violent et je pense qu'on ne devrait pas les condamner trop vite. Ils savent ce qu'ils font et pourquoi ils le font.</p>
+<p>S'adapter ou crever, ce sont les seules options qu'ont les organismes vivants et Mozilla comme beaucoup de sociétés, en est un.</p>
+<p>Qui défendra leurs valeurs et propulsera des outils libres aussi hauts, lorsqu'ils seront enterrés ? Qui reprendra le flambeau et ira affronter Google ou Microsoft ? Tout cela a pris tellement de temps à bâtir que ce serait dommage de tout casser maintenant.</p>
+<p><a href="https://blog.mozilla.org/blog/2014/05/14/drm-and-the-challenge-of-serving-users/">+ d'infos ici</a>.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/drm-mozilla-pris-bonne-decision.html">DRM &#8211; Pourquoi Mozilla a pris la bonne décision</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=o_W91jWmdf0:BRBiMGU2azg:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=o_W91jWmdf0:BRBiMGU2azg:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=o_W91jWmdf0:BRBiMGU2azg:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=o_W91jWmdf0:BRBiMGU2azg:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=o_W91jWmdf0:BRBiMGU2azg:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=o_W91jWmdf0:BRBiMGU2azg:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=o_W91jWmdf0:BRBiMGU2azg:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=o_W91jWmdf0:BRBiMGU2azg:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=o_W91jWmdf0:BRBiMGU2azg:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/o_W91jWmdf0" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/drm-mozilla-pris-bonne-decision.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/drm-mozilla-pris-bonne-decision.html</feedburner:origLink></item>
+		<item>
+		<title>Monument Valley – Le test</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/165KQQLrQFw/monument-valley-test.html</link>
+		<comments>http://korben.info/monument-valley-test.html#comments</comments>
+		<pubDate>Thu, 15 May 2014 07:55:12 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Android]]></category>
+		<category><![CDATA[iOS]]></category>
+		<category><![CDATA[Jeux vidéos]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50971</guid>
+		<description><![CDATA[<p>Monument Valley est un jeu de casse-tête en 3D isométrique qui est une véritable œuvre d'art. Vous incarnez une princesse qui devra trouver la sortie de chaque niveau en bougeant des trucs, en résolvant des énigmes et en rencontrant d'autres personnages. Marion de Nowtech.tv a fait un bon test il y a quelque temps et [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/monument-valley-test.html">Monument Valley &#8211; Le test</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><strong>Monument Valley</strong> est un jeu de casse-tête en 3D isométrique qui est une véritable œuvre d'art. Vous incarnez une princesse qui devra trouver la sortie de chaque niveau en bougeant des trucs, en résolvant des énigmes et en rencontrant d'autres personnages.</p>
+<p>Marion de <a href="http://nowtech.tv/">Nowtech.tv</a> a fait un bon test il y a quelque temps et comme le jeu est sorti sur <strong>Android</strong> depuis quelques heures, je me suis dit que c'était l'occasion de le publier ici.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/ih5vtLgmitQ?feature=player_detailpage" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Alors convaincu ?</p>
+<p>Vous pouvez télécharger Monument Valley <a href="https://itunes.apple.com/us/app/monument-valley/id728293409?mt=8">sur iOS</a> et depuis peu <a href="https://play.google.com/store/apps/details?id=com.ustwo.monumentvalley">sur Android</a> !</p>
+<p>&nbsp;</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/monument-valley-test.html">Monument Valley &#8211; Le test</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=165KQQLrQFw:znhkIg8R5V8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=165KQQLrQFw:znhkIg8R5V8:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=165KQQLrQFw:znhkIg8R5V8:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=165KQQLrQFw:znhkIg8R5V8:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=165KQQLrQFw:znhkIg8R5V8:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=165KQQLrQFw:znhkIg8R5V8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=165KQQLrQFw:znhkIg8R5V8:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=165KQQLrQFw:znhkIg8R5V8:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=165KQQLrQFw:znhkIg8R5V8:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/165KQQLrQFw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/monument-valley-test.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/monument-valley-test.html</feedburner:origLink></item>
+		<item>
+		<title>Spotify sur la ChromeCast</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/KFeMO1WXYFY/spotify-chromecast.html</link>
+		<comments>http://korben.info/spotify-chromecast.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 17:54:41 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Musique]]></category>
+		<category><![CDATA[service web]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50964</guid>
+		<description><![CDATA[<p>Si vous avez opté pour une Chromecast à 35 € histoire de balancer vos films, sites, et musiques sur votre télévision, je pense que cette application va vous intéresser. Cela s'appelle Spoticast, ça fonctionne sous Android et ça permet de jouer de la musique en provenance de Spottify (compte free ou premium) directement sur la [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/spotify-chromecast.html">Spotify sur la ChromeCast</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous avez opté pour une Chromecast à 35 € histoire de balancer vos films, sites, et musiques sur votre télévision, je pense que cette application va vous intéresser.</p>
+<p>Cela s'appelle <strong>Spoticast</strong>, ça fonctionne sous Android et ça permet de jouer de la musique en provenance de Spottify (compte free ou premium) directement sur la Chromecast. En effet, le client officiel Spotify ne supporte pas encore cette fonctionnalité, du coup, Spoticast comble <a href="http://community.spotify.com/t5/Spotify-Ideas/Add-support-for-Google-ChromeCast/idi-p/482900">un gros manque dans la communauté</a>.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/5GPG3954t1U" width="600" height="340" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>L'application n'est pas encore des plus stables, mais elle a le mérite de fonctionner.<strong><br />
+</strong></p>
+<p><strong>Spoticast</strong> <a href="https://play.google.com/store/apps/details?id=com.nop.spoticast">est téléchargeable ici</a>.</p>
+<p>Edit : Sinon, il est aussi possible de caster l'onglet de la <a href="https://play.spotify.com/">version web de Spotify</a>. Merci à Lucas pour l'astuce.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/spotify-chromecast.html">Spotify sur la ChromeCast</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=KFeMO1WXYFY:Ny0cFHSvnSQ:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=KFeMO1WXYFY:Ny0cFHSvnSQ:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=KFeMO1WXYFY:Ny0cFHSvnSQ:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=KFeMO1WXYFY:Ny0cFHSvnSQ:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=KFeMO1WXYFY:Ny0cFHSvnSQ:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=KFeMO1WXYFY:Ny0cFHSvnSQ:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=KFeMO1WXYFY:Ny0cFHSvnSQ:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=KFeMO1WXYFY:Ny0cFHSvnSQ:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=KFeMO1WXYFY:Ny0cFHSvnSQ:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/KFeMO1WXYFY" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/spotify-chromecast.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/spotify-chromecast.html</feedburner:origLink></item>
+		<item>
+		<title>Debuggez vos scripts shell</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/Ixn2fm24F5k/shellcheck.html</link>
+		<comments>http://korben.info/shellcheck.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 17:26:20 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Linux]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50961</guid>
+		<description><![CDATA[<p>Si vous faites un peu de script shell (sh/bash) mais que vous débutez, voici un outil qui va vous permettre de détecter facilement vos erreurs de syntaxes et autres petites boulettes. Cela s'appelle ShellCheck et c'est dispo en ligne (copier-coller-vérifier) ou en téléchargement. ShellCheck est conçu pour vous indiquer en langage courant (en anglais) tous [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/shellcheck.html">Debuggez vos scripts shell</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous faites un peu de script shell (sh/bash) mais que vous débutez, voici un outil qui va vous permettre de détecter facilement vos erreurs de syntaxes et autres petites boulettes. Cela s'appelle <strong>ShellCheck</strong> et c'est dispo <a href="http://www.shellcheck.net/">en ligne</a> (copier-coller-vérifier) ou en <a href="http://www.shellcheck.net/about.html">téléchargement</a>.</p>
+<p><strong>ShellCheck</strong> est conçu pour vous indiquer en langage courant (en anglais) tous les problèmes un peu cryptiques que vous pourriez rencontrer durant l'exécution d'un script shell un poil foireux.</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/terminal.png"><img class="aligncenter size-full wp-image-50962" src="http://korben.info/wp-content/uploads/2014/05/terminal.png" alt="terminal Debuggez vos scripts shell" width="522" height="171" title="Debuggez vos scripts shell" /></a></p>
+<p>Un truc de plus à ajouter dans votre boite à outils.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/shellcheck.html">Debuggez vos scripts shell</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Ixn2fm24F5k:9WQCfvkZlFs:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Ixn2fm24F5k:9WQCfvkZlFs:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Ixn2fm24F5k:9WQCfvkZlFs:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Ixn2fm24F5k:9WQCfvkZlFs:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Ixn2fm24F5k:9WQCfvkZlFs:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Ixn2fm24F5k:9WQCfvkZlFs:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Ixn2fm24F5k:9WQCfvkZlFs:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Ixn2fm24F5k:9WQCfvkZlFs:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Ixn2fm24F5k:9WQCfvkZlFs:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/Ixn2fm24F5k" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/shellcheck.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/shellcheck.html</feedburner:origLink></item>
+		<item>
+		<title>Tout savoir sur les licences Creative Commons en 2 min</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/Q-w0h6g4bhY/savoir-les-licences-creative-commons-en-2-min.html</link>
+		<comments>http://korben.info/savoir-les-licences-creative-commons-en-2-min.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 15:37:34 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Libre]]></category>
+		<category><![CDATA[Vidéo]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50959</guid>
+		<description><![CDATA[<p>Le Ministère de la Culture a réalisé avec Creative Commons France, une petite vidéo qui vous permettra de comprendre exactement comment fonctionnent les licences CC. Du coup, si les licences ouvertes ne sont pas très claires pour vous, je vous invite à regarder ce petit clip. Autrement, même si vous êtes un barbu de la [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/savoir-les-licences-creative-commons-en-2-min.html">Tout savoir sur les licences Creative Commons en 2 min</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><strong>Le Ministère de la Culture</strong> a réalisé avec <strong>Creative Commons France</strong>, une petite vidéo qui vous permettra de comprendre exactement comment fonctionnent les licences CC.</p>
+<p>Du coup, si les licences ouvertes ne sont pas très claires pour vous, je vous invite à regarder ce petit clip. Autrement, même si vous êtes un barbu de la licence, c'est toujours bon à avoir sous la main pour montrer à vos amis ou votre famille qui est peu ou pas familier avec ce concept.</p>
+<p style="text-align: center;"><iframe frameborder="0" width="600" height="340" src="//www.dailymotion.com/embed/video/x1tg4gv" allowfullscreen></iframe><br /><a href="http://www.dailymotion.com/video/x1tg4gv_les-licences-creative-commons_webcam" target="_blank">Les licences Creative Commons</a> <i>par <a href="http://www.dailymotion.com/culture-gouv" target="_blank">culture-gouv</a></i></p>
+<p>Histoire d'appliquer la leçon eux-même, toutes les données des sites culture.fr et culturecommunication.gouv.fr <a href="http://www.culture.fr/Mentions-legales">sont maintenant</a> placées sous licence CC.</p>
+<p>C'est important de souligner les bonnes initiatives, tout comme <a href="http://www.zdnet.fr/actualites/rapport-miq-contre-le-telechargement-des-propositions-un-peu-justes-39801077.htm">les idées de merde</a>, n'est ce pas Mireille ?</p>
+<p>Si vous voulez en savoir plus sur les licences Creative Commons, je vous invite <a href="http://creativecommons.fr/licences/les-6-licences/">à vous rendre ici</a>.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/savoir-les-licences-creative-commons-en-2-min.html">Tout savoir sur les licences Creative Commons en 2 min</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Q-w0h6g4bhY:0Q16Tap7Ruk:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Q-w0h6g4bhY:0Q16Tap7Ruk:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Q-w0h6g4bhY:0Q16Tap7Ruk:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Q-w0h6g4bhY:0Q16Tap7Ruk:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Q-w0h6g4bhY:0Q16Tap7Ruk:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Q-w0h6g4bhY:0Q16Tap7Ruk:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Q-w0h6g4bhY:0Q16Tap7Ruk:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Q-w0h6g4bhY:0Q16Tap7Ruk:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Q-w0h6g4bhY:0Q16Tap7Ruk:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/Q-w0h6g4bhY" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/savoir-les-licences-creative-commons-en-2-min.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/savoir-les-licences-creative-commons-en-2-min.html</feedburner:origLink></item>
+		<item>
+		<title>Nuit du Hack 2014 – 10 places à gagner</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/urokiKBEviM/nuit-du-hack-2014-10-places-gagner.html</link>
+		<comments>http://korben.info/nuit-du-hack-2014-10-places-gagner.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 14:54:36 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Concours]]></category>
+		<category><![CDATA[Sécurité]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50942</guid>
+		<description><![CDATA[<p>Les amis, j'ai une excellente nouvelle pour vous ! Si vous souhaitez vous immerger dans le plus imposant et le plus connu des événements liés à la sécurité informatique en France, ça tombe bien car j'ai des places à vous filer. Plus exactement 10 places pour pouvoir venir à la Nuit du Hack qui aura [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/nuit-du-hack-2014-10-places-gagner.html">Nuit du Hack 2014 &#8211; 10 places à gagner</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Les amis, j'ai une excellente nouvelle pour vous ! Si vous souhaitez vous immerger dans le plus imposant et le plus connu des événements liés à la sécurité informatique en France, ça tombe bien car j'ai des places à vous filer.</p>
+<p>Plus exactement 10 places pour pouvoir venir à la <strong><a href="http://www.nuitduhack.com/">Nuit du Hack</a></strong> qui aura lieu du <strong>28 au 29 juin à Disneyland Paris</strong>. Au programme des conférences, des workshops, des rencontres, mais aussi un CTF (Capture The Flag) durant lequel vous verrez les meilleures équipes s'affronter.</p>
+<p>Il y aura aussi des petites nouveautés comme le <a href="https://www.nuitduhack.com/challenges-nuit-du-hack%20">Bug Bounty</a> qui vous récompensera si vous trouvez une faille dans un soft et que vous codez l'exploit qui va bien avec. Il y a aussi <a href="https://www.nuitduhack.com/challenges-nuit-du-hack%20">Sploit'n'Drink</a> qui permettra de tester vos capacités de développement durant une soirée arrosée, l'espace <a href="https://www.nuitduhack.com/ndh-kids%20pour les enfants">NDH Kids</a> qui proposera aux enfants de s'initier au monde de la sécurité, sans oublier l'espace Yes We Hack où plusieurs dizaines de sociétés seront présentes pour recruter des experts en sécurité. D'ailleurs, si vous recrutez ce type de profils et que vous voulez être présent, contactez <a href="https://yeswehack.com/contact">l'équipe de Yes We Hack</a>.</p>
+<p>Beaucoup de choses donc pour cette nouvelle édition 2014 !</p>
+<p>Ça va envoyer du lourd comme tous les ans. D'ailleurs, on connait enfin <a href="https://www.nuitduhack.com/talks">le détail de la plupart des conférences </a>:</p>
+<table class="views-table cols-3" style="height: 325px;" width="664">
+<tbody>
+<tr class="odd views-row-first">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/223">[FR] Break, dump &amp; crash</a></td>
+<td class="views-field views-field-field-auteur-value">Virtualabs</td>
+</tr>
+<tr class="even">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/225">[FR] Retro-arcades protections &amp; hacking</a></td>
+<td class="views-field views-field-field-auteur-value">CrashTest</td>
+</tr>
+<tr class="odd">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/227">[EN] Around the world in 80 Cons</a></td>
+<td class="views-field views-field-field-auteur-value">Jayson Street</td>
+</tr>
+<tr class="even">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/228">[EN] Defeating Memory Corruption Attacks by Replication and Diversification</a></td>
+<td class="views-field views-field-field-auteur-value">Marc Nimmerrichter</td>
+</tr>
+<tr class="odd">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/229">[FR] Use CNC and 3D to cut your own mechanical keys</a></td>
+<td class="views-field views-field-field-auteur-value">Mr Jack</td>
+</tr>
+<tr class="even">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/231">[EN] Take care of your inputs</a></td>
+<td class="views-field views-field-field-auteur-value">Zakaria Rachid &amp; Borja Berástegui</td>
+</tr>
+<tr class="odd">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/232">[FR] A common weakness in RSA signatures</a></td>
+<td class="views-field views-field-field-auteur-value">Renaud Lifchitz</td>
+</tr>
+<tr class="even">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/233">[EN] Combating Evasive Malware</a></td>
+<td class="views-field views-field-field-auteur-value">Marco Cova</td>
+</tr>
+<tr class="odd">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/234">[FR] Coucou, tu veux voir ma domotique ?</a></td>
+<td class="views-field views-field-field-auteur-value">Vorex &amp; Virtualabs</td>
+</tr>
+<tr class="even">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/236">[EN] Security Threats for Instant Messaging Platforms</a></td>
+<td class="views-field views-field-field-auteur-value">Jaime Sanchez</td>
+</tr>
+<tr class="odd">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/237">[FR] Using a basic bathroom scale to remotly follow a behive production</a></td>
+<td class="views-field views-field-field-auteur-value">Electrolab</td>
+</tr>
+<tr class="even">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/239">[FR] La tête dans les nuages</a></td>
+<td class="views-field views-field-field-auteur-value">Matthieu Bouthors</td>
+</tr>
+<tr class="odd views-row-last">
+<td class="views-field views-field-field-heure-value active"></td>
+<td class="views-field views-field-title"><a href="http://www.nuitduhack.com/node/241">[FR] Keynote</a></td>
+<td class="views-field views-field-field-auteur-value">Benjamin Bayart</td>
+</tr>
+</tbody>
+</table>
+<p>Du beau monde dont Benjamin Bayart en tête d'affiche ;-)</p>
+<p>Alors chaud patate pour venir ? Le détail du planning <a href="https://www.nuitduhack.com/planning">est ici</a>.</p>
+<p>3 choses importantes à savoir :</p>
+<ul>
+<li>1/ <a href="http://www.nuitduhack.com/inscription">Pour acheter les places c'est par ici</a></li>
+<li>2/ Pour les goodies, vous avez jusqu'à vendredi pour les acheter en ligne. Ils ne seront pas vendus sur place cette année. Il y a des <a href="https://www.nuitduhack.com/tshirt-nuit-du-hack-fr">t-shirts</a> et des <a href="https://www.nuitduhack.com/badge-collector-nuit-du-hack">badges collectors</a>.</li>
+<li>3/ Je serai présent jusqu'au bout de la nuit ou presque pour faire la fiesta avec vous et papoter</li>
+</ul>
+<p>Pour les 10 places à gagner, vous pouvez tenter votre chance ici avec une petite partie de 2048 (fin dimanche soir).</p>
+<div style="width:520px;">
+  <iframe src="http://contest-ha5v56.xg1.li/web" height="900" width="520" frameborder="0"></iframe>
+</div>
+<p>Autrement, si vous souhaitez vraiment venir et que vous ne voulez pas laisser passer votre chance d'avoir le sésame magique, <a href="http://www.nuitduhack.com/inscription">vous pouvez réserver ici directement</a>.</p>
+<p>On se voit là bas ?</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/nuit-du-hack-2014-10-places-gagner.html">Nuit du Hack 2014 &#8211; 10 places à gagner</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=urokiKBEviM:sFAFbmHNs84:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=urokiKBEviM:sFAFbmHNs84:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=urokiKBEviM:sFAFbmHNs84:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=urokiKBEviM:sFAFbmHNs84:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=urokiKBEviM:sFAFbmHNs84:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=urokiKBEviM:sFAFbmHNs84:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=urokiKBEviM:sFAFbmHNs84:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=urokiKBEviM:sFAFbmHNs84:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=urokiKBEviM:sFAFbmHNs84:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/urokiKBEviM" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/nuit-du-hack-2014-10-places-gagner.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/nuit-du-hack-2014-10-places-gagner.html</feedburner:origLink></item>
+		<item>
+		<title>10 bidouilles à connaitre</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/N3S5VVG46Jo/10-bidouilles-connaitre.html</link>
+		<comments>http://korben.info/10-bidouilles-connaitre.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 14:43:43 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[DIY]]></category>
+		<category><![CDATA[Vidéo]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50950</guid>
+		<description><![CDATA[<p>Le fameux Crazy Russian Hacker qu'on ne présente plus tant ses vidéos font le tour de la toile, a réalisé une compilation de ses meilleures bidouilles concernant la survie. Je me suis dit que ça vous intéresserait... Notez qu'il a beaucoup d'autres vidéos disponibles ici. C'est vraiment à suivre, car il y a souvent des [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/10-bidouilles-connaitre.html">10 bidouilles à connaitre</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Le fameux <strong>Crazy Russian Hacker</strong> qu'on ne présente plus tant ses vidéos font le tour de la toile, a réalisé une compilation de ses meilleures bidouilles concernant la survie.</p>
+<p>Je me suis dit que ça vous intéresserait...</p>
+<p><iframe src="//www.youtube.com/embed/ybyHcWynSx4?feature=player_detailpage" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Notez qu'il a <a href="https://www.youtube.com/user/CrazyRussianHacker">beaucoup d'autres vidéos disponibles ici</a>. C'est vraiment à suivre, car il y a souvent des pépites.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/10-bidouilles-connaitre.html">10 bidouilles à connaitre</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N3S5VVG46Jo:y9hnVZQlZ4g:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N3S5VVG46Jo:y9hnVZQlZ4g:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=N3S5VVG46Jo:y9hnVZQlZ4g:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N3S5VVG46Jo:y9hnVZQlZ4g:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=N3S5VVG46Jo:y9hnVZQlZ4g:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N3S5VVG46Jo:y9hnVZQlZ4g:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N3S5VVG46Jo:y9hnVZQlZ4g:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=N3S5VVG46Jo:y9hnVZQlZ4g:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N3S5VVG46Jo:y9hnVZQlZ4g:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/N3S5VVG46Jo" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/10-bidouilles-connaitre.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/10-bidouilles-connaitre.html</feedburner:origLink></item>
+		<item>
+		<title>Comment fabriquer la famille Simpsons en LEGO ?</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/Vxa12pDnBxk/comment-fabriquer-famille-simpsons-en-lego.html</link>
+		<comments>http://korben.info/comment-fabriquer-famille-simpsons-en-lego.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 14:05:21 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Série]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50946</guid>
+		<description><![CDATA[<p>C'est mercredi après-midi et vous cherchez une idée d'atelier pour occuper les enfants ou simplement vous occuper vous ? Ne cherchez plus et regardez cette petite vidéo mise en ligne par Nightly News at Nine qui vous expliquera comment, à partir de quelques briques (courantes) de LEGO, fabriquer vous-même Marge, Homer, Bart, Lisa et Maggie. [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/comment-fabriquer-famille-simpsons-en-lego.html">Comment fabriquer la famille Simpsons en LEGO ?</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>C'est mercredi après-midi et vous cherchez une idée d'atelier pour occuper les enfants ou simplement vous occuper vous ?</p>
+<p>Ne cherchez plus et regardez cette petite vidéo mise en ligne par Nightly News at Nine qui vous expliquera comment, à partir de quelques briques (courantes) de LEGO, fabriquer vous-même Marge, Homer, Bart, Lisa et Maggie.</p>
+<p>Bon montage !</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/KtjjS9P0ebM?feature=player_embedded" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p style="text-align: left;"><a href="https://www.youtube.com/watch?v=9xL3U41Awws">Bonus</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/comment-fabriquer-famille-simpsons-en-lego.html">Comment fabriquer la famille Simpsons en LEGO ?</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Vxa12pDnBxk:s7IDJxJgug0:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Vxa12pDnBxk:s7IDJxJgug0:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Vxa12pDnBxk:s7IDJxJgug0:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Vxa12pDnBxk:s7IDJxJgug0:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Vxa12pDnBxk:s7IDJxJgug0:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Vxa12pDnBxk:s7IDJxJgug0:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Vxa12pDnBxk:s7IDJxJgug0:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Vxa12pDnBxk:s7IDJxJgug0:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Vxa12pDnBxk:s7IDJxJgug0:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/Vxa12pDnBxk" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/comment-fabriquer-famille-simpsons-en-lego.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/comment-fabriquer-famille-simpsons-en-lego.html</feedburner:origLink></item>
+		<item>
+		<title>Glorious Leader</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/1Zk87Po1e_U/glorious-leader.html</link>
+		<comments>http://korben.info/glorious-leader.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 11:03:36 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Jeux vidéos]]></category>
+		<category><![CDATA[Vidéo]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50938</guid>
+		<description><![CDATA[<p>Je n'ai pas réussi à savoir si c'était un vrai jeu ou une grosse connerie, mais le fait est que l'éditeur Moneyhorse (Qui les connait ?) annonce partout qu'ils vont sortir un jeu dont le héros n'est autre que Kim Jung Un. Celui-ci combat le méchant capitalisme avec un style rétro tout à fait excellent. [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/glorious-leader.html">Glorious Leader</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Je n'ai pas réussi à savoir si c'était un vrai jeu ou une grosse connerie, mais le fait est que l'éditeur <a href="http://www.moneyhorsegames.com/">Moneyhorse</a> (Qui les connait ?) annonce partout qu'ils vont sortir un jeu dont le héros n'est autre que Kim Jung Un.</p>
+<p>Celui-ci combat le méchant capitalisme avec un style rétro tout à fait excellent. Au menu, chevauchée de licorne, partie de basket avec Dennis Rodman, éclatage de la Corée du Sud...etc. Du grand art !</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/j8_X-9AIG-c?feature=player_embedded" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Reste à voir si ce jeu sortira un jour...</p>
+<p>Après si le jeu vidéo nord-coréen vous intéresse vraiment, je vous invite à jeter un oeil à <a href="http://korben.info/pyongyang-racer.html">Pyongyang Racer</a>.</p>
+<p>Merci à <a title="Je dis +1 pour Voteman" href="http://twitter.com/au_taquet">Paul</a> pour le partage.</p>
+<p>&nbsp;</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/glorious-leader.html">Glorious Leader</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=1Zk87Po1e_U:BgzbjPlZ3q8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=1Zk87Po1e_U:BgzbjPlZ3q8:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=1Zk87Po1e_U:BgzbjPlZ3q8:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=1Zk87Po1e_U:BgzbjPlZ3q8:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=1Zk87Po1e_U:BgzbjPlZ3q8:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=1Zk87Po1e_U:BgzbjPlZ3q8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=1Zk87Po1e_U:BgzbjPlZ3q8:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=1Zk87Po1e_U:BgzbjPlZ3q8:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=1Zk87Po1e_U:BgzbjPlZ3q8:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/1Zk87Po1e_U" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/glorious-leader.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/glorious-leader.html</feedburner:origLink></item>
+		<item>
+		<title>Babun – Enfin un vrai terminal sous Windows</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/lLz0vwKoJeA/babun-enfin-vrai-terminal-windows.html</link>
+		<comments>http://korben.info/babun-enfin-vrai-terminal-windows.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 10:44:17 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Développement]]></category>
+		<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Windows]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50935</guid>
+		<description><![CDATA[<p>Si il y a un truc sur lequel je passe pas mal de temps, c'est bien la console de mon système d'exploitation. Que ce soit sous OSX ou Linux, c'est le bonheur. Mais quand il s'agit de passer sous Windows, ça devient l'horreur. En effet, le terminal de Windows est une abomination lorsqu'il s'agit de [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/babun-enfin-vrai-terminal-windows.html">Babun &#8211; Enfin un vrai terminal sous Windows</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si il y a un truc sur lequel je passe pas mal de temps, c'est bien la console de mon système d'exploitation. Que ce soit sous OSX ou Linux, c'est le bonheur. Mais quand il s'agit de passer sous Windows, ça devient l'horreur.</p>
+<p>En effet, le terminal de Windows est une abomination lorsqu'il s'agit de l'utiliser quotidiennement. Et quand on a plus l'habitude d'utiliser son clavier que sa souris, ça devient rapidement problématique.</p>
+<p>Heureusement, il existe <strong><a href="http://babun.github.io/">Babun</a></strong>, une interface en ligne de commande qui remplace la console de Windows et qui apporte pas mal d'outils et de confort. On y retrouve un Cygwin préconfiguré avec son lot de commandes unix en environnement Windows, un gestionnaire de paquet comme apt-get sauf que celui-là s'appelle pact. Et surtout de la coloration syntaxique, le support de plugins, pas mal de scripts et d'alias par défaut, le support natif de git...etc.</p>
+<p>C'est vraiment très complet et avec <strong>Babun</strong>, vous approcherez enfin le niveau de fonctionnalités que d'autres ont sous Linux ou OSX. Voici une démo en vidéo pour vous donner un aperçu :</p>
+<p style="text-align: center;"><iframe src="//player.vimeo.com/video/95045348" width="600" height="320" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></p>
+<p>Si Babun vous intéresse, <a href="http://babun.github.io/">vous pouvez le télécharger ici</a>.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/babun-enfin-vrai-terminal-windows.html">Babun &#8211; Enfin un vrai terminal sous Windows</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=lLz0vwKoJeA:hwsSPQBZzOE:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=lLz0vwKoJeA:hwsSPQBZzOE:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=lLz0vwKoJeA:hwsSPQBZzOE:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=lLz0vwKoJeA:hwsSPQBZzOE:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=lLz0vwKoJeA:hwsSPQBZzOE:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=lLz0vwKoJeA:hwsSPQBZzOE:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=lLz0vwKoJeA:hwsSPQBZzOE:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=lLz0vwKoJeA:hwsSPQBZzOE:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=lLz0vwKoJeA:hwsSPQBZzOE:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/lLz0vwKoJeA" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/babun-enfin-vrai-terminal-windows.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/babun-enfin-vrai-terminal-windows.html</feedburner:origLink></item>
+		<item>
+		<title>Octotree – Faites grimper Github dans l’arbre</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/3ImtY171d4I/octotree.html</link>
+		<comments>http://korben.info/octotree.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 10:29:34 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Navigateur]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50933</guid>
+		<description><![CDATA[<p>Si vous passez beaucoup de temps sur Github et que vous souhaitez parcourir les sources des projets plus rapidement et de manière un peu plus agréable, j'ai ce qu'il vous faut. Il s'agit d'une extension nommée Octotree, pour Chrome uniquement qui ouvrira automatiquement sur la gauche d'une page Github, un arbre des fichiers à parcourir. [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/octotree.html">Octotree &#8211; Faites grimper Github dans l&rsquo;arbre</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous passez beaucoup de temps sur <a href="http://github.com">Github</a> et que vous souhaitez parcourir les sources des projets plus rapidement et de manière un peu plus agréable, j'ai ce qu'il vous faut.</p>
+<p>Il s'agit d'une extension nommée <strong><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc">Octotree</a></strong>, pour Chrome uniquement qui ouvrira automatiquement sur la gauche d'une page Github, un arbre des fichiers à parcourir. Vous pourrez ainsi inspecter les sources de manière instantanée aussi bien sur les dépôts publics que les dépôts privés. Plus la peine d'attendre que la page charge, et pour ouvrir le fichier, il suffit simplement de double cliquer dessus.</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/octotree.jpg"><img class="aligncenter wp-image-50934 size-full" src="http://korben.info/wp-content/uploads/2014/05/octotree.jpg" alt="octotree Octotree   Faites grimper Github dans larbre" width="650" height="489" title="Octotree   Faites grimper Github dans larbre" /></a></p>
+<p>Pratique !</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/octotree.html">Octotree &#8211; Faites grimper Github dans l&rsquo;arbre</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=3ImtY171d4I:fdULBQcsMkA:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=3ImtY171d4I:fdULBQcsMkA:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=3ImtY171d4I:fdULBQcsMkA:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=3ImtY171d4I:fdULBQcsMkA:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=3ImtY171d4I:fdULBQcsMkA:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=3ImtY171d4I:fdULBQcsMkA:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=3ImtY171d4I:fdULBQcsMkA:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=3ImtY171d4I:fdULBQcsMkA:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=3ImtY171d4I:fdULBQcsMkA:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/3ImtY171d4I" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/octotree.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/octotree.html</feedburner:origLink></item>
+		<item>
+		<title>Un #nofilter sur Instagram ? Oh vraiment ?</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/Fqf9QgkSl4o/nofilter-instagram-oh-vraiment.html</link>
+		<comments>http://korben.info/nofilter-instagram-oh-vraiment.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 09:55:38 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[service web]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50928</guid>
+		<description><![CDATA[<p>Si vous utilisez Instagram, vous connaissez sans doute le hashtag #nofilter qui signifie qu'aucun filtre n'a été ajouté sur la photo. Le but non avoué de ce hashtag est de dire : "Tu vois, je suis dans un endroit tellement merveilleux que ce que tu regardes sur ton smartphone est exactement ce que je vois [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/nofilter-instagram-oh-vraiment.html">Un #nofilter sur Instagram ? Oh vraiment ?</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous utilisez <strong>Instagram</strong>, vous connaissez sans doute le hashtag <strong>#nofilter</strong> qui signifie qu'aucun filtre n'a été ajouté sur la photo. Le but non avoué de ce hashtag est de dire : "<em>Tu vois, je suis dans un endroit tellement merveilleux que ce que tu regardes sur ton smartphone est exactement ce que je vois avec mes yeux. C'est super beau, pas besoin d'ajouter de filtre pour magnifier tout ça. Sois jaloux de moi.</em>"</p>
+<p>Seulement voilà, il y a toujours des petits malins qui trichent. Et ces petits malins, vous allez pouvoir les débusquer grâce à <a href="http://filterfakers.com/catcher">FilterFakers</a>, un site capable de détecter la présence d'un filtre sur une photo Instagram.</p>
+<p style="text-align: center;"><a title="" href="http://korben.info/wp-content/uploads/2014/05/nofilter-instagram-oh-vraiment.jpg"><img class="aligncenter size-new-size wp-image-50929" title="" src="http://korben.info/wp-content/uploads/2014/05/nofilter-instagram-oh-vraiment-650x547.jpg" alt="nofilter instagram oh vraiment 650x547 Un #nofilter sur Instagram ? Oh vraiment ?" width="650" height="547" /></a></p>
+<p>Et bien évidemment, lorsqu'un tricheur est débusqué, sa photo <a href="http://filterfakers.com/">est publiée sur le site</a>. Bon j'avoue, c'est le truc con et inutile au possible, mais y'a quand même de quoi s'amuser avec vos amis qui abusent du #nofilter ;-)</p>
+<p><a href="http://www.webpronews.com/no-filter-site-catches-instagrams-biggest-liars-2014-05">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/nofilter-instagram-oh-vraiment.html">Un #nofilter sur Instagram ? Oh vraiment ?</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Fqf9QgkSl4o:nzUQfmzccbY:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Fqf9QgkSl4o:nzUQfmzccbY:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Fqf9QgkSl4o:nzUQfmzccbY:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Fqf9QgkSl4o:nzUQfmzccbY:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Fqf9QgkSl4o:nzUQfmzccbY:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Fqf9QgkSl4o:nzUQfmzccbY:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Fqf9QgkSl4o:nzUQfmzccbY:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=Fqf9QgkSl4o:nzUQfmzccbY:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=Fqf9QgkSl4o:nzUQfmzccbY:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/Fqf9QgkSl4o" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/nofilter-instagram-oh-vraiment.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/nofilter-instagram-oh-vraiment.html</feedburner:origLink></item>
+		<item>
+		<title>15 Comics Batman à gagner + de jolis fonds d’écran</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/u42y-HxMp4M/15-comics-batman-gagner-jolis-fonds-decran.html</link>
+		<comments>http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 08:44:44 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Concours]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50877</guid>
+		<description><![CDATA[<p>Batman étant à l'honneur cette semaine sur Korben.info parce que le monsieur fête quand même ses 75 ans, avec Urban Comics on s'est dit que ce serait sympa de vous faire gagner des comics. Et pas n'importe quel comic book puisqu'il s'agit de Grant Morrison présente Batman tome 1 : L'héritage maudit. Pour ceux qui [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html">15 Comics Batman à gagner + de jolis fonds d&rsquo;écran</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><strong>Batman</strong> étant à l'honneur cette semaine sur <strong>Korben.info</strong> parce que le monsieur fête quand même ses 75 ans, avec <strong><a href="http://bit.ly/1jLaA8v">Urban Comics</a></strong> on s'est dit que ce serait sympa de vous faire gagner des comics.</p>
+<p>Et pas n'importe quel comic book puisqu'il s'agit de <span id="btAsinTitle"><span style="padding-left: 0;"><strong>Grant Morrison présente Batman tome 1 : L'héritage maudit</strong>.</span></span></p>
+<p>Pour ceux qui ne connaitraient pas Grant Morrison, il s'agit d'un scénariste anglais qui a bossé pour Marvel et surtout DC Comics sur des titres comme Animal Man, Doom Patrol, The Invisibles, la Justice League of America, et bien sûr Batman qu'il a modernisé.</p>
+<p>Dans ce tome 1, Batman a déjà affronté Talia Al Ghul et son empire du crime à plusieurs reprises, mais leur lutte prend un tour bien plus personnel lorsqu’elle présente au héros le fils issu de leur union : Damian !</p>
+<p>Oui, Batman est papa ! Félicitations ! Malgré son jeune âge, Damian est déjà un assassin de renom et Tim Drake, alias Robin, ne tarde pas à en faire les frais ! Pour Batman, c’est le début d’une épopée qui va l’amener à revisiter toute son histoire et redécouvrir des alliés comme des ennemis passés.</p>
+<p>J'ai 15 exemplaires rien que pour vous alors si vous souhaitez participer :</p>
+<div style="width: 520px;"><iframe src="http://contest-392avr.xg1.li/widget" width="520" height="365" frameborder="0"></iframe></div>
+<p style="text-align: left;">Ah et si vous aimez très très fort l'homme chauve souris, <a href="http://bit.ly/1jLaA8v">il y a de jolis fonds d'écran à télécharger ici</a>.</p>
+<p>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batman-3'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batman-150x150.jpg" class="attachment-thumbnail" alt="batman 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batman2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batman2-150x150.jpg" class="attachment-thumbnail" alt="batman2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batman3'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batman3-150x150.jpg" class="attachment-thumbnail" alt="batman3 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batman4'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batman4-150x150.jpg" class="attachment-thumbnail" alt="batman4 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanam%c2%8arevictoire1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanamrevictoire1-150x150.jpg" class="attachment-thumbnail" alt="batmanamrevictoire1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanam%c2%8arevictoire2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanamrevictoire2-150x150.jpg" class="attachment-thumbnail" alt="batmanamrevictoire2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanann%c2%82eune1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmananneune1-150x150.jpg" class="attachment-thumbnail" alt="batmananneune1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanann%c2%82eune12'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmananneune12-150x150.jpg" class="attachment-thumbnail" alt="batmananneune12 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanann%c2%82eune13'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmananneune13-150x150.jpg" class="attachment-thumbnail" alt="batmananneune13 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanarkhamcity1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanarkhamcity1-150x150.jpg" class="attachment-thumbnail" alt="batmanarkhamcity1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanarkhamcity2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanarkhamcity2-150x150.jpg" class="attachment-thumbnail" alt="batmanarkhamcity2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanarkhamcity4'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanarkhamcity4-150x150.jpg" class="attachment-thumbnail" alt="batmanarkhamcity4 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanlanouvelleaube'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanlanouvelleaube-150x150.jpg" class="attachment-thumbnail" alt="batmanlanouvelleaube 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanlanouvelleaube2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanlanouvelleaube2-150x150.jpg" class="attachment-thumbnail" alt="batmanlanouvelleaube2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmanlanouvelleaube3'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmanlanouvelleaube3-150x150.jpg" class="attachment-thumbnail" alt="batmanlanouvelleaube3 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmansombrereflettome21'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmansombrereflettome21-150x150.jpg" class="attachment-thumbnail" alt="batmansombrereflettome21 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmansombrereflettome22'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmansombrereflettome22-150x150.jpg" class="attachment-thumbnail" alt="batmansombrereflettome22 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batmansombrereflettome23'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batmansombrereflettome23-150x150.jpg" class="attachment-thumbnail" alt="batmansombrereflettome23 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batwoman1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batwoman1-150x150.jpg" class="attachment-thumbnail" alt="batwoman1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batwoman01'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batwoman01-150x150.jpg" class="attachment-thumbnail" alt="batwoman01 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batwoman02'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batwoman02-150x150.jpg" class="attachment-thumbnail" alt="batwoman02 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/batwoman12'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/batwoman12-150x150.jpg" class="attachment-thumbnail" alt="batwoman12 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/braveandthebold1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/braveandthebold1-150x150.jpg" class="attachment-thumbnail" alt="braveandthebold1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/braveandthebold2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/braveandthebold2-150x150.jpg" class="attachment-thumbnail" alt="braveandthebold2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/braveandthebold3'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/braveandthebold3-150x150.jpg" class="attachment-thumbnail" alt="braveandthebold3 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/braveandthebold4'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/braveandthebold4-150x150.jpg" class="attachment-thumbnail" alt="braveandthebold4 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/braveandthebold5'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/braveandthebold5-150x150.jpg" class="attachment-thumbnail" alt="braveandthebold5 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/dccomicsanthologie3'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/dccomicsanthologie3-150x150.jpg" class="attachment-thumbnail" alt="dccomicsanthologie3 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/gmpresentebatman1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/gmpresentebatman1-150x150.jpg" class="attachment-thumbnail" alt="gmpresentebatman1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/gmpresentebatman12'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/gmpresentebatman12-150x150.jpg" class="attachment-thumbnail" alt="gmpresentebatman12 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/gmpresentebatman13'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/gmpresentebatman13-150x150.jpg" class="attachment-thumbnail" alt="gmpresentebatman13 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/gmpresentebatman21'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/gmpresentebatman21-150x150.jpg" class="attachment-thumbnail" alt="gmpresentebatman21 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/gmpresentebatman22'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/gmpresentebatman22-150x150.jpg" class="attachment-thumbnail" alt="gmpresentebatman22 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/gmpresentebatman23'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/gmpresentebatman23-150x150.jpg" class="attachment-thumbnail" alt="gmpresentebatman23 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/gmpresentebatman24'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/gmpresentebatman24-150x150.jpg" class="attachment-thumbnail" alt="gmpresentebatman24 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/kingdomcome'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/kingdomcome-150x150.jpg" class="attachment-thumbnail" alt="kingdomcome 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/knightfall1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/knightfall1-150x150.jpg" class="attachment-thumbnail" alt="knightfall1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/knightfall12'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/knightfall12-150x150.jpg" class="attachment-thumbnail" alt="knightfall12 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/lechevaliernoir1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/lechevaliernoir1-150x150.jpg" class="attachment-thumbnail" alt="lechevaliernoir1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/lechevaliernoir2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/lechevaliernoir2-150x150.jpg" class="attachment-thumbnail" alt="lechevaliernoir2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/lechevaliernoir3'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/lechevaliernoir3-150x150.jpg" class="attachment-thumbnail" alt="lechevaliernoir3 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/revanchedebane1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/revanchedebane1-150x150.jpg" class="attachment-thumbnail" alt="revanchedebane1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/revanchedebane2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/revanchedebane2-150x150.jpg" class="attachment-thumbnail" alt="revanchedebane2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/revanchedebane3'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/revanchedebane3-150x150.jpg" class="attachment-thumbnail" alt="revanchedebane3 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/sombrereflet1'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/sombrereflet1-150x150.jpg" class="attachment-thumbnail" alt="sombrereflet1 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+<a href='http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/sombrereflet2'><img width="150" height="150" src="http://korben.info/wp-content/uploads/2014/05/sombrereflet2-150x150.jpg" class="attachment-thumbnail" alt="sombrereflet2 150x150 15 Comics Batman à gagner + de jolis fonds décran"  title="15 Comics Batman à gagner + de jolis fonds décran" /></a>
+</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html">15 Comics Batman à gagner + de jolis fonds d&rsquo;écran</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=u42y-HxMp4M:pCsR7XqPIck:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=u42y-HxMp4M:pCsR7XqPIck:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=u42y-HxMp4M:pCsR7XqPIck:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=u42y-HxMp4M:pCsR7XqPIck:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=u42y-HxMp4M:pCsR7XqPIck:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=u42y-HxMp4M:pCsR7XqPIck:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=u42y-HxMp4M:pCsR7XqPIck:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=u42y-HxMp4M:pCsR7XqPIck:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=u42y-HxMp4M:pCsR7XqPIck:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/u42y-HxMp4M" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/15-comics-batman-gagner-jolis-fonds-decran.html</feedburner:origLink></item>
+		<item>
+		<title>Syncthing – Un clone de BTSync pour se débarrasser de Dropbox</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/nojHXs_FFjw/syncthing.html</link>
+		<comments>http://korben.info/syncthing.html#comments</comments>
+		<pubDate>Wed, 14 May 2014 08:12:47 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Download]]></category>
+		<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Linux]]></category>
+		<category><![CDATA[Mac OSX]]></category>
+		<category><![CDATA[Windows]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50871</guid>
+		<description><![CDATA[<p>Je vous ai déjà parlé à plusieurs reprises de BTSync, le logiciel de synchronisation P2P initié par Bittorrent. Il est top, mais y'a 2 trucs qui me gênent avec cet outil : 1/ Il suffit d'entrer une clé pour que ça se synchro. Pas de mot de passe, pas d'approbation de l'ajout...etc. Du coup, même [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/syncthing.html">Syncthing &#8211; Un clone de BTSync pour se débarrasser de Dropbox</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Je vous ai déjà parlé à plusieurs reprises de <a href="http://korben.info/bittorrent-sync-debarque-en-beta.html">BTSync</a>, le logiciel de synchronisation P2P initié par Bittorrent. Il est top, mais y'a 2 trucs qui me gênent avec cet outil :</p>
+<ul>
+<li>1/ Il suffit d'entrer une clé pour que ça se synchro. Pas de mot de passe, pas d'approbation de l'ajout...etc. Du coup, même si le risque est limité, n'importe qui peut "deviner" ou voler votre clé et se synchroniser avec vous.</li>
+<li>2/ Les sources ne sont pas ouvertes.</li>
+</ul>
+<p>Et c'est là qu'entre en scène <a href="http://syncthing.net/"><strong>Syncthing</strong></a>. Cette solution sous licence MIT ressemble beaucoup à BTSync. Elle n'est pas encore très user friendly, mais des binaires sont dispos pour OSX, Windows et Linux donc pas besoin de vous lancer dans de la compilation. Une fois téléchargé, lancez le soft et vous serez automatiquement redirigé vers une interface locale sur votre navigateur.</p>
+<p style="text-align: center;"><a title="" href="http://korben.info/wp-content/uploads/2014/05/syncthing.jpg"><img class="aligncenter wp-image-50874 size-new-size" title="" src="http://korben.info/wp-content/uploads/2014/05/syncthing-650x289.jpg" alt="syncthing 650x289 Syncthing   Un clone de BTSync pour se débarrasser de Dropbox" width="650" height="289" /></a></p>
+<p>À partir de là, vous pourrez ajouter :</p>
+<ul>
+<li>Des repositories (les dépôts où se trouveront vos fichiers)</li>
+<li>Des nodes (les machines avec lesquelles vous ferez vos synchros)</li>
+</ul>
+<p>Comme pour BTSync, vous devrez récupérer un identifiant unique, que vous communiquerez à l'autre machine. Mais contrairement à BTSync, vous devrez aussi faire la même opération dans l'autre sens pour que ça se synchronise. Aucune machine ne peut se synchroniser à une autre si elle n'est pas approuvée.</p>
+<p>Ensuite, une fois les machines ajoutées, vous devrez indiquer dans la config des dépôts quelles sont les machines autorisées à y accéder. Chaque connexion est chiffrée et Syncthing est portable... vous pouvez donc l'embarquer sur une clé USB.</p>
+<p style="text-align: center;"><a title="" href="http://korben.info/wp-content/uploads/2014/05/syncthing.png"><img class="aligncenter size-new-size wp-image-50875" title="" src="http://korben.info/wp-content/uploads/2014/05/syncthing-650x423.png" alt="syncthing 650x423 Syncthing   Un clone de BTSync pour se débarrasser de Dropbox" width="650" height="423" /></a></p>
+<p>Une fois que c'est fait, vos fichiers pourront se synchroniser, soit localement soit à travers l'Internet intersidéral. Par contre, la synchro fonctionne un peu comme avec un service de type Dropbox. Par exemple, si vous synchronisez la machine A à la machine B,  puis la machine A à la machine C, et bien vos documents ne vont pas se synchroniser directement entre B et C.</p>
+<p>Soit vous associez aussi B et C pour que ce joyeux petit monde se copie les uns sur les autres, soit vous acceptez le fait que B et C doivent obligatoirement se connecter à A pour disposer des mêmes données.</p>
+<p>Rien de bien méchant, mais c'est une différence à prendre en compte par rapport à BTSync qui fonctionne plus comme un téléchargement de Bittorrent où tous les clients se connectent entre eux pour récupérer des bouts de fichiers.</p>
+<p>Sachez qu'avec <strong>Syncthing</strong>, il est aussi possible de faire des copies en sens unique. C'est-à-dire que B pourra récupérer des fichiers en provenance de A mais si vous placez de nouveaux documents sur B, la machine A ne pourra pas les récupérer. Cela permet de monter des dépôts en lecture seule.</p>
+<p>Voilà, je pense que j'ai fait le tour. Je le teste depuis hier et c'est déjà très stable bien que ce soit une beta. <a href="http://syncthing.net/">Mais c'est un projet à suivre de près</a>.</p>
+<p>J'espère qu'une version mobile verra aussi bientôt le jour.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/syncthing.html">Syncthing &#8211; Un clone de BTSync pour se débarrasser de Dropbox</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=nojHXs_FFjw:JeMBAYAMDZQ:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=nojHXs_FFjw:JeMBAYAMDZQ:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=nojHXs_FFjw:JeMBAYAMDZQ:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=nojHXs_FFjw:JeMBAYAMDZQ:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=nojHXs_FFjw:JeMBAYAMDZQ:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=nojHXs_FFjw:JeMBAYAMDZQ:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=nojHXs_FFjw:JeMBAYAMDZQ:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=nojHXs_FFjw:JeMBAYAMDZQ:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=nojHXs_FFjw:JeMBAYAMDZQ:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/nojHXs_FFjw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/syncthing.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/syncthing.html</feedburner:origLink></item>
+		<item>
+		<title>Les cosplays de Calgary Expo 2014</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/omeffpCDk8Y/les-cosplays-calgary-expo-2014.html</link>
+		<comments>http://korben.info/les-cosplays-calgary-expo-2014.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 15:48:44 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Culture Internet]]></category>
+		<category><![CDATA[Vidéo]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50868</guid>
+		<description><![CDATA[<p>OTL Production a mis en ligne une vidéo des meilleurs cosplays de la Calgary Expo 2014 qui a eu lieu fin avril. Je suis toujours fasciné par le souci du détail des cosplayers. Ah et si vous aimez les animes et les mangas, allez faire un tour sur la chaine d'OTL. Il y a d'autres [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/les-cosplays-calgary-expo-2014.html">Les cosplays de Calgary Expo 2014</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p><strong>OTL Production</strong> a mis en ligne une vidéo des meilleurs cosplays de la <a href="http://www.calgaryexpo.com/">Calgary Expo 2014</a> qui a eu lieu fin avril.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/FkJqYvXrewI?feature=player_embedded" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p style="text-align: left;">Je suis toujours fasciné par le souci du détail des cosplayers. Ah et si vous aimez les animes et les mangas, allez faire un tour sur <a href="https://www.youtube.com/user/andalantie">la chaine d'OTL</a>. Il y a d'autres belles vidéos prises lors de la Sakuracon ou la Katsucon de cette année.</p>
+<p style="text-align: left;"><a href="http://www.geeksaresexy.net/2014/05/12/beautiful-cosplay-music-videos-for-calgary-expo-2014-and-sakuracon-2014/">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/les-cosplays-calgary-expo-2014.html">Les cosplays de Calgary Expo 2014</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=omeffpCDk8Y:AwBh9sxg9qs:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=omeffpCDk8Y:AwBh9sxg9qs:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=omeffpCDk8Y:AwBh9sxg9qs:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=omeffpCDk8Y:AwBh9sxg9qs:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=omeffpCDk8Y:AwBh9sxg9qs:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=omeffpCDk8Y:AwBh9sxg9qs:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=omeffpCDk8Y:AwBh9sxg9qs:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=omeffpCDk8Y:AwBh9sxg9qs:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=omeffpCDk8Y:AwBh9sxg9qs:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/omeffpCDk8Y" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/les-cosplays-calgary-expo-2014.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/les-cosplays-calgary-expo-2014.html</feedburner:origLink></item>
+		<item>
+		<title>Amazon vous file 500 coins pour acheter des applications Android</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/YU1112ObXXQ/amazon-file-500-coins-acheter-applications-android.html</link>
+		<comments>http://korben.info/amazon-file-500-coins-acheter-applications-android.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 15:27:14 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Android]]></category>
+		<category><![CDATA[Infos]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50865</guid>
+		<description><![CDATA[<p>Pour faire la promo de son store d'applications Android, Amazon offre jusqu'au 26 mai, 500 coins. Ces "coins" sont une monnaie virtuelle proposée par Amazon qui permet d'acheter des applications sur l'App Shop. Pour en profiter, c'est très simple. Il suffit d'installer la dernière version d'Amazon App Shop sur votre téléphone ou tablette puis de [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/amazon-file-500-coins-acheter-applications-android.html">Amazon vous file 500 coins pour acheter des applications Android</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Pour faire la promo de son store d'applications Android, Amazon offre jusqu'au 26 mai, 500 coins.</p>
+<p>Ces "coins" sont une monnaie virtuelle proposée par Amazon qui permet d'acheter des applications sur l'App Shop.</p>
+<p>Pour en profiter, c'est très simple. Il suffit d'installer <a href="https://www.amazon.fr/gp/feature.html?ie=UTF8&amp;docId=1000714613&amp;ref_=amb_link_181215447_1">la dernière version d'Amazon App Shop</a> sur votre téléphone ou tablette puis de télécharger une application gratuite ou payante  (celle de votre choix).</p>
+<p>Dès la fin du téléchargement, vous serez alors crédité de 500 coins pour acheter d'autres applications. Attention, ce n’est pas Byzance hein, car 500 coins, ça fait 5 € ... Mais ça vous permettra de vous offrir une ou deux applications payantes qui vous font envie.</p>
+<p style="text-align: center;"><a title="" href="http://korben.info/wp-content/uploads/2014/05/amazon-file-500-coins-acheter-applications-android.png"><img class="aligncenter  wp-image-50866" title="" src="http://korben.info/wp-content/uploads/2014/05/amazon-file-500-coins-acheter-applications-android-576x1024.png" alt="amazon file 500 coins acheter applications android 576x1024 Amazon vous file 500 coins pour acheter des applications Android" width="426" height="757" /></a></p>
+<p>Notez que ces coins ont une durée de validité de 1 an donc pensez à les dépenser.</p>
+<p>Enjoy !</p>
+<p><a href="http://www.dealabs.com/gratuit/recevez-gratuitement-500-amazon-coins-une-valeur-de-5-pour-acheter-des-applis-et-jeux-android/59140">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/amazon-file-500-coins-acheter-applications-android.html">Amazon vous file 500 coins pour acheter des applications Android</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=YU1112ObXXQ:RMNKaDk1auo:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=YU1112ObXXQ:RMNKaDk1auo:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=YU1112ObXXQ:RMNKaDk1auo:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=YU1112ObXXQ:RMNKaDk1auo:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=YU1112ObXXQ:RMNKaDk1auo:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=YU1112ObXXQ:RMNKaDk1auo:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=YU1112ObXXQ:RMNKaDk1auo:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=YU1112ObXXQ:RMNKaDk1auo:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=YU1112ObXXQ:RMNKaDk1auo:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/YU1112ObXXQ" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/amazon-file-500-coins-acheter-applications-android.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/amazon-file-500-coins-acheter-applications-android.html</feedburner:origLink></item>
+		<item>
+		<title>Hackathon spécial « DSI de demain »</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/9KouzuyLzqY/hackathon-special-dsi-demain.html</link>
+		<comments>http://korben.info/hackathon-special-dsi-demain.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 14:43:47 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Société]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50857</guid>
+		<description><![CDATA[<p>Chers amis développeurs &#38; designers, voici un événement dont je suis partenaire qui devrait vous intéresser. Il s'agit d'un Hackathon organisé par BeMyApp et La Société Géniale Générale dont le thème est la DSI. Durant 3 jours, du 23 au 25 mai à l'École 42, vous allez pouvoir créer avec vos amis ou partenaires d'un [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/hackathon-special-dsi-demain.html">Hackathon spécial &laquo;&nbsp;DSI de demain&nbsp;&raquo;</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Chers amis développeurs &amp; designers, voici un événement dont je suis partenaire qui devrait vous intéresser. Il s'agit d'un <a href="http://bit.ly/1oKKO4M"><strong>Hackathon</strong></a> organisé par <strong>BeMyApp</strong> et <strong>La Société <del>Géniale</del> Générale</strong> dont le thème est la <strong>DSI</strong>.</p>
+<p>Durant 3 jours, du 23 au 25 mai à l'<strong>École 42</strong>, vous allez pouvoir créer avec vos amis ou partenaires d'un soir, <strong>des outils pour collaborer à distance, optimiser les échanges d'infos, faciliter la formation entre développeurs...etc.</strong></p>
+<p>Je suis certain que vous débordez d'idées et ce genre de hackathon, c'est le lieu idéal pour faire des rencontres, lancer un projet que vous avez dans la tête depuis un moment, trouver des soutiens, échanger des idées ou des expériences....etc.</p>
+<p>En plus pour les champions, il y aura un voyage à New York pour présenter votre projet au jury américain et du matos à gagner (5000 €).</p>
+<p>Si ça vous intéresse, je vous invite <a href="http://bit.ly/1oKKO4M">à vous rendre sur ce site</a> sur lequel tout est détaillé. Planning, lieux, API utilisées et surtout inscriptions !</p>
+<p>Happy coding à tous ! <img src="http://network.bemyapp.com/trk/7E97343FA62B191AC6F39D2D73A75101" alt=" Hackathon spécial DSI de demain"  title="Hackathon spécial DSI de demain" /></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/hackathon-special-dsi-demain.html">Hackathon spécial &laquo;&nbsp;DSI de demain&nbsp;&raquo;</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=9KouzuyLzqY:bKi1hy-Dzno:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=9KouzuyLzqY:bKi1hy-Dzno:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=9KouzuyLzqY:bKi1hy-Dzno:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=9KouzuyLzqY:bKi1hy-Dzno:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=9KouzuyLzqY:bKi1hy-Dzno:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=9KouzuyLzqY:bKi1hy-Dzno:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=9KouzuyLzqY:bKi1hy-Dzno:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=9KouzuyLzqY:bKi1hy-Dzno:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=9KouzuyLzqY:bKi1hy-Dzno:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/9KouzuyLzqY" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/hackathon-special-dsi-demain.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/hackathon-special-dsi-demain.html</feedburner:origLink></item>
+		<item>
+		<title>Oinker pour les radioamateurs – Envoyer des emails sur les ondes</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/5koQwbjrjR8/oinker-les-radioamateurs-envoyer-emails-les-ondes.html</link>
+		<comments>http://korben.info/oinker-les-radioamateurs-envoyer-emails-les-ondes.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 09:46:37 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[DIY]]></category>
+		<category><![CDATA[Raspberry]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50852</guid>
+		<description><![CDATA[<p>Si vous êtes radioamateur et que vous voulez vous amuser un peu, je vous invite à tester Oinker. Il s'agit d'un script Perl que vous pouvez faire tourner sur un PC ou un Raspberry Pi, qui est capable de récupérer vos emails, de les transformer en audio grâce à un module de text-to-speech et de [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/oinker-les-radioamateurs-envoyer-emails-les-ondes.html">Oinker pour les radioamateurs &#8211; Envoyer des emails sur les ondes</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous êtes radioamateur et que vous voulez vous amuser un peu, je vous invite à tester <strong><a href="http://af7hg.com/oinker.html" target="_blank">Oinker</a></strong>. Il s'agit d'un script Perl que vous pouvez faire tourner sur un PC ou un Raspberry Pi, qui est capable de récupérer vos emails, de les transformer en audio grâce à un module de text-to-speech et de les balancer dans l'entrée audio de votre radio. Vous pouvez bien sûr ajouter votre indicatif à la fin de chaque message pour être conforme avec la réglementation.</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/oink.jpg"><img class="aligncenter size-full wp-image-50853" src="http://korben.info/wp-content/uploads/2014/05/oink.jpg" alt="oink Oinker pour les radioamateurs   Envoyer des emails sur les ondes" width="480" height="640" title="Oinker pour les radioamateurs   Envoyer des emails sur les ondes" /></a></p>
+<p>L'intérêt de ce genre de bidouille, c'est de pouvoir envoyer des infos à ses amis radioamateurs, même lorsqu'on est coincé au bureau ou dans la voiture. Un petit mail rapide ou un petit SMS qui atterri dans la bonne boite mail et ce sont tous ceux qui écoutent votre fréquence qui recevront le message.</p>
+<p>Pratique !</p>
+<p><a href="http://hackaday.com/2014/05/12/oinker-is-twitter-for-hams/" target="_blank">Source</a> et <a href="http://fr.wikipedia.org/wiki/Radioamateur" target="_blank">photo</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/oinker-les-radioamateurs-envoyer-emails-les-ondes.html">Oinker pour les radioamateurs &#8211; Envoyer des emails sur les ondes</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5koQwbjrjR8:BO6nidol0Z8:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5koQwbjrjR8:BO6nidol0Z8:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=5koQwbjrjR8:BO6nidol0Z8:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5koQwbjrjR8:BO6nidol0Z8:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=5koQwbjrjR8:BO6nidol0Z8:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5koQwbjrjR8:BO6nidol0Z8:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5koQwbjrjR8:BO6nidol0Z8:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=5koQwbjrjR8:BO6nidol0Z8:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=5koQwbjrjR8:BO6nidol0Z8:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/5koQwbjrjR8" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/oinker-les-radioamateurs-envoyer-emails-les-ondes.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/oinker-les-radioamateurs-envoyer-emails-les-ondes.html</feedburner:origLink></item>
+		<item>
+		<title>Hopper – Pour savoir quand acheter votre billet d’avion</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/N__srCWb01M/hopper-savoir-acheter-billet-davion.html</link>
+		<comments>http://korben.info/hopper-savoir-acheter-billet-davion.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 09:32:25 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[service web]]></category>
+		<category><![CDATA[Voyage]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50817</guid>
+		<description><![CDATA[<p>Le Big Data, quand c'est bien utilisé, c'est formidable ! Par exemple, Frédéric Lalonde a eu l'excellente idée en 2007 de récupérer des millions des données de réservation en provenance de tous les sites des compagnies aériennes du monde entier afin de les analyser. Et ce qui en est ressorti, c'est Hopper, un site miraculeux [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/hopper-savoir-acheter-billet-davion.html">Hopper &#8211; Pour savoir quand acheter votre billet d&rsquo;avion</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Le Big Data, quand c'est bien utilisé, c'est formidable !</p>
+<p>Par exemple, Frédéric Lalonde a eu l'excellente idée en 2007 de récupérer des millions des données de réservation en provenance de tous les sites des compagnies aériennes du monde entier afin de les analyser.</p>
+<p>Et ce qui en est ressorti, c'est <a href="http://www.hopper.com/tools"><strong>Hopper</strong></a>, un site miraculeux pour ceux qui cherchent à acheter leurs billets d'avion le moins cher possible.</p>
+<p>Sur Hopper, vous entrez votre aéroport de départ (en anglais), celui d'arrivée et vous obtenez une page assez complète sur où, quand, comment acheter un billet au meilleur tarif.</p>
+<p>Prenons par exemple un <a href="http://korben.info/guadeloupe.html">CDG-PTP (Paris -&gt; Point à Pitre en Guadeloupe)</a>. Hopper m'indique que le prix moyen d'un vol est actuellement de 918 €. Que durant les 6 derniers mois, le moins cher était à 400 € et me dit surtout de ne pas l'acheter tout de suite car les prix vont bientôt baisser. Hopper m'explique (en anglais) que la demande baisse chaque jour comparé aux 4 précédentes semaines et que le prix de la semaine dernière a baissé de 22% par rapport au prix du mois dernier.</p>
+<p>Du coup, grâce à son index faramineux, Hopper m'indique que la meilleur période pour réserver son vol à destination de Point à Pitre c'est fin mai. Pour les pas réveillés, ça ne veut pas dire que je dois partir fin Mai. Non, cela veut dire que je dois ACHETER fin mai pour avoir plus de chances d'avoir un meilleur tarif. (peu importe mes dates réelles de départ)</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/hopper-savoir-acheter-billet-davion.jpg"><img class="aligncenter size-full wp-image-50850" src="http://korben.info/wp-content/uploads/2014/05/hopper-savoir-acheter-billet-davion.jpg" alt="hopper savoir acheter billet davion Hopper   Pour savoir quand acheter votre billet davion" width="610" height="347" title="Hopper   Pour savoir quand acheter votre billet davion" /></a></p>
+<p>Il recommande d'ailleurs de partir un mercredi et de rentrer un mercredi pour économiser de l'argent sur le billet. Il me dit aussi que XL Airways en vol direct, c'est le moins cher. Et avec des escales, Lufthansa et American Airlines sont intéressants. Hopper me propose aussi de jeter un oeil aux départs d'Orly pour voir si y'a pas moins cher. Ou plutôt que d’atterrir à PTP, opter pour une arrivée à Antigua &amp; Barbuda ou à la Dominique.</p>
+<p>Autrement, le site propose aussi pas mal de lieux à voir, de restaurants et d’hôtels ou séjourner, en complétement d'information.</p>
+<p><a href="http://www.hopper.com/tools">A bookmarker !</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/hopper-savoir-acheter-billet-davion.html">Hopper &#8211; Pour savoir quand acheter votre billet d&rsquo;avion</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N__srCWb01M:LqekNvJjAyU:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N__srCWb01M:LqekNvJjAyU:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=N__srCWb01M:LqekNvJjAyU:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N__srCWb01M:LqekNvJjAyU:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=N__srCWb01M:LqekNvJjAyU:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N__srCWb01M:LqekNvJjAyU:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N__srCWb01M:LqekNvJjAyU:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=N__srCWb01M:LqekNvJjAyU:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=N__srCWb01M:LqekNvJjAyU:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/N__srCWb01M" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/hopper-savoir-acheter-billet-davion.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/hopper-savoir-acheter-billet-davion.html</feedburner:origLink></item>
+		<item>
+		<title>L’essentiel de l’information internationale sur votre smartphone</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/IMYgL0M29ms/yahoo-news-digest.html</link>
+		<comments>http://korben.info/yahoo-news-digest.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 09:08:34 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Android]]></category>
+		<category><![CDATA[Infos]]></category>
+		<category><![CDATA[iOS]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50812</guid>
+		<description><![CDATA[<p>Si vous cherchez un moyen de vous informer rapidement de ce qui se passe dans le monde, sans forcement regarder la TV, écouter la radio, écumer Twitter ou trier le bon grain des articles "Mettons un nichon pou faire du clic" des sites d'information généraliste, une nouvelle application proposée par Yahoo! vient de faire son [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/yahoo-news-digest.html">L&rsquo;essentiel de l&rsquo;information internationale sur votre smartphone</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous cherchez un moyen de vous informer rapidement de ce qui se passe dans le monde, sans forcement regarder la TV, écouter la radio, écumer Twitter ou trier le bon grain des articles "<em>Mettons un nichon pou faire du clic</em>" des sites d'information généraliste, une nouvelle application proposée par Yahoo! vient de faire son entrée dans l'écosystème Android et iOS.</p>
+<p>Utilisant Summly, une technologie mise au point par <a href="http://en.wikipedia.org/wiki/Nick_D%27Aloisio">Nick D'Aloisio</a> qui permet de résumer des contenus automatiquement avec une qualité remarquable, <strong>Yahoo! News Digest</strong> propose 2 fois par jour un résumé de l'actualité internationale (ou Canadienne, États-unienne ou Anglaise) enrichi de photos, de liens, de cartes, de tweets, de définitions...etc</p>
+<p><a title="" href="http://korben.info/wp-content/uploads/2014/05/yahoo-news-digest1.png"><img class="aligncenter size-large wp-image-50815" title="" src="http://korben.info/wp-content/uploads/2014/05/yahoo-news-digest1-576x1024.png" alt="yahoo news digest1 576x1024 Lessentiel de linformation internationale sur votre smartphone" width="576" height="1024" /></a></p>
+<p style="text-align: center;"><a title="" href="http://korben.info/wp-content/uploads/2014/05/yahoo-news-digest.png"><img class="aligncenter size-large wp-image-50814" title="" src="http://korben.info/wp-content/uploads/2014/05/yahoo-news-digest-576x1024.png" alt="yahoo news digest 576x1024 Lessentiel de linformation internationale sur votre smartphone" width="576" height="1024" /></a></p>
+<p>Je la teste depuis quelques jours, et je trouve ça diablement efficace. Les contenus sont riches, bien illustrés et le résumé se limite à une dizaine d'articles. De quoi avoir un aperçu rapide de ce qui se passe dans le monde, sans perdre 30 minutes devant la TV ou lire tout un tas de conneries.</p>
+<p>Vous pouvez télécharger Yahoo! News Digest <a href="https://www.google.fr/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;cad=rja&amp;uact=8&amp;ved=0CDAQFjAA&amp;url=https%3A%2F%2Fitunes.apple.com%2Fus%2Fapp%2Fyahoo-news-digest%2Fid784982356%3Fmt%3D8&amp;ei=D9txU4aXLanK0AXjqoDICQ&amp;usg=AFQjCNGYbGBd6x3rLKDQxNbKKoQtwih-qQ&amp;bvm=bv.66330100,d.d2k">ici pour iOS</a> et <a href="https://www.google.fr/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=9&amp;cad=rja&amp;uact=8&amp;ved=0CGoQFjAI&amp;url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.yahoo.mobile.client.android.atom&amp;ei=D9txU4aXLanK0AXjqoDICQ&amp;usg=AFQjCNEV5ga_1vBYpal4-7uKxsn-rwCfow&amp;bvm=bv.66330100,d.d2k">ici pour Android</a>.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/yahoo-news-digest.html">L&rsquo;essentiel de l&rsquo;information internationale sur votre smartphone</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=IMYgL0M29ms:65eSwWHXTv4:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=IMYgL0M29ms:65eSwWHXTv4:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=IMYgL0M29ms:65eSwWHXTv4:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=IMYgL0M29ms:65eSwWHXTv4:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=IMYgL0M29ms:65eSwWHXTv4:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=IMYgL0M29ms:65eSwWHXTv4:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=IMYgL0M29ms:65eSwWHXTv4:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=IMYgL0M29ms:65eSwWHXTv4:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=IMYgL0M29ms:65eSwWHXTv4:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/IMYgL0M29ms" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/yahoo-news-digest.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/yahoo-news-digest.html</feedburner:origLink></item>
+		<item>
+		<title>Jumpcut – Une mémoire tampon pour vos copier/coller sous OSX</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/niH1w782DC4/jumpcut-multiple-copier-coller-osx.html</link>
+		<comments>http://korben.info/jumpcut-multiple-copier-coller-osx.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 08:28:32 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Mac OSX]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50807</guid>
+		<description><![CDATA[<p>Si vous faites beaucoup de copier / coller toute la journée et que vous êtes sous Mac OSX, il existe un petit soft sous licence MIT qui se loge dans la barre de notifications et qui permet de sauvegarder de multiple "copier" de texte. Pratique pour les développeurs. Avec Jumpcut, vous pouvez conserver jusqu'à 25 [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/jumpcut-multiple-copier-coller-osx.html">Jumpcut &#8211; Une mémoire tampon pour vos copier/coller sous OSX</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous faites beaucoup de copier / coller toute la journée et que vous êtes sous Mac OSX, il existe un petit soft sous licence MIT qui se loge dans la barre de notifications et qui permet de sauvegarder de multiple "copier" de texte. Pratique pour les développeurs.</p>
+<p>Avec <a href="http://jumpcut.sourceforge.net/">Jumpcut</a>, vous pouvez conserver jusqu'à 25 éléments dans ce presse-papier augmenté et les coller ensuite comme bon vous semble. Plutôt sympa !</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/jumpcut-memoire-tampon-vos-copiercoller-osx.jpg"><img class="aligncenter size-full wp-image-50808" src="http://korben.info/wp-content/uploads/2014/05/jumpcut-memoire-tampon-vos-copiercoller-osx.jpg" alt="jumpcut memoire tampon vos copiercoller osx Jumpcut   Une mémoire tampon pour vos copier/coller sous OSX" width="353" height="201" title="Jumpcut   Une mémoire tampon pour vos copier/coller sous OSX" /></a></p>
+<p style="text-align: left;">Vous pouvez choisir l'élément à coller en cliquant sur l'icône ou en utilisant le raccourci clavier de votre choix (par défaut c'est Command + Option + v)</p>
+<p style="text-align: left;">Edit : Dans le même genre, il y a aussi <a href="http://www.clipmenu.com/">ClipMenu</a>. (Merci à <a href="http://twitter.com/moewb">Moewb</a>)</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/jumpcut-multiple-copier-coller-osx.html">Jumpcut &#8211; Une mémoire tampon pour vos copier/coller sous OSX</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=niH1w782DC4:9xXeUnH-91A:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=niH1w782DC4:9xXeUnH-91A:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=niH1w782DC4:9xXeUnH-91A:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=niH1w782DC4:9xXeUnH-91A:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=niH1w782DC4:9xXeUnH-91A:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=niH1w782DC4:9xXeUnH-91A:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=niH1w782DC4:9xXeUnH-91A:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=niH1w782DC4:9xXeUnH-91A:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=niH1w782DC4:9xXeUnH-91A:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/niH1w782DC4" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/jumpcut-multiple-copier-coller-osx.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/jumpcut-multiple-copier-coller-osx.html</feedburner:origLink></item>
+		<item>
+		<title>Allez courage, c’est bientôt les vacances</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/JtMmOhEJf4o/allez-courage-cest-bientot-les-vacances.html</link>
+		<comments>http://korben.info/allez-courage-cest-bientot-les-vacances.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 08:09:11 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Vidéo]]></category>
+		<category><![CDATA[Voyage]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50803</guid>
+		<description><![CDATA[<p>Je ne sais pas si ça va vous motiver pour aujourd'hui ou si on contraire, ça va vous faire poser des congés dès aujourd'hui, mais j'ai trouvé cette vidéo réalisée par Alex Chacón plutôt cool. Durant 600 jours, il a parcouru le monde et filmé avec ses GoPro, son périple de plus de 200 000 [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/allez-courage-cest-bientot-les-vacances.html">Allez courage, c&rsquo;est bientôt les vacances</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Je ne sais pas si ça va vous motiver pour aujourd'hui ou si on contraire, ça va vous faire poser des congés dès aujourd'hui, mais j'ai trouvé cette vidéo réalisée par <strong>Alex Chacón</strong> plutôt cool. Durant 600 jours, il a parcouru le monde et filmé avec ses GoPro, son périple de plus de 200 000 km en moto.</p>
+<p>Le monsieur est photographe freelance, passionné de moto et a profité de ce voyage pour réaliser des photos et vidéos pour pas mal de magazines ainsi qu'un peu d'humanitaire.</p>
+<p style="text-align: center;"><iframe src="//www.youtube.com/embed/VTlXttQL_Yk?feature=player_embedded" width="600" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Si vous voulez en voir un peu plus, d'autres vidéos sont disponibles <a href="http://www.modernmotodiaries.com/">sur son site</a>.</p>
+<p><a href="http://sploid.gizmodo.com/600-days-traveling-around-the-world-summarized-in-this-1575212050/+caseychan">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/allez-courage-cest-bientot-les-vacances.html">Allez courage, c&rsquo;est bientôt les vacances</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=JtMmOhEJf4o:jYuG1bWpAVI:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=JtMmOhEJf4o:jYuG1bWpAVI:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=JtMmOhEJf4o:jYuG1bWpAVI:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=JtMmOhEJf4o:jYuG1bWpAVI:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=JtMmOhEJf4o:jYuG1bWpAVI:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=JtMmOhEJf4o:jYuG1bWpAVI:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=JtMmOhEJf4o:jYuG1bWpAVI:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=JtMmOhEJf4o:jYuG1bWpAVI:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=JtMmOhEJf4o:jYuG1bWpAVI:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/JtMmOhEJf4o" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/allez-courage-cest-bientot-les-vacances.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/allez-courage-cest-bientot-les-vacances.html</feedburner:origLink></item>
+		<item>
+		<title>Firefox 29 – L’extension pour ceux qui n’aiment pas la nouvelle interface Australis</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/HyJxvVU9Jpw/firefox-29-classic-theme-restorer.html</link>
+		<comments>http://korben.info/firefox-29-classic-theme-restorer.html#comments</comments>
+		<pubDate>Tue, 13 May 2014 07:49:01 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Infos]]></category>
+		<category><![CDATA[Navigateur]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50795</guid>
+		<description><![CDATA[<p>C'est bien connu, l'être humain est réfractaire au changement. Et bien que vous soyez tous de gros geeks, vous n'en restez pas moins des êtres humains. Mi-Homme, mimolette, vous venez fébrilement d'installer Firefox 29 et Ô désespoir, vous constatez un certain nombre de changements qui risquent encore de vous faire passer pas mal de temps [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/firefox-29-classic-theme-restorer.html">Firefox 29 &#8211; L&rsquo;extension pour ceux qui n&rsquo;aiment pas la nouvelle interface Australis</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>C'est bien connu, l'être humain est réfractaire au changement. Et bien que vous soyez tous de gros geeks, vous n'en restez pas moins des êtres humains.</p>
+<p>Mi-Homme, mimolette, vous venez fébrilement d'installer <strong>Firefox 29</strong> et Ô désespoir, vous constatez un certain nombre de changements qui risquent encore de vous faire passer pas mal de temps en psychothérapie.</p>
+<p>En gros, cette nouvelle interface baptisée <strong>Australis</strong>, optimisée pour les écrans tactiles affiche de grosses icônes de menus, des onglets aux coins arrondis et les icônes des extensions sont maintenant placées à droite de la barre d'URL. Même le gros bouton orange tout moche saute. La petite étoile de mise en marque-page est sortie de la barre d'URL et accolée au menu des marques pages. Même chose pour le bouton "Home" qui déménage.</p>
+<p style="text-align: center;"><a href="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis.jpg"><img class="aligncenter size-full wp-image-50797" src="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis.jpg" alt="firefox 29 lextension ceux naiment pas nouvelle interface australis Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" width="273" height="513" title="Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" /></a></p>
+<p>De petits changements graphiques parmi d'autres choses qui rafraichissent Firefox et qui sont, je crois, plutôt bien pensés. Je préfère d'ailleurs cette nouvelle interface à la précédente surtout que leur menu d'agencement d'interface est vraiment bien foutu.</p>
+<p>Mais pour ceux d'entre vous qui la vomissent (Oui, restons dans l'excès), il existe une extension qui permet de garder le look graphique d'avant tout en profitant de la nouvelle version 29 de Firefox.</p>
+<p>Baptisée <strong><a href="https://addons.mozilla.org/fr/firefox/addon/classicthemerestorer/">Classic Theme Restorer</a></strong>, cette extension permet d'avoir à nouveau les onglets aux coins carrés, la barre des extensions, l'ancien menu (bouton orange) tout moche, l'ancien accès pour les marques pages, les petits boutons...etc. Bref, je ne vous fais pas un dessin. C'est à vous de paramétrer tout ça et de choisir ce que vous voulez conserver de la nouvelle version ou de l'ancienne.</p>
+<p style="text-align: center;"><a title="" href="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis1.jpg"><img class="aligncenter size-new-size wp-image-50798" src="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis1-650x420.jpg" alt="firefox 29 lextension ceux naiment pas nouvelle interface australis1 650x420 Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" width="650" height="420" title="Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" /></a> <a title="" href="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis2.jpg"><img class="aligncenter size-new-size wp-image-50799" src="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis2-650x420.jpg" alt="firefox 29 lextension ceux naiment pas nouvelle interface australis2 650x420 Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" width="650" height="420" title="Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" /></a> <a title="" href="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis3.jpg"><img class="aligncenter size-new-size wp-image-50800" title="" src="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis3-650x420.jpg" alt="firefox 29 lextension ceux naiment pas nouvelle interface australis3 650x420 Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" width="650" height="420" /></a> <a title="" href="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis4.jpg"><img class="aligncenter size-new-size wp-image-50801" title="" src="http://korben.info/wp-content/uploads/2014/05/firefox-29-lextension-ceux-naiment-pas-nouvelle-interface-australis4-650x420.jpg" alt="firefox 29 lextension ceux naiment pas nouvelle interface australis4 650x420 Firefox 29   Lextension pour ceux qui naiment pas la nouvelle interface Australis" width="650" height="420" /></a></p>
+<p>En ce qui me concerne, je n'en ai pas besoin, car j'approuve à 100% Australis (Firefox est mon navigateur principal) mais pour ceux qui aimaient mieux le look d'avant, <a href="https://addons.mozilla.org/fr/firefox/addon/classicthemerestorer/">c'est à installer d'urgence</a>. (ça fonctionne pour les versions Windows, Mac et Linux)</p>
+<p><a href="http://www.ghacks.net/2014/04/26/turn-new-firefox-29-old-firefox/">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/firefox-29-classic-theme-restorer.html">Firefox 29 &#8211; L&rsquo;extension pour ceux qui n&rsquo;aiment pas la nouvelle interface Australis</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=HyJxvVU9Jpw:MAxhJLcGX98:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=HyJxvVU9Jpw:MAxhJLcGX98:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=HyJxvVU9Jpw:MAxhJLcGX98:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=HyJxvVU9Jpw:MAxhJLcGX98:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=HyJxvVU9Jpw:MAxhJLcGX98:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=HyJxvVU9Jpw:MAxhJLcGX98:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=HyJxvVU9Jpw:MAxhJLcGX98:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=HyJxvVU9Jpw:MAxhJLcGX98:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=HyJxvVU9Jpw:MAxhJLcGX98:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/HyJxvVU9Jpw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/firefox-29-classic-theme-restorer.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/firefox-29-classic-theme-restorer.html</feedburner:origLink></item>
+		<item>
+		<title>Clones de Disqus</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/TozWvojGeHw/clones-disqus.html</link>
+		<comments>http://korben.info/clones-disqus.html#comments</comments>
+		<pubDate>Fri, 09 May 2014 23:08:00 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Script]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50789</guid>
+		<description><![CDATA[<p>Si vous cherchez un moyen de décentraliser les commentaires sur vos sites tout en évitant de passer par un tiers comme Disqus, voici quelques alternatives libres à Disqus que vous pouvez héberger vous-même. Je me les note ici afin de pouvoir tester tout ça dès que j'aurai 5 minutes. Talktav Isso Jskomment Juvia CommentServe HashOver [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/clones-disqus.html">Clones de Disqus</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Si vous cherchez un moyen de décentraliser les commentaires sur vos sites tout en évitant de passer par un tiers comme Disqus, voici quelques alternatives libres à Disqus que vous pouvez héberger vous-même.</p>
+<p>Je me les note ici afin de pouvoir tester tout ça dès que j'aurai 5 minutes.</p>
+<ul>
+<li><a href="https://github.com/talkatv/talkatv">Talktav</a></li>
+<li><a href="https://github.com/posativ/isso">Isso</a></li>
+<li><a href="https://github.com/monperrus/jskomment">Jskomment</a></li>
+<li><a href="https://github.com/phusion/juvia">Juvia</a></li>
+<li><a href="https://github.com/drewp/commentserve">CommentServe</a></li>
+<li><a href="http://tildehash.com/">HashOver</a></li>
+</ul>
+<p>Si vous en connaissez d'autres, n'hésitez pas à mes les indiquer pour que je les rajoute à la liste.</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/clones-disqus.html">Clones de Disqus</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=TozWvojGeHw:M0vlWWyLNBY:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=TozWvojGeHw:M0vlWWyLNBY:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=TozWvojGeHw:M0vlWWyLNBY:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=TozWvojGeHw:M0vlWWyLNBY:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=TozWvojGeHw:M0vlWWyLNBY:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=TozWvojGeHw:M0vlWWyLNBY:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=TozWvojGeHw:M0vlWWyLNBY:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=TozWvojGeHw:M0vlWWyLNBY:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=TozWvojGeHw:M0vlWWyLNBY:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/TozWvojGeHw" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/clones-disqus.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/clones-disqus.html</feedburner:origLink></item>
+		<item>
+		<title>Popcorn Time sur Android (non officielle)</title>
+		<link>http://feedproxy.google.com/~r/KorbensBlog-UpgradeYourMind/~3/SziJMRKqsVc/android-popcorn-time.html</link>
+		<comments>http://korben.info/android-popcorn-time.html#comments</comments>
+		<pubDate>Fri, 09 May 2014 22:27:58 +0000</pubDate>
+		<dc:creator><![CDATA[Korben]]></dc:creator>
+				<category><![CDATA[Android]]></category>
+		<category><![CDATA[Download]]></category>
+
+		<guid isPermaLink="false">http://korben.info/?p=50777</guid>
+		<description><![CDATA[<p>Ce matin, avant que mon NAS ne tombe en panne, que mon site n'explose, que le livreur de DHL m'oublie et qu'un tout un tas de relous me harcèlent au téléphone, j'ai eu l'immense bonheur de tester PopCorn Time pour Android. Je ne vous présente à nouveau pas ce magnifique logiciel qui permet de regarder [&#8230;]</p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/android-popcorn-time.html">Popcorn Time sur Android (non officielle)</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+]]></description>
+				<content:encoded><![CDATA[<p>Ce matin, avant que mon NAS ne tombe en panne, que mon site n'explose, que le livreur de DHL m'oublie et qu'un tout un tas de relous me harcèlent au téléphone, j'ai eu l'immense bonheur de tester <a href="https://play.google.com/store/apps/details?id=dp.ws.popcorntime">PopCorn Time pour Android</a>.</p>
+<p>Je ne vous présente à nouveau pas <a href="http://korben.info/popcorn-time.html">ce magnifique logiciel</a> qui permet de regarder des films et des séries en toute illégalité comme si on était sur Netflix ou équivalent et son portage Android (non officiel) et à la hauteur de mes espérances.</p>
+<p>Alors bien sûr, c'est toujours du Bittorrent, donc je doute que votre connexion data apprécie et ce n'est toujours pas Hadopi proof. M'enfin, les VPN ça se configure aussi sur mobile alors bon...</p>
+<p><a title="" href="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.01.46.png"><img class="aligncenter size-new-size wp-image-50786" title="" src="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.01.46-650x365.png" alt="2014 05 09 01.01.46 650x365 Popcorn Time sur Android (non officielle)" width="650" height="365" /></a></p>
+<p><a title="" href="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.01.52.png"><img class="aligncenter size-new-size wp-image-50785" title="" src="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.01.52-650x365.png" alt="2014 05 09 01.01.52 650x365 Popcorn Time sur Android (non officielle)" width="650" height="365" /></a></p>
+<p>On y retrouve tous les films et séries récents, en anglais, classés par catégories...</p>
+<p><a title="" href="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.02.22.png"><img class="aligncenter size-new-size wp-image-50784" title="" src="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.02.22-650x365.png" alt="2014 05 09 01.02.22 650x365 Popcorn Time sur Android (non officielle)" width="650" height="365" /></a></p>
+<p><a href="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.02.42.png"><img class="aligncenter size-new-size wp-image-50783" title="" src="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.02.42-650x365.png" alt="2014 05 09 01.02.42 650x365 Popcorn Time sur Android (non officielle)" width="650" height="365" /></a></p>
+<p>Et PopCorn Time propose même de choisir le torrent le plus approprié...</p>
+<p><a href="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.02.50.png"><img class="aligncenter size-new-size wp-image-50782" title="" src="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.02.50-650x365.png" alt="2014 05 09 01.02.50 650x365 Popcorn Time sur Android (non officielle)" width="650" height="365" /></a></p>
+<p><a title="" href="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.14.51.png"><img class="aligncenter size-new-size wp-image-50779" title="" src="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.14.51-650x365.png" alt="2014 05 09 01.14.51 650x365 Popcorn Time sur Android (non officielle)" width="650" height="365" /></a></p>
+<p>Vous pouvez ensuite régler la vitesse de lecture, la mise en veille et surtout choisir les sous-titres qui vont bien.</p>
+<p><a title="" href="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.16.15.png"><img class="aligncenter size-new-size wp-image-50778" title="" src="http://korben.info/wp-content/uploads/2014/05/2014-05-09-01.16.15-650x365.png" alt="2014 05 09 01.16.15 650x365 Popcorn Time sur Android (non officielle)" width="650" height="365" /></a></p>
+<p>Concernant les temps de chargement sur mobile, j'ai testé en 4G et j'ai trouvé ça un peu long. Par contre, via le Wifi (fibre à la maison), c'était assez rapide à charger. <del>Pensez à la récupérer assez vite, car je ne donne pas cher de sa peau <a href="https://play.google.com/store/apps/details?id=dp.ws.popcorntime">sur le PlayStore</a></del>. Ce n'est plus dispo mais un APK <a href="https://mega.co.nz/#!tdsm3ISY!9LNIraXd1-Ms8e60n7esJ8SkcMABzzH_rrY5M1GME5I">est téléchargeable ici</a>.</p>
+<p>Globalement, c'est une excellente surprise. L'application est propre, jolie, et rassemble toutes les fonctionnalités de la version desktop de PCT. Un must pour les longues soirées d'hiver de mai.</p>
+<p>Edit : Certains expriment <a href="http://www.reddit.com/r/time4popcorn/duplicates/24a7qd/why_time4popcorn_is_incredibly_dangerous/">une réserve</a> sur cette version car une partie du soft peut être modifiée à tout moment.</p>
+<p><a href="http://lifehacker.com/popcorn-time-the-netflix-for-movie-torrents-comes-to-1573658347">Source</a></p>
+<p>Cet article merveilleux et sans aucun égal intitulé : <a rel="nofollow" href="http://korben.info/android-popcorn-time.html">Popcorn Time sur Android (non officielle)</a> ; a été publié sur <a rel="nofollow" href="http://korben.info">Korben</a>, le seul site qui t'aime plus fort que tes parents.</p>
+<div class="feedflare">
+<a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=SziJMRKqsVc:37Gzyvop08I:yIl2AUoC8zA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=yIl2AUoC8zA" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=SziJMRKqsVc:37Gzyvop08I:D7DqB2pKExk"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=SziJMRKqsVc:37Gzyvop08I:D7DqB2pKExk" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=SziJMRKqsVc:37Gzyvop08I:GG6oivYVkFs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=SziJMRKqsVc:37Gzyvop08I:GG6oivYVkFs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=SziJMRKqsVc:37Gzyvop08I:qj6IDK7rITs"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=qj6IDK7rITs" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=SziJMRKqsVc:37Gzyvop08I:gIN9vFwOqvQ"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?i=SziJMRKqsVc:37Gzyvop08I:gIN9vFwOqvQ" border="0"></img></a> <a href="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?a=SziJMRKqsVc:37Gzyvop08I:7Q72WNTAKBA"><img src="http://feeds.feedburner.com/~ff/KorbensBlog-UpgradeYourMind?d=7Q72WNTAKBA" border="0"></img></a>
+</div><img src="http://feeds.feedburner.com/~r/KorbensBlog-UpgradeYourMind/~4/SziJMRKqsVc" height="1" width="1"/>]]></content:encoded>
+			<wfw:commentRss>http://korben.info/android-popcorn-time.html/feed</wfw:commentRss>
+		<slash:comments>0</slash:comments>
+		<feedburner:origLink>http://korben.info/android-popcorn-time.html</feedburner:origLink></item>
+	</channel>
+</rss><!-- Dynamic page generated in 1.310 seconds. --><!-- Cached page generated by WP-Super-Cache on 2014-05-16 12:33:01 --><!-- Compression = gzip -->
