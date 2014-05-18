@@ -87,8 +87,10 @@
     \end{enumerate}
 
     \section{Modélisation relationnelle}
-
+	\begin{center}
         User (\textbf{email}, password, nickname, city, country, avatar, \textit{biography}, subscription date.)
+        \end{center}
+        
             \begin{itemize}            
              \item seul le champ \textit{biography} peut être nul
              \item \textit{subscription date} ne peut être dans le futur
@@ -96,53 +98,76 @@
              \item \textit{city} implique \textit{pays}
             \end{itemize}
 
-
+	\begin{center}
         Feed(\textbf{URL}, title, description, \textit{link})
+        \end{center}
+        
             \begin{itemize}
             \item \textit{URL} doit être une URL valide
 	    \end{itemize}
-        
+
+	\begin{center}
         Publication(\textbf{URL}, title, releaseDate, description)
+        \end{center}
+        
         \begin{itemize}            
             \item \textit{releaseDate} ne peut être dans le futur
         \end{itemize}
 
+	\begin{center}
         Comment(\textbf{user, publication, feed}, date, text)
+        \end{center}
+        
         \begin{itemize}
             \item \textit{user} référence \textit{User.email}
             \item \textit{publication} référence \textit{Publication.URL}
             \item \textit{feed} référence \textit{Feed.URL}
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
-        
+
+	\begin{center}
         Friendship(\textbf{user\_1, user\_2}, accepted, date)
+        \end{center}
+        
         \begin{itemize}            
             \item \textit{user\_1} référence \textit{User.email}
             \item \textit{user\_2} référence \textit{User.email}
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
 
+	\begin{center}
         Subscribes(\textbf{user, feed}, date)
+        \end{center}
+        
         \begin{itemize}            
             \item \textit{user} référence \textit{User.email}
             \item \textit{feed} référence \textit{Feed.URL}
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
 
+	\begin{center}
         Read(\textbf{user, publication, feed}, date)
+        \end{center}
+        
         \begin{itemize}            
             \item \textit{user} référence \textit{User.email}
             \item \textit{publication} référence \textit{Publication.URL}
             \item \textit{date} ne peut être dans le futur
         \end{itemize}
-            
+
+	\begin{center}
         Contains(\textbf{feed, publication})
+        \end{center}
+        
         \begin{itemize}            
             \item \textit{feed} référence \textit{Feed.URL}
             \item \textit{publication} référence \textit{Publication.URL}
         \end{itemize}
-            
+
+	\begin{center}
         Share(\textbf{user, publication}, date, text)
+        \end{center}
+        
         \begin{itemize}
 			\item seul le champ \textit{text} peut être nul
             \item \textit{user} référence \textit{User.email}
