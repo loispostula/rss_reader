@@ -272,7 +272,7 @@ GROUP BY c.feed_url
 $feed\_of\_<\text{user}>$	& $\leftarrow$ & $ \pi_{feed\_url}\ (\sigma_{user\_email=<user>.email}\ (feedsubscription)$\\
 $f\_as\_<\text{user}>_1$ & $\leftarrow$ & $ \pi_{user\_email, feed_1=feed\_url}\ (feedsubscription)$\\
 $f\_as\_<\text{user}>_2$ & $\leftarrow$ & $ \pi_{user\_email, feed_2=feed\_url}\ (feedsubscription)$\\
-$same\_feed\_sub$			& $\leftarrow$ & $ f\_as\_<\text{user}>_1 \ast_{f\_as\_<\text{user}>_1.user\_email=f\_as\_<\text{user}>_2.user\_email}\ (f\_as\_<\text{user}>_2)$\\
+$same\_feed\_sub$			& $\leftarrow$ & $ f\_as\_<\text{user}>_1 \ast\ (f\_as\_<\text{user}>_2)$\\
 $two\_different\_feed$	& $\leftarrow$ & $\pi_{user\_email}(\sigma_{feed_1\ \neq\ feed_2}(same\_feed\_sub))$\\$feeds$	& $\leftarrow$ & $ \pi_{feed\_url}(user \ast_{user.email=feedsubscription.user\_email} feedsubscription)$\\
 $Result$	& $\leftarrow$ & $ feeds\ \ast\ feed$
 \end{tabular}
@@ -284,8 +284,9 @@ $Result$	& $\leftarrow$ & $ feeds\ \ast\ feed$
  f\ |\ \text{feed}(f)\ \wedge \\
  \exists\ fs_1\ (\text{feedsubscription}(fs_1)\ \wedge\ fs_1.feed\_url\ =\ f.url\ \wedge \\
  \exists\ fs_2\ (\text{feedsubscription}(fs_2)\ \wedge\ fs_2.user\_email\ =\ fs_1.user\_email\ \wedge \\
- \exists\ fs_3\ (\text{feedsubscription}(fs_3)\ \wedge\ fs_3.feed\_url\ =\ fs_2.feed\_url\ \wedge\ fs_3.user\_email\ =\ <\text{user}>.email\ \wedge \\
- \exists\ fs_4\ (\text{feedsubscription}(fs_4)\ \wedge\ fs_4.feed\_url\ =\ fs_1.feed\_url\ \wedge\ fs_4.user\_email\ =\ <\text{user}>.email))))
+ \exists\ fs_3\ (\text{feedsubscription}(fs_3)\ \wedge\ fs_3.user\_email\ =\ fs_1.user\_email\ \wedge\ fs_3.feed\_url \ \ne \ fs_2.feed\_url\wedge \\
+ \exists\ fs_4\ (\text{feedsubscription}(fs_4)\ \wedge\ fs_4.feed\_url\ =\ fs_2.feed\_url\ \wedge\ fs_4.user\_email\ =\ <\text{user}>.email\ \wedge \\
+ \exists\ fs_5\ (\text{feedsubscription}(fs_5)\ \wedge\ fs_5.feed\_url\ =\ fs_3.feed\_url\ \wedge\ fs_3.user\_email\ =\ <\text{user}>.email))))
 \end{split}
 \end{equation*}
 
@@ -336,13 +337,13 @@ WHERE fs2.feed_url = f.url"
 \begin{center}
 \begin{tabular}{lll}
 $Shared\_Feeds$ & $\leftarrow$ & $contain \Join_{publication\_url\_1=publication\_url\_2 \wedge feed\_url\_2 = {user.email}}\ (contain)$\\
-$Shared\_Feed\_URL$ & $\leftarrow$ & $\pi_{feed_url} \sigma_{feed\_url\_2=url}\ (Shared\_Feeds)$\\
+$Shared\_Feed\_X$ & $\leftarrow$ & $\pi_{feed\_url} \sigma_{feed\_url\_2=X}\ (Shared\_Feeds)$\\
 $Friend\_Feeds$ & $\leftarrow$ & $feedsubscription \Join_{((user1\_email=email \wedge user2\_email={user.email}) }$\\
-&&$_{\vee (user2\_email=email \wedge user2\_email=[user.email]))} $\\
+&&$_{\vee (user2\_email=email \wedge user2\_email=<user>.email))} $\\
 &&$_{\wedge accepted=TRUE}\ (friendship)$\\
-$Friend\_Feed\_URL$ & $\leftarrow$ & $\pi_{feed\_url} \sigma_{feed\_url=url}\ (Friend\_Feeds)$\\
-$User\_Feed$ & $\leftarrow$ & $feed \Join_{feed\_url=url \wedge user\_ema1l={user.email}}\ (feedsubscription)$\\
-$Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_URL) - Friend\_Subscribed\_URL$
+$Friend\_Feed\_X$ & $\leftarrow$ & $\pi_{feed\_url} \sigma_{feed\_url=X}\ (Friend\_Feeds)$\\
+$User\_Feed$ & $\leftarrow$ & $feed \Join_{feed\_url=url \wedge user\_email={user.email}}\ (feedsubscription)$\\
+$Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_X) - Friend\_Subscribed\_X$
 \end{tabular}
 \end{center}
 
@@ -350,7 +351,7 @@ $Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_URL) - Friend\_Subscribed
 
 \begin{equation*}
  \begin{split}
-  \{\ f |\ feed(f)\ \wedge\\
+  \ f |\ feed(f)\ \wedge\\
   (\ \exists\ s\ (feedsubscription(s)\ \wedge\\
   (\ s.feed\_url\ =\ f.url\ \wedge\ s.user\_email\ =\ <\text{user}>.email\ ))\   \wedge\\
   (\nexists\ c\ (contain(c)\ \wedge\ \exists\ d\ (contain(d)\ \wedge\ d.publication\_url = c.publication\_url\ \wedge\\
