@@ -227,18 +227,25 @@ $Result$			& $\leftarrow$ & $ user \ast_{email\ =\ email} under\_2\_friends$
 
 \subsubsection{Calcul relationnel tuple}
 Définissons le prédicat \emph{Friends(user1, user2)} comme étant:
-\\
-      $Friends(u_1, u_2):\ \exists\ d\ (Friendship(d)\ \wedge $\\
-      $(d.user_1\_email\ =\ u_1.email\ \vee\ d.user_2\_email\ =\ u_2.email)\ \wedge $\\
-      $(d.user_2\_email\ =\ u_1.email\ \vee\ d.user_1\_email\ =\ u_2.email)\ \wedge $\\
-      $d.accepted\ =\ 1$
-
+\begin{equation*}
+\begin{split}
+Friends(u_1, u_2):\ \exists\ d\ (Friendship(d)\ \wedge \\
+(d.user_1\_email\ =\ u_1.email\ \vee\ d.user_2\_email\ =\ u_2.email)\ \wedge \\
+(d.user_2\_email\ =\ u_1.email\ \vee\ d.user_1\_email\ =\ u_2.email)\ \wedge \\
+d.accepted\ =\ 1 
+\end{split}
+\end{equation*}
+  
 La requête devient alors:
 
-       $u | User(u) \wedge$ \\
-       $\exists friend_1 ((User(friend_1) \wedge Friends(u, friend_1)) \rightarrow$ \\
-       $\exists friend_2 ((User(friend_2) \wedge friend_1 \neq friend_2 \wedge Friends(u, friend_2)) \rightarrow$ \\
-       $\nexists friend_3 ((User(friend_3) \wedge friend_1 \neq friend_2 \neq friend_3 \wedge Friends(u, friend_3)))))$
+\begin{equation*}
+\begin{split}
+u | User(u) \wedge \\
+\exists friend_1 ((User(friend_1) \wedge Friends(u, friend_1)) \rightarrow \\
+\exists friend_2 ((User(friend_2) \wedge friend_1 \neq friend_2 \wedge Friends(u, friend_2)) \rightarrow \\
+\nexists friend_3 ((User(friend_3) \wedge friend_1 \neq friend_2 \neq friend_3 \wedge Friends(u, friend_3)))))
+\end{split}
+\end{equation*}
 \clearpage
 \subsection{Requête 2}
 La liste des flux auxquels a souscrit au moins un utilisateur qui a souscrit à au moins deux flux auxquel X
@@ -343,21 +350,19 @@ $Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_URL) - Friend\_Subscribed
 
 \begin{equation*}
  \begin{split}
-  \{\ f |\ feed(f)\ \wedge\ \\
-  &\quad (\ \exists\ s\ (feedsubscription(s)\ \wedge\\
-  &(\ s.feed\_url\ =\ f.url\ \wedge\ s.user\_email\ =\ <\text{user}>.email\ ))\   \wedge \\
-  &\quad \quad(\nexists\ c\ (contain(c)\ \wedge\ \exists\ d\ (contain(d)\ \wedge\ d.publication\_url = c.publication\_url\ \wedge\ \\
-  &\qquad \qquad d.feed\_url = \text{"feed:// + "}<\text{user}>.email) )\ \wedge \\
-  &\quad (\nexists\ e\ (feedsubscription(e)\ \wedge\ \exists\ fs\ (friendship(fs)\ \wedge\ \\
-  &\qquad \qquad ((fs.user1\_email\ =\ e.user\_email\ \wedge\ fs.user2\_email\ =\ <\text{user}>.email)\\
-  &\qquad \qquad \vee\\
-  &\qquad \qquad (fs.user2\_email\ =\ e.user\_email\ \wedge\ fs.user1\_email\ =\ <\text{user}>.email))\\
-  &\qquad \qquad \wedge\\
-  &\qquad \qquad (fs.accepted\ =\ 1))))\ \wedge \\
-  &\quad (e.feed\_url = f.url)
+  \{\ f |\ feed(f)\ \wedge\\
+  (\ \exists\ s\ (feedsubscription(s)\ \wedge\\
+  (\ s.feed\_url\ =\ f.url\ \wedge\ s.user\_email\ =\ <\text{user}>.email\ ))\   \wedge\\
+  (\nexists\ c\ (contain(c)\ \wedge\ \exists\ d\ (contain(d)\ \wedge\ d.publication\_url = c.publication\_url\ \wedge\\
+  d.feed\_url = \text{"feed:// + "}<\text{user}>.email) )\ \wedge\\
+  (\nexists\ e\ (feedsubscription(e)\ \wedge\ \exists\ fs\ (friendship(fs)\ \wedge\\
+  ((fs.user1\_email\ =\ e.user\_email\ \wedge\ fs.user2\_email\ =\ <\text{user}>.email)\ \vee\\
+  (fs.user2\_email\ =\ e.user\_email\ \wedge\ fs.user1\_email\ =\ <\text{user}>.email))\ \wedge\\
+  (fs.accepted\ =\ 1))))\ \wedge\\
+  (e.feed\_url = f.url)
   \end{split}
 \end{equation*}
-
+\clearpage
 \subsection{Requête 4}
 La liste des utilisateurs qui ont partagé au moins 3 publications que X a partagé.
 \subsubsection{SQL}
@@ -390,20 +395,26 @@ $Result$	& $\leftarrow$ & $user\Join_{email = user\_email} (Reshared\_3\_times)$
 
 \subsubsection{Calcul relationnel tuple}
 Définissons le prédicat \emph{ResharedPublication(user1, user2)} comme étant:
-\\
-      $ResharedPublication(u_1, u_2):\ $\\
-	  $\exists\ s\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_1.email)\ \wedge $\\
-	  $\exists\ a\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_2.email)\ \wedge $\\
-	  $a.publication\_url = s.publication\_url$
-
+\begin{equation*}
+ \begin{split}
+  ResharedPublication(u_1, u_2):\ \\
+	  \exists\ s\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_1.email)\ \wedge \\
+	  \exists\ a\ (Sharedpublication(publication\_url)\ \wedge s.user\_email\ =\ u_2.email)\ \wedge \\
+	  a.publication\_url = s.publication\_url
+ \end{split}
+\end{equation*}
 La requête devient alors:
-
-       $u\ |\ User(u) \wedge$ \\
-       $\exists \ publication_1 \ ((Sharedpublication(publication_1) \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
-       $\exists \ publication_2 \ (Sharedpublication(publication_2) \ \wedge \ publication_1 \ \neq \ publication_2 \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
-       $\exists \ publication_3 \ (Sharedpublication(publication_3) \ \wedge \ publication_1 \ \neq \ publication_2 \ \neq \ publication_3$\\
-       $\wedge  \ ResharedPublication(u, \ <user>)))$
-       
+\begin{equation*}
+ \begin{split}
+       u\ |\ User(u) \wedge \\
+       \exists \ publication_1 \ ((Sharedpublication(publication_1) \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge \\
+       \exists \ publication_2 \ (Sharedpublication(publication_2) \ \wedge\\
+       publication_1 \ \neq \ publication_2 \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge \\
+       \exists \ publication_3 \ (Sharedpublication(publication_3) \ \wedge\\
+       publication_1 \ \neq \ publication_2 \ \neq \ publication_3\\
+       \wedge  \ ResharedPublication(u, \ <user>)))
+ \end{split}
+\end{equation*}    
 \clearpage
 \subsection{Requête 5}
 La liste des flux auquel un utilisateur est inscrit avec le nombre de publications lues, le nombre de publications
@@ -500,7 +511,7 @@ OR
   )
 ORDER BY mread
 \end{lstlisting}
-		
+\clearpage
 \section{Script SQL DDL}
 \begin{lstlisting}
 
