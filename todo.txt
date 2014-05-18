@@ -2,13 +2,13 @@ TODO
 Rapport :
 
 Algèbre relationnel
-- R1  LOIS
-- R2  LOIS
+- R1  LOIS done
+- R2  LOIS done
 - R4  SIMON done
-Choix d'implémentation LOIS + SIMON
+Choix d'implémentation LOIS + SIMON done(LOIS)
 Instruction d'installation  LOIS
 Calcul relationnel tuple
--R2 LOIS
+-R2 LOIS done
 Mise en page
 
 

@@ -67,7 +67,7 @@
 	
 	\begin{figure}[ht]
 	\includegraphics[width = \textwidth]{dea.png}
-	\caption{Nous avons ici la modélisation entités-relations du projet.}
+	\caption{Modélisation entités-relations du projet.}
 	\end{figure}
 
     \section{Contraintes d'intégrité}
@@ -160,8 +160,10 @@
 \item Un commentaire ne doit etre affiché que sur certains fluxs. En effet, l'utilisateur ne peut écrire un commentaire uniquement lorsqu'il l'a partagée ou si elle lui a été partagée. Comme il ne peut y avoir qu'un commentaire par publication d'un flux, ces trois éléments sont suffisants pour identifier un commentaire.
 \end{itemize}
 \section{Choix d'implémentation}
-\subsection{Language}
-\subsection{Librairie graphique}
+\subsection{Language -- Java}
+Nous avions comme contrainte que nous devions développer sur deux platforme différente, nous avons donc optez pour \emph{Java} qui permet cela.
+\subsection{Librairie graphique -- JavaFX 8}
+\emph{JavaFX 8} est la plus récente librairie graphique d'Oracle, elle incorpore toutes les avancés de Java 1.8 et est simple d'utilisation.
 		
 \section{Instructions d'installation}
 
@@ -195,9 +197,9 @@ SELECT * FROM user u
 LEFT OUTER JOIN friendship f
 ON
 (
-f.user1_email = u.email
+  f.user1_email = u.email
 OR
-f.user2_email = u.email
+  f.user2_email = u.email
 )
 GROUP BY u.email
 HAVING COUNT(u.email) < 3
@@ -205,9 +207,21 @@ HAVING COUNT(u.email) < 3
 \subsubsection{Algèbre relationnel}
 \begin{center}
 \begin{tabular}{lll}
-$Request$		& $\leftarrow$ & $ user\sqsupset\Join_{email=user1\_email \vee email=user2\_email}( friendship)$\\
-$Request\_Accepted$	& $\leftarrow$ & $ \sigma_{accepted=TRUE}\ (Request)$\\
-$Result$		& $\leftarrow$ & $ \pi_* (email\ \sigma_{COUNT(email)\ <\ 3}\ (Request_Accepted) )$ 
+$Request$		& $\leftarrow$ & $ user\sqsupset\Join_{email=user_1\_email \vee email=user_2\_email}( friendship)$\\
+$Friends$		& $\leftarrow$ & $ \sigma_{accepted=TRUE}\ (Request)$\\
+\end{tabular}
+\end{center}
+Il faut maintenant exclure tout ceux qui ont au moins 3 amis différents
+\begin{center}
+\begin{tabular}{lll}
+$f_1$				& $\leftarrow$ & $ \pi_{user_1\_email,f_1 = user_2\_email}(Friends)$\\
+$f_2$				& $\leftarrow$ & $ \pi_{user_1\_email,f_2 = user_2\_email}(Friends)$\\
+$f_3$				& $\leftarrow$ & $ \pi_{user_1\_email,f_3 = user_2\_email}(Friends)$\\
+$two\_friends$			& $\leftarrow$ & $ f_1 \ast_{user_1\_email = user_1\_email} f_2$\\
+$three\_friends$		& $\leftarrow$ & $ two\_friends \ast_{user_1\_email = user_1\_email} f_3$\\
+$three\_friends\_different$	& $\leftarrow$ & $ \sigma_{f_1\ \neq\ f_2\ \neq\ f_3}(three\_friends)$\\
+$under\_2\_friends$		& $\leftarrow$ & $ \pi_{email}(user) - \pi_{email}(three\_friends\_different)$\\ 
+$Result$			& $\leftarrow$ & $ user \ast_{email\ =\ email} under\_2\_friends$ 
 \end{tabular}
 \end{center}
 
@@ -248,17 +262,26 @@ GROUP BY c.feed_url
 \subsubsection{Algèbre relationnel}
 \begin{center}
 \begin{tabular}{lll}
-$a$		& $\leftarrow$ & $ \pi_{feed\_url}\ (\sigma_{user\_email=<user>.email}\ (feedsubscription)$\\
-$b$		& $\leftarrow$ & $ \pi_{user\_email, feed\_url}\ (feedsubscription)$\\
-$b\_a\_join$	& $\leftarrow$ & $ b \Join_{a.feed\_url=b.feed\_url}\ (a)$\\
-$d$		& $\leftarrow$ & $ \pi_{b.user\_email}\ (b.user\_email\ \sigma_{COUNT(b.user\_email)\ >\ 1} (b\_a\_join))$\\
-$c$		& $\leftarrow$ & $ feedsubscription \Join_{feed\_url=url}\ (f)$\\
-$c\_d\_join$	& $\leftarrow$ & $ c \Join_{c.user\_email=d.user\_email} (d)$\\
-$Result$	& $\leftarrow$ & $ \pi_*\ (c.feed\_url\ c\_d\_join)$
+$feed\_of\_<\text{user}>$	& $\leftarrow$ & $ \pi_{feed\_url}\ (\sigma_{user\_email=<user>.email}\ (feedsubscription)$\\
+$f\_as\_<\text{user}>_1$ & $\leftarrow$ & $ \pi_{user\_email, feed_1=feed\_url}\ (feedsubscription)$\\
+$f\_as\_<\text{user}>_2$ & $\leftarrow$ & $ \pi_{user\_email, feed_2=feed\_url}\ (feedsubscription)$\\
+$same\_feed\_sub$			& $\leftarrow$ & $ f\_as\_<\text{user}>_1 \ast_{f\_as\_<\text{user}>_1.user\_email=f\_as\_<\text{user}>_2.user\_email}\ (f\_as\_<\text{user}>_2)$\\
+$two\_different\_feed$	& $\leftarrow$ & $\pi_{user\_email}(\sigma_{feed_1\ \neq\ feed_2}(same\_feed\_sub))$\\$feeds$	& $\leftarrow$ & $ \pi_{feed\_url}(user \ast_{user.email=feedsubscription.user\_email} feedsubscription)$\\
+$Result$	& $\leftarrow$ & $ feeds\ \ast\ feed$
 \end{tabular}
 \end{center}
 
 \subsubsection{Calcul relationnel tuple}
+\begin{equation*}
+\begin{split}
+ f\ |\ \text{feed}(f)\ \wedge \\
+ \exists\ fs_1\ (\text{feedsubscription}(fs_1)\ \wedge\ fs_1.feed\_url\ =\ f.url\ \wedge \\
+ \exists\ fs_2\ (\text{feedsubscription}(fs_2)\ \wedge\ fs_2.user\_email\ =\ fs_1.user\_email\ \wedge \\
+ \exists\ fs_3\ (\text{feedsubscription}(fs_3)\ \wedge\ fs_3.feed\_url\ =\ fs_2.feed\_url\ \wedge\ fs_3.user\_email\ =\ <\text{user}>.email\ \wedge \\
+ \exists\ fs_4\ (\text{feedsubscription}(fs_4)\ \wedge\ fs_4.feed\_url\ =\ fs_1.feed\_url\ \wedge\ fs_4.user\_email\ =\ <\text{user}>.email))))
+\end{split}
+\end{equation*}
+
 \clearpage
 \subsection{Requête 3}
 La liste des flux auxquels X a souscrit, auxquels aucun de ses amis n’a souscrit et duquel il n’a partagé
