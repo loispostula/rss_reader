@@ -243,4 +243,8 @@ public class Feed {
     public void setRatio(Double ratio) {
         this.pubRatio.set(ratio);
     }
+
+    public Boolean isSharedFeed(){
+        return this.getUrl().substring(0, "feed://".length()).equals("feed://");
+    }
 }

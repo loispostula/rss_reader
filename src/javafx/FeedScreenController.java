@@ -3,6 +3,7 @@ package javafx;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import entities.Feed;
 import entities.Publication;
+import entities.SharedPublication;
 import entities.User;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
@@ -248,7 +249,11 @@ public class FeedScreenController implements DialogController {
                                 text1.setWrappingWidth(290);
                                 text1.setStyle("-fx-font-weight: bold");
                                 Text skip = new Text("\n");
-                                Text text2 = new Text(pub.getDescription().substring(0, pub.getDescription().length() < 100? pub.getDescription().length() : 100).replace("&apos;", "'") + " ...");
+                                Text text2 = null;
+                                if (feed.isSharedFeed()){
+                                    text2 = new Text();//here for the comment
+                                }
+                                else text2 = new Text(pub.getDescription().substring(0, pub.getDescription().length() < 100? pub.getDescription().length() : 100).replace("&apos;", "'") + " ...");
                                 text2.setWrappingWidth(290);
                                 text = new TextFlow(text1, skip, text2);
                                 setGraphic(text);
