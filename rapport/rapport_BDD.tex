@@ -142,7 +142,7 @@
             \item \textit{publication} référence \textit{Publication.URL}
         \end{itemize}
             
-        Share(\textbf{user, publication, feed}, date, text)
+        Share(\textbf{user, publication}, date, text)
         \begin{itemize}
 			\item seul le champ \textit{text} peut être nul
             \item \textit{user} référence \textit{User.email}
@@ -353,10 +353,15 @@ HAVING COUNT(s.user_email) > 2
 \subsubsection{Algèbre relationnelle}
 \begin{center}
 \begin{tabular}{lll}
-$a$		& $\leftarrow$ & $\pi_{publication\_url}\ (\ \sigma_{user\_email=<user>.email}\ (sharedpublication))$\\
-$s$		& $\leftarrow$ & $user \Join_{email = user\_email} (sharedpublication)$\\
-$a\_s\_join$	& $\leftarrow$ & $a \Join_{a.publication\_url=s.publication_url} (s)$\\
-$Result$	& $\leftarrow$ & $\pi_*\ (s.user\_email\ \sigma_{COUNT(s.user_email) > 2} (a\_s\_join))$
+$Shared\_by\_<user>$ & $\leftarrow$ & $\pi_{publication\_url}\ (\ \sigma_{user\_email=<user>.email}\ (sharedpublication))$\\
+
+$Reshared_1$ & $\leftarrow$ & $\pi_{publication\_url=publication\_url_1, user\_email}\ (Shared\_by\_<user>*sharedpublication)$\\
+$Reshared_2$ & $\leftarrow$ & $\pi_{publication\_url=publication\_url_2, user\_email}\ (Shared\_by\_<user>*sharedpublication)$\\
+$Reshared_3$ & $\leftarrow$ & $\pi_{publication\_url=publication\_url_3, user\_email}\ (Shared\_by\_<user>*sharedpublication)$\\
+$Reshared$ & $\leftarrow$ & $(Reshared_1*Reshared_2*Reshared_3)$\\
+$Reshared\_3\_times$ & $\leftarrow$ & $\pi_{user\_email} \ (\ \sigma_{publication\_url_1\ne publication\_url_2\ne publication\_url_3}\ (Reshared))$\\
+
+$Result$	& $\leftarrow$ & $user\Join_{email = user\_email} (Reshared\_3\_times)$
 \end{tabular}
 \end{center}
 
