@@ -1,16 +1,17 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[utf8]{inputenc}
- \usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage{latexsym}
 \usepackage{listings}
 \usepackage{amssymb, amsmath}
-\usepackage[usenames,dvipsnames]{color}
-
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{tikz}
-
 \usepackage{geometry}
+
+\usepackage{hyperref}
+
  \geometry{
  a4paper,
- total={210mm,297mm},
  left=20mm,
  right=20mm,
  top=20mm,
@@ -31,25 +32,36 @@
   numbers=left
 }
 
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
 
 \begin{document}
 \begin{titlepage}
-	\begin{center}
-	\textbf{\textsc{UNIVERSIT\'E LIBRE DE BRUXELLES}}\\
-	\textbf{\textsc{Faculté des Sciences}}\\
-	\textbf{\textsc{Département d'Informatique}}
-	\vfill{}\vfill{}
-	\begin{center}{\Huge INFO-H-303 Bases de données : Rapport de projet -- Partie 2}\end{center}{\Huge \par}
-	\begin{center}{\large \textsc{Postula} Loïs \\ \textsc{Picard} Simon}\end{center}{\Huge \par}
-	\vfill{}\vfill{}
-	\vfill{}\vfill{}\enlargethispage{3cm}
-	\textbf{Année académique 2013~-~2014}
-	\end{center}
-	\end{titlepage}
-	
-    \pagebreak
-	\tableofcontents
-	\clearpage
+  \begin{center}
+    \textbf{\textsc{UNIVERSIT\'E LIBRE DE BRUXELLES}}\\
+    \textbf{\textsc{Faculté des Sciences}}\\
+    \textbf{\textsc{Département d'Informatique}}
+    \vfill{}\vfill{}
+    \begin{center}
+	{\Huge INFO-H-303 Bases de données : Rapport de projet -- Partie 2}
+    \end{center}
+    {\Huge \par}
+    \begin{center}
+	{\large \textsc{Postula} Loïs \\ \textsc{Picard} Simon}
+    \end{center}
+    {\Huge \par}
+    \vfill{}\vfill{}
+    \textbf{Année académique 2013~-~2014}
+  \end{center}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
 
     \section{Modélisation entités-relations}
 	
@@ -309,7 +321,8 @@ $Result$ & $\leftarrow$ & $(User\_Feed - Shared\_Feed\_URL) - Friend\_Subscribed
 \begin{equation*}
  \begin{split}
   \{\ f |\ feed(f)\ \wedge\ \\
-  &\quad (\ \exists\ s\ (feedsubscription(s)\ \wedge\ (\ s.feed\_url\ =\ f.url\ \wedge\ s.user\_email\ =\ <\text{user}>.email\ ))\   \wedge \\
+  &\quad (\ \exists\ s\ (feedsubscription(s)\ \wedge\\
+  &(\ s.feed\_url\ =\ f.url\ \wedge\ s.user\_email\ =\ <\text{user}>.email\ ))\   \wedge \\
   &\quad \quad(\nexists\ c\ (contain(c)\ \wedge\ \exists\ d\ (contain(d)\ \wedge\ d.publication\_url = c.publication\_url\ \wedge\ \\
   &\qquad \qquad d.feed\_url = \text{"feed:// + "}<\text{user}>.email) )\ \wedge \\
   &\quad (\nexists\ e\ (feedsubscription(e)\ \wedge\ \exists\ fs\ (friendship(fs)\ \wedge\ \\
@@ -365,7 +378,9 @@ La requête devient alors:
        $u\ |\ User(u) \wedge$ \\
        $\exists \ publication_1 \ ((Sharedpublication(publication_1) \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
        $\exists \ publication_2 \ (Sharedpublication(publication_2) \ \wedge \ publication_1 \ \neq \ publication_2 \ \wedge \ ResharedPublication(u, \ <user>)) \ \wedge$ \\
-       $\exists \ publication_3 \ (Sharedpublication(publication_3) \ \wedge \ publication_1 \ \neq \ publication_2 \ \neq \ publication_3 \ \wedge  \ ResharedPublication(u, \ <user>)))$
+       $\exists \ publication_3 \ (Sharedpublication(publication_3) \ \wedge \ publication_1 \ \neq \ publication_2 \ \neq \ publication_3$\\
+       $\wedge  \ ResharedPublication(u, \ <user>)))$
+       
 \clearpage
 \subsection{Requête 5}
 La liste des flux auquel un utilisateur est inscrit avec le nombre de publications lues, le nombre de publications

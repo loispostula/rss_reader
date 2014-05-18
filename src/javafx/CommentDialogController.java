@@ -75,7 +75,7 @@ public class CommentDialogController implements DialogController {
         commentDate.setCellValueFactory(new PropertyValueFactory("dateP"));
 
         TableColumn commentText = new TableColumn("Text");
-        commentText.setPrefWidth(400);
+        commentText.setPrefWidth(350);
         commentText.setCellValueFactory(new PropertyValueFactory<Publication, String>("text"));
         Callback<TableColumn, TableCell> cellFactory = new Callback<TableColumn, TableCell>() {
             @Override
@@ -88,7 +88,7 @@ public class CommentDialogController implements DialogController {
                         super.updateItem(o, b);
                         if (!isEmpty()) {
                             text = new Text(o.toString());
-                            text.setWrappingWidth(390);
+                            text.setWrappingWidth(340);
                             setGraphic(text);
                         }
                     }
@@ -98,7 +98,7 @@ public class CommentDialogController implements DialogController {
         };
         commentText.setCellFactory(cellFactory);
 
-        tableView.getColumns().addAll(commentUser, commentDate, commentText);
+        tableView.getColumns().setAll(commentUser, commentDate, commentText);
         tableView.setItems(FXCollections.observableArrayList(publication.getComments(feed)));
     }
 
