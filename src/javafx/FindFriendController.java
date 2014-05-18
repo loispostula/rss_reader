@@ -51,7 +51,7 @@ public class FindFriendController implements DialogController {
                 "Email",
                 "Nickname",
                 "R1 : User with two or less friends",
-                "R4 : Rechared X three or more times",
+                "R4 : Reshared X three or more times",
                 "R6 : Friends fo X and some stats"
         );
         criteriaBox.getSelectionModel().selectFirst();

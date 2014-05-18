@@ -116,13 +116,13 @@ public class GenerateXML {
         	for (int i = 0; i < 50; ++i) {
         		nickname.set(i, nickname.get(i)+Integer.toString((int) (Math.random()*100)));
         		email.set(i, email.get(i).replace('é', 'e').replace('è', 'e').replace('ë', 'e').replace('ê', 'e').replace('ü', 'u').replace('ä', 'a')+"@gmail.com");
-        		date.add(generate_random_date_java("2011-01-01","2013-12-28"));
+        		date.add(generate_random_date_java("2014-01-01","2014-05-18"));
         	}
         	
         	output.write("<users>\n");
         	
         	for (int i = 0; i < 50; ++i) {
-            	output.write("\t<user>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<password>azerty</password>\n\t\t<nickname>"+email.get(i).substring(0, email.get(i).length()-9)+Integer.toString((int) (Math.random()*100))+"</nickname>\n\t\t<country>"+country.get((int) (Math.random()*country.size()))+"</country>\n\t\t<city>"+city.get(i)+"</city>\n\t\t<biography></biography>\n\t\t<avatar>avatar.jpg</avatar>\n\t\t<date>"+date.get(i)+"</date>\n\t</user>\n\n");
+            	output.write("\t<user>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<password>azerty</password>\n\t\t<nickname>"+email.get(i).substring(0, email.get(i).length()-10)+Integer.toString((int) (Math.random()*100))+"</nickname>\n\t\t<country>"+country.get((int) (Math.random()*country.size()))+"</country>\n\t\t<city>"+city.get(i)+"</city>\n\t\t<biography></biography>\n\t\t<avatar>avatar.jpg</avatar>\n\t\t<date>"+date.get(i)+"</date>\n\t</user>\n\n");
         	}
         	output.write("</users>\n\n");
         	
@@ -147,7 +147,7 @@ public class GenerateXML {
             		accepted = "False";
         		}
         		
-            	output.write("\t<friend>\n\t\t<email>"+email.get(a)+"</email>\n\t\t<email>"+email.get(b)+"</email>\n\t\t<date>"+generate_random_date_java(sd, "2014-05-14")+"</date>\n\t\t<accepted>"+accepted+"</accepted>\n\t</friend>\n\n");
+            	output.write("\t<friend>\n\t\t<email>"+email.get(a)+"</email>\n\t\t<email>"+email.get(b)+"</email>\n\t\t<date>"+generate_random_date_java(sd, "2014-05-18")+"</date>\n\t\t<accepted>"+accepted+"</accepted>\n\t</friend>\n\n");
         	}
         	output.write("</friends>\n\n");
         	
@@ -157,22 +157,25 @@ public class GenerateXML {
         	String sub = "", share = "";
         	sub += "<subscriptions>\n";
         	share += "<shares>\n";
-        	String currentDate = "";
+        	String currentDate = "",currentDate2 = "",currentDate3 = "";
         	String pubUrl = "";
         	ArrayList<String> text = new ArrayList<String>(Arrays.asList("lol","ptdr","mdr","","check ça","pas mal"));
         	for (int i = 0; i < email.size(); ++i) {
         		nbSub = (int) (Math.random()*feeds.size());
         		for (int j = 0; j < nbSub; ++j){
-        			currentDate = generate_random_date_java(date.get(i), "2014-05-14");
+        			currentDate = generate_random_date_java(date.get(i), "2014-05-18");
         			sub += "\t<subscription>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<url>"+feeds.get(j)+"</url>\n\t\t<date>"+currentDate+"</date>\n\t</subscription>\n\n";
 
         	        res = db.querry("SELECT publication_url, p.releaseDate FROM `contain` INNER JOIN publication p ON p.url = publication_url WHERE feed_url = \""+feeds.get(j)+"\"");
         	        while (res.next()){
         	        	if ((Math.random()*100)<readPercent){
-	            	        output.write("\t<read>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<date>"+getMinDate(currentDate, res.getString("releaseDate"))+"</date>\n\t\t<feed>"+feeds.get(j)+"</feed>\n\t\t<item>"+res.getString("publication_url")+"</item>\n\t</read>\n\n");
-	        	        	if ((Math.random()*100)<sharePercent){
-	        	        		share +="\t<share>\n\t\t<feed>"+feeds.get(j)+"</feed>\n\t\t<item>"+res.getString("publication_url")+"</item>\n\t\t<date>"+getMinDate(currentDate, res.getString("releaseDate"))+"</date>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<text>"+text.get((int)(Math.random()*text.size()))+"</text>\n\t</share>\n\n";
-	        	        	}
+        	        		if(getMinDate(date.get(i), res.getString("releaseDate")) == date.get(i)){
+        	        			currentDate2 = generate_random_date_java(currentDate, "2014-05-18");
+		            	        output.write("\t<read>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<date>"+currentDate2+"</date>\n\t\t<feed>"+feeds.get(j)+"</feed>\n\t\t<item>"+res.getString("publication_url")+"</item>\n\t</read>\n\n");
+		        	        	if ((Math.random()*100)<sharePercent){
+		        	        		share +="\t<share>\n\t\t<feed>"+feeds.get(j)+"</feed>\n\t\t<item>"+res.getString("publication_url")+"</item>\n\t\t<date>"+currentDate2+"</date>\n\t\t<email>"+email.get(i)+"</email>\n\t\t<text>"+text.get((int)(Math.random()*text.size()))+"</text>\n\t</share>\n\n";
+		        	        	}
+        	        		}
         	        	}
         	        }
         		}

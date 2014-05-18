@@ -10,6 +10,8 @@ Instruction d'installation  LOIS
 Calcul relationnel tuple
 -R2 LOIS
 
+Mise en page
+
 
 Code :
 prendre fichier pour config bdd  LOIS

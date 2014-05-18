@@ -82,7 +82,8 @@ public class Feed {
         ArrayList<Publication> publications = new ArrayList<Publication>();
         String query ="SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
         		+ "INNER JOIN contain c ON c.publication_url = p.url " +
-                "WHERE c.feed_url = \""+ escapeXml(this.getUrl()) + "\"";
+                "WHERE c.feed_url = \""+ escapeXml(this.getUrl()) + "\""
+                		+ "ORDER BY releaseDate DESC";
         ResultSet res = db.querry(query);
         try {
             while(res.next()){
@@ -105,7 +106,8 @@ public class Feed {
         String query ="SELECT p.url, p.title, p.releaseDate, p.description, p.image FROM publication p "
         		+ "INNER JOIN contain cnt ON cnt.publication_url = p.url "
         		+ "WHERE cnt.feed_url = \""+getUrl()+"\" AND NOT EXISTS "
-        		+ "(SELECT * FROM readstatus r WHERE r.publication_url = cnt.publication_url AND r.feed_url = cnt.feed_url AND r.user_email = \""+user.getEmail()+"\")";
+        		+ "(SELECT * FROM readstatus r WHERE r.publication_url = cnt.publication_url AND r.feed_url = cnt.feed_url AND r.user_email = \""+user.getEmail()+"\") "
+        		+ "ORDER BY p.releaseDate DESC";
         ResultSet res = db.querry(query);
         try {
             while(res.next()){

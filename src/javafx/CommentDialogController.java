@@ -15,6 +15,8 @@ import javafx.util.Callback;
 
 import java.util.Date;
 
+import static org.apache.commons.lang3.StringEscapeUtils.escapeXml;
+
 
 /**
  * Created by lpostula on 16/05/14.
@@ -103,8 +105,9 @@ public class CommentDialogController implements DialogController {
 
     public void doComment(ActionEvent actionEvent) {
         if (! commentArea.getText().isEmpty()){
-            Comment comment = new Comment(feed, publication, screens.getConnectedUser(), new Date(), commentArea.getText());
+            Comment comment = new Comment(feed, publication, screens.getConnectedUser(), new Date(), escapeXml(commentArea.getText()));
             comment.save();
+            //TODO clear table
             loadComments();
         }
     }

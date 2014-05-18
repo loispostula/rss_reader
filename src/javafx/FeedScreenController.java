@@ -175,7 +175,7 @@ public class FeedScreenController implements DialogController {
             final Feed feed = feeds.get(i);
             TitledPane pane = new TitledPane();
             pane.setText(feed.getTitle());
-            pane.setTooltip(new Tooltip(feed.getDescription()));
+            //pane.setTooltip(new Tooltip(feed.getDescription()));
             if (!feed.getImageS().isEmpty()) {
                 ImageView temp = new ImageView((Image)feed.getImage());
                 temp.setPreserveRatio(true);
@@ -279,7 +279,9 @@ public class FeedScreenController implements DialogController {
                                     TableRow row = c.getTableRow();
                                     Publication pub = (Publication) row.getTableView().getItems().get(row.getIndex());
                                     openBrowser(pub.getUrl());
-                                    pub.markAsRead(screens.getConnectedUser(), feed);
+                                    if(!switchFeed.isSelected()){
+                                    	pub.markAsRead(screens.getConnectedUser(), feed);
+                                    }
                                 }
                             });
                             vbox.getChildren().add(button);

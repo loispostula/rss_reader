@@ -79,6 +79,9 @@ public class XMLParser {
 
 			Feed feed = new Feed("feed://"+current.getChild("email").getText(), current.getChild("nickname").getText()+" personnal feed","Feed with all the publication which "+ current.getChild("nickname").getText()+" shares.", "None", avatarPath);
 			feed.save();
+			
+			feedSubscription subscription = new feedSubscription(user, feed, d);
+			subscription.save();
 		}
     	System.out.println("\nDone adding user\n");
 		

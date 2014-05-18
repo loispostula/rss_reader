@@ -18,7 +18,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-    	/*Database db = new Database();
+        /*Database db = new Database();
     	db.update("TRUNCATE TABLE `user`");
     	db.update("TRUNCATE TABLE `comment`");
     	db.update("TRUNCATE TABLE `feed`");
@@ -32,6 +32,6 @@ public class Main extends Application {
     	System.out.println("Done clearing bdd");
     	XMLParser a = new XMLParser("xmltest.xml");*/
     	//GenerateXML.run();
-    	
+    	//System.out.println("done");
     }
 }

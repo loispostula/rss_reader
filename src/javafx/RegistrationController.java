@@ -2,6 +2,7 @@ package javafx;
 
 import entities.Feed;
 import entities.User;
+import entities.feedSubscription;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -132,6 +133,9 @@ public class RegistrationController implements DialogController {
         Feed usrFeed = new Feed("feed://"+emailField.getText(), nicknameField.getText()+" personnal feed", "Feed with all the publication which "+ nicknameField.getText()+" shares.", "None", "file://" + img_path);
         usrFeed.save();
         this.dialog.close();
+		
+		feedSubscription subscription = new feedSubscription(usr, usrFeed, new Date());
+		subscription.save();
 
     }
 }
