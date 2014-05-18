@@ -1,5 +1,7 @@
 package entities;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Date;
 
 import util.Database;
@@ -34,6 +36,21 @@ public class SharedPublication {
         db.update("INSERT INTO contain (`publication_url`, `feed_url`) VALUES "
             	+ "('"+ publication.getUrl() +"', 'feed://"+ user.getEmail() +"')");
         db.close();
+    }
+    
+    public static String getComment(User user, Publication publication){
+        Database db = new Database();
+        String result = "";
+        ResultSet res = db.querry("SELECT text FROM sharedpublication WHERE publication_url = \""+publication.getUrl()+"\" AND user_email = \""+user.getEmail()+"\"");
+        try {
+            while (res.next()) {
+            	result = res.getString("text");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        db.close();
+        return result;
     }
 
 

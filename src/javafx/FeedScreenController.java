@@ -251,7 +251,7 @@ public class FeedScreenController implements DialogController {
                                 Text skip = new Text("\n");
                                 Text text2 = null;
                                 if (feed.isSharedFeed()){
-                                    text2 = new Text();//here for the comment
+                                    text2 = new Text(SharedPublication.getComment(screens.getConnectedUser(), pub));//here for the comment
                                 }
                                 else text2 = new Text(pub.getDescription().substring(0, pub.getDescription().length() < 100? pub.getDescription().length() : 100).replace("&apos;", "'") + " ...");
                                 text2.setWrappingWidth(290);
